@@ -27,7 +27,7 @@ Pokud naleznete nějakou chybu, budeme rádi za `git pull` s opravou.
 
 5. Vytvořující funkce (obyčejná, exponenciální), otevřený a uzavřený tvar, základní operace s vytvořujícími funkcemi, vytvořující funkce (uzavřený tvar) základních posloupností, věžové polynomy.
 
-6. [Problematika řazení – základní algoritmy a jejich složitost.]([https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/06_problematika_razeni/06_problematika_razeni.md)
+6. [Problematika řazení – základní algoritmy a jejich složitost.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/06_problematika_razeni/06_problematika_razeni.md)
 
 7. Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.
 
