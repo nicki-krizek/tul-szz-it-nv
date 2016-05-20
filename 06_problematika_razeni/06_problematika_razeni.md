@@ -6,11 +6,11 @@ Problematika řazení – základní algoritmy a jejich složitost.
 
 ## Formální definice
 
-![A](http://latex.codecogs.com/gif.latex?%5Clarge%26space%3BA) ... abeceda, nad kterou je dáno řazení
+![A](http://latex.codecogs.com/gif.latex?%5Clarge%20A) ... abeceda, nad kterou je dáno řazení
 
-![a_{i_1}, a_{i_2}, \ldots , a_{i_n}](http://latex.codecogs.com/gif.latex?%5Clarge%26space%3Ba_%7Bi_1%7D%2C%26space%3Ba_%7Bi_2%7D%2C%26space%3B%5Cldots%26space%3B%2C%26space%3Ba_%7Bi_n%7D) ... posloupnost (slovo) nad abecedou ![A](http://latex.codecogs.com/gif.latex?%5Clarge%26space%3BA)
+![a_{i_1}, a_{i_2}, \ldots , a_{i_n}](http://latex.codecogs.com/gif.latex?%5Clarge%20a_%7Bi_1%7D%2C%20a_%7Bi_2%7D%2C%20%5Cldots%20%2C%20a_%7Bi_n%7D) ... posloupnost (slovo) nad abecedou ![A](http://latex.codecogs.com/gif.latex?%5Clarge%20A)
 
-Cílem je nalézt permutaci ![\pi \in S_n](http://latex.codecogs.com/gif.latex?%5Clarge%26space%3B%5Cpi%26space%3B%5Cin%26space%3BS_n) takovou, že posloupnost ![a_{\pi(i_1)} a_{\pi(i_2)} \ldots a_{\pi(i_n)}](http://latex.codecogs.com/gif.latex?%5Clarge%26space%3Ba_%7B%5Cpi(i_1)%7D%26space%3Ba_%7B%5Cpi(i_2)%7D%26space%3B%5Cldots%26space%3Ba_%7B%5Cpi(i_n)%7D) je setříděná, tj. ![a_{\pi(i_j)} \leq a_{\pi(i_{j+1})}](http://latex.codecogs.com/gif.latex?%5Clarge%26space%3Ba_%7B%5Cpi(i_j)%7D%26space%3B%5Cleq%26space%3Ba_%7B%5Cpi(i_%7Bj%26plus%3B1%7D)%7D)
+Cílem je nalézt permutaci ![\pi \in S_n](http://latex.codecogs.com/gif.latex?%5Clarge%20%5Cpi%20%5Cin%20S_n) takovou, že posloupnost ![a_{\pi(i_1)} a_{\pi(i_2)} \ldots a_{\pi(i_n)}](http://latex.codecogs.com/gif.latex?%5Clarge%20a_%7B%5Cpi%28i_1%29%7D%20a_%7B%5Cpi%28i_2%29%7D%20%5Cldots%20a_%7B%5Cpi%28i_n%29%7D) je setříděná, tj. ![a_{\pi(i_j)} \leq a_{\pi(i_{j+1})}](http://latex.codecogs.com/gif.latex?%5Clarge%20a_%7B%5Cpi%28i_j%29%7D%20%5Cleq%20a_%7B%5Cpi%28i_%7Bj&plus;1%7D%29%7D)
 
 ## Vlastnosti
 
