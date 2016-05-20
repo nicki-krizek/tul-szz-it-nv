@@ -1,0 +1,14 @@
+{
+  "name": "tul-szz-it-nv",
+  "version": "1.0.0",
+  "description": "Materiály ke SZZ na TUL (NV IT)",
+  "main": "gulp.js",
+  "author": "Jan Gabriel",
+  "repository": "https://github.com/tomaskrizek/tul-szz-it-nv",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-markdown-pdf": "^2.0.1"
+  }
+}
