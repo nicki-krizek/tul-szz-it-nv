@@ -18,26 +18,39 @@ Cílem je nalézt permutaci ![\pi \in S_n](http://latex.codecogs.com/gif.latex?%
 - *stabilní* - v seřazené posloupnosti je zachováno pořadí rovnocenných prvků
 - [*interní*](https://en.wikipedia.org/wiki/Internal_sort) - všechna data jsou k dispozici v paměti
 - [*externí*](https://en.wikipedia.org/wiki/External_sorting) - další prvky přichází v průběhu řazení
+- [*časová složitost*](https://cs.wikipedia.org/wiki/Asymptotick%C3%A1_slo%C5%BEitost) (dále jako ![f(n)](http://latex.codecogs.com/gif.latex?%5Clarge%20f%28n%29))
+- *paměťová složitost*
 
-## Princip
+## a) Rozšřování setříděné části
 
-### Rozšřování setříděné části
+### Selection Sort
 
-#### Selection Sort
+V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nakonec setříděné části.
 
-#### Insertion Sort
+|  64  |  25  |  12  |  22  |  11  |
+|**11**|  64  |  25  |  12  |  22  |
+|**11**|**12**|  64  |  25  |  22  |
+|**11**|**12**|**22**|  64  |  25  |
+|**11**|**12**|**22**|**25**|**64**|
 
-### Záměna dvojic mimo pořadí
+![f(n) \in \mathcal{O}(n^2)](http://latex.codecogs.com/gif.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 
-#### Bubble Sort
+![f(n) = f(n - 1) + (n - 1)](http://latex.codecogs.com/gif.latex?%5Clarge%20f%28n%29%20%3D%20f%28n%20-%201%29%20&plus;%20%28n%20-%201%29)
 
-#### Sinking Sort
 
-#### Shaker Sort
+### Insertion Sort
 
-### Divide and conquer
+## b) Záměna dvojic mimo pořadí
 
-#### Merge sort
+### Bubble Sort
 
-#### Quick sort
+### Sinking Sort
+
+### Shaker Sort
+
+## c) Divide and conquer
+
+### Merge sort
+
+### Quick sort
 
