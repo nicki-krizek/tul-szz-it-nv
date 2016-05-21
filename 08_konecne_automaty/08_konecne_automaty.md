@@ -24,11 +24,11 @@ Konečným automatem je
 
 ### Přeloženo
 
-Konečný automat (KA) je reprezentován pomocí stavů. Je schopen pracovat s nějakými vstuoními znaky, kterým se říká abeceda. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní - tam automat začíná svojí činnost. Některé (lze i žádné) stavy je možné označit jako koncové. Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní slovo (posloupnost znaků dané abecedy) bylo rozpoznáno (akceptováno).
+Konečný automat (KA) je reprezentován pomocí stavů. Je schopen pracovat s nějakými vstupními znaky, kterým se říká abeceda. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní - tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové. Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní slovo (posloupnost znaků dané abecedy) bylo rozpoznáno (akceptováno).
 
 ## Jazyk rozpoznávaný KA
 
-Množina všech slov, které je schopen KA ![A](http://latex.codecogs.com/gif.latex?A) rozpozvnat tvoří jazyk ![L(A)](http://latex.codecogs.com/gif.latex?L%28A%29). Formálně:
+Množina všech slov, které je schopen KA ![A](http://latex.codecogs.com/gif.latex?A) rozpoznat tvoří jazyk ![L(A)](http://latex.codecogs.com/gif.latex?L%28A%29). Formálně:
 
 ![L(A) = \{w \in \Sigma^*; \delta(q_0, w) \in F\} \subset \Sigma^*](http://latex.codecogs.com/gif.latex?L%28A%29%20%3D%20%5C%7Bw%20%5Cin%20%5CSigma%5E*%3B%20%5Cdelta%28q_0%2C%20w%29%20%5Cin%20F%5C%7D%20%5Csubset%20%5CSigma%5E*)
 
@@ -58,10 +58,12 @@ KA je možné reprezentovat několika způsoby.
 
 3. Tabulkou
 
-  | | 0 | 1 |
-  |-| - | - |
+  | &nbsp; |  0  |  1  |
+  | --- | --- | --- |
   | ![\leftrightarrow S_1](http://latex.codecogs.com/gif.latex?%5Cleftrightarrow%20S_1) | ![S_2](http://latex.codecogs.com/gif.latex?S_2) | ![S_1](http://latex.codecogs.com/gif.latex?S_1) |
-  | ![S_2](http://latex.codecogs.com/gif.latex?S_2) |  ![S_1](http://latex.codecogs.com/gif.latex?S_1) | ![S_2](http://latex.codecogs.com/gif.latex?S_2) |
+  | ![S_2](http://latex.codecogs.com/gif.latex?S_2) | ![S_1](http://latex.codecogs.com/gif.latex?S_1) | ![S_2](http://latex.codecogs.com/gif.latex?S_2) |
+
+  Pomocí šipek se označí stav jako vstupní (![\rightarrow](http://latex.codecogs.com/gif.latex?%5Crightarrow)), výstupní (![\leftarrow](http://latex.codecogs.com/gif.latex?%5Cleftarrow)) nebo vstupní i výstupní zároveň (![\leftrightarrow](http://latex.codecogs.com/gif.latex?%5Cleftrightarrow)).
 
 4. Stavovým stromem
 
