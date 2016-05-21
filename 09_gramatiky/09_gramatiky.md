@@ -85,12 +85,70 @@ Jazyk ![L](http://latex.codecogs.com/gif.latex?L) rozpoznávaný analytickou gra
 
 ## Chomského hierarchie
 
+Gramatiky se dělí na základě omezení přepisovacích pravidel do několika typů podle Chomského hierachie. Ta definuje následující typy gramatik:
+
+![Chomskeho hierarchie](09_chomskeho_hiearchie.png]
+
+Důležité je si uvědomit, že regulární gramatika je zároveň i bezkontextová, kontextová i typu 0. Stejně tak třeba kontexová gramatika je zároveň i typu 0. Všechny gramatiky jsou tím pádem typu 0.
+
+Různé typy gramatik jsou schopné rozpoznávat různé typy jazyků a pro jejich implementaci je potřeba jiný typ konečného stroje. Výhodou gramatik vyšších typů je právě fakt, že jejich implementace je jednodušší. Následující tabulka znázorňuje typy gramatik, jazyků, strojů pro implementaci a omezení pro přepisovací pravidla.
+
+| Gramatika | Jazyky | Konečný stroj | Formát přepisovacích pravidel |
+| --------- | ------ | ----- | ------------------------------ |
+| Typ 0     | Rekurzivně spočitatelné | TS, PS, KSZ2  | ![\alpha \rightarrow \beta](http://latex.codecogs.com/gif.latex?%5Calpha%20%5Crightarrow%20%5Cbeta) (žádná omezení) |
+| Kontextová (typ 1) | Kontextové |           | ![\alpha A \beta \rightarrow \alpha \gamma \beta](http://latex.codecogs.com/gif.latex?%5Calpha%20A%20%5Cbeta%20%5Crightarrow%20%5Calpha%20%5Cgamma%20%5Cbeta) |
+| *Bezkontextová* (typ 2) | Bezkontextové | nedeterministický KSZ1 | ![A \rightarrow \gamma](http://latex.codecogs.com/gif.latex?A%20%5Crightarrow%20%5Cgamma)
+| *Regulární* (typ 3) | Regulární | KA | ![A \rightarrow a, A \rightarrow aB](http://latex.codecogs.com/gif.latex?A%20%5Crightarrow%20a%2C%20A%20%5Crightarrow%20aB) |
+
+U přepisovacích pravidel platí konvence:
+
+- písmena řecké abecedy \in (\Pi \cup \Sigma)*
+- velká písmena představují neterminální symboly
+- malá písmena představují terminální symboly
+
+### Vztah ke konečným strojům
+
+Viz předchozí tabulka. Připomenutí:
+
+#### Turingův stroj (TS)
+
+- čtecí hlava, nekonečná páska, program
+- na pásce se lze pohybovat doleva/doprava, je možné číst a zapisovat
+
+#### Postův stroj (PS)
+
+- pamět je typu fronta (FIFO)
+- z jednoho konce se čte, z druhého se zapisuje
+
+#### Konečný stroj se zásobníky (KSZn)
+
+- paměť je typu zásobník (LIFO)
+- zapisuje se i se čte z vrcholu zásobníku
+- pokud má alespoň 2 zásobníky, dokáže to,co TS nebo PS
+
+#### Zásobníkový automat (KSZ1)
+
+- jiné označení pro KSZ1
+- s jedním zásobníkem nedokáže to, co TS, PS nebo KSZ2+
+
+#### Konečný automat (KA)
+
+- žádná paměť pro zápis
+- pouze si pamatuje (se nachází v) aktuální stav
+
 ## Syntaktická analýza
 
 > Nevím, jestli to zde uvádět. Patří sem věci jako derivační strom, determinismus, jednoznačnost gramatiky, levá a pravá derivace.
 
 ## Vlastnosti relací
 
-> Není to úplněsoučástí otázky, ale mohla by na to přijít řeč. Je to dobré vědět, ale pokud se na to někdo vyložené nezeptá, asi bych to nezmiňoval.
+> Není to úplně součástí otázky, ale mohla by na to přijít řeč. Je to dobré vědět, ale pokud se na to někdo vyložené nezeptá, asi bych to nezmiňoval.
 
+### Reflexivita
+
+### Symetrie
+
+### Antisymetrie
+
+### Tranzitivita
 
