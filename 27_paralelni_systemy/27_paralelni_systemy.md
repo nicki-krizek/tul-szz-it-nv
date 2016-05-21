@@ -28,7 +28,8 @@ Následující stavy procesů se vyskytují ve všech víceúlohových systémec
 - **ukončený** (terminated) – proces skončil
 
 ![Životní cyklus procesu](27_zivotni_cyklus_procesu.png)
-Životní cyklus procesu
+
+*Životní cyklus procesu*
 
 ### Plánování procesů
 Přepínání kontextu:
@@ -93,7 +94,8 @@ Modely řešící způsob jak vytvářit a rozdělit práci mezi vlákny
  - jednotlivé Workers nemusí vědět o vstupu, ale musí o něm vědět Boss, který pak rozděluje úlohy
 
 ![Boss/Worker](27_boss_worker.png)
-Boss/Worker
+
+*Boss/Worker*
 
 - **Peer**
  - vlákna běží paralelně bez specifického vedoucího
@@ -103,7 +105,8 @@ Boss/Worker
  - všechny 3 Workery si sahají na vstup pro data
 
 ![Peer](27_peer.png)
-Peer
+
+*Peer*
 
 - **Pipeline**
  - zpracování dat sekvencí operací.
@@ -113,7 +116,8 @@ Peer
  - o vstupu ví jen první, udělí se část dat a předá dál
 
 ![Pipeline](27_pipeline.png)
-Pipeline
+
+*Pipeline*
 
 - **Producent a konzument**
  - předávání dat mezi vlákny je realizováno vyrovnávací pamětí – buffer
@@ -122,7 +126,8 @@ Pipeline
  - přístup do vyrovnávací paměti musí být synchronizovaný (exkluzivní přístup)
  
 ![Producent/Consument](27_pro_con.png)
-Producent/Consument
+
+*Producent/Consument*
 
 ## Paralelní systémy
 Jako paralelní označujeme systém, v němž může probíhat několik procesů současně (paralelně).
