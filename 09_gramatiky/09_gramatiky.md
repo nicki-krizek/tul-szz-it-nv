@@ -144,25 +144,25 @@ Pro libovolnou binární relaci mohou (a nemusí) platit následující vlasnost
 
 Nechť ![\varrho](http://latex.codecogs.com/gif.latex?%5Cvarrho) je binární relace.
 
-a. Reflexivita
+1. Reflexivita
 
   ![\forall a \in A: a \varrho a](http://latex.codecogs.com/gif.latex?%5Cforall%20a%20%5Cin%20A%3A%20a%20%5Cvarrho%20a)
 
-  Všechny prvky z ![A](http://latex.codecogs.com/gif.latex?A) jsou v relaci samy se sebou.
+  Všechny prvky z ![A](http://latex.codecogs.com/gif.latex?A) jsou v relaci sami se sebou.
 
-b. Symetrie
+2. Symetrie
 
   ![\forall a, b \in A: a \varrho b \leftrightarrow b \varrho a](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cleftrightarrow%20b%20%5Cvarrho%20a)
 
-  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b), potom i ![b](http://latex.codecogs.com/gif.latex?b) je v relaci s ![a](http://latex.codecogs.com/gif.latex?a).
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b), potom i ![b](http://latex.codecogs.com/gif.latex?b) je v relaci s ![a](http://latex.codecogs.com/gif.latex?a). (nebo *právě tehdy když* - zde to lze zaměnit)
 
-c. Antisymetrie
+3. Antisymetrie
 
   ![\forall a, b \in A: a \varrho b \wedge b \varrho a \rightarrow a = b](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20a%20%5Crightarrow%20a%20%3D%20b)
 
   Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b) a zároveň je i ![b](http://latex.codecogs.com/gif.latex?b) v relaci s ![a](http://latex.codecogs.com/gif.latex?a), potom se jedná o totožný prvek.
 
-d. Tranzitivita
+4. Tranzitivita
 
   ![\forall a, b, c \in A: a \varrho b \wedge b \varrho c \rightarrow a \varrho c](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%2C%20c%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20c%20%5Crightarrow%20a%20%5Cvarrho%20c)
 
