@@ -29,7 +29,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 7. Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.
 
-8. Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
+8. [Definice konečného automatu, jazyky rozpoznávané konečnými automaty.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/08_konecne_automaty/08_konecne_automaty.md)
 
 9. [Gramatiky, Chomského hierarchie, vztah gramatik ke konečným strojům.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md)
 
