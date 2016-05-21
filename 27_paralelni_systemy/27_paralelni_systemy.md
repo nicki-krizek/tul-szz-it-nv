@@ -1,8 +1,5 @@
 # 18. - Paralelní systémy
-
-```
-Paralelní systémy, kategorie, paralelizace zpracování, víceprocesorové systémy, programování v paralelních a distribuovaných systémech – přístupy, prostředky, metody vzájemné synchronizace.
-```
+>Paralelní systémy, kategorie, paralelizace zpracování, víceprocesorové systémy, programování v paralelních a distribuovaných systémech – přístupy, prostředky, metody vzájemné synchronizace.
 
 ## Základní pojmy
 **Paralelismus** -  Vytváření souběžnosti, zdánlivý nebo skutečný paralelní běh více procesů zároveň.
@@ -21,7 +18,6 @@ Paralelní systémy, kategorie, paralelizace zpracování, víceprocesorové sys
 >V rámci jednoho **procesu** může běžet několik **vláken**, ty mají sdílenou pamět a při jejich střídání nemusí docházet ke změně kontextu. Díky tomu je mezi vláknová komunikace jednoduší a střídání vláken je rychlejší. Použití oddělených procesu se používá například z bezpečnostních důvodů k omezení přístupu do paměti.
 
 ## Procesy
-
 ### Základní stavy procesů
 Následující stavy procesů se vyskytují ve všech víceúlohových systémech:
 
@@ -66,7 +62,6 @@ Podle času:
  - Optimalizace vytížení počítače
 
 ## Vlákna
-
 ### Podpora v OS
 Vlákna můžeme dělit z hlediska správy v OS:
 
@@ -144,6 +139,7 @@ Jako paralelní označujeme systém, v němž může probíhat několik procesů
 **Grid** - Podobné jako cluster, ale počítače jsou rozmístěny v internetu a nemusí mít stejný operační systém. Propojení je řešeno přes speciální aplikaci (middleware). Po spuštění aplikace se stáhne sada výpočtů, které počítač provádí a výsledek je odesílán zpět. Viz různé vědecké projekty na hromadné zkoumání genomu či vesmíru. Případně může jít o spojení několika clusterů, kvůli snadné správě a sdílení výpočetního výkonu.
 
 ### Architektura
+Rozlišujeme 2 druhy architektur:
 
 1. **Paralelní počítače (multiprocesory) se sdílenou pamětí** (superpočítač)
  - Procesory mohou sdílet paměť (RAM) jednoho počítače
@@ -180,12 +176,12 @@ Vývoj paralelních systémů logicky postupuje od nižších úrovní granulari
  - Optimální dělení strojového času mezi jendotlivé úlohy
 
 ### Flynova klasifikace
-Podle toku instrukcí
+Podle toku instrukcí:
 
 - SI (Single Instruction Streem) s jedním tokem instrukcí
 - MI (Multilple Instruction Streem) s vícenásobným tokem instrukcí
 
-Podle toku dat
+Podle toku dat:
 
 - SD s jedním tokem dat
 - MD s vícenásobným tokem dat
