@@ -34,6 +34,8 @@ Množina všech slov, které je schopen KA ![A](http://latex.codecogs.com/gif.la
 
 Jazyk ![L](http://latex.codecogs.com/gif.latex?L) je **rozpoznatelný** KA, jestliže existuje KA ![A](http://latex.codecogs.com/gif.latex?A) takový, že ![L = L(A)](http://latex.codecogs.com/gif.latex?L%20%3D%20L%28A%29).
 
+Jazyky, které KA rozpoznávají jsou **regulární**. Viz ![Chomského hierarchie v okruhu 9 (Gramatiky)](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#chomsk%C3%A9ho-hierarchie).
+
 ## Reprezentace automatu
 
 Následující KA rozpoznává binární čísla, která mají sudý počet nul. 
@@ -76,6 +78,20 @@ KA je možné reprezentovat několika způsoby.
 ## Nedeterministické automaty
 
 TODO převod nedeterministického automatu na deterministický?
+
+## Porovnání síly konečných automatů
+
+TODO inteligentnejsi nadpis?
+
+![Porovnani konecnych stroju](08_porovnani_konecnych_stroju.png)
+
+Turingův stroj je nejsilnější a dokáže realizovat libovolný algoritmus.
+
+Slabším nástrojem je zásobníkový automat (KSZ1).
+
+Poté jsou konečné automaty, které jsou schopny rozpoznávat regulární jazyky.
+
+Konečné automaty jsou silnější nástroj než kombinační logika.
 
 ## Uzávěrové vlastnosti
 
