@@ -30,7 +30,7 @@ To znamená, že pomocí přepisovacích pravidel můžu změnit řetězec ![\al
 | -------  | ----- |
 | ![X \rightarrow a](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20a) |  neterminál ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na ![a](http://latex.codecogs.com/gif.latex?a) |
 | ![X \rightarrow Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20Y) | neterminál ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) |
-| ![X \rightarrow a | Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20a%20%7C%20Y) | neterminál se ![X](http://latex.codecogs.com/gif.latex?X) přepíše buď na terminál ![a](http://latex.codecogs.com/gif.latex?a) nebo na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) (spojení více pravidel do jednoho) |
+| ![X \rightarrow a|Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20a%20%7C%20Y) | neterminál se ![X](http://latex.codecogs.com/gif.latex?X) přepíše buď na terminál ![a](http://latex.codecogs.com/gif.latex?a) nebo na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) (spojení více pravidel do jednoho) |
 | ![aX \rightarrow ba](http://latex.codecogs.com/gif.latex?aX%20%5Crightarrow%20ba) | terminál ![a](http://latex.codecogs.com/gif.latex?a) následovaný neterminálem ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na terminální symboly ![ba](http://latex.codecogs.com/gif.latex?ba) |
 
 Podle toho, jak vypadají řetězce ![\alpha](http://latex.codecogs.com/gif.latex?%5Calpha) (levé strany přepisovacích pravidel - to, co přepisuju), se gramatiky dělí do různých skupin, viz Chomského hierarchie níže.
