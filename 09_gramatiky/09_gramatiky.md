@@ -16,7 +16,7 @@ Gramatika ![G](http://latex.codecogs.com/gif.latex?G) je čtveřice ![G = (\Pi, 
 
 ### Přeloženo
 
-Mám nějakou abecedu symbolů, což odpovídá terminálním symbolům. Řekněmě, že máme písmena a, b. Dále mám nějaké proměnné (neterminální symboly), třeba X, Y. A abych měl celou gramatiku, tak potřebuju ještě počáteční proměnnou ze které je možné odvodit všechna slova, která umí gramatika generovat. Řekněmě, že počáteční symbol bude X. Nakonec k tomu přidám přepisovací pravidla, pomocí kterých můžu přepisovat terminální a neterminální symboly na jiné.
+Mám nějakou abecedu symbolů, což odpovídá terminálním symbolům. Řekněmě, že máme písmena a, b. Dále mám nějaké proměnné (neterminální symboly), třeba X, Y. Pak potřebuju ještě počáteční proměnnou ze které je možné odvodit všechna slova, která umí gramatika generovat. Řekněmě, že počáteční symbol bude X. Nakonec k tomu přidám přepisovací pravidla, pomocí kterých můžu přepisovat terminální a neterminální symboly na jiné.
 
 ### Přepisovací pravidla
 
@@ -32,8 +32,6 @@ To znamená, že pomocí přepisovacích pravidel můžu změnit řetězec ![\al
 | ![X \rightarrow Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20Y) | neterminál ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) |
 | ![X \rightarrow a &#124; Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20a%20%7C%20Y) | neterminál se ![X](http://latex.codecogs.com/gif.latex?X) přepíše buď na terminál ![a](http://latex.codecogs.com/gif.latex?a) nebo na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) (spojení více pravidel do jednoho) |
 | ![aX \rightarrow ba](http://latex.codecogs.com/gif.latex?aX%20%5Crightarrow%20ba) | terminál ![a](http://latex.codecogs.com/gif.latex?a) následovaný neterminálem ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na terminální symboly ![ba](http://latex.codecogs.com/gif.latex?ba) |
-
-Podle toho, jak vypadají řetězce ![\alpha](http://latex.codecogs.com/gif.latex?%5Calpha) (levé strany přepisovacích pravidel - to, co přepisuju), se gramatiky dělí do různých skupin, viz Chomského hierarchie níže.
 
 ### Příklad gramatiky
 
