@@ -107,7 +107,7 @@ Nyní si musím vhodně zvolit slova, abych potom došel ke sporu. Zvolím si ji
 
 ![a^i \sim a^j \overset{PKKI}{\Rightarrow} \underbrace{a^i b^i}_{\in L} \sim \underbrace{a^i b^j}_{\notin L}](http://latex.codecogs.com/gif.latex?a%5Ei%20%5Csim%20a%5Ej%20%5Coverset%7BPKKI%7D%7B%5CRightarrow%7D%20%5Cunderbrace%7Ba%5Ei%20b%5Ei%7D_%7B%5Cin%20L%7D%20%5Csim%20%5Cunderbrace%7Ba%5Ei%20b%5Ej%7D_%7B%5Cnotin%20L%7D)
 
-Pomocí PKKI připíšu slovo ![b^i](http://latex.codecogs.com/gif.latex?b%5Ei) a slova by měla stále patřit do stejné třídy, což nepatří, protože ![i \neq j](http://latex.codecogs.com/gif.latex?i%20%5Cneq%20j) a slovo ![a^i b^i](http://latex.codecogs.com/gif.latex?a%5Ei%20b%5Ei) patří do jazyka ![L](http://latex.codecogs.com/gif.latex?L), zatímco slovo ![a^j b^i](http://latex.codecogs.com/gif.latex?a%5Ej%20b%5Ei) do jazyka ![L](http://latex.codecogs.com/gif.latex?L) nepatří. Docházím ke **sporu** a tím pádem mohu prohlásit, že jazyk ![L](http://latex.codecogs.com/gif.latex?L) *není rozpoznatelný KA (jakýmkoliv)*.
+Pomocí PKKI připíšu slovo ![b^i](http://latex.codecogs.com/gif.latex?b%5Ei). Výsledná slova by měla stále patřit do stejné třídy, což nepatří, protože ![i \neq j](http://latex.codecogs.com/gif.latex?i%20%5Cneq%20j) a slovo ![a^i b^i](http://latex.codecogs.com/gif.latex?a%5Ei%20b%5Ei) patří do jazyka ![L](http://latex.codecogs.com/gif.latex?L), zatímco slovo ![a^i b^j](http://latex.codecogs.com/gif.latex?a%5Ei%20b%5Ej) do jazyka ![L](http://latex.codecogs.com/gif.latex?L) nepatří. Docházím ke **sporu** a tím pádem mohu prohlásit, že jazyk ![L](http://latex.codecogs.com/gif.latex?L) *není rozpoznatelný KA (jakýmkoliv)*.
 
 ## Nedeterministické automaty
 
