@@ -254,7 +254,20 @@ K uváznutí dojde jen při splnění všech následujících podmínek:
 **Synchronizační primitiva** jsou v operačních systémech prostředky, umožňující zároveň běžícím aplikacím ošetřit současný přístup ke sdíleným prostředkům.
 
 ### Prostředky synchronizace
-- **Zámek** - Základní primituv, které zajišťuje pomocí atomických operací přístup do kritické sekce. Je-li zámek odemčen, zamknu si ho pro sebe (atomické čtení a zápis) a vstoupím do kritické sekce. V případě zamčení čekám na jeho uvolnění a přenechávám strojový čas, jde o takzvanou blokující operaci.
+- **Mutex** - Mutual Exlusion je v podstatě zámek na úrovni operačního systému, umožňuje tak synchronizaci i mezi různými procesy. Programovací jazyky se od toho odstiňují skrze zámek na kterém se pak staví.
+- **Zámek** - Základní synchronizační prostředek, který zajišťuje pomocí atomických operací přístup do kritické sekce. Je-li zámek odemčen, zamknu si ho pro sebe (atomické čtení a zápis) a vstoupím do kritické sekce. V případě zamčení čekám na jeho uvolnění a přenechávám strojový čas, jde o takzvanou blokující operaci.
 - **Semafor** - Rozšířený zámek, který má v sobě počítadlo přístupů a do kritické sekce vpustí pouze předem stanovený počet vláken.
 - **Fronta** - Datová struktura, která v sobě implementuje zámek a je takzvaně vláknově bezpečná. Operace čtení a zápisu jsou synchronizovány a nedochází k souběhům.
 - **Monitor** - Konstrukce vyšších programovacích jazyků, která zajistí vygenerování potřebné obsluhy pro kritickou sekci.
+
+```java
+//se zamkem
+mylock.acquire();
+doSomething(); 
+mylock.release(); // Oh noes, we never release the lock!
+
+//pomoci monitoru se synchronized
+synchronized(myObject) {
+    doSomething();
+}
+```
