@@ -5,10 +5,8 @@ Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro m
 Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 ## Rozcestník
-- Předběžné datum: [Harmonogram SZZ - červen 2016 #1](https://github.com/tomaskrizek/tul-szz-it-nv/issues/1)
-- Složení komise a co od ní můžeme čekat: [SSZ - 14. - 16. června 2016 #2](https://github.com/tomaskrizek/tul-szz-it-nv/issues/2)
+- Složení komise, co od ní můžeme čekat a jak to bude probíhat: [SSZ - 14. - 16. června 2016 #2](https://github.com/tomaskrizek/tul-szz-it-nv/issues/2)
 - Stav vypracování a diskuze k jednotlivým otázkám: [Tematické okruhy ke SZZ 2015/2016 #3](https://github.com/tomaskrizek/tul-szz-it-nv/issues/3)
-- Jak SZZ bude probíhat a kolik je času na co: [Standardní průběh SZZ #4](https://github.com/tomaskrizek/tul-szz-it-nv/issues/4)
 - Jak se mohu do vypracovávání zapojit:  [Vypracovávání materiálů a formátování #5](https://github.com/tomaskrizek/tul-szz-it-nv/issues/5)
 
 
