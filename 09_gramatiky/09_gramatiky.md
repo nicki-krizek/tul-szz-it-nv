@@ -136,19 +136,57 @@ Viz předchozí tabulka. Připomenutí:
 - žádná paměť pro zápis
 - pouze si pamatuje (se nachází v) aktuální stav
 
-## Syntaktická analýza
-
-> Nevím, jestli to zde uvádět. Patří sem věci jako derivační strom, determinismus, jednoznačnost gramatiky, levá a pravá derivace.
-
-## Vlastnosti relací
+## Vlastnosti binárních relací
 
 > Není to úplně součástí otázky, ale mohla by na to přijít řeč. Je to dobré vědět, ale pokud se na to někdo vyložené nezeptá, asi bych to nezmiňoval.
 
-### Reflexivita
+Pro libovolnou binární relaci mohou (a nemusí) platit následující vlasnosti.
 
-### Symetrie
+Nechť ![\varrho](http://latex.codecogs.com/gif.latex?%5Cvarrho) je binární relace.
 
-### Antisymetrie
+a. Reflexivita
 
-### Tranzitivita
+  ![\forall a \in A: a \varrho a](http://latex.codecogs.com/gif.latex?%5Cforall%20a%20%5Cin%20A%3A%20a%20%5Cvarrho%20a)
+
+  Všechny prvky z ![A](http://latex.codecogs.com/gif.latex?A) jsou v relaci samy se sebou.
+
+b. Symetrie
+
+  ![\forall a, b \in A: a \varrho b \leftrightarrow b \varrho a](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cleftrightarrow%20b%20%5Cvarrho%20a)
+
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b), potom i ![b](http://latex.codecogs.com/gif.latex?b) je v relaci s ![a](http://latex.codecogs.com/gif.latex?a).
+
+c. Antisymetrie
+
+  ![\forall a, b \in A: a \varrho b \wedge b \varrho a \rightarrow a = b](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20a%20%5Crightarrow%20a%20%3D%20b)
+
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b) a zároveň je i ![b](http://latex.codecogs.com/gif.latex?b) v relaci s ![a](http://latex.codecogs.com/gif.latex?a), potom se jedná o totožný prvek.
+
+d. Tranzitivita
+
+  ![\forall a, b, c \in A: a \varrho b \wedge b \varrho c \rightarrow a \varrho c](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%2C%20c%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20c%20%5Crightarrow%20a%20%5Cvarrho%20c)
+
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b) a zároveň je ![b](http://latex.codecogs.com/gif.latex?b) v relaci s ![c](http://latex.codecogs.com/gif.latex?c), potom je i ![a](http://latex.codecogs.com/gif.latex?a) v relaci s ![c](http://latex.codecogs.com/gif.latex?c).
+
+### Relace ekvivalence
+
+Pro relaci ekvivalence ![\sim](http://latex.codecogs.com/gif.latex?%5Csim) platí:
+
+- reflexivita
+- symetrie
+- tranzitivita
+
+K libovolné relaci ekvivalence existuje právě jediný rozklad na třídy ekvivalence.
+
+### Částečné uspořádání
+
+Pro relaci částečného uspořádání ![\leq](http://latex.codecogs.com/gif.latex?%5Cleq) platí:
+
+- reflexivita
+- antisymetrie
+- tranzitivita
+
+## Syntaktická analýza
+
+> Nevím, jestli to zde uvádět. Patří sem věci jako derivační strom, determinismus, jednoznačnost gramatiky, levá a pravá derivace.
 
