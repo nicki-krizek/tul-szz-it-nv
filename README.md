@@ -1,6 +1,6 @@
 # Materiály ke SZZ na TUL (NV IT)
 
-Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro magisterské studium, obor Informační technolgie**.  Za kvalitu ani pravdivost informací neručíme, jedná se o kompilaci informací sesbíraných různě po internetu. Kvůli takto převzatým materiálům (viz níže) ani blíže nespecifikujeme licenci. Materiály jsme tímto  stylem vypracovaly, aby byly snadno dustupné všem. V případě, že si nějaký z materiálů nárokujete, neváhejte se nám ozvat.
+Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro magisterské studium, obor Informační technolgie**.  Za kvalitu ani pravdivost informací neručíme, jedná se o kompilaci informací sesbíraných různě po internetu. Kvůli takto převzatým materiálům (viz níže) ani blíže nespecifikujeme licenci. Materiály jsme vypracovali tímto stylem, aby byly snadno dustupné všem. V případě, že si nějaký z materiálů nárokujete, neváhejte se nám ozvat.
 
 Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
