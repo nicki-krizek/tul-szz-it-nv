@@ -1,8 +1,6 @@
 # 6. Problematika řazení
 
-```
-Problematika řazení – základní algoritmy a jejich složitost.
-```
+> Problematika řazení – základní algoritmy a jejich složitost.
 
 ## Formální definice
 
