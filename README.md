@@ -33,7 +33,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 8. Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
 
-9. Gramatiky, Chomského hierarchie, vztah gramatik ke konečným strojům.
+9. [Gramatiky, Chomského hierarchie, vztah gramatik ke konečným strojům.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md)
 
 10. Turingův stroj, problém zastavení, totální a parciální rozhodnutelnost tříd problémů, rekurzivní a rekurzivně spočetné množiny, jejich vztah.
 
