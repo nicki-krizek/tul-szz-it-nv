@@ -87,7 +87,7 @@ Jazyk ![L](http://latex.codecogs.com/gif.latex?L) rozpoznávaný analytickou gra
 
 Gramatiky se dělí na základě omezení přepisovacích pravidel do několika typů podle Chomského hierachie. Ta definuje následující typy gramatik:
 
-![Chomskeho hierarchie](09_chomskeho_hiearchie.png]
+![Chomskeho hierarchie](09_chomskeho_hierarchie.png)
 
 Důležité je si uvědomit, že regulární gramatika je zároveň i bezkontextová, kontextová i typu 0. Stejně tak třeba kontexová gramatika je zároveň i typu 0. Všechny gramatiky jsou tím pádem typu 0.
 
@@ -102,9 +102,9 @@ Různé typy gramatik jsou schopné rozpoznávat různé typy jazyků a pro jeji
 
 U přepisovacích pravidel platí konvence:
 
-- písmena řecké abecedy \in (\Pi \cup \Sigma)*
-- velká písmena představují neterminální symboly
-- malá písmena představují terminální symboly
+- *písmena řecké abecedy* ![\in (\Pi \cup \Sigma)*](http://latex.codecogs.com/gif.latex?%5Cin%20%28%5CPi%20%5Ccup%20%5CSigma%29*)
+- *velká písmena* představují **neterminální symboly**
+- *malá písmena* představují **terminální symboly**
 
 ### Vztah ke konečným strojům
 
@@ -129,7 +129,7 @@ Viz předchozí tabulka. Připomenutí:
 #### Zásobníkový automat (KSZ1)
 
 - jiné označení pro KSZ1
-- s jedním zásobníkem nedokáže to, co TS, PS nebo KSZ2+
+- konečný stroj s jedním zásobníkem nedokáže to, co TS, PS nebo KSZ2+
 
 #### Konečný automat (KA)
 
