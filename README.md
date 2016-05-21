@@ -1,8 +1,8 @@
 # Materiály ke SZZ na TUL (NV IT)
 
-Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro magisterské studium, obor Informatční technolgie**.  Za kvalitu ani pravdivost infromací neručíme, jedná se o kompilaci informací sesbíraných různě po internetu. Kvůli takto převzatým materiálům (viz níže) ani blíže nespecifikujeme licenci. Materiály jsme tímto  stylem vypracovaly, aby byly snadno dustupné všem. V případě, že si nějaký z materiálů narokujete, neváhejte se nám ozvat.
+Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro magisterské studium, obor Informační technolgie**.  Za kvalitu ani pravdivost informací neručíme, jedná se o kompilaci informací sesbíraných různě po internetu. Kvůli takto převzatým materiálům (viz níže) ani blíže nespecifikujeme licenci. Materiály jsme tímto  stylem vypracovaly, aby byly snadno dustupné všem. V případě, že si nějaký z materiálů nárokujete, neváhejte se nám ozvat.
 
-Pokud naleznete nějakou chybu, budeme rádi za `git pull` s opravou.
+Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 ## Rozcestník
 - Předběžné datum: [Harmonogram SZZ - červen 2016 #1](https://github.com/tomaskrizek/tul-szz-it-nv/issues/1)
@@ -79,7 +79,7 @@ Pokud naleznete nějakou chybu, budeme rádi za `git pull` s opravou.
 
 ## Převzaté materiály
 
-Některé obrázky nebo materiály nemusí být naše vlastní a mohou být odněkud přejaté. Vzhledem k tomu, že je někdy obtížné dohledat licenční podínky užití obrázku, mohlo se stát, že jsme něco použili neoprávněně. Pokud nararazíte na nějaké obrázek či materiál, k němuž máte práva, a nesouhlasíte s jeho použitím v těchto materiálech, dejte nám prosím vědět, abychom ho mohli odstranit.
+Některé obrázky nebo materiály nemusí být naše vlastní a mohou být odněkud přejaté. Vzhledem k tomu, že je někdy obtížné dohledat licenční podmínky užití obrázku, mohlo se stát, že jsme něco použili neoprávněně. Pokud nararazíte na nějaký obrázek či materiál, k němuž máte práva, a nesouhlasíte s jeho použitím v těchto materiálech, dejte nám prosím vědět, abychom ho mohli odstranit.
 
 ## Used content
 
