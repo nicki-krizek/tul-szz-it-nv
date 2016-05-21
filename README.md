@@ -73,9 +73,9 @@ Pokud naleznete nějakou chybu, budeme rádi za `git pull` s opravou.
 
 28. Významné průmyslové komunikační systémy a sběrnice v počítačových systémech (CAN, Ethernet, Modbus, SPI, I2C, RS-232, USB, PCI-e, SATA), topologie, charakteristické vlastnosti.
 
-29. Abstraktní datové typy, seznam, fronta, zásobník, halda, strom, asociativní pole.
+29. [Abstraktní datové typy, seznam, fronta, zásobník, halda, strom, asociativní pole.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md)
 
-30. Vyhledávání lineární a binární, datové struktury optimalizované pro vyhledávání a práce s nimi, binární vyhledávací strom, 2-3 strom, B strom, hashování.
+30. [Vyhledávání lineární a binární, datové struktury optimalizované pro vyhledávání a práce s nimi, binární vyhledávací strom, 2-3 strom, B strom, hashování.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/30_vyhledavani/30_vyhledavani.md)
 
 ## Převzaté materiály
 
