@@ -21,7 +21,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 3. Rekurentní vztahy – základní pojmy, řešení, (ne)homogenní, (ne)lineární rekurentní vztahy, řešení lineárních rekurentních vztahů s konstantními koeficienty a jejich soustav (otázka existence a jednoznačnosti řešení), využití vytvořujících funkcí.
 
-4. Základy klasické kombinatoriky – princip inkluze a exkluze, Dirichletův princip, zobecněný binomický koeficient, subfaktoriály, Fibonacciho, Catalanova a Stirlingova čísla, problematika rozkladů – varianty, (ne)rozlišitelné objekty, (ne)rozlišitelné skupiny, využití diofantických rovnic a vytvořujících funkcí v oblasti rozkladů.
+4. [Základy klasické kombinatoriky – princip inkluze a exkluze, Dirichletův princip, zobecněný binomický koeficient, subfaktoriály, Fibonacciho, Catalanova a Stirlingova čísla, problematika rozkladů – varianty, (ne)rozlišitelné objekty, (ne)rozlišitelné skupiny, využití diofantických rovnic a vytvořujících funkcí v oblasti rozkladů.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/04_zaklady_klasicke_kombinatoriky/04_zaklady_klasicke_kombinatoriky.md)
 
 5. Vytvořující funkce (obyčejná, exponenciální), otevřený a uzavřený tvar, základní operace s vytvořujícími funkcemi, vytvořující funkce (uzavřený tvar) základních posloupností, věžové polynomy.
 
