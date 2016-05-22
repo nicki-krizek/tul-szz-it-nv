@@ -65,6 +65,7 @@
             return binarySearch(array, middleIndex + 1, rightIndex, value);
         else return binarySearch(array, leftIndex, Math.max(leftIndex, middleIndex - 1), value);
 }    
+```
 
 ## Datové struktury optimalizované pro vyhledávání
 ### Binární vyhledávací strom (BST)
