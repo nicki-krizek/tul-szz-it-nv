@@ -111,11 +111,14 @@ Pomocí PKKI připíšu slovo ![b^i](http://latex.codecogs.com/gif.latex?b%5Ei).
 
 ## Nedeterministické automaty
 
-TODO převod nedeterministického automatu na deterministický?
+- Oproti deterministickému KA (DKA):
+  - místo jednoho počátečního stavu má množinu vstupních stavů,
+  - po přečtení znaku je možné se z jednoho stavu dostat do *více* stavů.
+- Stejně silný jako DKA (rozpoznávají stejné jazyky).
+- Lze převést na DKA.
+- Může být jednodušší na návrh.
  
 ## Porovnání síly konečných automatů
-
-TODO inteligentnejsi nadpis?
 
 ![Porovnani konecnych stroju](08_porovnani_konecnych_stroju.png)
 
@@ -129,5 +132,5 @@ Konečné automaty jsou silnější nástroj než kombinační logika.
 
 ## Uzávěrové vlastnosti
 
-TODO uvadet?
+> Mohla by na to dojít řeč v souvislosti s jazyky rozpoznávanými KA, ale není to úplně součástí otázky, nevím zda uvést.
 
