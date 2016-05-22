@@ -100,7 +100,7 @@ Pro tvorbu zlomku se využijí koeficienty ![q](https://latex.codecogs.com/gif.l
 
 ## Kongruence modulo m
 
-Řekneme, že čísla ![a, b \in \mathbb{Z}](https://latex.codecogs.com/gif.latex?a%2C%20b%20%5Cin%20%5Cmathbb%7BZ%7D) jsou *kongruentní modulo* ![m \in \mathbb{N} - \{0, 1\}](https://latex.codecogs.com/gif.latex?%5Clarge%20m%20%5Cin%20%5Cmathbb%7BN%7D%20-%20%5C%7B0%2C%201%5C%7D), jestliže po vydělení číslem ![m](https://latex.codecogs.com/gif.latex?m) dávají stejný zbytek.
+Řekneme, že čísla ![a, b \in \mathbb{Z}](https://latex.codecogs.com/gif.latex?a%2C%20b%20%5Cin%20%5Cmathbb%7BZ%7D) jsou *kongruentní modulo* ![m \in \mathbb{N} - \{0, 1\}](https://latex.codecogs.com/gif.latex?%20m%20%5Cin%20%5Cmathbb%7BN%7D%20-%20%5C%7B0%2C%201%5C%7D), jestliže po vydělení číslem ![m](https://latex.codecogs.com/gif.latex?m) dávají stejný zbytek.
 
 Zápis ... ![a \equiv b (m)](https://latex.codecogs.com/gif.latex?a%20%5Cequiv%20b%20%28m%29)
 
@@ -160,6 +160,116 @@ Pro výpočty se používají reprezentanti ze zbytkových tříd, označované 
 
 ### Sčítání modulo m
 
+- existuje *neutrální prvek* ... ![0](https://latex.codecogs.com/gif.latex?0) (po jeho přičtení se výsledek nezmění)
+- ke všem prvkům lze nalézt *opačný prvek* (tzn. takový, že po jeho přičtení dostávám výsledek ![0](https://latex.codecogs.com/gif.latex?0))
+
+**Příklad** v ![Z_4](https://latex.codecogs.com/gif.latex?Z_4)
+
+![1 + 1 = 2](https://latex.codecogs.com/gif.latex?1%20&plus;%201%20%3D%202)
+![1 + 3 = 0](https://latex.codecogs.com/gif.latex?1%20&plus;%203%20%3D%200)
+![3 + 2 = 1](https://latex.codecogs.com/gif.latex?3%20&plus;%202%20%3D%201)
+
+| + | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+|*0*| 0 | 1 | 2 | 3 |
+|*1*| 1 | 2 | 3 | 0 |
+|*2*| 2 | 3 | 0 | 1 |
+|*3*| 3 | 2 | 1 | 0 |
+
 ### Násobení modulo m
+
+- existuje *neutrální prvek* ... ![1](https://latex.codecogs.com/gif.latex?1) (po vynásobení 1 se výsledek nezmění)
+
+**Příklad** v ![Z_5](https://latex.codecogs.com/gif.latex?Z_5)
+
+| ![\cdot](https://latex.codecogs.com/gif.latex?%5Ccdot) | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+|*1*| 1 | 2 | 3 | 4 |
+|*2*| 2 | 4 | 1 | 3 |
+|*3*| 3 | 1 | 4 | 2 |
+|*4*| 4 | 3 | 2 | 1 |
+
+Pozn.: Pokud cokoliv vynásobím prvek ze třídy 0, bude i výsledek 0.
+
+- ![2x \equiv 3 (5)](https://latex.codecogs.com/gif.latex?2x%20%5Cequiv%203%20%285%29)
+- potřebuju se zbavit 2, v tabulce najdu jakým číslem to musím vynásobit, abych dostal 1 ... musím násobit 3
+- ![2x \equiv 3 (5)~/\cdot3](https://latex.codecogs.com/gif.latex?2x%20%5Cequiv%203%20%285%29%7E/%5Ccdot3)
+- ![2 \cdot 3 = 1](https://latex.codecogs.com/gif.latex?2%20%5Ccdot%203%20%3D%201)
+- ![3 \cdot 3 = 4](https://latex.codecogs.com/gif.latex?3%20%5Ccdot%203%20%3D%204)
+- ![x \equiv 4 (5)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%204%20%285%29)
+
+Řešení *nemusí existovat*, např. ![3x \equiv 2 (6)](https://latex.codecogs.com/gif.latex?3x%20%5Cequiv%202%20%286%29)
+
+## Řešení kongruencí prvního stupně
+
+![ax \equiv b(m)](https://latex.codecogs.com/gif.latex?ax%20%5Cequiv%20b%28m%29)
+
+**Existence řešení**
+
+Nemá řešení pro ![NSD(a, m) \nmid b](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29%20%5Cnmid%20b).
+
+### Existuje jedno řešení
+
+Pokud ![NSD(a, m) = 1](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29%20%3D%201), existuje právě jedno řešení.
+
+**Příklad**
+
+![269x \equiv 11 (379)](https://latex.codecogs.com/gif.latex?269x%20%5Cequiv%2011%20%28379%29)
+
+1. Ověření existence (právě jednoho) řešení
+
+  ![NSD(269, 379) = \mathbf{1}](https://latex.codecogs.com/gif.latex?NSD%28269%2C%20379%29%20%3D%20%5Cmathbf%7B1%7D)
+
+2. Euklidův algoritmus pro ![https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29%20%3D%201](https://latex.codecogs.com/gif.latex?m%2C%20a)
+
+  | ![a](https://latex.codecogs.com/gif.latex?a) | ![b](https://latex.codecogs.com/gif.latex?b) | ![q](https://latex.codecogs.com/gif.latex?q) | ![r](https://latex.codecogs.com/gif.latex?r) |
+  | ---:  | ---: | ---: | ---: |
+  | 379 | 269 | 1 | 110 |
+  | 269 | 110 | 2 | 49 |
+  | 110 | 49 | 2 | 12 |
+  | 49 | 12 | 4 | 1 |
+  | 12 | 12 | 1 | 0 |
+
+3. **Přibližné zlomky**
+
+  ![P_i = q_i \cdot P_{i-1} + P_{i-2};~P_{-1} = 1,~P_0 = q_0](https://latex.codecogs.com/gif.latex?P_i%20%3D%20q_i%20%5Ccdot%20P_%7Bi-1%7D%20&plus;%20P_%7Bi-2%7D%3B%7EP_%7B-1%7D%20%3D%201%2C%7EP_0%20%3D%20q_0)
+
+  | ![i](https://latex.codecogs.com/gif.latex?i) | -1 | 0 | 1 | 2 | 3 | 4 |
+  | --- | --- | --- | --- | --- | --- | --- |
+  | ![P_i](https://latex.codecogs.com/gif.latex?P_i) | 1 | 1 | 3 | 7 | **31** | *379* |
+  | ![q_i](https://latex.codecogs.com/gif.latex?q_i) | - | 1 | 2 | 2 | 4 | 12 |
+
+4. ![x \equiv (-1)^n \cdot P_{n-1} \cdot b](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20%28-1%29%5En%20%5Ccdot%20P_%7Bn-1%7D%20%5Ccdot%20b)
+
+  ![x \equiv 341 (379)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20341%20%28379%29)
+
+### Existuje více řešení
+
+Pokud ![NSD(a, m) \mid b](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29%20%5Cmid%20b), existuje více řešení.
+
+**Příklad**
+
+![807x \equiv 33 (1137)](https://latex.codecogs.com/gif.latex?807x%20%5Cequiv%2033%20%281137%29)
+
+1. Ověření existence a zjištění počtu řešení
+
+  ![NSD(807, 1137) = \mathbf{3}](https://latex.codecogs.com/gif.latex?NSD%28807%2C%201137%29%20%3D%20%5Cmathbf%7B3%7D)
+
+2. Vydělení kongruence ![NSD(a, m)](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29)
+
+  ![269x_0 = 11 (379)](https://latex.codecogs.com/gif.latex?269x_0%20%3D%2011%20%28379%29)
+
+3. Nalezení řešení ![x_0](https://latex.codecogs.com/gif.latex?x_0)
+
+  Pro tuto kongruenci se použije výše popsaný postup pro nalezení jednoho řešení.
+
+  ![x_0 \equiv 341 (379)](https://latex.codecogs.com/gif.latex?x_0%20%5Cequiv%20341%20%28379%29)
+
+4. Nalezení zbývajících řešení.
+
+  Další řešení jsou pouze násobky ![x_0](https://latex.codecogs.com/gif.latex?x_0) menší než ![m](https://latex.codecogs.com/gif.latex?m).
+
+  ![x \equiv \mathbf{341, 720, 1099}~(1137)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20%5Cmathbf%7B341%2C%20720%2C%201099%7D%7E%281137%29)
+
 
 
