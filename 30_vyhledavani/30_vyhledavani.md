@@ -33,8 +33,8 @@
 ```
 
 ## Binární vyhledávání
-- Vyhledávací algoritmus na nalezení zadané hodnoty na principu **půlení intervalu**.
-- Funguje pouze na **uspořádáném** seznamu.
+- Vyhledávací algoritmus na nalezení zadané hodnoty pomocí **půlení intervalu**.
+- Funguje pouze na **uspořádáném** (seřazeném) seznamu.
 - Složitost procházení je O(log2(N)), tedy lepší (rychlejší) než u lineárního vyhledávání.
 - Algoritmus je typu divide and conquer.
 - Možný je rekurzivní i iterativní zápis. (iteratívní nevolá funkce a je nepatrně rychlejší)
@@ -65,4 +65,23 @@
             return binarySearch(array, middleIndex + 1, rightIndex, value);
         else return binarySearch(array, leftIndex, Math.max(leftIndex, middleIndex - 1), value);
 }    
-```
+
+## Datové struktury optimalizované pro vyhledávání
+### Binární vyhledávací strom (BST)
+- Postaveno na principu binárního vyhledávání. (vyvážený BST strom má složitost vyhledávání O(log2(N))
+- Jedná se o binární strom, každý uzel tedy má nanejvýš dva potomky − levého a pravého.
+- Každému uzlu je přiřazen určitý klíč. Podle hodnot těchto klíčů jsou uzly uspořádány.
+- Levý podstrom uzlu obsahuje pouze klíče menší než je klíč tohoto uzlu.
+- Pravý podstrom uzlu obsahuje pouze klíče větší než je klíč tohoto uzlu.
+- Může (multimnožina) i nemusí (množina) podporovat duplicitní hodnoty. (ostrá a neostrá nerovnost, záleží na implementaci)
+- Základ pro konstrukci abstraktnějších datových struktur jako jsou množiny, multimnožiny a asociativní pole.
+
+![Binární vyhledávací strom](30_bst.png)
+
+*Binární vyhledávací strom*
+
+### 2-3 strom
+
+### B strom
+
+### Hashovaní
