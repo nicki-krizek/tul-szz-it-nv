@@ -17,7 +17,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 1. Základy teorie grafů – souvislost, kostra grafu, eulerovské, hamiltonovské a rovinné grafy. Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkratší cesta.
 
-2. Základy teorie dělitelnosti – základní pojmy (NSD, NSN, Eukleidův algoritmus), řetězové zlomky, kongruence modulo m, úplná a redukovaná soustava zbytků, počítání v (Zm, +, .), řešení kongruencí 1. stupně a jejich soustav.
+2. [Základy teorie dělitelnosti – základní pojmy (NSD, NSN, Eukleidův algoritmus), řetězové zlomky, kongruence modulo m, úplná a redukovaná soustava zbytků, počítání v (Zm, +, .), řešení kongruencí 1. stupně a jejich soustav.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/02_zaklady_teorie_delitelnosti/02_zaklady_teorie_delitelnosti.md)
 
 3. Rekurentní vztahy – základní pojmy, řešení, (ne)homogenní, (ne)lineární rekurentní vztahy, řešení lineárních rekurentních vztahů s konstantními koeficienty a jejich soustav (otázka existence a jednoznačnosti řešení), využití vytvořujících funkcí.
 
