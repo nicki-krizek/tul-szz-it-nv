@@ -228,7 +228,7 @@ Pokud ![NSD(a, m) = 1](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29%20
   | 269 | 110 | 2 | 49 |
   | 110 | 49 | 2 | 12 |
   | 49 | 12 | 4 | 1 |
-  | 12 | 12 | 1 | 0 |
+  | 12 | 1 | 12 | 0 |
 
 3. **Přibližné zlomky**
 
@@ -273,5 +273,47 @@ Pokud ![NSD(a, m) \mid b](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29
 
   ![x \equiv \mathbf{341, 720, 1099}~(1137)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20%5Cmathbf%7B341%2C%20720%2C%201099%7D%7E%281137%29)
 
+## Řešení soustav kongruencí
 
+Čínská věta o zbytku
+
+### m po dvou nesoudělné
+
+V soustavě jsou všechny m po dvou nesoudělné.
+
+**Příklad**
+
+![x \equiv 2(5),~x \equiv 3(8),~x \equiv 6(11),~x \equiv 4(9)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%202%285%29%2C%7Ex%20%5Cequiv%203%288%29%2C%7Ex%20%5Cequiv%206%2811%29%2C%7Ex%20%5Cequiv%204%289%29)
+
+1. [M = m_1 \cdot m_2 \cdot \ldots \cdot m_n = 5 \cdot 8 \cdot 11 \cdot 9 = 3960](https://latex.codecogs.com/gif.latex?M%20%3D%20m_1%20%5Ccdot%20m_2%20%5Ccdot%20%5Cldots%20%5Ccdot%20m_n%20%3D%205%20%5Ccdot%208%20%5Ccdot%2011%20%5Ccdot%209%20%3D%203960)
+
+2. Vytvořím kongruence ![M_i = \frac{M}{m_i},~M_i x_i \equiv 1 (m_i)](https://latex.codecogs.com/gif.latex?M_i%20%3D%20%5Cfrac%7BM%7D%7Bm_i%7D%2C%7EM_i%20x_i%20%5Cequiv%201%20%28m_i%29)
+
+  - ![M_1 = 792,~792x_1 \equiv 1 (5)](https://latex.codecogs.com/gif.latex?M_1%20%3D%20792%2C%7E792x_1%20%5Cequiv%201%20%285%29)
+  - ![M_2 = 495,~495x_2 \equiv 1 (8)](https://latex.codecogs.com/gif.latex?M_2%20%3D%20495%2C%7E495x_2%20%5Cequiv%201%20%288%29)
+  - ![M_3 = 360,~360x_3 \equiv 1 (11)](https://latex.codecogs.com/gif.latex?M_3%20%3D%20360%2C%7E360x_3%20%5Cequiv%201%20%2811%29)
+  - ![M_4 = 440,~440x_4 \equiv 1 (9)](https://latex.codecogs.com/gif.latex?M_4%20%3D%20440%2C%7E440x_4%20%5Cequiv%201%20%289%29)
+
+3. Vyřeším kongruence
+
+  - ![x_1 \equiv 3(5)](https://latex.codecogs.com/gif.latex?x_1%20%5Cequiv%203%285%29)
+  - ![x_2 \equiv 7(8)](https://latex.codecogs.com/gif.latex?x_2%20%5Cequiv%207%288%29)
+  - ![x_3 \equiv 7(11)](https://latex.codecogs.com/gif.latex?x_3%20%5Cequiv%207%2811%29)
+  - ![x_4 \equiv 8(9)](https://latex.codecogs.com/gif.latex?x_4%20%5Cequiv%208%289%29)
+
+4. Naleznu řešení původní soustavy.
+
+  ![x \equiv x_0 (M)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20x_0%20%28M%29)
+
+  ![x_0 = M_1 x_1 b_1 + M_2 x_2 b_2 + \ldots + M_n x_n b_n = \ldots = 44347](https://latex.codecogs.com/gif.latex?x_0%20%3D%20M_1%20x_1%20b_1%20&plus;%20M_2%20x_2%20b_2%20&plus;%20%5Cldots%20&plus;%20M_n%20x_n%20b_n%20%3D%20%5Cldots%20%3D%2044347)
+
+  ![x \equiv 44347 (3960)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%2044347%20%283960%29)
+
+  ![x \equiv \mathbf{787} (3960)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20%5Cmathbf%7B787%7D%20%283960%29)
+
+### Zobecněná Čínská věta o zbytku
+
+Umožňuje řešit obecné soustavy kongruencí, kde
+
+![\forall i \neq j : NSD(m_i, m_j) \mid (b_i - b_j)](https://latex.codecogs.com/gif.latex?%5Cforall%20i%20%5Cneq%20j%20%3A%20NSD%28m_i%2C%20m_j%29%20%5Cmid%20%28b_i%20-%20b_j%29)
 
