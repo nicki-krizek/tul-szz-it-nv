@@ -100,7 +100,7 @@ Pro tvorbu zlomku se využijí koeficienty ![q](https://latex.codecogs.com/gif.l
 
 ## Kongruence modulo m
 
-Řekneme, že čísla ![a, b \in \mathbb{Z}](https://latex.codecogs.com/gif.latex?a%2C%20b%20%5Cin%20%5Cmathbb%7BZ%7D) jsou *kongruentní modulo* m \in \mathbb{N} - \{0, 1\}, jestliže po vydělení číslem ![m](https://latex.codecogs.com/gif.latex?m) dávají stejný zbytek.
+Řekneme, že čísla ![a, b \in \mathbb{Z}](https://latex.codecogs.com/gif.latex?a%2C%20b%20%5Cin%20%5Cmathbb%7BZ%7D) jsou *kongruentní modulo* ![m \in \mathbb{N} - \{0, 1\}](https://latex.codecogs.com/gif.latex?%5Clarge%20m%20%5Cin%20%5Cmathbb%7BN%7D%20-%20%5C%7B0%2C%201%5C%7D), jestliže po vydělení číslem ![m](https://latex.codecogs.com/gif.latex?m) dávají stejný zbytek.
 
 Zápis ... ![a \equiv b (m)](https://latex.codecogs.com/gif.latex?a%20%5Cequiv%20b%20%28m%29)
 
@@ -111,8 +111,8 @@ Zápis ... ![a \equiv b (m)](https://latex.codecogs.com/gif.latex?a%20%5Cequiv%2
 Nechť ![a_1 \equiv b_1 (m)~\wedge~a_2 \equiv b_2 (m)](https://latex.codecogs.com/gif.latex?a_1%20%5Cequiv%20b_1%20%28m%29%7E%5Cwedge%7Ea_2%20%5Cequiv%20b_2%20%28m%29), potom platí:
 
 - ![a_1 + a_2 \equiv b_1 + b_2 (m)](https://latex.codecogs.com/gif.latex?a_1%20&plus;%20a_2%20%5Cequiv%20b_1%20&plus;%20b_2%20%28m%29),
-- ![a_1 \cdot a_2 \equiv b_1 \cdot b_2 (m)](https://latex.codecogs.com/gif.latex?a_1%20%5Ccdot%20a_2%20%5Cequiv%20b_1%20%5Ccdot%20b_2%20%28m%29)
-- ![d | NSD(a_1, b_1)~\wedge~NSD(d, m) = 1 \rightarrow \frac{a_1}{d} \equiv \frac{b_1}{d} (m)](https://latex.codecogs.com/gif.latex?d%20%7C%20NSD%28a_1%2C%20b_1%29%7E%5Cwedge%7ENSD%28d%2C%20m%29%20%3D%201%20%5Crightarrow%20%5Cfrac%7Ba_1%7D%7Bd%7D%20%5Cequiv%20%5Cfrac%7Bb_1%7D%7Bd%7D%20%28m%29)
+- ![a_1 \cdot a_2 \equiv b_1 \cdot b_2 (m)](https://latex.codecogs.com/gif.latex?a_1%20%5Ccdot%20a_2%20%5Cequiv%20b_1%20%5Ccdot%20b_2%20%28m%29),
+- ![d | NSD(a_1, b_1)~\wedge~NSD(d, m) = 1 \rightarrow \frac{a_1}{d} \equiv \frac{b_1}{d} (m)](https://latex.codecogs.com/gif.latex?d%20%7C%20NSD%28a_1%2C%20b_1%29%7E%5Cwedge%7ENSD%28d%2C%20m%29%20%3D%201%20%5Crightarrow%20%5Cfrac%7Ba_1%7D%7Bd%7D%20%5Cequiv%20%5Cfrac%7Bb_1%7D%7Bd%7D%20%28m%29).
 
 Konguence *se stejným modulem* lze upravovat.
 
@@ -134,7 +134,7 @@ Konguence *se stejným modulem* lze upravovat.
 
 ### Rozklad na třídy ekvivalence
 
-Kongruence je (viz [9. Gramatiky - Vlastnosti binárních relací](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#vlastnosti-bin%C3%A1rn%C3%ADch-relac%C3%AD):
+Kongruence je (viz [9. Gramatiky - Vlastnosti binárních relací](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#vlastnosti-bin%C3%A1rn%C3%ADch-relac%C3%AD)):
   - reflexivní,
   - symetrická,
   - tranzitivní.
