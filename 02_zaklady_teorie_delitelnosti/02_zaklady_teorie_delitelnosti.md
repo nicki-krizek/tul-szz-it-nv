@@ -275,17 +275,15 @@ Pokud ![NSD(a, m) \mid b](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29
 
 ## Řešení soustav kongruencí
 
-Čínská věta o zbytku
+### Čínská věta o zbytku
 
-### m po dvou nesoudělné
-
-V soustavě jsou všechny m po dvou nesoudělné.
+*Podmínka řešitelnosti*: V soustavě jsou všechny m po dvou nesoudělné.
 
 **Příklad**
 
 ![x \equiv 2(5),~x \equiv 3(8),~x \equiv 6(11),~x \equiv 4(9)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%202%285%29%2C%7Ex%20%5Cequiv%203%288%29%2C%7Ex%20%5Cequiv%206%2811%29%2C%7Ex%20%5Cequiv%204%289%29)
 
-1. [M = m_1 \cdot m_2 \cdot \ldots \cdot m_n = 5 \cdot 8 \cdot 11 \cdot 9 = 3960](https://latex.codecogs.com/gif.latex?M%20%3D%20m_1%20%5Ccdot%20m_2%20%5Ccdot%20%5Cldots%20%5Ccdot%20m_n%20%3D%205%20%5Ccdot%208%20%5Ccdot%2011%20%5Ccdot%209%20%3D%203960)
+1. ![M = m_1 \cdot m_2 \cdot \ldots \cdot m_n = 5 \cdot 8 \cdot 11 \cdot 9 = 3960](https://latex.codecogs.com/gif.latex?M%20%3D%20m_1%20%5Ccdot%20m_2%20%5Ccdot%20%5Cldots%20%5Ccdot%20m_n%20%3D%205%20%5Ccdot%208%20%5Ccdot%2011%20%5Ccdot%209%20%3D%203960)
 
 2. Vytvořím kongruence ![M_i = \frac{M}{m_i},~M_i x_i \equiv 1 (m_i)](https://latex.codecogs.com/gif.latex?M_i%20%3D%20%5Cfrac%7BM%7D%7Bm_i%7D%2C%7EM_i%20x_i%20%5Cequiv%201%20%28m_i%29)
 
