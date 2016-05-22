@@ -4,7 +4,7 @@
 
 ## Základní pojmy
 
-Relace *býti dělitelem* ![\mid](https://latex.codecogs.com/gif.latex?%7C)
+Relace *býti dělitelem* "![\mid](https://latex.codecogs.com/gif.latex?%7C)"
 
 ![b \mid a \leftrightarrow \exists q \in \mathbb{Z}: a = b \cdot q](https://latex.codecogs.com/gif.latex?b%20%5Cmid%20a%20%5Cleftrightarrow%20%5Cexists%20q%20%5Cin%20%5Cmathbb%7BZ%7D%3A%20a%20%3D%20b%20%5Ccdot%20q)
 
@@ -30,7 +30,7 @@ Relace *býti dělitelem* ![\mid](https://latex.codecogs.com/gif.latex?%7C)
 
 ### Největší společný dělitel (NSD)
 
-![NSD(a, b)] ... **největší společný dělitel** čísel ![a, b](https://latex.codecogs.com/gif.latex?a%2C%20b)
+![NSD(a, b)](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20b%29) ... **největší společný dělitel** čísel ![a, b](https://latex.codecogs.com/gif.latex?a%2C%20b)
 
 Pokud ![a, b \in \mathbb{Z} - \{0\}](https://latex.codecogs.com/gif.latex?a%2C%20b%20%5Cin%20%5Cmathbb%7BZ%7D%20-%20%5C%7B0%5C%7D), pak ![NSD(a, b)](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20b%29) existuje vždy a je určen jednoznačně.
 
@@ -45,9 +45,10 @@ Platí: ![1 \leq NSD(a, b) \leq min(a, b)](https://latex.codecogs.com/gif.latex?
 3. dvojkový NSD algortimus
 4. pomocí kanonických rozkladů
 
-- pro více čísel:
-  - kanonické rozklady (prvočísla)
-  - udělám NSD dvou a postupně přidávám další čísla ![NSD(a, b, c) = NSD(NSD(a, b), c)](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20b%2C%20c%29%20%3D%20NSD%28NSD%28a%2C%20b%29%2C%20c%29)
+Pro více čísel:
+
+- kanonické rozklady (prvočísla)
+- udělám NSD dvou a postupně přidávám další čísla ![NSD(a, b, c) = NSD(NSD(a, b), c)](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20b%2C%20c%29%20%3D%20NSD%28NSD%28a%2C%20b%29%2C%20c%29)
 
 ### Nejmenší společný násobek (NSN)
 
@@ -60,7 +61,7 @@ Existuje a je určen jednoznačně.
 1. metoda hrubé síly
 2. Euklidův algoritmus
 
-- pro více čísel: obdobně jako u NSD
+Pro více čísel: obdobně jako u NSD.
 
 ### Souvislost mezi NSD a NSN
 
@@ -71,6 +72,8 @@ Existuje a je určen jednoznačně.
 ![a = b \cdot q_0 + r](https://latex.codecogs.com/gif.latex?a%20%3D%20b%20%5Ccdot%20q_0%20&plus;%20r)
 
 ![b = r_1 \cdot q_1 + r_2](https://latex.codecogs.com/gif.latex?b%20%3D%20r_1%20%5Ccdot%20q_1%20&plus;%20r_2)
+
+NSD je poslední nenulový zbytek (![r_{n-1}](https://latex.codecogs.com/gif.latex?r_%7Bn-1%7D)).
 
 #### Příklad
 
