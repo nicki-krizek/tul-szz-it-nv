@@ -165,9 +165,9 @@ Pro výpočty se používají reprezentanti ze zbytkových tříd, označované 
 
 **Příklad** v ![Z_4](https://latex.codecogs.com/gif.latex?Z_4)
 
-![1 + 1 = 2](https://latex.codecogs.com/gif.latex?1%20&plus;%201%20%3D%202)
-![1 + 3 = 0](https://latex.codecogs.com/gif.latex?1%20&plus;%203%20%3D%200)
-![3 + 2 = 1](https://latex.codecogs.com/gif.latex?3%20&plus;%202%20%3D%201)
+- ![1 + 1 = 2](https://latex.codecogs.com/gif.latex?1%20&plus;%201%20%3D%202)
+- ![1 + 3 = 0](https://latex.codecogs.com/gif.latex?1%20&plus;%203%20%3D%200)
+- ![3 + 2 = 1](https://latex.codecogs.com/gif.latex?3%20&plus;%202%20%3D%201)
 
 | + | 0 | 1 | 2 | 3 |
 |---|---|---|---|---|
@@ -241,7 +241,9 @@ Pokud ![NSD(a, m) = 1](https://latex.codecogs.com/gif.latex?NSD%28a%2C%20m%29%20
 
 4. ![x \equiv (-1)^n \cdot P_{n-1} \cdot b](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20%28-1%29%5En%20%5Ccdot%20P_%7Bn-1%7D%20%5Ccdot%20b)
 
-  ![x \equiv 341 (379)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20341%20%28379%29)
+  ![n = 4,~P_3 = 31,~b = 11](https://latex.codecogs.com/gif.latex?n%20%3D%204%2C%7EP_3%20%3D%2031%2C%7Eb%20%3D%2011)
+
+  ![x \equiv \mathbf{341} (379)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20%5Cmathbf%7B341%7D%20%28379%29)
 
 ### Existuje více řešení
 
