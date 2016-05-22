@@ -1,14 +1,12 @@
 # Materiály ke SZZ na TUL (NV IT)
 
-Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro magisterské studium, obor Informační technolgie**.  Za kvalitu ani pravdivost informací neručíme, jedná se o kompilaci informací sesbíraných různě po internetu. Kvůli takto převzatým materiálům (viz níže) ani blíže nespecifikujeme licenci. Materiály jsme tímto  stylem vypracovaly, aby byly snadno dustupné všem. V případě, že si nějaký z materiálů nárokujete, neváhejte se nám ozvat.
+Repozitář obsahuje vypracované otázky ke **SZZ na TUL v roce 2015/2016 pro magisterské studium, obor Informační technolgie**.  Za kvalitu ani pravdivost informací neručíme, jedná se o kompilaci informací sesbíraných různě po internetu. Kvůli takto převzatým materiálům (viz níže) ani blíže nespecifikujeme licenci. Materiály jsme vypracovali tímto stylem, aby byly snadno dustupné všem. V případě, že si nějaký z materiálů nárokujete, neváhejte se nám ozvat.
 
 Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 ## Rozcestník
-- Předběžné datum: [Harmonogram SZZ - červen 2016 #1](https://github.com/tomaskrizek/tul-szz-it-nv/issues/1)
-- Složení komise a co od ní můžeme čekat: [Komise SSZ - červen 2016 #2](https://github.com/tomaskrizek/tul-szz-it-nv/issues/2)
+- Složení komise, co od ní můžeme čekat a jak to bude probíhat: [SSZ - 14. - 16. června 2016 #2](https://github.com/tomaskrizek/tul-szz-it-nv/issues/2)
 - Stav vypracování a diskuze k jednotlivým otázkám: [Tematické okruhy ke SZZ 2015/2016 #3](https://github.com/tomaskrizek/tul-szz-it-nv/issues/3)
-- Jak SZZ bude probíhat a kolik je času na co: [Standardní průběh SZZ #4](https://github.com/tomaskrizek/tul-szz-it-nv/issues/4)
 - Jak se mohu do vypracovávání zapojit:  [Vypracovávání materiálů a formátování #5](https://github.com/tomaskrizek/tul-szz-it-nv/issues/5)
 
 
@@ -31,7 +29,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 7. Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.
 
-8. Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
+8. [Definice konečného automatu, jazyky rozpoznávané konečnými automaty.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/08_konecne_automaty/08_konecne_automaty.md)
 
 9. [Gramatiky, Chomského hierarchie, vztah gramatik ke konečným strojům.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md)
 

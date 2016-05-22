@@ -31,7 +31,7 @@ K základním abstraktním datovým typům můžeme zařadit následující kons
 - **seznam** (list)
 - **množina** (set)
 - **strom** (tree) - speciálním typem stromu je **halda** (heap)
-- **zobrazení** (map) - také známá jako **asociativní pole**
+- **zobrazení** (map) - také známé jako **asociativní pole**
 
 ### Seznam
 Seznam (Lineární seznam, Spojový seznam) je kontejner určený k ukládání dat předem neznámé délky. Základní stavební jednotkou spojového seznamu je uzel, který vždy obsahuje ukládanou hodnotu a ukazatel na následující prvek. Operace vkládání a nebo vyhledávání tedy musí seznamem procházet, což je složitější než jendoduše použít index. Lineární seznamy mohou existovat **jednosměrné** a **obousměrné**. V jednosměrném seznamu odkazuje každá položka na položku následující a v obousměrném seznamu odkazuje položka na následující i předcházející položky. Zavádí se také ukazatel nebo reference na aktuální (vybraný) prvek seznamu. Na konci (a začátku) seznamu musí být definována zarážka označující konec seznamu. Pokud vytvoříme cyklus tak, že konec seznamu navážeme na jeho počátek, jedná se o **kruhový seznam**.
@@ -137,4 +137,5 @@ Zde se to trochu míchá a různá označení se překrývají. (asociative arra
 - "Map" is used by Java, C++
 - "Dictionary" is used by .Net, Python
 - "Associative array" is used by Javascript, PHP
+
 "Map" is the correct mathematical term, but it is avoided because it has separate meaning in functional programming. ([Stackoverflow](http://stackoverflow.com/questions/2884068/what-is-the-difference-between-a-map-and-a-dictionary))

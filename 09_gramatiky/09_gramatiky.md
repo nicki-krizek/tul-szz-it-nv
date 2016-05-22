@@ -16,7 +16,7 @@ Gramatika ![G](http://latex.codecogs.com/gif.latex?G) je čtveřice ![G = (\Pi, 
 
 ### Přeloženo
 
-Mám nějakou abecedu symbolů, což odpovídá terminálním symbolům. Řekněmě, že máme písmena a, b. Dále mám nějaké proměnné (neterminální symboly), třeba X, Y. A abych měl celou gramatiku, tak potřebuju ještě počáteční proměnnou ze které je možné odvodit všechna slova, která umí gramatika generovat. Řekněmě, že počáteční symbol bude X. Nakonec k tomu přidám přepisovací pravidla, pomocí kterých můžu přepisovat terminální a neterminální symboly na jiné.
+Mám nějakou abecedu symbolů, což odpovídá terminálním symbolům. Řekněmě, že máme písmena a, b. Dále mám nějaké proměnné (neterminální symboly), třeba X, Y. Pak potřebuju ještě počáteční proměnnou ze které je možné odvodit všechna slova, která umí gramatika generovat. Řekněmě, že počáteční symbol bude X. Nakonec k tomu přidám přepisovací pravidla, pomocí kterých můžu přepisovat terminální a neterminální symboly na jiné.
 
 ### Přepisovací pravidla
 
@@ -32,8 +32,6 @@ To znamená, že pomocí přepisovacích pravidel můžu změnit řetězec ![\al
 | ![X \rightarrow Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20Y) | neterminál ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) |
 | ![X \rightarrow a &#124; Y](http://latex.codecogs.com/gif.latex?X%20%5Crightarrow%20a%20%7C%20Y) | neterminál se ![X](http://latex.codecogs.com/gif.latex?X) přepíše buď na terminál ![a](http://latex.codecogs.com/gif.latex?a) nebo na neterminál ![Y](http://latex.codecogs.com/gif.latex?Y) (spojení více pravidel do jednoho) |
 | ![aX \rightarrow ba](http://latex.codecogs.com/gif.latex?aX%20%5Crightarrow%20ba) | terminál ![a](http://latex.codecogs.com/gif.latex?a) následovaný neterminálem ![X](http://latex.codecogs.com/gif.latex?X) se přepíše na terminální symboly ![ba](http://latex.codecogs.com/gif.latex?ba) |
-
-Podle toho, jak vypadají řetězce ![\alpha](http://latex.codecogs.com/gif.latex?%5Calpha) (levé strany přepisovacích pravidel - to, co přepisuju), se gramatiky dělí do různých skupin, viz Chomského hierarchie níže.
 
 ### Příklad gramatiky
 
@@ -85,12 +83,108 @@ Jazyk ![L](http://latex.codecogs.com/gif.latex?L) rozpoznávaný analytickou gra
 
 ## Chomského hierarchie
 
+Gramatiky se dělí na základě omezení přepisovacích pravidel do několika typů podle Chomského hierachie. Ta definuje následující typy gramatik:
+
+![Chomskeho hierarchie](09_chomskeho_hierarchie.png)
+
+Důležité je si uvědomit, že regulární gramatika je zároveň i bezkontextová, kontextová i typu 0. Stejně tak třeba kontexová gramatika je zároveň i typu 0. Všechny gramatiky jsou tím pádem typu 0.
+
+Různé typy gramatik jsou schopné rozpoznávat různé typy jazyků a pro jejich implementaci je potřeba jiný typ konečného stroje. Výhodou gramatik vyšších typů je právě fakt, že jejich implementace je jednodušší. Následující tabulka znázorňuje typy gramatik, jazyků, strojů pro implementaci a omezení pro přepisovací pravidla.
+
+| Gramatika | Jazyky | Konečný stroj | Formát přepisovacích pravidel |
+| --------- | ------ | ----- | ------------------------------ |
+| Typ 0     | Rekurzivně spočitatelné | TS, PS, KSZ2  | ![\alpha \rightarrow \beta](http://latex.codecogs.com/gif.latex?%5Calpha%20%5Crightarrow%20%5Cbeta) (žádná omezení) |
+| Kontextová (typ 1) | Kontextové |           | ![\alpha A \beta \rightarrow \alpha \gamma \beta](http://latex.codecogs.com/gif.latex?%5Calpha%20A%20%5Cbeta%20%5Crightarrow%20%5Calpha%20%5Cgamma%20%5Cbeta) |
+| *Bezkontextová* (typ 2) | Bezkontextové | nedeterministický KSZ1 | ![A \rightarrow \gamma](http://latex.codecogs.com/gif.latex?A%20%5Crightarrow%20%5Cgamma)
+| *Regulární* (typ 3) | Regulární | KA | ![A \rightarrow a, A \rightarrow aB](http://latex.codecogs.com/gif.latex?A%20%5Crightarrow%20a%2C%20A%20%5Crightarrow%20aB) |
+
+U přepisovacích pravidel platí konvence:
+
+- *písmena řecké abecedy* ![\in (\Pi \cup \Sigma)*](http://latex.codecogs.com/gif.latex?%5Cin%20%28%5CPi%20%5Ccup%20%5CSigma%29*)
+- *velká písmena* představují **neterminální symboly**
+- *malá písmena* představují **terminální symboly**
+
+### Vztah ke konečným strojům
+
+Viz předchozí tabulka. Připomenutí:
+
+#### Turingův stroj (TS)
+
+- čtecí hlava, nekonečná páska, program
+- na pásce se lze pohybovat doleva/doprava, je možné číst a zapisovat
+
+#### Postův stroj (PS)
+
+- pamět je typu fronta (FIFO)
+- z jednoho konce se čte, z druhého se zapisuje
+
+#### Konečný stroj se zásobníky (KSZn)
+
+- paměť je typu zásobník (LIFO)
+- zapisuje se i se čte z vrcholu zásobníku
+- pokud má alespoň 2 zásobníky, dokáže to,co TS nebo PS
+
+#### Zásobníkový automat (KSZ1)
+
+- jiné označení pro KSZ1
+- konečný stroj s jedním zásobníkem nedokáže to, co TS, PS nebo KSZ2+
+
+#### Konečný automat (KA)
+
+- žádná paměť pro zápis
+- pouze si pamatuje (se nachází v) aktuální stav
+
+## Vlastnosti binárních relací
+
+> Není to úplně součástí otázky, ale mohla by na to přijít řeč. Je to dobré vědět, ale pokud se na to někdo vyložené nezeptá, asi bych to nezmiňoval.
+
+Pro libovolnou binární relaci mohou (a nemusí) platit následující vlasnosti.
+
+Nechť ![\varrho](http://latex.codecogs.com/gif.latex?%5Cvarrho) je binární relace.
+
+1. **Reflexivita**
+
+  ![\forall a \in A: a \varrho a](http://latex.codecogs.com/gif.latex?%5Cforall%20a%20%5Cin%20A%3A%20a%20%5Cvarrho%20a)
+
+  Všechny prvky z ![A](http://latex.codecogs.com/gif.latex?A) jsou v relaci sami se sebou.
+
+2. **Symetrie**
+
+  ![\forall a, b \in A: a \varrho b \leftrightarrow b \varrho a](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cleftrightarrow%20b%20%5Cvarrho%20a)
+
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b), potom i ![b](http://latex.codecogs.com/gif.latex?b) je v relaci s ![a](http://latex.codecogs.com/gif.latex?a). (nebo *právě tehdy když* - zde to lze zaměnit)
+
+3. **Antisymetrie**
+
+  ![\forall a, b \in A: a \varrho b \wedge b \varrho a \rightarrow a = b](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20a%20%5Crightarrow%20a%20%3D%20b)
+
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b) a zároveň je i ![b](http://latex.codecogs.com/gif.latex?b) v relaci s ![a](http://latex.codecogs.com/gif.latex?a), potom se jedná o totožný prvek.
+
+4. **Tranzitivita**
+
+  ![\forall a, b, c \in A: a \varrho b \wedge b \varrho c \rightarrow a \varrho c](http://latex.codecogs.com/gif.latex?%5Cforall%20a%2C%20b%2C%20c%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20c%20%5Crightarrow%20a%20%5Cvarrho%20c)
+
+  Pokud ![a](http://latex.codecogs.com/gif.latex?a) je v relaci s ![b](http://latex.codecogs.com/gif.latex?b) a zároveň je ![b](http://latex.codecogs.com/gif.latex?b) v relaci s ![c](http://latex.codecogs.com/gif.latex?c), potom je i ![a](http://latex.codecogs.com/gif.latex?a) v relaci s ![c](http://latex.codecogs.com/gif.latex?c).
+
+### Relace ekvivalence
+
+Pro relaci ekvivalence ![\sim](http://latex.codecogs.com/gif.latex?%5Csim) platí:
+
+- reflexivita
+- symetrie
+- tranzitivita
+
+K libovolné relaci ekvivalence existuje právě jediný rozklad na třídy ekvivalence.
+
+### Částečné uspořádání
+
+Pro relaci částečného uspořádání ![\leq](http://latex.codecogs.com/gif.latex?%5Cleq) platí:
+
+- reflexivita
+- antisymetrie
+- tranzitivita
+
 ## Syntaktická analýza
 
 > Nevím, jestli to zde uvádět. Patří sem věci jako derivační strom, determinismus, jednoznačnost gramatiky, levá a pravá derivace.
-
-## Vlastnosti relací
-
-> Není to úplněsoučástí otázky, ale mohla by na to přijít řeč. Je to dobré vědět, ale pokud se na to někdo vyložené nezeptá, asi bych to nezmiňoval.
-
 
