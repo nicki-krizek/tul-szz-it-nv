@@ -148,45 +148,30 @@ Typické operace:
 
 **Procházení stromem:**
 
+![Ukázka stromu](29_strom_preorder_inorder_postorder.png)
+
+*Ukázka stromu*
+
 1. Průchod do šířky
 
   Projdou se nejprve všechny uzly stromu v jedné hloubce a až poté se pokračuje do další hladiny, kde se opět projdou všechny uzly v dané hloubce.
+
+  Příklad: F, B, G, A, D, I, C, E, H
 
 2. Průchod do hloubky
 
   Procházení začíná v kořeni stromu a postupuje se po potomcích uzlu. Procházení končí, když už v žádné větvi není nenavšívený potomek.
 
+  Při průchodu je možné zpracovat navštívený uzel (N), projít levý podstrom (L) a projít pravý podstrom (P). Podle pořadí těchto akcí se rozlišují tři druhy průchodu:
 
-  - *Preorder*
-    - proveď akci
-    - projdi levý podstrom
-    - projdi pravý podstrom
-  - *Inorder*
-    - projdi levý podstrom
-    - proveď akci
-    - projdi pravý podstrom
-  - *Postorder*
-    - projdi levý podstrom
-    - projdi pravý podstrom
-    - proveď akci
-
-**Příklad průchodu stromem**
-
-![Ukázka stromu](29_strom_preorder_inorder_postorder.png)
-
-*Ukázka stromu*
-
-N = navštívený uzel, L = levý, R = pravý
-
-- Preorder (NLR): F, B, A, D, C, E, G, I, H
-- Inorder (LNR): A, B, C, D, E, F, G, H, I
-- Postorder (LRN): A, C, E, D, B, H, I, G, F
-- Procházení do šířky (po vrstvách) Level-order: F, B, G, A, D, I, C, E, H
+  - **Preorder** (NLR): F, B, A, D, C, E, G, I, H
+  - **Inorder** (LNR): A, B, C, D, E, F, G, H, I
+  - **Postorder** (LRN): A, C, E, D, B, H, I, G, F
 
 #### Halda
-- stromová struktura splňující vlastnost haldy, tj. pokud ![B](https://latex.codecogs.com/gif.latex?B) je potomek ![A](https://latex.codecogs.com/gif.latex?A), tak
-  - ![x(B) \geq x(A)](https://latex.codecogs.com/gif.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro *max heap* nebo
-  - ![x(B) \leq x(A)](https://latex.codecogs.com/gif.latex?x%28B%29%20%5Cleq%20x%28A%29) pro *min heap*
+- stromová struktura splňující vlastnost haldy, tj. pokud ![B](https://latex.codecogs.com/svg.latex?B) je potomek ![A](https://latex.codecogs.com/svg.latex?A), tak
+  - ![x(B) \geq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro *max heap* nebo
+  - ![x(B) \leq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cleq%20x%28A%29) pro *min heap*
 - vlastnost býti haldou je rekurzivní, všechny podstromy haldy jsou také haldy
 - tvar stromu je buď perfektně vyvážený, nebo pokud je poslední úroveň stromu nekompletní, uzly plní strom zleva doprava
 - efektivita operací haldy je klíčová pro mnoho algoritmů
@@ -198,21 +183,16 @@ N = navštívený uzel, L = levý, R = pravý
 
 Operace s haldou:
 
-- INSERT - přidání nového prvku do haldy
-- DELETE MAX nebo DELETE MIN - vyjmutí kořenu v max heap nebo v min heap
-- DELETE(v) - smaže uzel „v“
-- MIN, MAX - vrátí minimální resp. maximální klíč v haldě
-- DECREASE KEY(v, okolik) - zmenšení klíče uzlu „v“ o hodnotu „okolik“
-- INCRESE KEY(v, okolik) - zvětšení klíče uzlu „v“ o hodnotu „okolik“
-- MERGE - spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních
-- MAKE - dostane pole N prvku a vytvoří z nich haldu
-
-Složitost operací:
-
-- Stavba haldy - ![\mathcal{O}(n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28n%29)
-- Získání hodnoty kořene - ![\mathcal{O}(1)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%281%29)
-- Vložení/odstranění/nalezení prvku - ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29)
-- Sloučení hald - ![\mathcal{O}(n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28n%29)
+|   Operace    | Složitost  | Popis |
+| -----------  | ---------- | ----- |
+| INSERT | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  přidání nového prvku do haldy |
+| DELETE MAX / DELETE MIN | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  vyjmutí kořenu v max heap nebo v min heap |
+| DELETE(v) | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | smaže uzel „v“ |
+| MIN, MAX | ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29) |  vrátí minimální resp. maximální klíč v haldě |
+| DECREASE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | zmenšení klíče uzlu „v“ o hodnotu „okolik“ |
+| INCRESE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |zvětšení klíče uzlu „v“ o hodnotu „okolik“ |
+| MERGE | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) |  spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních |
+| MAKE | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) | dostane pole N prvku a vytvoří z nich haldu |
 
 Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
 
@@ -226,8 +206,10 @@ Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
   - slovník (.NET, Python)
   - asociativní pole (Javascript, PHP)
 - v porovnání s obecným polem může být klíčem i nečíselný typ datový typ klíče musí pouze implementovat operaci porovnání
-- rychlé hledání podle klíče
+- rychlé hledání podle klíče (![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29))
 - nelze prohledávat podle částečného klíče
 - z klíče nelze přímo spočítat umístění prvku v poli - používá se *hashovací funkce*
+
+![Asociativní pole](29_asociativni_pole.gif)
 
 Více viz hašování v otázce [30. Vyhledávání](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md).
