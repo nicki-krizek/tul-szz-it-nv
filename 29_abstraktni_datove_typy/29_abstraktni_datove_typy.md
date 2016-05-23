@@ -3,7 +3,7 @@
 
 **Abstraktní datové typy (ADT)**
 
-- matematický model nezávislý na konkrétní implementaci v konkrétním programovacím jazyce
+- matematický model nezávislý na konkrétní implementaci v programovacím jazyce
 - popisuje chování (možné operace) z hlediska uživatele dat
 - často se u nich uvádí časová či paměťová složitost (důležité z hlediska efektivního návrhu různých algoritmu)
 - uživatel používá pouze obecné rozhraní ADT a konkrétní implementace mu zůstává skryta
