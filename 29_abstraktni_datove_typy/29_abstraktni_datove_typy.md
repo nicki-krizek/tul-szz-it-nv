@@ -1,28 +1,42 @@
 # 29. - Abstraktní datové typy
 >Abstraktní datové typy, seznam, fronta, zásobník, halda, strom, asociativní pole.
 
-**Abstraktní datové typy** jsou nezávislé na vlastní implementaci. Hlavním cílem je zjednodušit a zpřehlednit program, který provádí operace s daným datovým typem. Protože některé abstraktní datové typy jsou velmi užitečné a běžně používané, různé programovací jazyky používají tyto **ADT** jako primitivní datové typy, které jsou přidány do jejich standardních knihoven. Při programování je ADT reprezentován rozhraním, které skrývá vlastní implementaci. Programátor tak pouze využívá poskytované rozhraní a definované operace.  V praxi je rozdíl mezi abstraktním datovým typem a datovou strukturou použitou pro jeho implementaci. Například seznam jako ADT může být implementován jako pole, nebo jako spojový seznam. Výběr vhodné abstraktní datové struktury je tedy rozhodující pro design účinných algoritmů a pro odhad jejich složitosti.
+**Abstraktní datové typy (ADT)**
 
-**Datový typ** je rozsah hodnot, které může proměnná určitého datovému typu přijmout, a množina
-operací (funkce, metody nebo procedury), které jsou pro tento datový typ specifikovány. "+" je například
-definován pro numerické typy, a v některých programovacích jazycích pro typ string (řetězec). "-" je naproti
-tomu zpravidla definován jen pro numerické typy dat.
+- matematický model nezávislý na konkrétní implementaci v konkrétním programovacím jazyce
+- popisuje chování (možné operace) z hlediska uživatele dat
+- často se u nich uvádí časová či paměťová složitost (důležité z hlediska efektivního návrhu různých algoritmu)
+- uživatel používá pouze obecné rozhraní ADT a konkrétní implementace mu zůstává skryta
+- ADT může mít více různých implementací, např. seznam lze implementovat jako pole nebo jako spojový seznam
+- jazyky mají ve svých standartních knihovnách obvykle obsaženy optimalizované implementace ADT
+
+**Datové struktury**
+
+- narozdíl od ADT se jedná o konkrétní organizaci dat v paměti
+- definuje je ten, kdo je implementuje
+- například strom uložen do pole
+
+**Datový typ**
+
+- určuje rozsah hodnot a definované operace pro proměnou daného typu
 
 ## Vlastnosti
 Nejdůležitější vlastnosti abstraktního typu dat jsou:
 
-- **Všeobecnost implementace:** Jednou navržený ADT může být zabudován a bez problémů používán v jakémkoli programu.
-- **Přesný popis:** Propojení mezi implementací a rozhraním musí být jednoznačné a úplné.
-- **Jednoduchost:** Při používání se uživatel nemusí starat o vnitřní realizaci a správu ADT v paměti.
-- **Zapouzdření:** Rozhraní by mělo být pojato jako uzavřená část. Uživatel by měl přesně vědět, co ADT dělá, ale ne jak to dělá.
-- **Integrita:** Uživatel nemůže zasahovat do vnitřní struktury dat. Tím se výrazně sníží riziko nechtěného smazání nebo změna již uložených dat.
-- **Modularita:** „Stavebnicový“ princip programování je přehledný a umožňuje snadnou výměnu části kódu. Při hledání chyb mohou být jednotlivé moduly považovány za kompaktní celky. Při zlepšování ADT není nutné zasahovat do celého programu.
+- **Univerzálnost:** - navržený adt je univerzální a může být použit v libovolném programu (jako hodnota libovolný datový typ)
+- **Zapouzdření:** - vnitřní reprezentace je skryta za transparetní rozhraní, které je poskytováno uživateli (uživatel ví jak použít, ne jak je implementováno)
+- **Integrita:** - do vnitřní struktury nelze zasahovat jinak, než přes definované rozhraní (zamezuje nechtěnému poškození dat)
+- **Modularita:** - konkrétní implementaci implementaci na spodu je možné libovolně měnit (vylepšovat), aniž by bylo nutné přeisovat programy, které adt využívají (abstrakce modelu od konkrétní implementace)
 
 Pokud je ADT programován objektově, jsou většinou tyto vlastnosti splněny.
 
-## Operace
-Na abstraktním datovém typu rozlišujeme tři druhy operací: **konstruktor**, **selektor** a **modifikátor**. Operace, která ze zadaných parametrů vytváří novou hodnotu abstraktního datového typu, se nazývá konstruktor. Úkolem *konstruktoru* je sestavení platné vnitřní reprezentace hodnoty na základě dodaných parametrů. Operace označovaná jako *selektor* slouží k získání hodnot, které tvoří složky nebo vlastnosti konkrétní hodnoty abstraktního datového typu, a konečně operace typu *modifikátor* provádí změnu hodnoty datového typu.
+## Základní operace
+Na abstraktním datovém typu rozlišujeme tři druhy základních operací:
 
+- **konstruktor** zodpovídá za správnou inicializaci a sestavené platné reprezentace datového typu na základě dodaných parametrů
+- **selektor** slouží k získání hodnot (get, empty, peek)
+- **modifikátor** provádí změnu hodnoty (add, remove, pop)
+- 
 ## Příklady
 K základním abstraktním datovým typům můžeme zařadit následující konstrukce:
 
@@ -31,10 +45,31 @@ K základním abstraktním datovým typům můžeme zařadit následující kons
 - **seznam** (list)
 - **množina** (set)
 - **strom** (tree) - speciálním typem stromu je **halda** (heap)
-- **zobrazení** (map) - také známé jako **asociativní pole**
+- **zobrazení** (map) - také známé jako **asociativní pole** (hash)
 
 ### Seznam
-Seznam (Lineární seznam, Spojový seznam) je kontejner určený k ukládání dat předem neznámé délky. Základní stavební jednotkou spojového seznamu je uzel, který vždy obsahuje ukládanou hodnotu a ukazatel na následující prvek. Operace vkládání a nebo vyhledávání tedy musí seznamem procházet, což je složitější než jendoduše použít index. Lineární seznamy mohou existovat **jednosměrné** a **obousměrné**. V jednosměrném seznamu odkazuje každá položka na položku následující a v obousměrném seznamu odkazuje položka na následující i předcházející položky. Zavádí se také ukazatel nebo reference na aktuální (vybraný) prvek seznamu. Na konci (a začátku) seznamu musí být definována zarážka označující konec seznamu. Pokud vytvoříme cyklus tak, že konec seznamu navážeme na jeho počátek, jedná se o **kruhový seznam**.
+- kontejner pro ukládání dat předem neznámé délky
+- nerozdíl od množiny (set) se mohou stejné prvky opakovat
+
+Typické operace:
+- **add**: vložení hodnoty na konec seznamu
+- **remove**: odstranění hodnoty z určitého indexu (prvky za se přisunou)
+- **get**: čtení hodnoty z určitého indexu
+- **empty**: testování, zda je seznam prázdný
+- **size**: dotaz na velikost seznamu
+
+Implementace je obvykle realizována jako:
+
+- **Dynamické pole**
+  - postaveno na statickém poli pevné velikosti
+  - při vkládání kontrolujeme velikost a vnitřního pole a případně ho zvětšíme
+  - v kontruktoru obvykle předáváme počáteční velikost vnitřního pole
+  - díky vnitřnímu poli umožňuje rychlejší vyhledávání prvku dle indexu (je možné realizovat binární vyhledávání)
+- **Spojových seznam**
+  - jednotlivé prvky jsou reprezentovány vždy jako uzly, které mají odkaz na svého následníka (případně i předchůdce)
+  - uzly je nutné při vyhledávání procházet postupně (pouze lineární vyhledávání)
+
+Spojové seznamy (linked list) mohou existovat **jednosměrné** a **obousměrné**.V jednosměrném seznamu odkazuje každá položka na položku následující a v obousměrném seznamu odkazuje položka na následující i předcházející položky. Zavádí se také ukazatel nebo reference na aktuální (vybraný) prvek seznamu. Na konci (a začátku) seznamu musí být definována zarážka označující konec seznamu.Pokud vytvoříme cyklus tak, že konec seznamu navážeme na jeho počátek, jedná se o **kruhový seznam**. Viz následující ukázky.
 
 ![Jednosměrný seznam](29_jendosmerny_seznam.png)
 
@@ -49,59 +84,113 @@ Seznam (Lineární seznam, Spojový seznam) je kontejner určený k ukládání 
 *Kruhový seznam*
 
 ### Fronta
-Fronta je v programování abstraktní datový typ typu FIFO (z anglického First In, First Out, česky První dovnitř, první ven). Fronta používaná v operačních systémech pro meziprocesovou komunikaci je také nazývána roura (angl. pipe). Opakem fronty FIFO je zásobník (LIFO).
+
+- prvek, který byl nejdříve přidán, bude také nejdříve odebrán
+- anglické označení First In First Out (FIFO)
+- implementace pomocí spojových seznamů (výhodný je obousměrný) nebo pole
+- využití:
+  - plánování procesů v OS (FCFS)
+  - meziprocesová komunikace - roura (pipe)
+  - síťová komunikace - buffer pro datové pakety (switch, bridge, router)
+
+Typické operace:
+
+- **enqueue**: vložení hodnoty na konec fronty
+- **dequeue**: odstranění hodnoty ze začátku fronty
+- **front**: čtení hodnoty na začátku fronty
+- **empty**: testování, zda je fronta prázdná
+- **size**: dotaz na velikost fronty
 
 ![Fronta](29_fronta.png)
 
 *Fronta*
 
+### Zásobník
+
+- prvek, který byl naposled přidán bude nejdříve odebrán
+- anglické označení Last In First Out (LIFO)
+- implementace pomocí pole nebo spojových seznamů
+
 Typické operace:
 
-- **enqueue**: vložení hodnoty na konec fronty,
-- **dequeue**: odstranění hodnoty ze začátku fronty,
-- **front**: čtení hodnoty na začátku fronty a
-- **empty**: testování, zda je fronta prázdná.
-
-### Zásobník
-Zásobník (stack) je jednou ze základních datových struktur, která se využívá především pro dočasné ukládání dat v průběhu výpočtu. Zásobník data ukládá způsobem, kterému se říká LIFO - last in, first out - čili poslední vložený prvek jde na výstup jako první, předposlední jako druhý a tak dále. Opačným způsobem funguje datový typ fronta - FIFO - first in, first out.
+- **push**: vložení hodnoty na vrchol zásobníku,
+- **pop**: odstranění hodnoty z vrcholu zásobníku
+- **top**: čtení hodnoty z vrcholu zásobníku
+- **empty**: testování, zda je zásobník prázdný
+- **size**: dotaz na velikost zásobníku
 
 ![Zásobník](29_zasobnik.png)
 
 *Zásobník*
 
-Typické operace:
-
-- **push**: vložení hodnoty na vrchol zásobníku,
-- **pop**: odstranění hodnoty z vrcholu zásobníku,
-- **top**: čtení hodnoty z vrcholu zásobníku a
- -**empty**: testování, zda je zásobník prázdný.
-
 ### Strom
-Jedná se o hierarchickou strukturu, kde každý otec má 0 až mnoho dětí a každé dítě právě jednoho otce takovým způsobem, že v této struktuře nejsou cykly. Uzel, který je praotcem všech ostatních uzlů nazveme kořenem (z pohledu teorie grafů tím vytvoříme orientovaný strom). Uzel, který nemá žádné potomky nazýváme listem. Být stromem je rekurzívní vlastnost - každý podstrom stromu S je také stromem. Strom je velmi populární pro svoji jednoduchost a použitelnost. Příkladem mohou být vyhledávací stromy nebo haldy.
+
+- hierarchická struktura
+- každý uzel může mít několik synů (přímých potomků)
+- všechny uzly kromě kořenového uzlu mají právě jednoho otce
+- uzel, který nemá žádné potomky (je koncový) se nazývá *list*
+- vlastnost býti stromem je rekurzivní, každý podstrom je také strom
+- použití:
+  - halda
+  - vyhledávací strom
 
 ![Strom](29_strom.png)
 
 *Strom*
 
-Vlastnosti:
+**Vlastnosti:**
 
 - **N-arita** - Kolik smí mít každý uzel maximálně potomků, z tohoto hlediska patří mezi neoblíbenější binární stromy (každý uzel má 0, 1 nebo 2 potomky).
-- **Hloubka** - Hloubkou rozumíme maximální hloubku libovolného uzlu (kořen je v hloubce 0, potomci v hloubce 1, vnuci v hloubce 2...).
-- **Pravidelnost** - N-ární strom je pravidelný, pokud má každý uzel 0 nebo N potomků.
-- **Vyváženost** - N-ární strom je vyvážený, pokud pro všechny listy platí, že jsou nejsou o nic více hlouběji, než kterýkoliv jiný list. Definice „o nic více hlouběji“ se liší v závislosti na konkrétní implementaci.
-- **Úplná pravidelnost** - Úplným N-árním pravidelným stromem hloubky k je strom, jehož každý uzel má 0 nebo N potomků a všechny uzly jsou ve hloubce k.
+- **Hloubka uzlu** - Hloubka uzlu je délka cesty od kořene k uzlu
+- **Výška stromu** - Je rovna hodnotě maximální délky stromu.
+- **Šířka stromu** - Počet uzlů na stejné úrovni.
+- **Vyváženost** - Strom je vyvážený, jestliže má uzly rovnoměrně rozložené tak, že má nejmenší možnou výšku.
 
-Procházení stromem:
+**Procházení stromem:**
 
-- **Preorder** - zpracuje se napřed kořen, poté levý podstrom a nakonec pravý podstrom.
-- **Inorder** - zpracuje se napřed levý podstrom, poté kořen a nakonec pravý podstrom.
-- **Postorder** - zpracuje se napřed levý podstrom, poté pravý podstrom a nakonec kořen.
+1. Průchod do šířky
 
-### Halda
-Halda je v informatice stromová datová struktura splňující tzv. vlastnost haldy: pokud je B potomek A, pak x(A) >= x(B). To znamená, že v kořenu stromu je vždy prvek s nejvyšším klíčem (klíč udává funkce x). Taková halda se pak někdy označuje jako max heap (heap je v angličtině halda), halda s reverzním pořadím prvků se analogicky nazývá min heap. Díky této vlastnosti se haldy často používají na implementaci prioritní fronty. Efektivita operací s haldou je klíčová pro mnoho algoritmů.
+  Projdou se nejprve všechny uzly stromu v jedné hloubce a až poté se pokračuje do další hladiny, kde se opět projdou všechny uzly v dané hloubce.
 
-- Vlastnost tvaru – strom je buď perfektně vyvážený binární strom, nebo pokud je poslední úroveň stromu nekompletní, uzly plní strom zleva doprava
-- Vlastnost haldy - každý uzel je větší nebo roven všem svým potomkům
+2. Průchod do hloubky
+
+  Procházení začíná v kořeni stromu a postupuje se po potomcích uzlu. Procházení končí, když už v žádné větvi není nenavšívený potomek.
+
+
+  - *Preorder*
+    - proveď akci
+    - projdi levý podstrom
+    - projdi pravý podstrom
+  - *Inorder*
+    - projdi levý podstrom
+    - proveď akci
+    - projdi pravý podstrom
+  - *Postorder*
+    - projdi levý podstrom
+    - projdi pravý podstrom
+    - proveď akci
+
+**Příklad průchodu stromem**
+
+![Ukázka stromu](29_strom_preorder_inorder_postorder.png)
+
+*Ukázka stromu*
+
+N = navštívený uzel, L = levý, R = pravý
+
+- Preorder (NLR): F, B, A, D, C, E, G, I, H
+- Inorder (LNR): A, B, C, D, E, F, G, H, I
+- Postorder (LRN): A, C, E, D, B, H, I, G, F
+- Procházení do šířky (po vrstvách) Level-order: F, B, G, A, D, I, C, E, H
+
+#### Halda
+- stromová struktura splňující vlastnost haldy, tj. pokud ![B](https://latex.codecogs.com/gif.latex?B) je potomek ![A](https://latex.codecogs.com/gif.latex?A), tak
+  - ![x(B) \geq x(A)](https://latex.codecogs.com/gif.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro *max heap* nebo
+  - ![x(B) \leq x(A)](https://latex.codecogs.com/gif.latex?x%28B%29%20%5Cleq%20x%28A%29) pro *min heap*
+- vlastnost býti haldou je rekurzivní, všechny podstromy haldy jsou také haldy
+- tvar stromu je buď perfektně vyvážený, nebo pokud je poslední úroveň stromu nekompletní, uzly plní strom zleva doprava
+- efektivita operací haldy je klíčová pro mnoho algoritmů
+- často se používá pro implementaci prioritní fronty (na tomto principu funguje heapsort)
 
 ![Binární minimální halda](29_binarni_min_halda.png)
 
@@ -120,22 +209,33 @@ Operace s haldou:
 
 Složitost operací:
 
-- Stavba haldy - O(n)
-- Získání hodnoty kořene - O(1)
-- Vyjmutí kořene - O(log n)
-- Vložení prvku - O(log n)
-- Odstranění prvku - O(log n)
-- Sloučení 2 hald - O(n1 + n2)
+- Stavba haldy - ![\mathcal{O}(n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28n%29)
+- Získání hodnoty kořene - ![\mathcal{O}(1)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%281%29)
+- Vložení/odstranění/nalezení prvku - ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29)
+- Sloučení hald - ![\mathcal{O}(n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28n%29)
 
-### Asociativní pole
-Datový typ zobrazení (map) je založen na matematickém pojmu zobrazení, které prvkům z množiny vzorů přiřazuje (nejvýše jeden) prvek z množiny obrazů. Tento datový typ se v mnoha programovacích jazycích označuje také jako asociativní pole; množina vzorů pak odpovídá datovému typu indexu pole a množina obrazů datovému typu hodnoty uložené na zadaném indexu. Proti "obyčejnému" poli nabízí asociativní pole zobecnění v tom smyslu, že typem indexu může být libovolný datový typ, nad kterým je definována alespoň operace porovnání. Z hlediska implementace to ale většinou znamená, že nemůžeme jednoduchou matematickou úpravou hodnoty indexu získat jednoznačně umístění požadovaného prvku, a je tedy nutné pro zpřístupnění prvku využít nějaké formy vyhledávání.
+Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
 
-Protože přímo z klíče nelze spočítat index nebo adresa adresu prvku v poli, je zapotřebí prvek podle klíče vyhledat. Nejpoužívanější metodou je mechanismus zvaný hašovací funkce.
+- 2n+1 hodnota pro levý podstrom
+- 2n+2 hodnota pro pravý podstrom
 
-Zde se to trochu míchá a různá označení se překrývají. (asociative array, hashmap, hashtable, dictonary)
+### Zobrazení (Asociativní pole)
+- prvkům z množiny klíčů přiřazuje nejvýše jednu hodnotu (klíč => hodnota)
+- různá označení (Hash, HashMap, HashTable, AsociativeArray, Dictionary)
+  - mapa (Java, C++)
+  - slovník (.NET, Python)
+  - asociativní pole (Javascript, PHP)
+- v porovnání s obecným polem může být klíčem i nečíselný typ datový typ klíče musí pouze implementovat operaci porovnání
+- rychlé hledání podle klíče
+- nelze prohledávat podle částečného klíče
+- z klíče nelze přímo spočítat umístění prvku v poli - používá se *hashovací funkce*
 
-- "Map" is used by Java, C++
-- "Dictionary" is used by .Net, Python
-- "Associative array" is used by Javascript, PHP
+Více viz hašování v otázce [30. Vyhledávání](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md).
 
-"Map" is the correct mathematical term, but it is avoided because it has separate meaning in functional programming. ([Stackoverflow](http://stackoverflow.com/questions/2884068/what-is-the-difference-between-a-map-and-a-dictionary))
+## Odkazy
+
+http://www.cs.vsb.cz/benes/vyuka/upr/texty/adt/index.html
+
+https://cs.wikipedia.org/wiki/Abstraktn%C3%AD_datov%C3%BD_typ
+
+https://www.algoritmy.net/article/30/Zasobnik
