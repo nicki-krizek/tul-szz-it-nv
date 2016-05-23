@@ -136,7 +136,7 @@ Strom je vyvažován požadavkem, aby byly všechny listy na stejné úrovni. Ta
 *Odstranění uzlu*
 
 ### 2-3 strom
-**2-3 strom** je druh stromu, který se označuje v počítačové terminologii jako** B-strom** obsahující pouze uzly s dvěma nebo třemi potomky. Všechny listy ve stejné hloubce, proto se 2‑3 strom řadí mezi vyvážené stromy.
+**2-3 strom** je druh stromu, který se označuje v počítačové terminologii jako **B-strom** obsahující pouze uzly s dvěma nebo třemi potomky. Všechny listy ve stejné hloubce, proto se 2‑3 strom řadí mezi vyvážené stromy.
 
 ![2-3 strom](30_23_strom.png)
 
