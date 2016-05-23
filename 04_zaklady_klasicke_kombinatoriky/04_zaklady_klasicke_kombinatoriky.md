@@ -190,7 +190,7 @@ Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
 
 ![F(n) = F(n-1) + F(n-2)](https://latex.codecogs.com/svg.latex?F%28n%29%20%3D%20F%28n-1%29%20&plus;%20F%28n-2%29)
 
-## Problematika rozkladů
+## Rozklady
 
 ### Nerozlišitelné objekty do rozlišitelných skupin
 
@@ -200,7 +200,7 @@ Rozděluji n nerozlišitelných objektů do k rozlišitelných skupin.
 
   Odpovídá počtu řešení diofantické rovnice:
 
-  ![x_1 + x_2 + \ldots + x_k = n](x_1 + x_2 + \ldots + x_k = n)
+  ![x_1 + x_2 + \ldots + x_k = n](https://latex.codecogs.com/svg.latex?x_1%20&plus;%20x_2%20&plus;%20%5Cldots%20&plus;%20x_k%20%3D%20n)
 
   - Vytvářím bitový řetězec, kde
   - 1 je objekt,
