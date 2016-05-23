@@ -60,7 +60,7 @@ Máme n objektů, vybíráme k-tice.
 
   ![C^k_n = \frac{A^k_n}{k!} = \frac{n!}{k! \cdot (n-k)!};~~0 \leq k \leq n](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20%5Cfrac%7BA%5Ek_n%7D%7Bk%21%7D%20%3D%20%5Cfrac%7Bn%21%7D%7Bk%21%20%5Ccdot%20%28n-k%29%21%7D%3B%7E%7E0%20%5Cleq%20k%20%5Cleq%20n)
 
-  ![\binom{n}{k}](https://latex.codecogs.com/svg.latex?%5Cbinom%7Bn%7D%7Bk%7D) ... kombinační číslo "n nad k" (*binomick koeficient*)
+  ![\binom{n}{k}](https://latex.codecogs.com/svg.latex?%5Cbinom%7Bn%7D%7Bk%7D) ... kombinační číslo "n nad k" (*binomický koeficient*)
 
   **Vlastnosti**
 
@@ -124,6 +124,37 @@ Některé kombinatorické úlohy je jednodušší řešit tak, že nehledám, kt
 
 ![N(\overline{\alpha_1}, \overline{\alpha_2}, \overline{\alpha_3}) = N - N(\alpha_1) - N(\alpha_2) - N(\alpha_3)\\  ~~~~~~~~~~~~~~~~~~~~~~~~~~~+ N(\alpha_1, \alpha_2) + N(\alpha_1, \alpha_2) + N(\alpha_2, \alpha_3)\\  ~~~~~~~~~~~~~~~~~~~~~~~~~~~- N(\alpha_1, \alpha_2, \alpha_3)
 ](https://latex.codecogs.com/svg.latex?N%28%5Coverline%7B%5Calpha_1%7D%2C%20%5Coverline%7B%5Calpha_2%7D%2C%20%5Coverline%7B%5Calpha_3%7D%29%20%3D%20N%20-%20N%28%5Calpha_1%29%20-%20N%28%5Calpha_2%29%20-%20N%28%5Calpha_3%29%5C%5C%20%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E&plus;%20N%28%5Calpha_1%2C%20%5Calpha_2%29%20&plus;%20N%28%5Calpha_1%2C%20%5Calpha_2%29%20&plus;%20N%28%5Calpha_2%2C%20%5Calpha_3%29%5C%5C%20%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E%7E-%20N%28%5Calpha_1%2C%20%5Calpha_2%2C%20%5Calpha_3%29)
+
+## Zobecněný binomický koeficient
+
+Viz kombinace bez opakování.
+
+![C^k_n = \frac{n!}{k! \cdot (n-k)!};~~0 \leq k \leq n](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20%5Cfrac%7Bn%21%7D%7Bk%21%20%5Ccdot%20%28n-k%29%21%7D%3B%7E%7E0%20%5Cleq%20k%20%5Cleq%20n)
+
+![C^k_n = 0;~~ 0 \leq n < k](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%200%3B%7E%7E%200%20%5Cleq%20n%20%3C%20k)
+
+![C^{-k}_n = C^{-k}_{-n} = 0;~~ 0 < k](https://latex.codecogs.com/svg.latex?C%5E%7B-k%7D_n%20%3D%20C%5E%7B-k%7D_%7B-n%7D%20%3D%200%3B%7E%7E%200%20%3C%20k)
+
+![C^k_{-n} = (-1)^k C^k_{n+k-1};~~ 0 \leq k, 0 < n](https://latex.codecogs.com/svg.latex?C%5Ek_%7B-n%7D%20%3D%20%28-1%29%5Ek%20C%5Ek_%7Bn&plus;k-1%7D%3B%7E%7E%200%20%5Cleq%20k%2C%200%20%3C%20n)
+
+| ![\\k \rightarrow \\ n \downarrow](https://latex.codecogs.com/svg.latex?%5C%5Ck%20%5Crightarrow%20%5C%5C%20n%20%5Cdownarrow) | 0 | 1 | 2 | 3 |
+| --- | --- | --- | --- | --- |
+| -3 | **1** | **-3** | **6** | **-10** |
+| -2 | 1 | -2 | 3 | -4 |
+| -1 | 1 | -1 | 1 | -1 |
+| 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 2 |  **1** | 2 | 1 | 0 |
+| 3 | 1 | **3** | 3 | 1 |
+| 4 | 1 | 4 | **6** | 4 |
+| 5 | 1 | 5 | 10 | **10** |
+
+Pozn.: Na levé straně (![n < 0](https://latex.codecogs.com/svg.latex?n%20%3C%200)) jsou samé nuly.
+
+### Binomická věta
+
+![(x+y)^n = \sum^n_{k=0} C^k_n \cdot x^k \cdot y^{n-k}](https://latex.codecogs.com/svg.latex?%28x&plus;y%29%5En%20%3D%20%5Csum%5En_%7Bk%3D0%7D%20C%5Ek_n%20%5Ccdot%20x%5Ek%20%5Ccdot%20y%5E%7Bn-k%7D)
+
 
 
 
