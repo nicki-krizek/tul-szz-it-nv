@@ -13,7 +13,7 @@ Máme n objektů, vybíráme k-tice.
 #### Bez opakování (všechny prvky různé)
 
 | 1. | 2. | ... | k. |
-| -- | -- | --- | -- |
+| --- | --- | --- | --- |
 | n  | n-1 | ...| n-k+1 |
 
 ![A^k_n = n \cdot (n-1) \cdot \ldots \cdot (n-k+1) = \frac{n!}{(n-k)!}](https://latex.codecogs.com/svg.latex?A%5Ek_n%20%3D%20n%20%5Ccdot%20%28n-1%29%20%5Ccdot%20%5Cldots%20%5Ccdot%20%28n-k&plus;1%29%20%3D%20%5Cfrac%7Bn%21%7D%7B%28n-k%29%21%7D)
@@ -23,7 +23,7 @@ Máme n objektů, vybíráme k-tice.
 ###S opakováním
 
 | 1. | 2. | ... | k. |
-| -- | -- | --- | -- |
+| --- | --- | --- | --- |
 | n  | n | ...| n |
 
 ![\overline{A}^k_n = n^k](https://latex.codecogs.com/svg.latex?%5Coverline%7BA%7D%5Ek_n%20%3D%20n%5Ek)
