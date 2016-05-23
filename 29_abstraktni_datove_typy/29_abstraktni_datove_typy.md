@@ -231,11 +231,3 @@ Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
 - z klíče nelze přímo spočítat umístění prvku v poli - používá se *hashovací funkce*
 
 Více viz hašování v otázce [30. Vyhledávání](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md).
-
-## Odkazy
-
-http://www.cs.vsb.cz/benes/vyuka/upr/texty/adt/index.html
-
-https://cs.wikipedia.org/wiki/Abstraktn%C3%AD_datov%C3%BD_typ
-
-https://www.algoritmy.net/article/30/Zasobnik
