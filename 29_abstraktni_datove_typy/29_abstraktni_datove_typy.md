@@ -169,9 +169,9 @@ Typické operace:
   - **Postorder** (LRN): A, C, E, D, B, H, I, G, F
 
 #### Halda
-- stromová struktura splňující vlastnost haldy, tj. pokud ![B](https://latex.codecogs.com/gif.latex?B) je potomek ![A](https://latex.codecogs.com/gif.latex?A), tak
-  - ![x(B) \geq x(A)](https://latex.codecogs.com/gif.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro *max heap* nebo
-  - ![x(B) \leq x(A)](https://latex.codecogs.com/gif.latex?x%28B%29%20%5Cleq%20x%28A%29) pro *min heap*
+- stromová struktura splňující vlastnost haldy, tj. pokud ![B](https://latex.codecogs.com/svg.latex?B) je potomek ![A](https://latex.codecogs.com/svg.latex?A), tak
+  - ![x(B) \geq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro *max heap* nebo
+  - ![x(B) \leq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cleq%20x%28A%29) pro *min heap*
 - vlastnost býti haldou je rekurzivní, všechny podstromy haldy jsou také haldy
 - tvar stromu je buď perfektně vyvážený, nebo pokud je poslední úroveň stromu nekompletní, uzly plní strom zleva doprava
 - efektivita operací haldy je klíčová pro mnoho algoritmů
@@ -185,14 +185,14 @@ Operace s haldou:
 
 |   Operace    | Složitost  | Popis |
 | -----------  | ---------- | ----- |
-| INSERT | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  přidání nového prvku do haldy |
-| DELETE MAX / DELETE MIN | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  vyjmutí kořenu v max heap nebo v min heap |
-| DELETE(v) | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | smaže uzel „v“ |
-| MIN, MAX | ![\mathcal{O}(1)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%281%29) |  vrátí minimální resp. maximální klíč v haldě |
-| DECREASE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | zmenšení klíče uzlu „v“ o hodnotu „okolik“ |
-| INCRESE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |zvětšení klíče uzlu „v“ o hodnotu „okolik“ |
-| MERGE | ![\mathcal{O}(n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28n%29) |  spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních |
-| MAKE | ![\mathcal{O}(n)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%28n%29) | dostane pole N prvku a vytvoří z nich haldu |
+| INSERT | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  přidání nového prvku do haldy |
+| DELETE MAX / DELETE MIN | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  vyjmutí kořenu v max heap nebo v min heap |
+| DELETE(v) | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | smaže uzel „v“ |
+| MIN, MAX | ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29) |  vrátí minimální resp. maximální klíč v haldě |
+| DECREASE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | zmenšení klíče uzlu „v“ o hodnotu „okolik“ |
+| INCRESE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |zvětšení klíče uzlu „v“ o hodnotu „okolik“ |
+| MERGE | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) |  spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních |
+| MAKE | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) | dostane pole N prvku a vytvoří z nich haldu |
 
 Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
 
@@ -206,7 +206,7 @@ Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
   - slovník (.NET, Python)
   - asociativní pole (Javascript, PHP)
 - v porovnání s obecným polem může být klíčem i nečíselný typ datový typ klíče musí pouze implementovat operaci porovnání
-- rychlé hledání podle klíče (![\mathcal{O}(1)](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BO%7D%281%29))
+- rychlé hledání podle klíče (![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29))
 - nelze prohledávat podle částečného klíče
 - z klíče nelze přímo spočítat umístění prvku v poli - používá se *hashovací funkce*
 
