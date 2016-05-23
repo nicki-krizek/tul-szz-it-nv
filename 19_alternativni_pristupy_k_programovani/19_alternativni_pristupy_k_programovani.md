@@ -8,10 +8,10 @@ Hlavní dva přístupy k programování jsou:
 
 Vyšší programovací jazyky se dále dělí takto:
 
-- Procedurální (imperativní)
+- **Procedurální (imperativní)**
   - Strukturované (např. C, BASIC, Cobol)
   - Objektově orientované (např. Smalltalk, Java)
-- Neprocedurální (deklarativní)
+- **Neprocedurální (deklarativní)**
   - Funkcionální (např. **Lisp**, Haskell)
   - Logické (např. **Prolog**, Gödel)
 
@@ -70,7 +70,7 @@ public static long factorial(int num) {
             return result;
         }
 
-//rekurzivni
+//rekurzivni pristup
 public static long factorial(int num) {
         if(num == 0) {
             return 1;
@@ -87,18 +87,18 @@ public static long factorial(int num) {
 - jeden ze dvou hlavních dialektů funkcionálního programovacího jazyka Lisp.
 - deklarativní multiparadigmatický jazyk, převládá funcionální přístup
 - vše je definováno jako seznam (mnoho závorek)
- - promenná: (define var1 value)  
- - funkce: (define x2 (lambda (x) (* x x)))
- - seznam: (list 1 2 3)
+ - **promenná:** (define var1 value)  
+ - **funkce:** (define x2 (lambda (x) (* x x)))
+ - **seznam:** (list 1 2 3)
 
 **Příklad** (nalezení nejmenšího prvku v seznamu)
 
-Všechno je definováno jako seznam (například volání funkce  odmocnina = > (sqrt x)), pro seznam máme dvě základní procedury:
+Pro seznam máme dvě základní procedury:
 
-- (car seznam) vydá první prvek seznamu - (**head**)
-- (cdr seznam) vydá zbytek seznamu (bez 1. prvku) - (**tail**)
+- **(car seznam)** vydá první prvek seznamu - (**head**)
+- **(cdr seznam)** vydá zbytek seznamu (bez 1. prvku) - (**tail**)
 
-```prolog
+```scheme
 (define (minim lst)
     (cond ((null? (cdr lst)) (car lst))
           ((< (car lst) (minim (cdr lst))) (car lst))
@@ -119,8 +119,8 @@ Všechno je definováno jako seznam (například volání funkce  odmocnina = > 
 
 - využivá se v oboru umělé inteligence a počítačové lingvistiky
 - 2 režimy :
- - konzultační (zadávají se fakta a pravidla)
- - dotazovací (kladou se otázky)
+ - **konzultační** (zadávají se fakta a pravidla)
+ - **dotazovací** (kladou se otázky)
 - základní částí:
  - definice faktů o objektech a vztazích mezi nimi
  - definice pravidel pro odvozování dalších faktů
@@ -150,7 +150,7 @@ Způsob vyhdonocování na základě predikátů => tvorba derivačního stromu.
 
 ![Rezoluční mechanismus](19_rezolucni_mechanismus.png)
 
-> V dotazovacím režimu vrátí Prolog pouze první hodnotu větev s hodnotou True, pro druhý dotaz se provede backtracking a vrátí se další. To lze opakovat, dokud jsou k dispozici nějaké platné hodnoty.
+> V dotazovacím režimu vrátí Prolog pouze první větev s hodnotou True, pro druhý dotaz se provede backtracking a vrátí se další. To lze opakovat, dokud jsou k dispozici nějaké platné hodnoty.
 
 Prohledávám strom do hloubky dokud nenaleznu výsledek pro který je predikát TRUE, pokud dojdu k listu (TRUE,FALSE) bud vrátím výsledek a nebo se vracím.
 
