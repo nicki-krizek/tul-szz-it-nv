@@ -55,7 +55,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 20. Deterministické číslicové signály – popis v časové oblasti, periodicita, DTFT/DFT spektrum, krátkodobá spektrální analýza (STFT) + využití okénkových funkcí, vzorkovací teorém, kvantizace.
 
-21. LTI číslicové systémy – vlastnosti (linearita, kauzalita, stabilita), impulsní odezva (FIR/IIR), frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineární diferenční rovnice konstantními koeficienty, systém s lineární a minimální fází.
+21. [LTI číslicové systémy – vlastnosti (linearita, kauzalita, stabilita), impulsní odezva (FIR/IIR), frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineární diferenční rovnice konstantními koeficienty, systém s lineární a minimální fází.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_systemy/21_linearni_cislicove_systemy.md)
 
 22. Návrh číslicových filtrů – toleranční schéma, základní druhy filtrů (DP, HP, PP, PZ, Allpass), návrh FIR filtrů (metoda oken, metoda vzorkování frekvenční charakteristiky), typy IIR filtrů, porovnání vlastností FIR/IIR filtrů.
 
