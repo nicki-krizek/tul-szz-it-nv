@@ -10,59 +10,59 @@ Máme n objektů, vybíráme k-tice.
 
 = *uspořádané* k-tice prvků
 
-#### Bez opakování (všechny prvky různé)
+- **Bez opakování** (všechny prvky různé)
 
-| 1. | 2. | ... | k. |
-| --- | --- | --- | --- |
-| n  | n-1 | ...| n-k+1 |
+  | 1. | 2. | ... | k. |
+  | --- | --- | --- | --- |
+  | n  | n-1 | ...| n-k+1 |
 
-![A^k_n = n \cdot (n-1) \cdot \ldots \cdot (n-k+1) = \frac{n!}{(n-k)!}](https://latex.codecogs.com/svg.latex?A%5Ek_n%20%3D%20n%20%5Ccdot%20%28n-1%29%20%5Ccdot%20%5Cldots%20%5Ccdot%20%28n-k&plus;1%29%20%3D%20%5Cfrac%7Bn%21%7D%7B%28n-k%29%21%7D)
+  ![A^k_n = n \cdot (n-1) \cdot \ldots \cdot (n-k+1) = \frac{n!}{(n-k)!}](https://latex.codecogs.com/svg.latex?A%5Ek_n%20%3D%20n%20%5Ccdot%20%28n-1%29%20%5Ccdot%20%5Cldots%20%5Ccdot%20%28n-k&plus;1%29%20%3D%20%5Cfrac%7Bn%21%7D%7B%28n-k%29%21%7D)
 
-**Příklad**: Mám k dispozici pět lidí. Kolika způsoby z nich můžu vybrat trojici?
+  **Příklad**: Mám k dispozici pět lidí. Kolika způsoby z nich můžu vybrat trojici?
 
-###S opakováním
+- **S opakováním**
 
-| 1. | 2. | ... | k. |
-| --- | --- | --- | --- |
-| n  | n | ...| n |
+  | 1. | 2. | ... | k. |
+  | --- | --- | --- | --- |
+  | n  | n | ...| n |
 
-![\overline{A}^k_n = n^k](https://latex.codecogs.com/svg.latex?%5Coverline%7BA%7D%5Ek_n%20%3D%20n%5Ek)
+  ![\overline{A}^k_n = n^k](https://latex.codecogs.com/svg.latex?%5Coverline%7BA%7D%5Ek_n%20%3D%20n%5Ek)
 
-**Příklad**: Kolik různých binárních čísel lze sestavit pomocí tří bitů?
+  **Příklad**: Kolik různých binárních čísel lze sestavit pomocí tří bitů?
 
 ### Permutace
 = variace, kde ![k = n](https://latex.codecogs.com/svg.latex?k%20%3D%20n) (uspořádané n-tice)
 
-#### Bez opakování
+- **Bez opakování**
 
-![P(n) = A^n_n = n!](https://latex.codecogs.com/svg.latex?P%28n%29%20%3D%20A%5En_n%20%3D%20n%21)
+  ![P(n) = A^n_n = n!](https://latex.codecogs.com/svg.latex?P%28n%29%20%3D%20A%5En_n%20%3D%20n%21)
 
-![P(n) = n \cdot P(n-1); P(0) = 1](https://latex.codecogs.com/svg.latex?P%28n%29%20%3D%20n%20%5Ccdot%20P%28n-1%29%3B%20P%280%29%20%3D%201)
+  ![P(n) = n \cdot P(n-1); P(0) = 1](https://latex.codecogs.com/svg.latex?P%28n%29%20%3D%20n%20%5Ccdot%20P%28n-1%29%3B%20P%280%29%20%3D%201)
 
-**Příklad**: Na ústní zkoušku dorazilo sedm studentů. Kolik existuje různých pořadí, ve kterém mohou studenti jít postupně ke zkoušce?
+  **Příklad**: Na ústní zkoušku dorazilo sedm studentů. Kolik existuje různých pořadí, ve kterém mohou studenti jít postupně ke zkoušce?
 
-#### S opakováním
+- **S opakováním**
 
-- ![n_1](https://latex.codecogs.com/svg.latex?n_1) ... prvků 1. druhu
-- ![n_2](https://latex.codecogs.com/svg.latex?n_2) ... prvků 2. druhu
-- ...
-- ![n_k](https://latex.codecogs.com/svg.latex?n_k) ... prvků k. druhu
+  - ![n_1](https://latex.codecogs.com/svg.latex?n_1) ... prvků 1. druhu
+  - ![n_2](https://latex.codecogs.com/svg.latex?n_2) ... prvků 2. druhu
+  - ...
+  - ![n_k](https://latex.codecogs.com/svg.latex?n_k) ... prvků k. druhu
 
-![P(n_1, n_2, \ldots, n_k) = \frac{(n_1 + n_2 + \ldots + n_k)}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}](https://latex.codecogs.com/svg.latex?P%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_k%29%20%3D%20%5Cfrac%7B%28n_1%20&plus;%20n_2%20&plus;%20%5Cldots%20&plus;%20n_k%29%7D%7Bn_1%21%20%5Ccdot%20n_2%21%20%5Ccdot%20%5Cldots%20%5Ccdot%20n_k%21%7D)
+  ![P(n_1, n_2, \ldots, n_k) = \frac{(n_1 + n_2 + \ldots + n_k)}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}](https://latex.codecogs.com/svg.latex?P%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_k%29%20%3D%20%5Cfrac%7B%28n_1%20&plus;%20n_2%20&plus;%20%5Cldots%20&plus;%20n_k%29%7D%7Bn_1%21%20%5Ccdot%20n_2%21%20%5Ccdot%20%5Cldots%20%5Ccdot%20n_k%21%7D)
 
 ### Kombinace k-té třídy
 
 = *neuspořádané k-tice*
 
-#### Bez opakování
+- **Bez opakování**
 
-n různých objektů, každý v jednom exempláři
+  n různých objektů, každý v jednom exempláři
 
-![C^k_n = \frac{A^k_n}{k!} = \frac{n!}{k! \cdot (n-k)!};~~0 \leq k \leq n](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20%5Cfrac%7BA%5Ek_n%7D%7Bk%21%7D%20%3D%20%5Cfrac%7Bn%21%7D%7Bk%21%20%5Ccdot%20%28n-k%29%21%7D%3B%7E%7E0%20%5Cleq%20k%20%5Cleq%20n)
+  ![C^k_n = \frac{A^k_n}{k!} = \frac{n!}{k! \cdot (n-k)!};~~0 \leq k \leq n](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20%5Cfrac%7BA%5Ek_n%7D%7Bk%21%7D%20%3D%20%5Cfrac%7Bn%21%7D%7Bk%21%20%5Ccdot%20%28n-k%29%21%7D%3B%7E%7E0%20%5Cleq%20k%20%5Cleq%20n)
 
-![\binom{n}{k}](https://latex.codecogs.com/svg.latex?%5Cbinom%7Bn%7D%7Bk%7D) ... kombinační číslo "n nad k" (*binomick koeficient*)
+  ![\binom{n}{k}](https://latex.codecogs.com/svg.latex?%5Cbinom%7Bn%7D%7Bk%7D) ... kombinační číslo "n nad k" (*binomick koeficient*)
 
-**Vlastnosti**
+  **Vlastnosti**
 
   - ![C^k_n = P(k, n-k)](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20P%28k%2C%20n-k%29) (charakteristický vektor - pro každý prvek určím zda je/není v kombinaci)
   - ![C^k_n = C^{n-k}_n](https://latex.codecogs.com/svg.latex?C%5Ek_n%20%3D%20C%5E%7Bn-k%7D_n) ... symetrie
@@ -70,17 +70,17 @@ n různých objektů, každý v jednom exempláři
   - ![\sum^n_{k=0} C^k_n = 2^n](https://latex.codecogs.com/svg.latex?%5Csum%5En_%7Bk%3D0%7D%20C%5Ek_n%20%3D%202%5En)
   - ![\sum^n_{k=0} (-1)^k C^k_n = 0](https://latex.codecogs.com/svg.latex?%5Csum%5En_%7Bk%3D0%7D%20%28-1%29%5Ek%20C%5Ek_n%20%3D%200)
 
-#### S opakováním
+- **S opakováním**
 
-n různých exemplářů, každý v libovolném počtu
+  n různých exemplářů, každý v libovolném počtu
 
-![\overline{C}^k_n = P(n-1, k) = C^k_{n+k-1}](https://latex.codecogs.com/svg.latex?%5Coverline%7BC%7D%5Ek_n%20%3D%20P%28n-1%2C%20k%29%20%3D%20C%5Ek_%7Bn&plus;k-1%7D)
+  ![\overline{C}^k_n = P(n-1, k) = C^k_{n+k-1}](https://latex.codecogs.com/svg.latex?%5Coverline%7BC%7D%5Ek_n%20%3D%20P%28n-1%2C%20k%29%20%3D%20C%5Ek_%7Bn&plus;k-1%7D)
 
-**Odvození**:
+  **Odvození**:
 
-- 1 reprezentuje, že vyberu objekt
-- 0 se použije jako oddělovač
-- sestavím bitový řetězec, kde použiju n-1 oddělovačů a k výběrů
+  - 1 reprezentuje, že vyberu objekt
+  - 0 se použije jako oddělovač
+  - sestavím bitový řetězec, kde použiju n-1 oddělovačů a k výběrů
 
 ## Základní kombinatorická pravidla
 
