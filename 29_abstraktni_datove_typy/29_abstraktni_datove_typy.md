@@ -14,11 +14,11 @@
 
 - narozdíl od ADT se jedná o konkrétní organizaci dat v paměti
 - definuje je ten, kdo je implementuje
-- například strom uložen do pole
+- například binární haldu lze uložit do pole
 
-**Datový typ**
+**Datové typy**
 
-- určuje rozsah hodnot a definované operace pro proměnou daného typu
+- určují rozsah hodnot a definované operace pro proměnou daného typu
 
 ## Vlastnosti
 Nejdůležitější vlastnosti abstraktního typu dat jsou:
@@ -36,7 +36,7 @@ Na abstraktním datovém typu rozlišujeme tři druhy základních operací:
 - **konstruktor** zodpovídá za správnou inicializaci a sestavené platné reprezentace datového typu na základě dodaných parametrů
 - **selektor** slouží k získání hodnot (get, empty, peek)
 - **modifikátor** provádí změnu hodnoty (add, remove, pop)
-- 
+
 ## Příklady
 K základním abstraktním datovým typům můžeme zařadit následující konstrukce:
 
