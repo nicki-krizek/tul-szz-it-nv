@@ -142,19 +142,170 @@ Viz kombinace bez opakování.
 | -3 | **1** | **-3** | **6** | **-10** |
 | -2 | 1 | -2 | 3 | -4 |
 | -1 | 1 | -1 | 1 | -1 |
-| 0 | 1 | 0 | 0 | 0 |
+| *0* | *1* | *0* | *0* | *0* |
 | 1 | 1 | 1 | 0 | 0 |
 | 2 |  **1** | 2 | 1 | 0 |
 | 3 | 1 | **3** | 3 | 1 |
 | 4 | 1 | 4 | **6** | 4 |
 | 5 | 1 | 5 | 10 | **10** |
 
-Pozn.: Na levé straně (![n < 0](https://latex.codecogs.com/svg.latex?n%20%3C%200)) jsou samé nuly.
+Pozn.: Na levé straně (![k < 0](https://latex.codecogs.com/svg.latex?k%20%3C%200)) jsou samé nuly.
 
 ### Binomická věta
 
 ![(x+y)^n = \sum^n_{k=0} C^k_n \cdot x^k \cdot y^{n-k}](https://latex.codecogs.com/svg.latex?%28x&plus;y%29%5En%20%3D%20%5Csum%5En_%7Bk%3D0%7D%20C%5Ek_n%20%5Ccdot%20x%5Ek%20%5Ccdot%20y%5E%7Bn-k%7D)
 
+## Catalanova čísla
 
+![C_n = \binom{2n}{n} - \binom{2n}{n-1} = \frac{1}{n+1} \cdot \binom{2n}{n}](https://latex.codecogs.com/svg.latex?C_n%20%3D%20%5Cbinom%7B2n%7D%7Bn%7D%20-%20%5Cbinom%7B2n%7D%7Bn-1%7D%20%3D%20%5Cfrac%7B1%7D%7Bn&plus;1%7D%20%5Ccdot%20%5Cbinom%7B2n%7D%7Bn%7D)
 
+**Základní problém**
 
+- Mám šachvnici [m, n]
+- Pohybuju se vždy o jeden krok ve směru x nebo ve směru y
+- Kolik způsoby se lze dostat z počátku do [m, n] **aniž bych překročil diagonálu**? ... ![C_n](https://latex.codecogs.com/svg.latex?C_n)
+
+**Praktické problémy**
+
+- Kolika způsoby lze správně uzávorkovat výraz ![x_1 \cdot x_2 \cdot \ldots \cdot x_n](https://latex.codecogs.com/svg.latex?x_1%20%5Ccdot%20x_2%20%5Ccdot%20%5Cldots%20%5Ccdot%20x_n)?
+  - Musí být dodrženo pravidlo, že v libovolné části výrazu je na levé straně více nebo stejně otevíracích závorek než uzavíracích.
+  - Počet způsobů ![C_n](https://latex.codecogs.com/svg.latex?C_n)
+
+- *Kolik permutací lze realizovat pomocí zásobníku?
+  - Nelze vybírat z prázdného zásobníku
+  - Vybírat lze pouze zeshora, stejně tak vkládat
+  - Počet způsobů opět ![C_n](https://latex.codecogs.com/svg.latex?C_n)
+
+### Subfaktoriály
+
+Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
+
+![D(n) = \frac{n!}{e}](https://latex.codecogs.com/svg.latex?D%28n%29%20%3D%20%5Cfrac%7Bn%21%7D%7Be%7D)
+
+### Fibonacciho čísla
+
+![F(0) = 0](https://latex.codecogs.com/svg.latex?F%280%29%20%3D%200)
+
+![F(1) = 1](https://latex.codecogs.com/svg.latex?F%281%29%20%3D%201)
+
+![F(n) = F(n-1) + F(n-2)](https://latex.codecogs.com/svg.latex?F%28n%29%20%3D%20F%28n-1%29%20&plus;%20F%28n-2%29)
+
+## Rozklady
+
+### Nerozlišitelné objekty do rozlišitelných skupin
+
+Rozděluji n nerozlišitelných objektů do k rozlišitelných skupin.
+
+1. Bez omezení
+
+  Odpovídá počtu řešení diofantické rovnice:
+
+  ![x_1 + x_2 + \ldots + x_k = n](https://latex.codecogs.com/svg.latex?x_1%20&plus;%20x_2%20&plus;%20%5Cldots%20&plus;%20x_k%20%3D%20n)
+
+  - Vytvářím bitový řetězec, kde
+  - 1 je objekt,
+  - 0 je oddělovač skupin.
+
+  ![P(n, k-1) = c^{k-1}_{n+k-1}](https://latex.codecogs.com/svg.latex?P%28n%2C%20k-1%29%20%3D%20c%5E%7Bk-1%7D_%7Bn&plus;k-1%7D)
+
+  **Vytvořující funkce**
+
+  ![f(x) = \underbrace{(1 + x + x^2 + \ldots + x^{n_1})}_{1.~prihradka} \cdot \underbrace{(1 + x + x^2 + \ldots + x^{n_2})}_{2.~prihradka} \cdot \ldots \cdot \underbrace{(1 + x + x^2 + \ldots + x^{n_k})}_{k.~prihradka}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Cunderbrace%7B%281%20&plus;%20x%20&plus;%20x%5E2%20&plus;%20%5Cldots%20&plus;%20x%5E%7Bn_1%7D%29%7D_%7B1.%7Eprihradka%7D%20%5Ccdot%20%5Cunderbrace%7B%281%20&plus;%20x%20&plus;%20x%5E2%20&plus;%20%5Cldots%20&plus;%20x%5E%7Bn_2%7D%29%7D_%7B2.%7Eprihradka%7D%20%5Ccdot%20%5Cldots%20%5Ccdot%20%5Cunderbrace%7B%281%20&plus;%20x%20&plus;%20x%5E2%20&plus;%20%5Cldots%20&plus;%20x%5E%7Bn_k%7D%29%7D_%7Bk.%7Eprihradka%7D)
+
+  ![f(x) = (1 + x + x^2 + \ldots ) = \mathbf{\frac{1}{(1-x)^k}}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%281%20&plus;%20x%20&plus;%20x%5E2%20&plus;%20%5Cldots%20%29%20%3D%20%5Cmathbf%7B%5Cfrac%7B1%7D%7B%281-x%29%5Ek%7D%7D)
+
+2. Skupiny jsou *neprázdné*
+
+  - k objektů umístím natvrdo (po jednom do každé skupiny)
+  - Tvořím bitový řetězec ze zbytku objektů a oddělovačů.
+
+  ![P(n-k, k-1) = C^{k-1}_{n-1}](https://latex.codecogs.com/svg.latex?P%28n-k%2C%20k-1%29%20%3D%20C%5E%7Bk-1%7D_%7Bn-1%7D)
+
+  **Vytvořující funkce**
+
+  ![f(x) = \mathbf{\frac{x^k}{(1-x)^k}}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Cmathbf%7B%5Cfrac%7Bx%5Ek%7D%7B%281-x%29%5Ek%7D%7D)
+
+3. Omezení počtů jednotlivých skupin
+
+  U skupin můžu specifikovat, kolik má obsahovat nejméně a nejvíce objektů.
+
+  ![x_1 + x_2 + \ldots + \x_k = n;~~a_i \leq x_i \leq b_i](https://latex.codecogs.com/svg.latex?x_1%20&plus;%20x_2%20&plus;%20%5Cldots%20&plus;%20%5Cx_k%20%3D%20n%3B%7E%7Ea_i%20%5Cleq%20x_i%20%5Cleq%20b_i)
+
+  Převede se na standardní tvar.
+
+  ![y_1 + y_2 + \ldots + y_k = m;~~0 \leq y_i \leq c_i](https://latex.codecogs.com/svg.latex?y_1%20&plus;%20y_2%20&plus;%20%5Cldots%20&plus;%20y_k%20%3D%20m%3B%7E%7E0%20%5Cleq%20y_i%20%5Cleq%20c_i)
+
+  Potom se řeší pomocí principu inkluze a exkluze, kde:
+
+  ![N = P(k-1, m)](https://latex.codecogs.com/svg.latex?N%20%3D%20P%28k-1%2C%20m%29)
+
+  ![\alpha_i : c_i + 1 \leq y_i](https://latex.codecogs.com/svg.latex?%5Calpha_i%20%3A%20c_i%20&plus;%201%20%5Cleq%20y_i)
+
+### Nerozlišitelné objekty do nerozlišitelných skupin
+
+- Mám n nerozlišitelných objektů.
+- Počet skupin nepředepisuji.
+- = *počet rozkladů přirozeného čísla n na nezáporné sčítance*
+- odpovídá počtu řešení diofantické rovnice
+
+![x_1 + 2x_2 + 3x_3 \ldots + nx_n = n,~~0 \leq x_i](https://latex.codecogs.com/svg.latex?x_1%20&plus;%202x_2%20&plus;%203x_3%20%5Cldots%20&plus;%20nx_n%20%3D%20n%2C%7E%7E0%20%5Cleq%20x_i)
+
+**Vytvořující funkce**
+
+![f(x) = \underbrace{(1 + x + x^2 + \ldots)}_{1.} \cdot \underbrace{(1 + x^2 + x^4 + x^6 + \ldots)}_{2.} \cdot \ldots \underbrace{\cdot (1 + x^n + x^{2n} + \ldots )}_{n.}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Cunderbrace%7B%281%20&plus;%20x%20&plus;%20x%5E2%20&plus;%20%5Cldots%29%7D_%7B1.%7D%20%5Ccdot%20%5Cunderbrace%7B%281%20&plus;%20x%5E2%20&plus;%20x%5E4%20&plus;%20x%5E6%20&plus;%20%5Cldots%29%7D_%7B2.%7D%20%5Ccdot%20%5Cldots%20%5Cunderbrace%7B%5Ccdot%20%281%20&plus;%20x%5En%20&plus;%20x%5E%7B2n%7D%20&plus;%20%5Cldots%20%29%7D_%7Bn.%7D)
+
+![1.~\ldots ~ \frac{1}{1-x}](https://latex.codecogs.com/svg.latex?1.%7E%5Cldots%20%7E%20%5Cfrac%7B1%7D%7B1-x%7D)
+
+![2.~\ldots ~ \frac{1}{1-x^2}](https://latex.codecogs.com/svg.latex?2.%7E%5Cldots%20%7E%20%5Cfrac%7B1%7D%7B1-x%5E2%7D)
+
+...
+
+![n.~\ldots ~ \frac{1}{1-x^n}](https://latex.codecogs.com/svg.latex?n.%7E%5Cldots%20%7E%20%5Cfrac%7B1%7D%7B1-x%5En%7D)
+
+![f(x) = \mathbf{\prod^n_{i=1} \frac{1}{1-x^i}}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Cmathbf%7B%5Cprod%5En_%7Bi%3D1%7D%20%5Cfrac%7B1%7D%7B1-x%5Ei%7D%7D)
+
+### Rozlišitelné objekty 
+
+- n rozlišitelných objektů
+- k rozlišitelných skupin
+- = počet rozkladů množiny na k tříd
+- = počet ekvivalencí na množině, které mají k tříd ekvivalence
+- = Stirling subset number
+
+**Stirling subset number**
+
+![0 \leq k \leq n](https://latex.codecogs.com/svg.latex?0%20%5Cleq%20k%20%5Cleq%20n)
+
+![\begin{Bmatrix}n\\k\end{Bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7BBmatrix%7Dn%5C%5Ck%5Cend%7BBmatrix%7D)
+
+![\begin{Bmatrix}n\\0\end{Bmatrix} = \begin{Bmatrix}
+1,~ n=0~~\\ 
+0,~ n \in \mathbb{N}^+
+\end{Bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7BBmatrix%7Dn%5C%5C0%5Cend%7BBmatrix%7D%20%3D%20%5Cbegin%7BBmatrix%7D%201%2C%7E%20n%3D0%7E%7E%5C%5C%200%2C%7E%20n%20%5Cin%20%5Cmathbb%7BN%7D%5E&plus;%20%5Cend%7BBmatrix%7D)
+
+![\begin{Bmatrix}n\\1\end{Bmatrix} = \begin{Bmatrix}n\\n\end{Bmatrix} = 1,~n \in \mathbb{N}^+](https://latex.codecogs.com/svg.latex?%5Cbegin%7BBmatrix%7Dn%5C%5C1%5Cend%7BBmatrix%7D%20%3D%20%5Cbegin%7BBmatrix%7Dn%5C%5Cn%5Cend%7BBmatrix%7D%20%3D%201%2C%7En%20%5Cin%20%5Cmathbb%7BN%7D%5E&plus;)
+
+![\begin{Bmatrix}n\\n-1\end{Bmatrix} = \binom{n}{2}](https://latex.codecogs.com/svg.latex?%5Cbegin%7BBmatrix%7Dn%5C%5Cn-1%5Cend%7BBmatrix%7D%20%3D%20%5Cbinom%7Bn%7D%7B2%7D)
+
+![\begin{Bmatrix}n\\k\end{Bmatrix} = \begin{Bmatrix}n-1\\k-1\end{Bmatrix} + k \cdot \begin{Bmatrix}n-1\\k\end{Bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7BBmatrix%7Dn%5C%5Ck%5Cend%7BBmatrix%7D%20%3D%20%5Cbegin%7BBmatrix%7Dn-1%5C%5Ck-1%5Cend%7BBmatrix%7D%20&plus;%20k%20%5Ccdot%20%5Cbegin%7BBmatrix%7Dn-1%5C%5Ck%5Cend%7BBmatrix%7D)
+
+**Stirling cycle number**
+
+Kolik existuje permutací na n-prvkové množině, které lze zapsat ve tvaru součinu k disjunktních cyklů?
+
+= n prvková množina, rozděluji do k tříd ve kterých prvky rozmisťuju na kružnici
+
+= ![\begin{bmatrix}n\\k\end{bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5Ck%5Cend%7Bbmatrix%7D)
+
+![0 \leq \begin{bmatrix}n\\k\end{bmatrix} \leq n!](https://latex.codecogs.com/svg.latex?0%20%5Cleq%20%5Cbegin%7Bbmatrix%7Dn%5C%5Ck%5Cend%7Bbmatrix%7D%20%5Cleq%20n%21)
+
+![\begin{bmatrix}n\\0\end{bmatrix} = \begin{Bmatrix}
+1,~n = 0~~\\ 
+0,~n \in \mathbb{N}^+
+\end{Bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5C0%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7BBmatrix%7D%201%2C%7En%20%3D%200%7E%7E%5C%5C%200%2C%7En%20%5Cin%20%5Cmathbb%7BN%7D%5E&plus;%20%5Cend%7BBmatrix%7D)
+
+![\begin{bmatrix}n\\1\end{bmatrix} = \frac{n!}{n}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5C1%5Cend%7Bbmatrix%7D%20%3D%20%5Cfrac%7Bn%21%7D%7Bn%7D)
+
+![\begin{bmatrix}n\\n\end{bmatrix} = 1](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5Cn%5Cend%7Bbmatrix%7D%20%3D%201)
+
+![\begin{bmatrix}n\\k\end{bmatrix} = \begin{bmatrix}n-1\\k-1\end{bmatrix} + (n-1) \cdot \begin{bmatrix}n-1\\k\end{bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5Ck%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7Dn-1%5C%5Ck-1%5Cend%7Bbmatrix%7D%20&plus;%20%28n-1%29%20%5Ccdot%20%5Cbegin%7Bbmatrix%7Dn-1%5C%5Ck%5Cend%7Bbmatrix%7D)
