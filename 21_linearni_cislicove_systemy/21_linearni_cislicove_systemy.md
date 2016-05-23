@@ -21,7 +21,7 @@ Lineární systém je aditivní a homogenní
 
 **Pro linearitu tedz platí podmínka**
 
-![F(ax_1 + bx_2) = aF(x_1) + bF(x_2)](https://latex.codecogs.com/gif.latex?F%28ax_%7B1%7D%20&plus;%20bx_%7B2%7D%29%20%3D%20aF%28x_%7B1%7D%29%20&plus;%20bF%28x_%7B2%7D%29)
+![F(ax_1 + bx_2) = aF(x_1) + bF(x_2)](https://latex.codecogs.com/svg.latex?F%28ax_%7B1%7D%20&plus;%20bx_%7B2%7D%29%20%3D%20aF%28x_%7B1%7D%29%20&plus;%20bF%28x_%7B2%7D%29)
 
 - odezva na lineární kombinaci budících signálů je rovna lineární kombinaci odezev na jednotlivé budící signály
 
@@ -29,19 +29,19 @@ Lineární systém je aditivní a homogenní
 
 **Příklad lineárního systému**
 
-![y(t) = kx(t)](https://latex.codecogs.com/gif.latex?y%28t%29%20%3D%20k%5Ccdot%20x%28t%29)
+![y(t) = kx(t)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20k%5Ccdot%20x%28t%29)
 
 **Příklad nelineárního systému**
 
-![y(t) = x^{2}(t)](https://latex.codecogs.com/gif.latex?y%28t%29%20%3D%20x%5E%7B2%7D%28t%29)
+![y(t) = x^{2}(t)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%5E%7B2%7D%28t%29)
 
 
 ###Kauzalita
 Odezva systému závisí pouze na současných a minulých hodnotách
 
-- Kauzální systém : ![y(t) = x(t) + x(t-1)](https://latex.codecogs.com/gif.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t-1%29)
+- Kauzální systém : ![y(t) = x(t) + x(t-1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t-1%29)
 
-- Nekauzální systém : ![y(t) = x(t) + x(t+1)](https://latex.codecogs.com/gif.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t&plus;1%29)
+- Nekauzální systém : ![y(t) = x(t) + x(t+1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t&plus;1%29)
 
 
 ###Stabilita
@@ -76,7 +76,7 @@ lze popsat pomocí:
 Vyjadřuje vztah mezi vstupem a výstupem LTI systému
 daného impulsní odezvou
 
-![y[n] = x[n] * h[n] = \sum_{k=0}^{N-1}x[k]\cdot h[n-k]](https://latex.codecogs.com/gif.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20*%20h%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7BN-1%7Dx%5Bk%5D%5Ccdot%20h%5Bn-k%5D)
+![y[n] = x[n] * h[n] = \sum_{k=0}^{N-1}x[k]\cdot h[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20*%20h%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7BN-1%7Dx%5Bk%5D%5Ccdot%20h%5Bn-k%5D)
 
 ###FIR (Finite Impulse Response)
 - jsou systémy s konečnou impulzní odezvou
@@ -88,22 +88,22 @@ daného impulsní odezvou
 
 ##Frekvenční charakteristika
 
-Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme ![H(ejω)](https://latex.codecogs.com/gif.latex?H%28e%5E%7Bj%5Comega%7D%29)
+Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme ![H(ejω)](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29)
 
 Získáme ji aplikací DTFT na odezvu systému y[n]
 
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
-- magnitudová charakteristika ![|H(ejω)|](https://latex.codecogs.com/gif.latex?%7CH%28e%5E%7Bj%5Comega%7D%29%7C)
+- magnitudová charakteristika ![|H(ejω)|](https://latex.codecogs.com/svg.latex?%7CH%28e%5E%7Bj%5Comega%7D%29%7C)
 - fázová charakteristika φ(ω)
 
-![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\phi(\omega) }](https://latex.codecogs.com/gif.latex?H%28e%5E%7Bj%5Comega%7D%29%20%3D%20%7CH%28e%5E%7Bj%5Comega%7D%29%7C%20%5Ccdot%20e%5E%7Bj%5Cphi%28%5Comega%29%20%7D)
+![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\phi(\omega) }](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29%20%3D%20%7CH%28e%5E%7Bj%5Comega%7D%29%7C%20%5Ccdot%20e%5E%7Bj%5Cphi%28%5Comega%29%20%7D)
 
 ##Skupinové spoždění
 
 - Místo fázové charakteristiky se často uvádí skupinové zpoždění (group delay - GD)
 - Udává zpoždění signálu e^jωn po průchodu LTI systémem (ve vzorcích)
-- ![τ(ω) = −dφ(ω)/dω](https://latex.codecogs.com/gif.latex?%5Ctau%28%5Comega%29%20%3D%20-%5Cfrac%7Bd%20%5Cphi%28%5Comega%29%7D%7Bd%20%5Comega%7D) 
+- ![τ(ω) = −dφ(ω)/dω](https://latex.codecogs.com/svg.latex?%5Ctau%28%5Comega%29%20%3D%20-%5Cfrac%7Bd%20%5Cphi%28%5Comega%29%7D%7Bd%20%5Comega%7D) 
 - na cviku jsme si psali, že 
 	- skupinové spoždění = řád/2 
 	- řád = délka signálu -1 
@@ -121,7 +121,7 @@ Obvykle se uvádí ve formě dvou reálných funkcí:
 - Linear constant coeﬃcient diﬀerence equation (LCCDE)
 - Speciální případ diferenčních rovnic popisující LTI systémy
 
-![y[n] = \sum_{k=0}^{q}b[k]x[n-k] - \sum_{k=1}^{p}a[k]x[n-k]](https://latex.codecogs.com/gif.latex?y%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7Bq%7Db%5Bk%5Dx%5Bn-k%5D%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bp%7Da%5Bk%5Dx%5Bn-k%5D)
+![y[n] = \sum_{k=0}^{q}b[k]x[n-k] - \sum_{k=1}^{p}a[k]x[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7Bq%7Db%5Bk%5Dx%5Bn-k%5D%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bp%7Da%5Bk%5Dx%5Bn-k%5D)
 
 - Vztah rekurzivně deﬁnující výstup ze systému jako lineární kombinaci hodnot vstupu a minulých hodnot výstupu
 
