@@ -149,6 +149,7 @@ Typické operace:
 **Procházení stromem:**
 
 ![Ukázka stromu](29_strom_preorder_inorder_postorder.png)
+
 *Ukázka stromu*
 
 1. Průchod do šířky
