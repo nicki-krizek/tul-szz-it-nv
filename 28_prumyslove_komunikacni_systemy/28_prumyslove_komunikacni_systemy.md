@@ -11,11 +11,33 @@ Komunikační systémy pro tato odvětví by měly být:
 -  **dostupné** - používají se stovky metrů, cena tedy hraje významnou roli
 - **flexibilní** - nutnost přizpůsobit systém požadavkům zákazníka
 
-**Časté jsou různé standartizační komise, které zabraňují drahým vendor lockům.**
+*Časté jsou různé standardizační komise, které zabraňují drahým vendor lockům.*
 
-**Pomyslné rozdělení**
+**Protokol** je konvence nebo standard, podle kterého probíhá elektronická komunikace a přenos dat mezi dvěma koncovými body.
 
-Uvedená směs sběrnic je hodně různoroda a můžeme jí rozdělit do několika pomyslných skupin podle specifického použití. (neoficiální dělení)
+**Sběrnice** je skupina signálových vodičů, kterou lze rozdělit na skupiny řídicích, adresových a datových vodičů v případě paralelní sběrnice nebo sdílení dat a řízení na společném vodiči (nebo vodičích) u sériových sběrnic. Sběrnice má za účel zajistit přenos dat a řídicích povelů mezi dvěma a více elektronickými zařízeními. Přenos dat na sběrnici se řídí stanoveným protokolem.
+
+**Dělení sběrnic**
+
+- podle provozu
+ - **synchronní**
+ - **asynchronní**
+- podle uspořádání
+ - **sériové** (všechny uvedené)
+ - **paralelní** (málo používané)
+ - **serioparalelní**
+- podle směru přenosu
+ - **jednousměrné**
+ - **obousměrné**
+- podle umístění
+  - ****intení****
+  - ****externí****
+
+**Sériové sběrnice** jsou nejhojněji používané, důvody k postupnému ústupu paralelních sběrnic jsou v zásadě dva. Synchronizace přenosu jednotlivých bitů paralelně je při vyšších rychlostech velmi složitá a narážíme na technologické limity, proto může být sériová sběrnice paradoxně rychlejší. Vodiče pro sériovou komunikaci jsou mnohem tenčí a praktičtější, to se také následně odráží na výsledné ceně. Pro realizaci delších sběrnic se jedná o poměrně významný faktor.
+
+## Pomyslné rozdělení uvedených systémů
+
+Uvedená směs sběrnic je hodně různoroda a můžeme jí rozdělit do několika pomyslných skupin podle specifického použití. (moje neoficiální dělení)
 
 - **Průmyslové** (CAN, RS-232 a asi i Ethernet)
     - pracují na vzdálenost desítky metrů
@@ -34,13 +56,13 @@ Uvedená směs sběrnic je hodně různoroda a můžeme jí rozdělit do několi
     - krátká až středně dlouhá komunikační vzdálenost
     - obvykle velké nároky na přenosovou rychlost (pro sysokou rychlost paralelní)
 
-## Sběrnice
-Sběrnice mohou být:
 
-- **sériové** (všechny uvedené)
-- **paralelní** (málo používané)
 
-Důvody k postupnému přechodu na sériové sběrnice jsou v zásadě dva. Synchronizace přenosu jednotlivých bitů paralelně je při vyšších rychlostech velmi složitá a narážíme na technologické limity, proto může být sériová sběrnice paradoxně rychlejší. Vodiče pro sériovou komunikaci jsou mnohem tenčí a praktičtější, to se také následně odráží na výsledné ceně. Pro realizaci delších sběrnic se jedná o poměrně významný faktor.
+## Používané systémy
+
+**USART**
+
+Synchronní / asynchronní sériové rozhraní USART (Universal Synchronous / Asynchronous Receiver and Transmitter). Jde o zařízení pro sériovou komunikaci, které lze nastavit buď pro asynchronní režim (SCI – např. pro linky RS232 resp. RS485), anebo pro synchronní režim (běžně označovaný jako SPI).
 
 ### CAN
 
