@@ -26,7 +26,7 @@ Nejdůležitější vlastnosti abstraktního typu dat jsou:
 - **Univerzálnost:** - navržený adt je univerzální a může být použit v libovolném programu (jako hodnota libovolný datový typ)
 - **Zapouzdření:** - vnitřní reprezentace je skryta za transparetní rozhraní, které je poskytováno uživateli (uživatel ví jak použít, ne jak je implementováno)
 - **Integrita:** - do vnitřní struktury nelze zasahovat jinak, než přes definované rozhraní (zamezuje nechtěnému poškození dat)
-- **Modularita:** - konkrétní implementaci implementaci na spodu je možné libovolně měnit (vylepšovat), aniž by bylo nutné přeisovat programy, které adt využívají (abstrakce modelu od konkrétní implementace)
+- **Modularita:** - konkrétní implementaci implementaci na spodu je možné libovolně měnit (vylepšovat), aniž by bylo nutné přepisovat programy, které adt využívají (abstrakce modelu od konkrétní implementace)
 
 Pokud je ADT programován objektově, jsou většinou tyto vlastnosti splněny.
 
