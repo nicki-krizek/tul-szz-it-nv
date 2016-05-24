@@ -1,68 +1,68 @@
- # »ÌslicovÈ sign·ly, DTFT/DFT/STFT
-> DeterministickÈ ËÌslicovÈ sign·ly ñ popis v ËasovÈ oblasti, periodicita, DTFT/DFT spektrum, kr·tkodob· spektr·lnÌ anal˝za (STFT) + vyuûitÌ okÈnkov˝ch funkcÌ, vzorkovacÌ teorÈm, kvantizace.
+Ôªø # ƒå√≠slicov√© sign√°ly, DTFT/DFT/STFT
+> Deterministick√© ƒç√≠slicov√© sign√°ly ‚Äì popis v ƒçasov√© oblasti, periodicita, DTFT/DFT spektrum, kr√°tkodob√° spektr√°ln√≠ anal√Ωza (STFT) + vyu≈æit√≠ ok√©nkov√Ωch funkc√≠, vzorkovac√≠ teor√©m, kvantizace.
 
-## Deterministick˝ ËÌslicov˝ sign·l
+## Deterministick√Ω ƒç√≠slicov√Ω sign√°l
 
-Sign·l je (matematick·) funkce, kter· reprezentuje informaci o v˝voji nÏjakÈ fyzik·lnÌ veliËiny.\
-Takov˝ sign·l je v re·lnÈm svÏtÏ obvykle spojit˝ (analogov˝) - akustika, elektrick˝ sign·l, teplota, tlak, etc. Vzorkov·nÌm (v˝bÏr vzorku v dan˝ch intervalech) a kvantov·nÌm (p¯i¯azenÌm jednÈ z koneËnÈho mnoûstvÌ hodnot) vznik· ËÌslicov˝ sign·l.\
-Deterministick˝ ËÌslicov˝ sign·l je pak kaûd˝ ËÌslicov˝ sign·l, u kterÈho lze v jakÈmkoliv okamûiku zjistit hodnotu s absolutnÌ jistotou (lze je popsat exaktnÌm matematick˝m vzorcem, nap¯. ![x[n] = sin(\omega n)](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20sin%28%5Comega%20n%29) - opakem jsou stochastickÈ sign·ly, kde jsou funkce pops·ny statistick˝m vzorcem.
+Sign√°l je (matematick√°) funkce, kter√° reprezentuje informaci o v√Ωvoji nƒõjak√© fyzik√°ln√≠ veliƒçiny.\
+Takov√Ω sign√°l je v re√°ln√©m svƒõtƒõ obvykle spojit√Ω (analogov√Ω) - akustika, elektrick√Ω sign√°l, teplota, tlak, etc. Vzorkov√°n√≠m (v√Ωbƒõr vzorku v dan√Ωch intervalech) a kvantov√°n√≠m (p≈ôi≈ôazen√≠m jedn√© z koneƒçn√©ho mno≈æstv√≠ hodnot) vznik√° ƒç√≠slicov√Ω sign√°l.\
+Deterministick√Ω ƒç√≠slicov√Ω sign√°l je pak ka≈æd√Ω ƒç√≠slicov√Ω sign√°l, u kter√©ho lze v jak√©mkoliv okam≈æiku zjistit hodnotu s absolutn√≠ jistotou (lze je popsat exaktn√≠m matematick√Ωm vzorcem, nap≈ô. ![x[n] = sin(\omega n)](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20sin%28%5Comega%20n%29) - opakem jsou stochastick√© sign√°ly, kde jsou funkce pops√°ny statistick√Ωm vzorcem.
 
-## Popis sign·lu v ËasovÈ oblasti
+## Popis sign√°lu v ƒçasov√© oblasti
 
-Sign·l ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) - indexovan· nekoneËn· posloupnost ËÌsel z ![R](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D) nebo ![C](https://latex.codecogs.com/png.latex?%5Cmathbb%7BC%7D). \
-Vznik· buÔ vzorkov·nÌm spojitÈho sign·lu ![x(t)](https://latex.codecogs.com/png.latex?x%28t%29) v ekvidistantnÌch okamûicÌch (![T_s](https://latex.codecogs.com/png.latex?T_s), vzorkovacÌ perioda -> ![1/T_s = F_s](https://latex.codecogs.com/png.latex?1/T_s%20%3D%20F_s), vzorkovacÌ frekvence)
+Sign√°l ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) - indexovan√° nekoneƒçn√° posloupnost ƒç√≠sel z ![R](https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D) nebo ![C](https://latex.codecogs.com/png.latex?%5Cmathbb%7BC%7D). \
+Vznik√° buƒè vzorkov√°n√≠m spojit√©ho sign√°lu ![x(t)](https://latex.codecogs.com/png.latex?x%28t%29) v ekvidistantn√≠ch okam≈æic√≠ch (![T_s](https://latex.codecogs.com/png.latex?T_s), vzorkovac√≠ perioda -> ![1/T_s = F_s](https://latex.codecogs.com/png.latex?1/T_s%20%3D%20F_s), vzorkovac√≠ frekvence)
 
 ![x[n] = x(nT_s)](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20x%28nT_s%29)
 
-nebo p¯irozenÏ diskrÈtnÌ sekvencÌ (dennÌ v˝voj cenov˝ch akciÌ). 
+nebo p≈ôirozenƒõ diskr√©tn√≠ sekvenc√≠ (denn√≠ v√Ωvoj cenov√Ωch akci√≠). 
 
-Sign·l lze v ËasovÈ oblasti rozloûit do jednoduööÌch funkcÌ, nap¯.\
+Sign√°l lze v ƒçasov√© oblasti rozlo≈æit do jednodu≈°≈°√≠ch funkc√≠, nap≈ô.\
 
-jednotkov˝ puls
+jednotkov√Ω puls
 
 ![\delta[n] = 1 pokud n = 0, 0 otherwise](https://latex.codecogs.com/png.latex?%5Cdelta%28n%29%20%3D%20%5Cbegin%7Bcases%7D%201%20%26%20%5Cquad%20%5Ctext%7Bpokud%20%7D%20n%20%3D%200%5C%5C%200%20%26%20%5Cquad%20%5Ctext%7Bjinak%20%7D%5C%5C%20%5Cend%7Bcases%7D)
 
-jednotkov˝ skok
+jednotkov√Ω skok
 
 ![u[n] = 1 pokud n >= 0, 0 otherwise](https://latex.codecogs.com/png.latex?u%28n%29%20%3D%20%5Cbegin%7Bcases%7D%201%20%26%20%5Cquad%20%5Ctext%7Bpokud%20%7D%20n%20%5Cgeq%200%5C%5C%200%20%26%20%5Cquad%20%5Ctext%7Bjinak%20%7D%5C%5C%20%5Cend%7Bcases%7D)
 
-## Periodicita sign·lu
+## Periodicita sign√°lu
 
 Pokud
 
 ![x[n] = x[n + N], \forall n, N \in \mathbb{Z}, N > 0](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20x%5Bn%20&plus;%20N%5D%2C%20%5Cforall%20n%2C%20N%20%5Cin%20%5Cmathbb%7BZ%7D%2C%20N%20%3E%200)
 
-pak sign·l ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) je ![N](https://latex.codecogs.com/png.latex?N)-periodick˝, hodnoty se opakujÌ s periodou ![N](https://latex.codecogs.com/png.latex?N).
+pak sign√°l ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) je ![N](https://latex.codecogs.com/png.latex?N)-periodick√Ω, hodnoty se opakuj√≠ s periodou ![N](https://latex.codecogs.com/png.latex?N).
 
 
 ## DTFT (Discrete Time Fourier Transform)
 
-### Z·kladem
+### Z√°kladem
 
-KomplexnÌ exponenciela
+Komplexn√≠ exponenciela
 
 ![x[n] = e^{j \omega_0 n}, \omega_0 \in \mathbb{R}](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20e%5E%7Bj%20%5Comega_0%20n%7D%2C%20%5Comega_0%20%5Cin%20%5Cmathbb%7BR%7D)
 
-kde ![\omega_0](https://latex.codecogs.com/png.latex?%5Comega_0) je ËÌslicov· frekvence
+kde ![\omega_0](https://latex.codecogs.com/png.latex?%5Comega_0) je ƒç√≠slicov√° frekvence
 
-![obr·zek komplexnÌ exponenciely](http://m.eet.com/media/1068017/lyons_pt2_3.gif)
+![obr√°zek komplexn√≠ exponenciely](http://m.eet.com/media/1068017/lyons_pt2_3.gif)
 
 ### DTFT
 
-ZobrazenÌ z mnoûiny posloupnosti prvk˘ (Ëasov· oblast) do mnoûiny spojit˝ch komplexnÌch funkcÌ re·lnÈ promÏnnÈ (frekvenËnÌ oblast)
+Zobrazen√≠ z mno≈æiny posloupnosti prvk≈Ø (ƒçasov√° oblast) do mno≈æiny spojit√Ωch komplexn√≠ch funkc√≠ re√°ln√© promƒõnn√© (frekvenƒçn√≠ oblast)
 
 ![X(e^{j\omega}) = \sum\limits_{n=-\infty}^{\infty}{x[n] e^{-j n \omega}}](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29%20%3D%20%5Csum%5Climits_%7Bn%3D-%5Cinfty%7D%5E%7B%5Cinfty%7D%7Bx%5Bn%5D%20e%5E%7B-j%20n%20%5Comega%7D%7D)
 
-kde ![\omega \in \mathbb{R}](https://latex.codecogs.com/png.latex?%5Comega%20%5Cin%20%5Cmathbb%7BR%7D) je ËÌslicov· frekvence
+kde ![\omega \in \mathbb{R}](https://latex.codecogs.com/png.latex?%5Comega%20%5Cin%20%5Cmathbb%7BR%7D) je ƒç√≠slicov√° frekvence
 
-![X(e^{j\omega})](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojit· komplexnÌ funkce re·lnÈho parametru ![\omega](https://latex.codecogs.com/png.latex?%5Comega). V bodÏ ![\omega_0](https://latex.codecogs.com/png.latex?%5Comega_0) se pak jedn· o korelaci sign·lu ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) a komplexnÌ exponenciely ![e^{j n \omega_0}](https://latex.codecogs.com/png.latex?e%5E%7Bj%20n%20%5Comega_0%7D) (v podstatÏ jak moc se sign·l podob· kosinusovce danÈ frekvence)\
-Ve v˝sledku se jedn· o rozloûenÌ sign·lu ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) na souËet nekoneËnÏ mnoha funkcÌ ![\cos(\omega n + \Phi(\omega))](https://latex.codecogs.com/png.latex?%5Ccos%28%5Comega%20n%20&plus;%20%5CPhi%28%5Comega%29%29), naz˝v·me DTFT spektrum.
+![X(e^{j\omega})](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojit√° komplexn√≠ funkce re√°ln√©ho parametru ![\omega](https://latex.codecogs.com/png.latex?%5Comega). V bodƒõ ![\omega_0](https://latex.codecogs.com/png.latex?%5Comega_0) se pak jedn√° o korelaci sign√°lu ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) a komplexn√≠ exponenciely ![e^{j n \omega_0}](https://latex.codecogs.com/png.latex?e%5E%7Bj%20n%20%5Comega_0%7D) (v podstatƒõ jak moc se sign√°l podob√° kosinusovce dan√© frekvence)\
+Ve v√Ωsledku se jedn√° o rozlo≈æen√≠ sign√°lu ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) na souƒçet nekoneƒçnƒõ mnoha funkc√≠ ![\cos(\omega n + \Phi(\omega))](https://latex.codecogs.com/png.latex?%5Ccos%28%5Comega%20n%20&plus;%20%5CPhi%28%5Comega%29%29), naz√Ωv√°me DTFT spektrum.
 
-RozdÏluje se na *magnitudu* (mÌra podobnosti ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/png.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
+Rozdƒõluje se na *magnitudu* (m√≠ra podobnosti ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/png.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
 
 ![|X(e^{j n \omega_0})|](https://latex.codecogs.com/png.latex?%7CX%28e%5E%7Bj%20n%20%5Comega_0%7D%29%7C)
 
-a f·zi (f·zov˝ posun mezi ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/png.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
+a f√°zi (f√°zov√Ω posun mezi ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/png.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
 
 ![\Phi(\omega_0)](https://latex.codecogs.com/png.latex?%5CPhi%28%5Comega_0%29)
 
@@ -71,33 +71,33 @@ Dohromady
 ![X(e^{j n \omega_0}) = |X(e^{j n \omega_0})| e^{j \Phi \omega_0}](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%20n%20%5Comega_0%7D%29%20%3D%20%7CX%28e%5E%7Bj%20n%20%5Comega_0%7D%29%7C%20e%5E%7Bj%20%5CPhi%20%5Comega_0%7D)
 
 ### Inverze
-Inverze je d·na jako
+Inverze je d√°na jako
 
 ![x[n] = \frac{1}{2\pi} \int\limits_{-\pi}^{\pi} X(e^{j\omega}) e^{j n \omega} d\omega](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20%5Cfrac%7B1%7D%7B2%5Cpi%7D%20%5Cint%5Climits_%7B-%5Cpi%7D%5E%7B%5Cpi%7D%20X%28e%5E%7Bj%5Comega%7D%29%20e%5E%7Bj%20n%20%5Comega%7D%20d%5Comega)
 
 ### Vlastnosti
 
-- Periodicita - DTFT je periodick· s periodou ![2\pi](https://latex.codecogs.com/png.latex?2%5Cpi) (ËÌslicov· frekvence od ![-\pi](https://latex.codecogs.com/png.latex?-%5Cpi) do ![\pi](https://latex.codecogs.com/png.latex?%5Cpi))
+- Periodicita - DTFT je periodick√° s periodou ![2\pi](https://latex.codecogs.com/png.latex?2%5Cpi) (ƒç√≠slicov√° frekvence od ![-\pi](https://latex.codecogs.com/png.latex?-%5Cpi) do ![\pi](https://latex.codecogs.com/png.latex?%5Cpi))
 
 - Linearita
  
   ![ax_1[n] + bx_2[n] \Leftrightarrow aX_1(e^{j \omega}) + bX_2(e^{j \omega})](https://latex.codecogs.com/png.latex?ax_1%5Bn%5D%20&plus;%20bx_2%5Bn%5D%20%5CLeftrightarrow%20aX_1%28e%5E%7Bj%20%5Comega%7D%29%20&plus;%20bX_2%28e%5E%7Bj%20%5Comega%7D%29)
 
 
-- OtoËenÌ - otoËenÌ ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) v Ëase vede k otoËenÌ ![X(e^{j\omega})](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29) ve frekvenci, tedy
+- Otoƒçen√≠ - otoƒçen√≠ ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) v ƒçase vede k otoƒçen√≠ ![X(e^{j\omega})](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29) ve frekvenci, tedy
 
   ![x[-n] = X(e^{-j n \omega})](https://latex.codecogs.com/png.latex?x%5B-n%5D%20%3D%20X%28e%5E%7B-j%20n%20%5Comega%7D%29)
   
 
-- KonvoluËnÌ teorÈm - konvoluce dvou sign·l˘ v ËasovÈ oblasti vede k vyn·sobenÌ ve frekvenËnÌ oblasti
+- Konvoluƒçn√≠ teor√©m - konvoluce dvou sign√°l≈Ø v ƒçasov√© oblasti vede k vyn√°soben√≠ ve frekvenƒçn√≠ oblasti
 
   ![h[n]*x[n] \Leftrightarrow H(e^{j n \omega})X(e^{j n \omega})](https://latex.codecogs.com/png.latex?h%5Bn%5D*x%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29X%28e%5E%7Bj%20n%20%5Comega%7D%29)
 
-  StejnÏ tak to platÌ obr·cenÏ - n·sobenÌ sign·l˘ v Ëase je konvolucÌ ve frekvenci
+  Stejnƒõ tak to plat√≠ obr√°cenƒõ - n√°soben√≠ sign√°l≈Ø v ƒçase je konvoluc√≠ ve frekvenci
   
   ![h[n]x[n] \Leftrightarrow H(e^{j n \omega})*X(e^{j n \omega})](https://latex.codecogs.com/png.latex?h%5Bn%5Dx%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29*X%28e%5E%7Bj%20n%20%5Comega%7D%29)
 
-- Parseval˘v teorÈm - DTFT zachov·v· energii sign·lu, tedy
+- Parseval≈Øv teor√©m - DTFT zachov√°v√° energii sign√°lu, tedy
 
   ![\sum\limits_{n=-\infty}^{\infty}{|x[n]|^2} = \frac{1}{2\pi} \int\limits_{-\pi}^{\pi}{|X(e^{j \omega})|^2 d\omega}](https://latex.codecogs.com/png.latex?%5Csum%5Climits_%7Bn%3D-%5Cinfty%7D%5E%7B%5Cinfty%7D%7B%7Cx%5Bn%5D%7C%5E2%7D%20%3D%20%5Cfrac%7B1%7D%7B2%5Cpi%7D%20%5Cint%5Climits_%7B-%5Cpi%7D%5E%7B%5Cpi%7D%7B%7CX%28e%5E%7Bj%20%5Comega%7D%29%7C%5E2%20d%5Comega%7D)
 
@@ -105,7 +105,7 @@ Inverze je d·na jako
 
 ### DFT
 
-DTFT p¯ev·dÌ nekoneËnou diskrÈtnÌ ¯adu ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) na spojitou funkci ËÌslicovÈ frekvence ![X(e^{j\omega})](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29). ZpÏtn· rekonstrukce sign·lu ze spektra je moûn·, pokud zn·me hodnoty spektra pro vöechny ËÌslicovÈ frekvence \omega. Pokud je trv·nÌ ¯ady koneËnÈ, pak je moûn· perfektnÌ rekonstrukce zn·me-li N vhodnÏ zvolen˝ch frekvenËnÌch bod˘. V podstatÏ se jedn· o vhodnÈ ekvidistantnÌ navzorkov·nÌ DTFT spektra N vzorky tak, ûe
+DTFT p≈ôev√°d√≠ nekoneƒçnou diskr√©tn√≠ ≈ôadu ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) na spojitou funkci ƒç√≠slicov√© frekvence ![X(e^{j\omega})](https://latex.codecogs.com/png.latex?X%28e%5E%7Bj%5Comega%7D%29). Zpƒõtn√° rekonstrukce sign√°lu ze spektra je mo≈æn√°, pokud zn√°me hodnoty spektra pro v≈°echny ƒç√≠slicov√© frekvence \omega. Pokud je trv√°n√≠ ≈ôady koneƒçn√©, pak je mo≈æn√° perfektn√≠ rekonstrukce zn√°me-li N vhodnƒõ zvolen√Ωch frekvenƒçn√≠ch bod≈Ø. V podstatƒõ se jedn√° o vhodn√© ekvidistantn√≠ navzorkov√°n√≠ DTFT spektra N vzorky tak, ≈æe
 
 ![\omega[k] = \frac{2 \pi k}{N}, 0 \leq k \leq N-1](https://latex.codecogs.com/png.latex?%5Comega%5Bk%5D%20%3D%20%5Cfrac%7B2%20%5Cpi%20k%7D%7BN%7D%2C%200%20%5Cleq%20k%20%5Cleq%20N-1)
 
@@ -113,102 +113,102 @@ Vzorec DFT je tedy
 
 ![X[k] = \sum\limits_{n=0}^{N-1}{x[n] e^{-j 2 \pi n k / N}}, 0 \leq k < N-1](https://latex.codecogs.com/png.latex?X%5Bk%5D%20%3D%20%5Csum%5Climits_%7Bn%3D0%7D%5E%7BN-1%7D%7Bx%5Bn%5D%20e%5E%7B-j%202%20%5Cpi%20n%20k%20/%20N%7D%7D%2C%200%20%5Cleq%20k%20%3C%20N-1)
 
-naz˝v·me ![N](https://latex.codecogs.com/png.latex?N)-bodov· DFT.
+naz√Ωv√°me ![N](https://latex.codecogs.com/png.latex?N)-bodov√° DFT.
 
-Vybr·nÌm ![N](https://latex.codecogs.com/png.latex?N) bod˘ sign·lu se v podstatÏ prov·dÌ operace n·sobenÌ sign·lu obdÈlnÌkov˝m okÈnkem (viz Ë·st o okÈnk·ch).
+Vybr√°n√≠m ![N](https://latex.codecogs.com/png.latex?N) bod≈Ø sign√°lu se v podstatƒõ prov√°d√≠ operace n√°soben√≠ sign√°lu obd√©ln√≠kov√Ωm ok√©nkem (viz ƒç√°st o ok√©nk√°ch).
 
 ### Inverze
 
-InverznÌ DFT je d·na jako
+Inverzn√≠ DFT je d√°na jako
 
 ![x[n] = \frac{1}{N} \sum\limits_{k=0}^{N-1}{X[k] e^{j 2 \pi n k / N}}, 0 \leq n \leq N-1](https://latex.codecogs.com/png.latex?x%5Bn%5D%20%3D%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum%5Climits_%7Bk%3D0%7D%5E%7BN-1%7D%7BX%5Bk%5D%20e%5E%7Bj%202%20%5Cpi%20n%20k%20/%20N%7D%7D%2C%200%20%5Cleq%20n%20%5Cleq%20N-1)
 
 ## STFT (Short Time Fourier Transform)
 
-Kompromis mezi dobr˝m rozliöenÌm v Ëase (vÌm, kde je v sign·lu aktivita) a frekvenci (vÌm, ze kter˝ch kosinusovek se sign·l skl·d· - jsem schopen ho dob¯e analyzovat).
+Kompromis mezi dobr√Ωm rozli≈°en√≠m v ƒçase (v√≠m, kde je v sign√°lu aktivita) a frekvenci (v√≠m, ze kter√Ωch kosinusovek se sign√°l skl√°d√° - jsem schopen ho dob≈ôe analyzovat).
 
-Sign·l je nejprve rozdÏlen do r·mc˘ vhodnÈ velikosti (dle ˙lohy, nap¯. pro zpracov·nÌ ¯eËi je vhodnÈ volit dÈlku r·mce mezi 10 - 40 ms kv˘li kvazi-stacionaritÏ ¯eËi), obvykle s p¯ekryvem okolo 50 %. 
+Sign√°l je nejprve rozdƒõlen do r√°mc≈Ø vhodn√© velikosti (dle √∫lohy, nap≈ô. pro zpracov√°n√≠ ≈ôeƒçi je vhodn√© volit d√©lku r√°mce mezi 10 - 40 ms kv≈Øli kvazi-stacionaritƒõ ≈ôeƒçi), obvykle s p≈ôekryvem okolo 50 %. 
 
-Sign·l v kaûdÈm r·mci je vyn·sobem vhodnou okÈnkovacÌ funkcÌ (Hamming, Hann, Blackmann...), v˝bÏr opÏt z·visÌ na ˙loze. Na kaûd˝ r·mec je aplikov·na DFT.
+Sign√°l v ka≈æd√©m r√°mci je vyn√°sobem vhodnou ok√©nkovac√≠ funkc√≠ (Hamming, Hann, Blackmann...), v√Ωbƒõr opƒõt z√°vis√≠ na √∫loze. Na ka≈æd√Ω r√°mec je aplikov√°na DFT.
 
-JednotlivÈ r·mce jsou pak naskl·d·ny za sebe, ËÌmû vznik· graf ukazujÌcÌ v˝voj aktivity spektra v Ëase - spektrogram (obvykle jenom pro magnitudu).
+Jednotliv√© r√°mce jsou pak naskl√°d√°ny za sebe, ƒç√≠m≈æ vznik√° graf ukazuj√≠c√≠ v√Ωvoj aktivity spektra v ƒçase - spektrogram (obvykle jenom pro magnitudu).
 
 ![spektrogram](http://newt.phys.unsw.edu.au/jw/graphics/didj_spectrogram.JPG)
 
-STFT je v˝hodnÈ hlavnÏ pro anal˝zu sign·l˘ se silnÏ dynamickou povahou (nap¯. ¯eË, hudba).
+STFT je v√Ωhodn√© hlavnƒõ pro anal√Ωzu sign√°l≈Ø se silnƒõ dynamickou povahou (nap≈ô. ≈ôeƒç, hudba).
 
-## OkÈnkovacÌ funkce a prosakov·nÌ spektra
+## Ok√©nkovac√≠ funkce a prosakov√°n√≠ spektra
 
-OkÈnkovacÌ funkce je funkce umoûÚujÌcÌ vybrat ze sign·lu koneËnÏ dlouhou sekvenci prvk˘. Sign·l je jednoduöe v ËasovÈ oblasti zn·soben koeficienty danÈho okÈnka (nap¯. obdÈlnÌkovÈ okÈnko = 1 tam kde chci sign·l zachovat, 0 jinde).
+Ok√©nkovac√≠ funkce je funkce umo≈æ≈àuj√≠c√≠ vybrat ze sign√°lu koneƒçnƒõ dlouhou sekvenci prvk≈Ø. Sign√°l je jednodu≈°e v ƒçasov√© oblasti zn√°soben koeficienty dan√©ho ok√©nka (nap≈ô. obd√©ln√≠kov√© ok√©nko = 1 tam kde chci sign√°l zachovat, 0 jinde).
 
-N·sobenÌ v ËasovÈ oblasti vöak odpovÌd· kruhovÈ konvoluci v oblasti frekvenËnÌ. V˝sledkem je tedy kruhov· konvoluce spektra sign·lu a spektra okÈnkovacÌ funkce, viz obr·zek, tzv. prosakov·nÌ spektra (spectral leakage).
+N√°soben√≠ v ƒçasov√© oblasti v≈°ak odpov√≠d√° kruhov√© konvoluci v oblasti frekvenƒçn√≠. V√Ωsledkem je tedy kruhov√° konvoluce spektra sign√°lu a spektra ok√©nkovac√≠ funkce, viz obr√°zek, tzv. prosakov√°n√≠ spektra (spectral leakage).
 
-![porovn·nÌ DTFT a okÈnkovanÈ DTFT](https://upload.wikimedia.org/wikipedia/commons/7/72/Spectral_leakage_Sine.svg)
+![porovn√°n√≠ DTFT a ok√©nkovan√© DTFT](https://upload.wikimedia.org/wikipedia/commons/7/72/Spectral_leakage_Sine.svg)
 
-U spektra okÈnkov˝ch funkcÌ se uv·dÏjÌ dva hlavnÌ parametry - öÌ¯ka hlavnÌho laloku a ˙tlum postrannÌch lalok˘. Ide·lnÌ je co nejmenöÌ öÌ¯ku hlavnÌho laloku a co nejvÏtöÌ ˙tlum lalok˘ postrannÌch, re·lnÏ je to vûdycky kompromis.\
-P¯i vysokÈ öÌ¯ce hlavnÌho laloku m˘ûe dojÌt ke slÈv·nÌ blÌzk˝ch frekvenËnÌch komponent, p¯i nÌzkÈm ˙tlumu postrannÌch lalok˘ m˘ûe doch·zet k maskov·nÌ slab˝ch frekvenËnÌch komponent, viz obr·zek - kosinusovky na frekvencÌch 1 kHz, 1,1 kHz a 3 kHz(slab·).
+U spektra ok√©nkov√Ωch funkc√≠ se uv√°dƒõj√≠ dva hlavn√≠ parametry - ≈°√≠≈ôka hlavn√≠ho laloku a √∫tlum postrann√≠ch lalok≈Ø. Ide√°ln√≠ je co nejmen≈°√≠ ≈°√≠≈ôku hlavn√≠ho laloku a co nejvƒõt≈°√≠ √∫tlum lalok≈Ø postrann√≠ch, re√°lnƒõ je to v≈ædycky kompromis.\
+P≈ôi vysok√© ≈°√≠≈ôce hlavn√≠ho laloku m≈Ø≈æe doj√≠t ke sl√©v√°n√≠ bl√≠zk√Ωch frekvenƒçn√≠ch komponent, p≈ôi n√≠zk√©m √∫tlumu postrann√≠ch lalok≈Ø m≈Ø≈æe doch√°zet k maskov√°n√≠ slab√Ωch frekvenƒçn√≠ch komponent, viz obr√°zek - kosinusovky na frekvenc√≠ch 1 kHz, 1,1 kHz a 3 kHz(slab√°).
 
-![obr·zek laloky dvou okÈnek](http://media.wiley.com/Lux/36/379636.image1.jpg)
+![obr√°zek laloky dvou ok√©nek](http://media.wiley.com/Lux/36/379636.image1.jpg)
 
-DalöÌ problÈm nast·v· p¯i navzorkov·nÌ DTFT pomocÌ DFT - Pokud nenÌ okÈnko zvoleno ve spr·vnÈ dÈlce, tak bude DTFT navzorkov·no nevhodnÏ, viz obr·zek - perfektnÏ navzorkovanÈ DTFT
+Dal≈°√≠ probl√©m nast√°v√° p≈ôi navzorkov√°n√≠ DTFT pomoc√≠ DFT - Pokud nen√≠ ok√©nko zvoleno ve spr√°vn√© d√©lce, tak bude DTFT navzorkov√°no nevhodnƒõ, viz obr√°zek - perfektnƒõ navzorkovan√© DTFT
 
 ![perfect DTFT sampling](http://blogs.mathworks.com/images/steve/2014/frequency_bins_for_sinusoid_v2_05.png)
 
-a nevhodnÏ navzorkovanÈ DTFT
+a nevhodnƒõ navzorkovan√© DTFT
 
 ![imperfect DTFT sampling](http://blogs.mathworks.com/images/steve/2014/frequency_bins_for_sinusoid_v2_07.png)
 
-## VzorkovacÌ teorÈm
+## Vzorkovac√≠ teor√©m
 
 ### Definice
-Je-li ![\Omega_0](https://latex.codecogs.com/png.latex?%5COmega_0) nevyööÌ frekvencÌ obsaûenou v analogovÈm sign·lu ![x_a(t)](https://latex.codecogs.com/png.latex?x_a%28t%29) (sign·l je p·smovÏ omezen), pak ![x_a(t)](https://latex.codecogs.com/png.latex?x_a%28t%29) je moûnÈ jednoznaËnÏ rekonstruovat z jeho vzork˘ ![x_a(nT_s)](https://latex.codecogs.com/png.latex?x_a%28nT_s%29) pokud
+Je-li ![\Omega_0](https://latex.codecogs.com/png.latex?%5COmega_0) nevy≈°≈°√≠ frekvenc√≠ obsa≈æenou v analogov√©m sign√°lu ![x_a(t)](https://latex.codecogs.com/png.latex?x_a%28t%29) (sign√°l je p√°smovƒõ omezen), pak ![x_a(t)](https://latex.codecogs.com/png.latex?x_a%28t%29) je mo≈æn√© jednoznaƒçnƒõ rekonstruovat z jeho vzork≈Ø ![x_a(nT_s)](https://latex.codecogs.com/png.latex?x_a%28nT_s%29) pokud
 
 ![\Omega_s = \frac{2\pi}{T_s} \geq 2\Omega_0](https://latex.codecogs.com/png.latex?%5COmega_s%20%3D%20%5Cfrac%7B2%5Cpi%7D%7BT_s%7D%20%5Cgeq%202%5COmega_0)
 
-![\Omega_0](https://latex.codecogs.com/png.latex?%5COmega_0) se naz˝v· Nyquistova frekvence
+![\Omega_0](https://latex.codecogs.com/png.latex?%5COmega_0) se naz√Ωv√° Nyquistova frekvence
 
 ### Prakticky
-NejvyööÌ frekvence obsaûen· v sign·lu nesmÌ b˝t vÏtöÌ neû polovina vzorkovacÌ frekvence.
+Nejvy≈°≈°√≠ frekvence obsa≈æen√° v sign√°lu nesm√≠ b√Ωt vƒõt≈°√≠ ne≈æ polovina vzorkovac√≠ frekvence.
 
 ### Aliasing
 
-P¯i nedodrûenÌ vzorkovacÌho teorÈmu doch·zÌ k aliasingu - p¯ekl·d·nÌ frekvencÌ ve spektru - a tÌm k nejednoznaËnosti rekonstrukce sign·lu, viz obr·zek.
+P≈ôi nedodr≈æen√≠ vzorkovac√≠ho teor√©mu doch√°z√≠ k aliasingu - p≈ôekl√°d√°n√≠ frekvenc√≠ ve spektru - a t√≠m k nejednoznaƒçnosti rekonstrukce sign√°lu, viz obr√°zek.
 
 ![chirp aliasing](http://i.imgur.com/kvacDPJ.png)
-Naho¯e zvyöujÌcÌ se tÛn od 0 do 2 kHz, vzorkovacÌ frekvence 4 kHz (splÚuje vzorkovacÌ teorÈm). \
-Dole zvyöujÌcÌ se tÛn od 0 do 4 kHz, vzorkovacÌ frekvence 4 kHz (od poloviny trv·nÌ nesplÚuje vzorkovacÌ teorÈm a je p¯eloûen (doslova)).
+Naho≈ôe zvy≈°uj√≠c√≠ se t√≥n od 0 do 2 kHz, vzorkovac√≠ frekvence 4 kHz (spl≈àuje vzorkovac√≠ teor√©m). \
+Dole zvy≈°uj√≠c√≠ se t√≥n od 0 do 4 kHz, vzorkovac√≠ frekvence 4 kHz (od poloviny trv√°n√≠ nespl≈àuje vzorkovac√≠ teor√©m a je p≈ôelo≈æen (doslova)).
 
 ## Kvantizace
 
 ### Definice
 
-Jedn· se o transformaci spojit˝ch amplitud diskrÈtnÌ (navzorkovanÈ) ¯ady ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) na diskrÈtnÌ koneËnou mnoûinu amplitud
+Jedn√° se o transformaci spojit√Ωch amplitud diskr√©tn√≠ (navzorkovan√©) ≈ôady ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) na diskr√©tn√≠ koneƒçnou mno≈æinu amplitud
 
 ![\hat{x}[n] = Q(x[n])](https://latex.codecogs.com/png.latex?%5Chat%7Bx%7D%5Bn%5D%20%3D%20Q%28x%5Bn%5D%29)
 
-Spojit· amplituda je rozdÏlena na ![L](https://latex.codecogs.com/png.latex?L) nep¯ekr˝vajÌcÌch se interval˘ ![l_k](https://latex.codecogs.com/png.latex?l_k) pomocÌ ![L+1](https://latex.codecogs.com/png.latex?L&plus;1) rozhodovacÌch hladin ![x_1, x_2,...,x_{L+1}](https://latex.codecogs.com/png.latex?x_1%2C%20x_2%2C...%2Cx_%7BL&plus;1%7D)
+Spojit√° amplituda je rozdƒõlena na ![L](https://latex.codecogs.com/png.latex?L) nep≈ôekr√Ωvaj√≠c√≠ch se interval≈Ø ![l_k](https://latex.codecogs.com/png.latex?l_k) pomoc√≠ ![L+1](https://latex.codecogs.com/png.latex?L&plus;1) rozhodovac√≠ch hladin ![x_1, x_2,...,x_{L+1}](https://latex.codecogs.com/png.latex?x_1%2C%20x_2%2C...%2Cx_%7BL&plus;1%7D)
 
 ![l_k = [x_k, x_{k+1}], k = 1, 2,..., L](https://latex.codecogs.com/png.latex?l_k%20%3D%20%5Bx_k%2C%20x_%7Bk&plus;1%7D%5D%2C%20k%20%3D%201%2C%202%2C...%2C%20L)
 
-Pokud ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) pat¯Ì do intervalu ![l_k](https://latex.codecogs.com/png.latex?l_k), kvantizace p¯i¯adÌ ![\hat{x}[n]](https://latex.codecogs.com/png.latex?%5Chat%7Bx%7D%5Bn%5D) hodnotu ![\hat{x}_k](https://latex.codecogs.com/png.latex?%5Chat%7Bx%7D_k)
+Pokud ![x[n]](https://latex.codecogs.com/png.latex?x%5Bn%5D) pat≈ô√≠ do intervalu ![l_k](https://latex.codecogs.com/png.latex?l_k), kvantizace p≈ôi≈ôad√≠ ![\hat{x}[n]](https://latex.codecogs.com/png.latex?%5Chat%7Bx%7D%5Bn%5D) hodnotu ![\hat{x}_k](https://latex.codecogs.com/png.latex?%5Chat%7Bx%7D_k)
 
 ### Prakticky
 
 ![\hat{x}[n] = round(x[n])](https://latex.codecogs.com/png.latex?%5Chat%7Bx%7D%5Bn%5D%20%3D%20round%28x%5Bn%5D%29)
 
-KvantizaËnÌ rozliöenÌ (öÌ¯ka mezi rozhodovacÌmi ˙rovnÏmi) nemÏnnÈ, poËet rozhodovacÌch hladin jako mocnina dvou (kv˘li bin·rnÌmu kÛdov·nÌ po kvantizaci).
+Kvantizaƒçn√≠ rozli≈°en√≠ (≈°√≠≈ôka mezi rozhodovac√≠mi √∫rovnƒõmi) nemƒõnn√©, poƒçet rozhodovac√≠ch hladin jako mocnina dvou (kv≈Øli bin√°rn√≠mu k√≥dov√°n√≠ po kvantizaci).
 
-### KvantizaËnÌ chyba a SQNR
+### Kvantizaƒçn√≠ chyba a SQNR
 
-RozdÌl mezi skuteËnou a kvantovanou hodnotou
+Rozd√≠l mezi skuteƒçnou a kvantovanou hodnotou
 
 ![e[n] = x[n] - Q(x[n])](https://latex.codecogs.com/png.latex?e%5Bn%5D%20%3D%20x%5Bn%5D%20-%20Q%28x%5Bn%5D%29)
 
-SQNR - Signal to Quantization Noise Ratio, Odstup sign·lu od kvantizaËnÌho öumu
+SQNR - Signal to Quantization Noise Ratio, Odstup sign√°lu od kvantizaƒçn√≠ho ≈°umu
 
 ![SQNR = 10 \log{\frac{\sigma_x^2}{\sigma_e^2}} \approx 6.02 \text{ dB per bit}](https://latex.codecogs.com/png.latex?SQNR%20%3D%2010%20%5Clog%7B%5Cfrac%7B%5Csigma_x%5E2%7D%7B%5Csigma_e%5E2%7D%7D%20%5Capprox%206.02%20%5Ctext%7B%20dB%20per%20bit%7D)
 
-tzn. p¯id·nÌm jednoho bitu se SQNR svyöuje o cca 6 dB (4x).
+tzn. p≈ôid√°n√≠m jednoho bitu se SQNR svy≈°uje o cca 6 dB (4x).
 
 
 
