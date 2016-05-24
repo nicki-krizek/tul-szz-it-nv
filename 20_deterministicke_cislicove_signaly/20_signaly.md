@@ -1,4 +1,4 @@
-﻿ # Číslicové signály, DTFT/DFT/STFT
+# Číslicové signály, DTFT/DFT/STFT
 > Deterministické číslicové signály – popis v časové oblasti, periodicita, DTFT/DFT spektrum, krátkodobá spektrální analýza (STFT) + využití okénkových funkcí, vzorkovací teorém, kvantizace.
 
 ## Deterministický číslicový signál
