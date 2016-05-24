@@ -177,6 +177,8 @@ doplnit Z-transformaci a ROC
 - Má-li transformovaná řada konečnou délku, pak ROC zahrnuje celou z-rovinu, kromě z = 0 a z = ∞
 	- z = ∞ patří do ROC, je-li řada pravostranná
 	- z = 0 patří do ROC, je-li řada levostranná
+	- je-li ROC vymezené z obou stran (two-sides) nazýváme ho mezikruží
+	- ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
 - Pravostranná sekvence má z-obraz s ROC ve tvaru: |z|>α
 - Levostranná sekvence má z-obraz s ROC ve tvaru: |z|<β
 - Z-obraz je komplexní funkce komplexní proměnné
