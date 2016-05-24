@@ -163,4 +163,31 @@ dochází k fázovému zkreslení
 ###Realizovatelný systém
 - musí být stabilní (ROC musí obsahovat jednotkovou kružnici) a kauzální (ROC musí být kruh rozpínající se vně jednotkové kružnice)
 
->doplnit Z-transformaci a ROC
+doplnit Z-transformaci a ROC
+
+###Z-transformace
+- Z-transformace diskrétní řady ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je deﬁnována jako:
+	- ![X(z) = \sum_{n = 0}^{N-1} x[n] \cdot z^{-n}](https://latex.codecogs.com/svg.latex?X%28z%29%20%3D%20%5Csum_%7Bn%20%3D%200%7D%5E%7BN-1%7D%20x%5Bn%5D%20%5Ccdot%20z%5E%7B-n%7D)
+- Z-obraz je komplexní funkce komplexní proměnné. Jeho vlastnosti se nejčastěji popisují v z-rovině
+
+###Region konvergence
+- (Region of Convergence - ROC) - hodnoty z, pro které je součet řady konečný
+- DTFT ze Z-obrazu získáme dosazením ![z = e^{j\omega}](https://latex.codecogs.com/svg.latex?z%20%3D%20e%5E%7Bj%5Comega%7D), tedy DTFT je tvořena body na jednotkové kružnici v Z rovině
+- Region konvergence je mezikruží ve formě α<|z|<β
+- Má-li transformovaná řada konečnou délku, pak ROC zahrnuje celou z-rovinu, kromě z = 0 a z = ∞
+	- z = ∞ patří do ROC, je-li řada pravostranná
+	- z = 0 patří do ROC, je-li řada levostranná
+- Pravostranná sekvence má z-obraz s ROC ve tvaru: |z|>α
+- Levostranná sekvence má z-obraz s ROC ve tvaru: |z|<β
+- Z-obraz je komplexní funkce komplexní proměnné
+
+####Nuly a póly
+- Všechny systémy popsané LCCDE lze jednoznačně popsat pomocí Z-transformace jako racionální funkci (viz. přenosová funkce)
+- nuly jsou pak kořeny čitatele a póly kořeny jmenovatele přenosové funkce
+- z pozic nul a pólů v z-rovině můžeme vyčíst chování daného filtru
+	- v blízkosti nul budou dané frekvence tlumeny
+	- v blízkosti pólů budou frekvence zesilovány
+- intenzita zesílení/tlumení je dána vzdáleností od [0;0]
+- ![ukazka frekencni char. filtru a roc](http://noel.feld.cvut.cz/vyu/ada/adacv/img139.png)
+- v pravo dole je z-rovina, filtr má nulu v [0;0] a jeden pól skoro u [1;0]
+	- ve frek. charak. se to projeví velkým zesílením jedné frekvence, v tomto případě zesílení konstantních signálů (f= 0 Hz)
