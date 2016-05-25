@@ -121,6 +121,10 @@ Teoreticky není možné splnit všechny tři požadavky najednou. CAP říká, 
 - CP - data jsou konzistentní mezi všemi uzly a zachovávají partition tolerance (zamezují desychroznizaci) tím, že pokud je uzel offline data jsou nedostupná.
 - AP - systém je dostupný díky replikaci, k synchronizaci dojde hned jak bude partition znovu dostupná. Nicméně není garantováno, že všechny uzly budou mít stejná data.
 
+![CAP distribuovaná aplikace](14_cap1.png)
+
+![CAP distribuovaná aplikace](14_cap2.png)
+
 ## SŘBD vs. NoSQL
 SŘBD
 - strukturovaná a organizovaná data
