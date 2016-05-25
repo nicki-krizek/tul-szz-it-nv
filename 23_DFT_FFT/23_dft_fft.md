@@ -35,11 +35,53 @@ výpočet DFT a IDFT
 	- Distributivita: (Distributive property)
 		- x[n] ∗{h1[n] + h2[n]}= x[n] ∗h1[n] + x[n] ∗h2[n]
 		- Paralelní zapojení systémů h1[n],h2[n] lze nahradit systémem s impulsní odezvou heq = h1[n] + h2[n]
+h[n] = [1 1 1 1] \
+x[n] = [1 2 3 4] \
+
+1. \
+[1 1 1 1] \
+      [1 2 3 4] \
+       1 = 1 \
+2. \
+[1 1 1 1] \
+    [1 2 3 4] \
+     1+2 = 3 \
+
+3. \
+[1 1 1 1] \
+  [1 2 3 4] \
+   1+2+3 = 6 \
+
+4. \
+[1 1 1 1] \
+[1 2 3 4] \
+ 1+2+3+4 = 10 \
+
+5. \
+  [1 1 1 1] \
+[1 2 3 4] \
+   2+3+4 = 9 \
+
+6 \
+. \
+. \
+. \
+7 \
+
+Vysledek konvoluce = [1 3 6 10 9 7 4]
+
+
 ###Kruhová konvoluce
 - Jsou-li x[n] a h[n] dvě konečné sekvence s N-bodovou DFT X[k] a H[k]
 - pak sekvence s DFT rovnou Y [k] = H[k]X[k] je dána vztahem
 - ![](http://s33.postimg.org/dyxv7dgsf/kruh_konv.png)
-- Jedná se tedy o konvoluci h[n] s periodicky prodlouženým signálem x[n] vyhodnocenou na jedné periodě o délce N
+- Jedná se tedy o konvoluci h[n] s periodicky prodlouženým signálem x[n] vyhodnocenou na jedné periodě o délce N \
+h[n] = [1 1 1 1] \
+x[n] = [1 2 3 4]_{4}\
+1 3 6 10 9   7  4 \
+         1   3  6 10 9 \
+        [10 10 10 10] vysledek kruhove konvoluce \
+
 - Kruhová konvoluce obecně NEMÁ stejnou hodnotu jako lineární  konvoluce
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
 
