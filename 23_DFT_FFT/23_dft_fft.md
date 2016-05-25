@@ -45,11 +45,9 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 - pak sekvence s DFT rovnou Y [k] = H[k]X[k] je dána vztahem
 - ![](http://s33.postimg.org/dyxv7dgsf/kruh_konv.png)
 - Jedná se tedy o konvoluci h[n] s periodicky prodlouženým signálem x[n] vyhodnocenou na jedné periodě o délce N \
-h[n] = [1 1 1 1] \
-x[n] = [1 2 3 4]_{4}\
-1 3 6 10 9   7  4 \
-         1   3  6 10 9 \
-        [10 10 10 10] vysledek kruhove konvoluce \
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/kruh_konv2.png)
+- vezme se výsledek lineárni konvoluce, seřadí se 2x pod sebe a spodní se posune doprava o délku kruhové konvoluce
+- překrávající se sečtou a zbytek se opíše, dokud nedostanem (v tomhle případě) 4 čísla 
 
 - Kruhová konvoluce obecně NEMÁ stejnou hodnotu jako lineární  konvoluce
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
