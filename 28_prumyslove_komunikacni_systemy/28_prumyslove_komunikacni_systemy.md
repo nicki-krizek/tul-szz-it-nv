@@ -167,18 +167,55 @@ Rámec přeplnění má obdobnou strukturu, jako chybový rámec. Uzel vyšle te
 - Prvotní náročnost nastavení registrů CAN sběrnice
 
 ### Ethernet
+[Ethernet](https://cs.wikipedia.org/wiki/Ethernet) je název souhrnu technologií pro počítačové sítě (LAN, MAN) z větší části standardizovaných jako IEEE 802.3, které používají kabely s kroucenou dvoulinkou, optické kabely (ve starší verzích i koaxiální kabely) pro komunikaci přenosovými rychlostmi od 10 Mbit/s po 100 Gbit/s. Sítě Ethernet realizují fyzickou a linkovou vrstvu referenčního modelu OSI.
 
-[https://cs.wikipedia.org/wiki/Ethernet](https://cs.wikipedia.org/wiki/Ethernet)
+- [https://cs.wikipedia.org/wiki/Ethernet](https://cs.wikipedia.org/wiki/Ethernet)
+- [http://www.svetsiti.cz/clanek.asp?cid=Ethernet-1992000&s=CFE74B0513B385BE1F8FE7EC8CC13A105D7E1A86](http://www.svetsiti.cz/clanek.asp?cid=Ethernet-1992000&s=CFE74B0513B385BE1F8FE7EC8CC13A105D7E1A86)
 
-[http://www.svetsiti.cz/clanek.asp?cid=Ethernet-1992000&s=CFE74B0513B385BE1F8FE7EC8CC13A105D7E1A86](http://www.svetsiti.cz/clanek.asp?cid=Ethernet-1992000&s=CFE74B0513B385BE1F8FE7EC8CC13A105D7E1A86)
+**V jednoduché sítí komunikují všichni na stejné sběrnici (fyzická topologie bus) a řeší se kolize při vysílaní paketů. Situaci zlepšují switche, které pakety filtrují do různých segmentů, aby nedocházelo neustále k blokování.**
+
+**CSMA** (Carrier Sense Multiple Access) - stanice připravená vysílat data si "poslechne" zda přenosové médium (kabel) nepoužívá jiná stanice. V případě, že ano, stanice zkouší přístup později až do té doby dokud není médium volné. V okamžiku kdy se médium uvolní začne stanice vysílat svá data. 
+
+**CD** (Collision Detection) - stanice během vysílání sleduje zda je na médiu signál odpovídající vysílaným úrovním (tedy aby se např. v okamžiku kdy vysílá signál 0 nevyskytl signál 1). Případ kdy dojde k interakci signálů více stanic se nazývá kolize. V případě detekce  kolize stanice generuje signál JAM a obě (všechny) stanice které v daném okamžiku vysílaly generují náhodnou hodnotu času po níž se pokusí vysílání zopakovat.
+
+**Podvrsty**
+
+- **Logical Link Control (LLC)** – sjednocuje, IEEE 802.2
+- **Medium Access Control (MAC)** – konkrétní technologie
+- 
+**Standardy**
+
+- **10BASE5** Původní Ethernet na koaxiálním kabelu o rychlosti 10 Mbit/s. Koaxiální kabel o impedanci 50 Ω tvoří sběrnici, ke které se připojují pomocí speciálních transceiverů a AUI kabelů jednotlivé stanice.
+- **10BASE2** Ethernet na tenkém koaxiálním kabelu o rychlosti 10 Mbit/s. Koaxiální kabel tvoří sběrnici, ke které se připojují jednotlivé stanice přímo. Kabel je impedance 50 Ω (RG-58) nesmí mít žádné odbočky a je na koncích zakončen odpory 50 Ω (tzv. terminátory).
+- **10BASE-T** Jako přenosové médium používá kroucenou dvojlinku s rychlostí 10 Mbit/s. Využívá dva páry strukturované kabeláže ze čtyř. Dnes již překonaná síť, která byla ve většině případů nahrazena rychlejší 100 Mbit/s variantou.
+- **10BASE-F** Varianta s optickými vlákny o rychlosti 10 Mbit/s. Používá se pro spojení na větší vzdálenost, nebo spojení mezi objekty, kde nelze použít kroucenou dvojlinku. Tvořila obvykle tzv. páteřní síť, která propojuje jednotlivé menší celky sítě. Dnes je již nahrazována vyššími rychlostmi (Fast Ethernet, Gigabit Ethernet).
+- **100BASE-TX** Varianta s přenosovou rychlostí 100 Mbit/s, které se říká Fast Ethernet, používá dva páry UTP nebo STP kabelu kategorie 5.
+- **100BASE-T2** Používá dva páry UTP kategorie 3, 4, 5. Je to varianta vhodná pro starší rozvody strukturované kabeláže.
+- **100BASE-T4** Používá čtyři páry UTP kategorie 3, 4, 5. Také vhodná pro starší rozvody strukturované kabeláže.
+- **100BASE-FX** Fast Ethernet používající dvě optická vlákna.
+- **1000BASE-T** Ethernet s rychlostí 1000 Mbit/s, nazývaný Gigabit Ethernet. Využívá 4 páry UTP kabeláže kategorie 5e, je definován do vzdálenosti 100 metrů.
+- **1000BASE-CX** Gigabit Ethernet na bázi měděného vodiče pro krátké vzdálenosti, učený pro propojování skupin zařízení.
+- **1000BASE-SX** Gigabit Ethernet používající mnohavidové optické vlákno. Je určen pro páteřní sítě do vzdáleností několik set metrů.
+- **1000BASE-LX** Gigabit Ethernet používající jednovidové optické vlákno. Je určen pro větší vzdáleností až několika desítek kilometrů.
+- **10GBASE-T** Ethernet s rychlostí 10 Gbit/s, nazývaný Ten Gigabit Ethernet (nebo také EFM – Ethernet on the first mile). Do vzdálenosti 55 metrů lze využít kabeláž kategorie 6. Pro využití plné délky 100  je nutné použít kategorii 6a (augmented Category 6 – šířka pásma 500 MHz). Někteří výrobci prodávají kabely kategorie 7, které jsou označeny jako kompatibilní s 10GBASE-T. V současné době (rok 2007) je ve vývoji nestíněná varianta UTP kabeláže kategorie 6a.
+- **40GBASE** a **100GBASE** s rychlostí 40 a 100 Gbps by měl používat optická vlákna; měděné kabely do délky alespoň 10 metrů
+
+![Ethernetový rámec](28_ethernet_frame.png)
+
+*Ethernetový rámec*
 
 ### Modbus
+MODBUS je otevřený protokol pro vzájemnou komunikaci různých zařízení (PLC, dotykové displeje, I/O rozhranní apod), který umožňuje přenášet data po různých sítích a sběrnicích (RS-232, RS-485, Ethernet TCP/IP, MODBUS+ atd.). Komunikace funguje na principu předávání datových zpráv mezi klientem a serverem resp. masterem a slavem. Komunikace probíhá metodou požadavek-odpověď a požadovaná funkce je specifikována pomocí kódu funkce jež je součástí požadavku.
 
-[http://automatizace.hw.cz/clanek/2004082301](http://automatizace.hw.cz/clanek/2004082301)
+- [http://automatizace.hw.cz/clanek/2004082301](http://automatizace.hw.cz/clanek/2004082301)
+- [http://home.zcu.cz/~ronesova/bastl/files/modbus.pdf](http://home.zcu.cz/~ronesova/bastl/files/modbus.pdf)
+- [https://cs.wikipedia.org/wiki/Modbus](https://cs.wikipedia.org/wiki/Modbus)
 
-[http://home.zcu.cz/~ronesova/bastl/files/modbus.pdf](http://home.zcu.cz/~ronesova/bastl/files/modbus.pdf)
+V soušasné době jsou implementována MODBUS komunikace po sítích:
 
-[https://cs.wikipedia.org/wiki/Modbus](https://cs.wikipedia.org/wiki/Modbus)
+- TCP/IP Ethernet
+- Asynchronní sériový přenos ( RS - 232C, RS - 422, RS - 485, vlákno, radiový přenos )
+- MODBUS PLUS vysokorychlostní síť
 
 ### SPI
 Sběrnice SPI (*Serial Peripheral Interface*) představuje jednu z forem sériových externích sběrnic sloužících pro vzájemné propojení dvou či více komunikujících uzlů, přičemž jeden uzel obvykle vystupuje v roli takzvaného řadiče sběrnice (**master**), ostatní uzly pracují v režimu **slave**. Uzel, který pracuje jako master, obsahuje generátor hodinového signálu, který je rozveden do všech ostatních uzlů, čímž je umožněn zcela synchronní (navíc ještě obousměrný) přenos dat. Hodinový signál je rozváděn vodičem označovaným symbolem **SCK**. Kromě vodiče s hodinovým signálem jsou uzly propojeny dvojicí vodičů označovaných většinou symboly **MISO** (Master In, Slave Out) a **MOSI**(Master Out, Slave In), pomocí nichž se obousměrně (**full duplex**) přenáší data. Posledním signálem, který se u této sběrnice používá, je signál **SSEL** (Slave Select), jenž slouží – jak již jeho název napovídá – k výběru některého uzlu pracujícího v režimu slave. V následujících kapitolách si ukážeme, jak a kdy se tento signál používá. Všechny čtyři signály – **SCK**, **MISO**, **MOSI** i **SSEL**, pro svoji funkci vyžadují pouze jednosměrné porty, což přispívá k jednoduché a především levné implementaci této sběrnice.
@@ -188,11 +225,9 @@ Sběrnice SPI (*Serial Peripheral Interface*) představuje jednu z forem sériov
 - mono-master(jeden master, více slavů)
 - 2 konfigurace(nezávislá, kaskádová)
 
-[http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/](http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/)
-
-[https://cs.wikipedia.org/wiki/Serial_Peripheral_Interface](https://cs.wikipedia.org/wiki/Serial_Peripheral_Interface)
-
-[http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf](http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf)
+- [http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/](http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/)
+- [https://cs.wikipedia.org/wiki/Serial_Peripheral_Interface](https://cs.wikipedia.org/wiki/Serial_Peripheral_Interface)
+- [http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf](http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf)
 
 **Obvody:**
 
@@ -221,7 +256,7 @@ I2C je zkratka z celého názvu *Inter-Integrated Circuit*. V určitých ohledec
 - může být multi-master
 - pevný protokol (startovní, ukončovací podmínka => podmínky generuje master)
 - až 128 různých zařízení
-- individuální adresu o délce 7 nebo 10 bitů pro všechny zařízení
+- individuální adresu o délce 7 (128 zařízení) nebo 10 bitů (1024 zařízení) pro všechna zařízení
 
 - [http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256](http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256)
 - [http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/](http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/)
@@ -239,14 +274,26 @@ I2C je zkratka z celého názvu *Inter-Integrated Circuit*. V určitých ohledec
 - RTC obvody
 - I/O expandery
 
+**Řízení komunikace**
+
+Pro řízení komunikace se na I2C používá metoda s detekcí kolize. Každá ze stanic může zahájit vysílání, je-li předtím sběrnice v klidovém stavu. Během vysílání musí neustále porovnávat vysílané bity se skutečným stavem SDA. Je-li zjištěn rozdíl mezi očekávaným a skutečným stavem linky SDA, je to indikace kolize mezi několika stanicemi.
+
+**Adresace**
+
+Každá stanice připojená na I2C má přidělenou 7 resp. 10 bitovou adresu. Po zachycení podmínky START porovnávají všechny obvody svou adresu s adresou, která je vysílána na sběrnici. Zjistí-li některý z obvodů shodu, je vysílání určeno právě jemu a musí přijetí adresy potvrdit bitem ACK. Potom přijímá nebo vysílá další data.
+
+**Potvrzování**
+
+Každý vysílaný byte a vyslaná adresa je následována vysláním jednoho bitu ACK. Vysílající stanice jej vysílá v úrovni H. Přijímající stanice potvrzuje přijetí tím, že v době vysílání ACK připojí SDA na úroveň L. Pokud vysílající stanice nedostane potvrzení příjmu, ukončí vysílání podmínkou STOP.
+
 ![I2C](28_i2c.png)
 
 *Zapojení uzlů na sběrnici I2C*
 
 ### RS-232
-Standard RS-232, resp. jeho poslední varianta RS-232C z roku 1969, (také sériový port nebo sériová linka) se používá jako komunikační rozhraní osobních počítačů a další elektroniky. RS-232 umožňuje propojení a vzájemnou sériovou komunikaci dvou zařízení, tzn., že jednotlivé bity přenášených dat jsou vysílány postupně za sebou (v sérii) po jednom páru vodičů v každém směru. Na rozdíl od síťové technologie Ethernet nebo rozhraní USB se tedy jedná o zcela bezkolizní fyzickou vrstvu.
+Standard RS-232, resp. jeho poslední varianta RS-232C z roku 1969, je postupně vytlačován výkonnějším USB. Nicméně v průmyslu je tento standard, především jeho modifikace - standardy RS-422 a RS-485, velice rozšířen a pro své specifické rysy tomu tak bude i nadále. Na rozdíl od komplexnějšího USB, standard RS-232 pouze definuje, jak přenést určitou sekvenci bitů a nezabývá se už vyššími vrstvami komunikace. V referenčním modelu ISO/OSI tak představuje pouze fyzickou vrstvu.
 
-**Jeden drát pro příjem druhý pro vysílaní, zařízení si navzájem plní vstupně/výystupní buffery.**
+**RS232 je point to point, jeden drát pro příjem druhý pro vysílaní, zařízení si navzájem plní vstupně/výystupní buffery. Neřeší se tedy adresy a kolize.**
 
 - [http://vyvoj.hw.cz/rozhrani/hw-server-predstavuje-seriova-linka-rs-232.html](http://vyvoj.hw.cz/rozhrani/hw-server-predstavuje-seriova-linka-rs-232.html)
 - [http://www.root.cz/clanky/seriovy-port-rs-232c/](http://www.root.cz/clanky/seriovy-port-rs-232c/)
