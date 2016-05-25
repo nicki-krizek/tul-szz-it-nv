@@ -51,7 +51,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 18. [WWW aplikace, programování na straně klienta a serveru, jejich možnosti a omezení, nejběžnější používané prostředky a jazyky, uchovávání stavové informace, cookie.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/18_www_aplikace/18_www_aplikace.md)
 
-19. Alternativní přístupy k programování – funkcionální programování a Lambda kalkulus, náhrada cyklu rekurzí, logické programování, rezoluční mechanismus a jazyk Prolog.
+19. [Alternativní přístupy k programování – funkcionální programování a Lambda kalkulus, náhrada cyklu rekurzí, logické programování, rezoluční mechanismus a jazyk Prolog.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/19_alternativni_pristupy_k_programovani/19_alternativni_pristupy_k_programovani.md)
 
 20. [Deterministické číslicové signály – popis v časové oblasti, periodicita, DTFT/DFT spektrum, krátkodobá spektrální analýza (STFT) + využití okénkových funkcí, vzorkovací teorém, kvantizace.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/20_deterministicke_cislicove_signaly/20_signaly.md)
 
