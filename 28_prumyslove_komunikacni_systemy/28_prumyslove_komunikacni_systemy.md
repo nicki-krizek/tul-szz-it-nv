@@ -223,15 +223,11 @@ I2C je zkratka z celého názvu *Inter-Integrated Circuit*. V určitých ohledec
 - až 128 různých zařízení
 - individuální adresu o délce 7 nebo 10 bitů pro všechny zařízení
 
-[http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256](http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256)
-
-[http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/](http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/)
-
-[https://cs.wikipedia.org/wiki/I%C2%B2C](https://cs.wikipedia.org/wiki/I%C2%B2C)
-
-[http://www.root.cz/clanky/komunikace-po-seriove-sbernici-isup2supc/](http://www.root.cz/clanky/komunikace-po-seriove-sbernici-isup2supc/)
-
-[http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf](http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf)
+- [http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256](http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256)
+- [http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/](http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/)
+- [https://cs.wikipedia.org/wiki/I%C2%B2C](https://cs.wikipedia.org/wiki/I%C2%B2C)
+- [http://www.root.cz/clanky/komunikace-po-seriove-sbernici-isup2supc/](http://www.root.cz/clanky/komunikace-po-seriove-sbernici-isup2supc/)
+- [http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf](http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf)
 
 **Obvody:**
 
@@ -248,15 +244,98 @@ I2C je zkratka z celého názvu *Inter-Integrated Circuit*. V určitých ohledec
 *Zapojení uzlů na sběrnici I2C*
 
 ### RS-232
+Standard RS-232, resp. jeho poslední varianta RS-232C z roku 1969, (také sériový port nebo sériová linka) se používá jako komunikační rozhraní osobních počítačů a další elektroniky. RS-232 umožňuje propojení a vzájemnou sériovou komunikaci dvou zařízení, tzn., že jednotlivé bity přenášených dat jsou vysílány postupně za sebou (v sérii) po jednom páru vodičů v každém směru. Na rozdíl od síťové technologie Ethernet nebo rozhraní USB se tedy jedná o zcela bezkolizní fyzickou vrstvu.
+
+**Jeden drát pro příjem druhý pro vysílaní, zařízení si navzájem plní vstupně/výystupní buffery.**
+
 - [http://vyvoj.hw.cz/rozhrani/hw-server-predstavuje-seriova-linka-rs-232.html](http://vyvoj.hw.cz/rozhrani/hw-server-predstavuje-seriova-linka-rs-232.html)
 - [http://www.root.cz/clanky/seriovy-port-rs-232c/](http://www.root.cz/clanky/seriovy-port-rs-232c/)
 - [https://cs.wikipedia.org/wiki/RS-232](https://cs.wikipedia.org/wiki/RS-232)
 
+![RS232](28_rs232.png)
+
+*RS232*
+
+| Zkratka       | Jméno                 | Popis                                                                                                                                                                                                                                              | PinD-Sub DB25 | PinD-Sub DE9 | Směr u DTE (např. PC, samčí konektor) | Směr u DCE (např. modem, samičí konektor) |
+|---------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------|---------------------------------------|-------------------------------------------|
+|               | Common Ground         | Stínění                                                                                                                                                                                                                                            | 1             | —            | —                                     | —                                         |
+| TxD, TX, TD   | Transmit Data         | Data posílaná z DTE do DCE                                                                                                                                                                                                                         | 2             | 3            | Výstup                                | Vstup                                     |
+| RxD, RX, RD   | Receive Data          | Data přijímaná v DTE z DCE                                                                                                                                                                                                                         | 3             | 2            | Vstup                                 | Výstup                                    |
+| RTS           | Request to Send       | „Požadavek na vysílání“; Logická jednička na tomto výstupu signalizuje, že DTE chce vysílat data. Některé převodníky RS232/RS485 tento signál používají pro přepínání směru linky, což však vyžaduje aby software tento signál správně obsluhoval. | 4             | 7            | Výstup                                | Vstup                                     |
+| CTS           | Clear to Send         | „Povolení k vysílání“; Logickou jedničkou na tomto vstupu protistrana signalizuje, že DTE může vysílat data                                                                                                                                        | 5             | 8            | Vstup                                 | Výstup                                    |
+| DSR           | Data Set Ready        | Logickou jedničkou na tomto vstupu protistrana signalizuje, že je připravena (což neznamená že DTE může okamžitě zaslat data, viz CTS)                                                                                                             | 6             | 6            | Vstup                                 | Výstup                                    |
+| GND           | Ground                | Signálová zem. Hodnoty napětí na pinech jsou určeny proti této zemi.                                                                                                                                                                               | 7             | 5            | —                                     | —                                         |
+| DCD, CD, RLSD | (Data) Carrier Detect | Logickou jedničkou na tomto vstupu protistrana signalizuje, že detekovala na vedení nosný signál a může komunikovat (DCE je např. modem na telefonní lince)                                                                                        | 8             | 1            | Vstup                                 | Výstup                                    |
+| DTR           | Data Terminal Ready   | Logickou jedničkou na tomto výstupu DTE signalizuje protistraně svoji připravenost. Protistrana (např. modem) se tím aktivuje nebo zase deaktivuje. Modem obvykle odpovídá nastavením DSR na logickou jedničku.                                    | 20            | 4            | Výstup                                | Vstup                                     |
+| RI            | Ring Indicator        | Logická jednička signalizuje do DTE příchozí hovor, tedy že někdo požaduje datové spojení („ring“ je anglicky „zvonit“; zvl. u telefonního modemu).                                                                                                | 22            | 9            | Vstup                                 | Výstup                                    |
+
+![Průběh signálu při přenosu znaku K](28_rs232_prenos.png)
+
+*Průběh signálu při přenosu znaku „K“ (ASCII kód 75, binárně 01001011) bez parity a s jedním stopbitem.*
+
 ### USB
+USB (Universal Serial Bus) je univerzální sériová sběrnice, moderní způsob připojení periferií k počítači. Nahrazuje dříve používané způsoby připojení (sériový a paralelní port, PS/2, Gameport apod.) pro běžné druhy periférií. USB je sběrnice jen s jedním zařízením typu Master, všechny aktivity vycházejí z PC a je možné připojit  až 127 různých zařízení.  PC může požadovat data od libovolného zařízení, naopak žádné zařízení nemůže vysílat data samo od sebe. Veškerý přenos dat se uskutečňuje v tzv. rámcích, které trvají přesně 1 milisekundu. Uvnitř jednoho rámce mohou být postupně zpracovávány pakety pro několik zařízení. Přitom se mohou spolu vyskytovat pomalé (low-speed) i rychlé (full-speed) pakety. Rozhraní obsahuje 5V napájení a maximální proud 100mA, na požádání 500mA: Některé desky mají napájení přímo ze zdroje a není limitováno specifikací. Maximální délka kabelu je 5m.
+
 - [http://vyvoj.hw.cz/navrh-obvodu/rozhrani/rs-485-rs-422/usb-20-dil-1.html](http://vyvoj.hw.cz/navrh-obvodu/rozhrani/rs-485-rs-422/usb-20-dil-1.html)
 - [http://vyvoj.hw.cz/navrh-obvodu/rozhrani/rs-485-rs-422/usb-20-dil-2.html](http://vyvoj.hw.cz/navrh-obvodu/rozhrani/rs-485-rs-422/usb-20-dil-2.html)
 - [http://www.root.cz/clanky/universalni-seriova-sbernice-usb/](http://www.root.cz/clanky/universalni-seriova-sbernice-usb/)
 - [https://cs.wikipedia.org/wiki/Universal_Serial_Bus](https://cs.wikipedia.org/wiki/Universal_Serial_Bus)
+
+Specifikace USB obsahuje čtyři základní typy datových přenosů:
+
+- **Řídící** (control) přenosy jsou používány ke konfiguraci zařízení při jeho připojení a mohou být použity k dalším účelům, jako např. k řízení dalších komunikačních rour.
+- **Hromadné** (bulk) přenosy slouží k přenosům velkého množství dat a jsou na ně kladena nejmenší omezení.
+- **Přerušovací** (interrupt) přenosy slouží k včasnému a spolehlivému doručení dat, nejčastěji pro asynchronní události.
+- **Izochronní** (isochronous) přenosy zabírají předem smluvené množství přenosového pásma a mají předem dohodnuté zpoždění. Tento druh přenosů je také nazýván proudový přenos v reálném čase (streaming real-time transfer).
+
+![USB topologie](28_usb_topologie.png)
+
+*USB topologie*
+
+**Plug and Play**
+
+Výhodou je možnost připojování Plug and Play bez nutnosti restartování počítače nebo ručního instalování ovladačů. Zařízení lze připojit za chodu k počítači a během několika sekund je přístupné. Při připojení nového zařízeni nejprve hub podle zdvižené datové linky pozná, že se objevilo nové zařízení. Pak proběhnou následující kroky:
+
+- Hub informuje hostitelský počítač o tom, že bylo připojeno nové zařízení.
+- Hostitelský počítač se dotáže hubu, na který port bylo zařízení připojeno.
+- Po doručení odpovědi vydá počítač příkaz tento port zapnout a provést vynulování (reset) sběrnice.
+- Hub vyrobí nulovací signál (reset) o délce 10 ms. Uvolní pro zařízení napájecí proud 100 mA. Zařízení je nyní připraveno a odpovídá na implicitní (default) adrese.
+- Než zařízení USB obdrží svou vlastní adresu sběrnice, je možno se na ně obracet přes implicitní adresu 0. Hostitel si přečte první bajty popisovači zařízení, aby stanovil, jakou délku mohou mít datové pakety.
+- Hostitel přiřadí zařízení jeho adresu na sběrnici.
+- Hostitel si ze zařízení pod novou sběrnicovou adresou načte všechny konfigurační informace.
+- Hostitel přiřadí zařízení jednu z možných konfigurací. Zařízení nyní může odebírat tolik proudu, kolik je uvedeno v jeho popisovači. Tím je připraveno k použití. Hostitel přiřadí zařízení jeho adresu na sběrnici.
+
+**Vodič**
+
+| 1    | Vcc        | napájení                                      |
+|------|------------|-----------------------------------------------|
+| 2    | D-         | rozdílový pár USB 2.0                         |
+| 3    | D+         | rozdílový pár USB 2.0                         |
+| 4    | GND        | zem napájení                                  |
+| 5    | StdB_SSTX- | superrychlostní vysílač diferenciálního páru  |
+| 6    | StdB_SSTX+ |                                               |
+| 7    | GND_DRAIN  | zem signálu                                   |
+| 8    | StdB_SSRX- | superrychlostní přijímač diferenciálního páru |
+| 9    | StdB_SSRX+ |                                               |
+| kryt | stínění    | kryt                                          |
+
+**Rychlosti**
+
+| Standart | Rychlost |
+|----------|----------|
+| USB 1.1 | 12 Mbit/s |
+| Firefire 400 | 400 Mbit/s | 
+| USB 2.0 | 480 Mbit/s |
+| FireWire 800 | 800 Mbit/s |
+| USB 3.0 | 5 Gbit/s |
+| USB 3.1 | 10 Gbit/s |
+| eSATA | Up to 6 Gbit/s (750 MB/s) |
+| Thunderbolt | 10 Gbit/s × 2 (2 channels) |
+| Thunderbolt 2 | 20 Gbit/s |
+| Thunderbolt 3 | 40 Gbit/s |
+
+*Přichácí USB-C, v podstatě USB 3.1 s jinným konektorem a podporou pro velké proudy (3A), vhodné třeba pro napájení notebooku.*
+
 
 ### SATA
 Serial ATA (SATA) označuje v informatice počítačovou sběrnici, která využívá datové rozhraní pro připojení velkokapacitních paměťových zařízení, jako jsou pevné a optické disky. Délká kabelu je maximálně 1 metr.Topologie je point to point a každé zařízení je připojeno přímo do řadiče. SATA je fullduplexní a poskytuje vyšší výkon díky vestavěnému řadiči DMA.
@@ -269,33 +348,33 @@ Serial ATA (SATA) označuje v informatice počítačovou sběrnici, která využ
 | 2.            | SATA 3 Gb/s   | 300 MB/s          | 3 GHz     |
 | 3.            | SATA 6 Gb/s   | 600 MB/s          | 6 GHz     |
 
-**Na dohled jsou další revize zohledňující nástup SSD a různých SSDlike mini uložišť, které dále navyšují podporu a komunikační rychlosti.**
+**Na dohled jsou další revize zohledňující nástup SSD a různých SSDlike mini uložišť, ktera dále navyšuje podporu a komunikační rychlosti.**
 
 **Již v PATA** (tlustá 40 žil kšanda)
 
-**PIO** (legacy podpora, nahrazeno DMA)
+*PIO* (legacy podpora, nahrazeno DMA)
 
 [PIO](https://cs.wikipedia.org/wiki/PIO) (Programmed Input Output) je režim přenosů dat po sběrnici v počítači mezi periferiemi (CD-ROM, pevný disk, síťová karta apod.) a operační pamětí. Data jsou přenášena za účasti procesoru. Procesor je tedy plně zaměstnán přenosem a nemůže vykonávat jinou práci.
 
-**DMA**
+*DMA*
 
 [DMA](https://cs.wikipedia.org/wiki/DMA) (Direct Memory Access) je způsob přímého přenosu dat mezi operační pamětí a vstupně/výstupními zařízeními. Data neprocházejí skrze procesor a lze tak dosáhnout vyššího výkonu (během přenosu dat může procesor zpracovávat jiné strojové instrukce). DMA se používá pro přenos větších objemů dat například řadič pevných disků, grafická karta, síťová karta, zvuková karta a podobně. DMA je odchylkou od Von Neumannovy architektury počítače. DMA je řízené speciálním řadičem, který je součástí základní desky počítače.
 
 **Ve standartu SATA**
 
-**Advanced Host Controler**
+*Advanced Host Controler*
 
 SATA řadič využívá jako standardní rozhraní [AHCI](https://cs.wikipedia.org/wiki/AHCI) (Advanced Host Controller Interface), které umožňuje využívat některé pokročilé funkce jako například SATA hotplug a Native Command Queuing (NCQ). Pokud není AHCI povoleno základní deskou nebo chipsetem (resp. nastavením v BIOSu), SATA řadič obvykle pracuje v módu „IDE emulace“
 
-**HotPlug**
+*HotPlug*
 
 Technologie [Hot Plug](https://cs.wikipedia.org/wiki/Hot_swapping) umožňuje odpojit či připojit daný disk i za běhu a v případě podpory i při spuštěném operačním systému.
 
-**NCQ**
+*NCQ*
 
 [NCQ](https://cs.wikipedia.org/wiki/NCQ) (Native Command Queuing) je technologie, která v některých případech umožňuje zvýšit výkon pevných disků s rozhraním SATA. Při použití NCQ pevný disk sám optimalizuje pořadí, ve kterém jsou vykonány požadavky na zápis nebo čtení. Tato optimalizace může redukovat nadbytečný pohyb hlaviček disku. Tím se zvýší rychlost přenosu dat mezi řadičem a diskem a také se mírně sníží opotřebení disku.
 
-**Specifikace datového vodiče** (specifikuje i vlastní napájecí konktor)
+**Specifikace datového vodiče** (SATA specifikuje i speciání napájecí konktor - neuveden)
 
 | Vodič | Funkce  |
 |-------|---------|
@@ -307,10 +386,10 @@ Technologie [Hot Plug](https://cs.wikipedia.org/wiki/Hot_swapping) umožňuje od
 | 6.    | DATA B- |
 | 7.    | Zem     |
 
-Existuje i standart eSATA pro externí zařízení a eSATAp, která je i napájena.
+Existuje i varianta eSATA pro externí zařízení a eSATAp, která je i napájena.
 
 ### PCI-e
-[PCI-Express](https://cs.wikipedia.org/wiki/PCI-Express) (též PCIe, PCI-E nebo 3GIO = 3rd Generation I/O) je standard systémové sběrnice, který byl vytvořen jako náhrada za starší standardy PCI, PCI-X a AGP. Označení sběrnice není zcela správné, protože se jedná o dvoubodové spoje, na kterých jsou data přenášena bez potřeby adresy (adresace zařízení). Sběrnice PCI-Express používá sériový přenos dat (na rozdíl od svých předchůdců), protože to přináší proti paralelnímu přenosu některé výhody, zejména možnost dále zvyšovat frekvenci, na které sběrnice pracuje a tím i přenosovou rychlost.
+[PCI-Express](https://cs.wikipedia.org/wiki/PCI-Express) (též PCIe, PCI-E nebo 3GIO = 3rd Generation I/O) je standard **vysoko rychlostní** (**full duplex**) systémové sběrnice, který byl vytvořen jako náhrada za starší standardy PCI, PCI-X a AGP. Označení sběrnice není zcela správné, protože se jedná o **dvoubodové spoje**, na kterých jsou data přenášena** bez potřeby adresy** (adresace zařízení). Sběrnice PCI-Express používá **sériový přenos** dat (na rozdíl od svých předchůdců), protože to přináší proti paralelnímu přenosu některé výhody, zejména možnost dále zvyšovat frekvenci, na které sběrnice pracuje a tím i přenosovou rychlost.
 
 - [http://vyvoj.hw.cz/teorie-a-praxe/dokumentace/pci-express-obecny-popis.html](http://vyvoj.hw.cz/teorie-a-praxe/dokumentace/pci-express-obecny-popis.html)
 - [http://www.root.cz/clanky/interni-sbernice-pci-express/](http://www.root.cz/clanky/interni-sbernice-pci-express/)
@@ -324,7 +403,25 @@ Existuje i standart eSATA pro externí zařízení a eSATAp, která je i napáje
 | 3.0          | 128b/130b | 8 GT/s             | 984.6 MB/s     | 3.938 GB/s     | 7.877 GB/s     | 15.754 GB/s     |
 | 4.0 (future) | 128b/130b | 16 GT/s            | 1.969 GB/s     | 7.877 GB/s     | 15.754 GB/s    | 31.508 GB/s     |
 
-PCI-e pracuje na systému jednotlivých drah ×1 (jedna dráha), ×2 (dvě dráhy), ×4, ×8, ×12, ×16 až ×32. Zajímavé a užitečné je, že i v konektoru ×16 je možné použít kartu, která má menší počet drah (×1, ×2 atd.). Taková karta bude pracovat, i když samozřejmě na nižší rychlosti. Některé základní desky dokonce obsahují kratší konektory s jedním otevřeným koncem, do kterých je možné zasunout i karty delší, čímž se teoreticky dá karta například s šestnácti drahami umístit do konektoru ×1.
+PCI Express **Link** reprezentuje komunikační kanál mezi dvěma zařízeními sběrnice PCI Express. Základní PCI Express Link je sestaven ze dvou nízkonapěťových diferenciálních párů a to přijímacího a vysílacího komunikačního páru označovaného jako **Lane**. Činnost vysílače i přijímače je na sobě nezávislá a Link tvoří plně duplexní komunikační kanál.
+
+- Základní link se skládá ze dvou jednosměrných diferenciálních párů v každém směru, reprezentující přijímací a vysílací pár. Hodinový signál je kódovaný do datového toku, aby mohlo být dosaženo maximální přenosové rychlosti. Samostatně vedené hodiny a data na vysokých frekvencích jsou náchylné k fázovému posunů a jitteru.
+- Každý link může pracovat s příslušnými signálovými úrovněmi pro které byl navržen. Přenosová rychlost dle současné specifikace dosahuje 2,5Gbitu/s na jeden Lane v jednom směru. Zvýšení pracovní frekvence se předpokládá v dalších verzích specifikace.
+- Každý Link musí podporovat **alespoň jeden Lane**. Pro zvýšení přenosové rychlosti je možné využít sdružování Lanes do Linků v povolené šířce. Obvykle se jedná o hodnoty **x1, x2, x4, x8, x12, x16 a x32**. Stejná šířka musí byt dodržena jak pro přijímací, tak vysílací část.
+- Během hardwarové inicializace Linku se vyjedná pracovní frekvence a počet Lanes sestavujících Link. Obdoba vyjednávání pracovní frekvence sítí typu Ethernet.
+
+* Zajímavé a užitečné je, že i v konektoru ×16 je možné použít kartu, která má menší počet drah (×1, ×2 atd.). Taková karta bude pracovat, i když samozřejmě na nižší rychlosti.*
+
+![Struktura PCI-e](28_pcie.png)
+
+*Struktura PCI-e*
+
+Podobně jako sběrnice PCI, tak i sběrnice PCI Express je sestavena ze zařízení, která jsou vzájemně propojena a zajišťují nezbytné funkce sběrnice. Jedné se o zařizení: 
+
+- root complex
+- switches
+- endpoints 
+- bridges.
 
 Od všech konektorů vedou jednotlivé dráhy do přepínače (switch), který (teoreticky) dokáže libovolné dvě dráhy propojit a vytvořit tak strukturu typu point-to-point. Na jednu stranu je sice nutné, aby byl na základní desce přítomen poměrně složitý přepínač, na stranu druhou však odpadá arbitrážní obvod (který také nebyl zcela jednoduchý) a především: každá dráha může přenášet data maximální rychlostí (samozřejmě obousměrně, čehož se však nedá vždy zcela využít) a zařízení se tak nemusí dělit o jedno přenosové pásmo tak, jak tomu bylo například u sběrnice PCI. 
 
