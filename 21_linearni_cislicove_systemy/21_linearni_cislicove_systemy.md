@@ -176,7 +176,8 @@ doplnit Z-transformaci a ROC
 - Region konvergence je mezikruží ve formě α<|z|<β
 	- α a β jsme počítali pomocí tabulky častých z-obrazů
 	- kde podle tvaru jmenovatele přenosové funkce, nebo tvaru impulzní odezvy se zjistila velikost a orientace daného limitu
-
+		- tabulka spíše pro představu, rozhodně nebude potřeba
+		- ![](http://s33.postimg.org/o95a4fx0f/roc.png)
 - ROC nikdy neobsahuje póly - v naprosté většině případů právě póly vymezujii ROC, ale nemusí tomu tak být (např. můžu mit kauzální system s pólem ve vzdálenosti 0.5 a s dalšim ve vzdálenosti 0.3 - 0.5 vymezuje ROC outward, 0.3 už ne)
 - pokud se ROC roztahuje ven -> system je kauzální 
 - pokud se ROC roztahuje dovnitř (k počátku), system je nekauzální
