@@ -41,11 +41,11 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 13. Operační systém a jeho základní úlohy – správa paměti, správa procesů, životní cyklus procesu, přidělování procesoru, správa periferií, problém uváznutí a metody jeho předcházení.
 
-14. Databázové systémy – relační a objektový model dat, NoSQL databáze (typy škálování, teorém CAP).
+14. [Databázové systémy – relační a objektový model dat, NoSQL databáze (typy škálování, teorém CAP).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/14_databazove_systemy/14_databazove_systemy.md)
 
-15. Normalizace v relačním modelu, bezztrátová dekompozice, datové modelování (ER/ERA diagramy), funkční analýza (DFD diagramy), optimalizace databázových struktur (typy indexů a případy jejich využití).
+15. [Normalizace v relačním modelu, bezztrátová dekompozice, datové modelování (ER/ERA diagramy), funkční analýza (DFD diagramy), optimalizace databázových struktur (typy indexů a případy jejich využití).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/15_normalizace_modelovani_optimalizace/15_normalizace_modelovani_optimalizace.md)
 
-16. Jazyk SQL (DDL, DML, množinové operace), uložené procedury a spouště v SQL, transakce (ACID, typy konfliktů, stupně izolace).
+16. [Jazyk SQL (DDL, DML, množinové operace), uložené procedury a spouště v SQL, transakce (ACID, typy konfliktů, stupně izolace).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/16_jazyk_sql/16_jazyk_sql.md)
 
 17. Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.
 
