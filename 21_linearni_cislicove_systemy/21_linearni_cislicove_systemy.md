@@ -183,14 +183,11 @@ doplnit Z-transformaci a ROC
 - pokud ROC je mezikruzi -> system obsahuje kauzalni i nekauzalni prvky
 - pokud ROC obsahuje jednotkovou kružnici (a tudíž lze vypočítat DTFT) -> systém je stabilní.
 
-- Má-li transformovaná řada konečnou délku, pak ROC zahrnuje celou z-rovinu, kromě z = 0 a z = ∞
-	- z = ∞ patří do ROC, je-li řada pravostranná
-	- z = 0 patří do ROC, je-li řada levostranná
-	- je-li ROC vymezené z obou stran (two-sides) nazýváme ho mezikruží
-	- ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
 - Pravostranná sekvence má z-obraz s ROC ve tvaru: |z|>α
 - Levostranná sekvence má z-obraz s ROC ve tvaru: |z|<β
 - Z-obraz je komplexní funkce komplexní proměnné
+- je-li ROC vymezené z obou stran (two-sides) nazýváme ho mezikruží
+- ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
 
 ####Nuly a póly
 - Všechny systémy popsané LCCDE lze jednoznačně popsat pomocí Z-transformace jako racionální funkci (viz. přenosová funkce)
