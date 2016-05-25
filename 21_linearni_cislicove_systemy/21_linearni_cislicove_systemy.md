@@ -174,6 +174,15 @@ doplnit Z-transformaci a ROC
 - (Region of Convergence - ROC) - hodnoty z, pro které je součet řady konečný
 - DTFT ze Z-obrazu získáme dosazením ![z = e^{j\omega}](https://latex.codecogs.com/svg.latex?z%20%3D%20e%5E%7Bj%5Comega%7D), tedy DTFT je tvořena body na jednotkové kružnici v Z rovině
 - Region konvergence je mezikruží ve formě α<|z|<β
+	- α a β jsme počítali pomocí tabulky častých z-obrazů
+	- kde podle tvaru jmenovatele přenosové funkce, nebo tvaru impulzní odezvy se zjistila velikost a orientace daného limitu
+
+- ROC nikdy neobsahuje póly - v naprosté většině případů právě póly vymezujii ROC, ale nemusí tomu tak být (např. můžu mit kauzální system s pólem ve vzdálenosti 0.5 a s dalšim ve vzdálenosti 0.3 - 0.5 vymezuje ROC outward, 0.3 už ne)
+- pokud se ROC roztahuje ven -> system je kauzální 
+- pokud se ROC roztahuje dovnitř (k počátku), system je nekauzální
+- pokud ROC je mezikruzi -> system obsahuje kauzalni i nekauzalni prvky
+- pokud ROC obsahuje jednotkovou kružnici (a tudíž lze vypočítat DTFT) -> systém je stabilní.
+
 - Má-li transformovaná řada konečnou délku, pak ROC zahrnuje celou z-rovinu, kromě z = 0 a z = ∞
 	- z = ∞ patří do ROC, je-li řada pravostranná
 	- z = 0 patří do ROC, je-li řada levostranná
