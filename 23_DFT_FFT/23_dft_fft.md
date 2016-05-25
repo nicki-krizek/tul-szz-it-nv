@@ -35,38 +35,7 @@ výpočet DFT a IDFT
 	- Distributivita: (Distributive property)
 		- x[n] ∗{h1[n] + h2[n]}= x[n] ∗h1[n] + x[n] ∗h2[n]
 		- Paralelní zapojení systémů h1[n],h2[n] lze nahradit systémem s impulsní odezvou heq = h1[n] + h2[n]
-h[n] = [1 1 1 1] \
-x[n] = [1 2 3 4] \
-
-1. \
-[1 1 1 1] \
-      [1 2 3 4] \
-       1 = 1 \
-2. \
-[1 1 1 1] \
-    [1 2 3 4] \
-     1+2 = 3 \
-
-3. \
-[1 1 1 1] \
-  [1 2 3 4] \
-   1+2+3 = 6 \
-
-4. \
-[1 1 1 1] \
-[1 2 3 4] \
- 1+2+3+4 = 10 \
-
-5. \
-  [1 1 1 1] \
-[1 2 3 4] \
-   2+3+4 = 9 \
-
-6 \
-. \
-. \
-. \
-7 \
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/lin_konv.png)
 
 Vysledek konvoluce = [1 3 6 10 9 7 4]
 
