@@ -60,11 +60,19 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 - Z kruhové konvoluce lze udělat lineární doplněním nul ke každému signálu 
 	- potřebná délka = délka prvního + délka druhého - 1
 	- v předchozím příkladu by se signály s délkou 4 doplnili 3 nulami, pak by kruhová konvoluce dala stejný výsledek jako lineární
+	- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/kruh_konv_3.png)
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
 
 ##Rychlý výpočet lineární konvoluce pomocí FFT
-- Výpočet DFT je možné provést efektivně pomocí Rychlé  Fourierovy Transformace (FFT)
-- Tento postup je nevhodný pro dlouhé sekvence x[n]
+Výpočet lin. konvoluce pomocí DFT:
+
+1. Doplnit sekvence nulami h[n] a x[n] na délku N ≥N 1 + N 2 −1
+2. Výpočet N-bodové DFT signálů h[n] a x[n]
+3. Vynásobení Y [k] = H[k]X[k]
+4. Inverzní transformace IDFT z Y [k]
+
+Výpočet DFT je možné provést efektivně pomocí Rychlé  Fourierovy Transformace (FFT)	\
+Tento postup je nevhodný pro dlouhé sekvence x[n]
 	- Při vyhodnocování konv. sumy získáváme výsledek po vzorcích
 	- Při výpočtu DFT výsledek celý najednou - zpoždění
 	- Toto negativum se v praxi obchází blokovým výpočtem konvoluce
