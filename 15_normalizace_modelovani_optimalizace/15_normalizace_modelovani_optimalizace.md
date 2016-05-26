@@ -185,12 +185,14 @@ Typy indexů:
 - operace na B+ stromech je nutné udržovat podle pravidel dále...
 
 **Vložení dat do B+ stromu**
+
 1. najít požadovaný list „L“
 2. vložit data do L - pokud je volný tak pouze zapsat; v opačném případě rozdělit L na nový uzel L a L2, provést redistribuci záznamů, vložit index ukazující z L2 na otce L
 
 Tento postup se může rekurzivně propagovat do celé větve stromu. Tímto strom roste.
 
 **Mazání dat z B+ stromu**
+
 1. najít požadovaný list „L“
 2. odstranit záznam	- pokud je L nejméně z poloviny plný tak smazat; pokud má L pouze (d-1) záznamů provést redistribuci, půjčit si záznamy od sousedních uzlů; jinak spojit L a souseda	
 
@@ -210,15 +212,19 @@ Máme seznam „buckets“ (koše). Jeden primární a případně více další
 **Hash funkce** je základní prvek ovlivňující efektivitu. Musí distribuovat záznamy do košů rovnoměrně.
 
 **Vyhledávání**  
+
 Při hledání záznamu, nejprve aplikuje hash funkce, která identifikuje koš, ve kterém se bude daná položka nalézat.
 
 **Vkládání**
+
 Použijeme hash funkci, abychom identifikovali správný koš, do kterého budeme vkládat záznam. Pokud zde již není místo, musíme přidat tzv. overflow bucket.
 
 **Mazání** 
-Pouužijeme hash funkci pro identifikaci koše, kde budeme mazat. Pokud se jednalo o poslední záznam v overflow bucket, pak se tento označí jako prázdný.
+
+Použijeme hash funkci pro identifikaci koše, kde budeme mazat. Pokud se jednalo o poslední záznam v overflow bucket, pak se tento označí jako prázdný.
 
 **Overflow bucket**
+
 Hlavním problémem je právě zmíněný pevný počet košů, které při vládání mohou začít přetékat. Případně pokud se bude hodně mazat, pak
 budeme plýtvat místem. Pomocí hash funkce nelze přímo adresovat konkrétní prvky. Je nutné po výpočtu hash a identifikaci koše projít všechny ostatní.
   	
@@ -226,12 +232,15 @@ budeme plýtvat místem. Pomocí hash funkce nelze přímo adresovat konkrétní
 Hledáme řešení pro problém s přetékajícími koši. U statického se to muselo přeorganizovat, pokud jsme nechtěli mít overflow buckets. K přeorganizování je třeba celý soubor načíst a pak ho znovu zapsat, což je drahé a časově/paměťově náročné. Řešením je použití adresáře ukazatelů na koše. Pro zdvojnásobení počtu košů stačí pracovat s adresářem ukazatelů.
 
 **Vkládání**
+
 Stejným způsobem najdeme v adresáři ukazatel na koš kam	máme vložit. Pokud je v koši místo přidáme. Pokud ne, pak to musíme řešit. Vytvoříme nový koš,  rozdělíme data do dvou košů a zdvojnásobíme adresář s ukazateli.
 
 **Globální hloubka** 
+
 Určuje počet bitů, které se použijí k adresování v rámci adresáře (počet bitů na konci hash hodnoty).
 
 **Lokální hloubka**  
+
 Pokud budeme vkládat tak, že se budou dále vytvářet nové koše, může se stát, že bude třeba opět zdvojnásobit adresář.
 
 #### Linear hashing
