@@ -257,6 +257,76 @@ Aby systém fungoval jak má, je nutné, aby současně zpracovával více proce
 - **Synchronizace** (synchronization): procesy se musí sejít v určitém okamžiku – synchronizační primitiva
 
 ## Správa periferií
+Operační systém poskytuje **abstrakci** přístupu k hardware, ke kterému přistupuje skrze **ovladače**. Je nutné určité dělení na podobná zařízení, aby byla abstrakce možná. Autor aplikace pak pracuje se „vstupy a výstupy“, aniž by musel znát jejich konkrétní podobu. Přímou komunikaci se zařízením vždy zajišťuje kernel!
+
+### Typy zařízení
+
+- **Znaková (character devices):**
+ - K zařízení lze přistupovat jako ke proudu (stream) znaků.
+ - Narozdíl od souboru je zařízení většinou tunel, do nějž a z nějž čerpáme data.
+ - Ovladač většinou podporuje systémová volání open, close, read, write.
+ - Příklad: terminály v Linuxu, klávesnice, myš, tiskárna.
+- **Bloková (block devices):**
+ - Zařízení se jeví jako souborový systém.
+ - Podporovaná volání různá dle OS. (Např. Unix jen přesouvání bloků dat, Linux podobné operace jako znaková zařízení.)
+ - Rozdíl oproti znakovým zařízením zejména v rozhraní mezi zařízením a jádrem (správa dat).
+ - Příklad: Magnetické disky, CD a spol., flash…
+- **Síťová (network interfaces, devices):**
+ - Přijímají a vysílají datové pakety.
+ - Umožňují výměnu dat s jinými systémy.
+ - Lze realizovat s pomocí HW (karta) nebo SW (loopback).
+
+### Požadované vlastnosti
+
+- **Transparentní přístup:** zařízení se pro I/O jeví jako soubory; konkrétní typ zařízení se určuje až při běhu programu. (Příklad: Tisk na různých tiskárnách.)
+- **Řízení přístupu:** sdílení mezi procesy, ochrana dat, ochrana proti kolizi apod.
+- **Zabezpečení:** respektuje úrovně zabezpečení v systému – různí uživatelé mají dostupná různá zařízení.
+- **Flexibilita:** zařízení lze připojovat a odpojovat s minimálním zásahem do systému. (Příklad: Plug-and-play)
+
+### Ovladače zařízení
+**Ovladač obsahuje:**
+
+1. Funkce pro komunikaci s procesy (zajištění I/O front).
+2. Rutina obsluhy přerušení při komunikaci se zařízením.
+3. Rutina pro inicializace zařízení (pro PnP).
+
+**Ovladače dělíme na:**
+
+- **Producent:**
+ - Logická vrstva směrem k OS.
+ - Přebírá data od procesů a řadí je do fronty.
+ - Závislá jen na typu zařízení, ale ne na HW.
+ - Může být obecná pro více zařízení („klávesnice“, „tiskárna“ apod.).
+- **Konzument:**
+ - Fyzická vrstva směrem k zařízení (přímá komunikace se zařízením)
+ - Odbavuje frontu směrem k zařízení.
+ - Závislé na typu HW.
+
+**Ovladač obstarává:**
+
+- **Inicializace:**
+ - Slouží k zavedení zařízení do OS.
+ - Používá se při startu OS, při zapnutí zařízení nebo při aktualizaci jeho nastavení.
+- **Připoj zařízení:**
+ - Pro zařízení typu plug and play.
+- **Ovládání zařízení:**
+ - Zápis a čtení dat, jiné I/O operace, vlastní práce zařízení.
+- **Start I/O:**
+ - Slouží k zahájení (a ukončení) přenosu dat do a ze zařízení.
+- **Obsluha přerušení:**
+ - Používá se, pokud zařízení pracuje v přerušení.
+- **Zrušení operace:**
+ - Obnova při zrušení I/O operace z libovolného důvodu.
+- **Rychlý průchod:**
+ - Umožní realizovat I/O rychleji něž při komunikaci se zařízením - např. čtením souboru z cache namísto z disku.
+- **Oznámení o vypnutí:**
+ - Při oznámení vypnutí systému se může řadič korektně ukončit.
+- **Záznam chyb:**
+ - Zaznamenává chyby a může o nich informovat I/O subsystém.
+
+![Ovladače zařízení](13_ovladace_zarizeni.png)
+
+*Ovladače zařízení*
 
 ## Souběh
 Dva (a více) provádí současně nějakou operaci nad stejnými daty; přitom operace nejsou korektně ukončeny a překrývají se. Zmatek v datech (nekonzistentní data). Viz také okruh [27. Paralelní systémy](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/27_paralelni_systemy/27_paralelni_systemy.md).
