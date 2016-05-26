@@ -20,6 +20,8 @@
 - dynamická
 - kód stránek je generován
 
+**Vrstvy:**
+
 1. prezentační vrstva (HTML, CSS, JavaScript)
 2. aplikační vrstva (PHP, Python, Ruby, JavaScript, Java, ...)
 3. datová vrstva (SQL, PostreSQL, MongoDB, ...)
