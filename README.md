@@ -37,7 +37,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 11. Pojmy šifrování, kódování, symetrické šifry (afinní, Vigener, Hill, jednoduchá transpozice), asymetrické šifry (RSA), Feistelovy šifry, princip, příklady (DES, AES, NDS).
 
-12. Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy.
+12. [Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/12_minimalni_kody.md)
 
 13. Operační systém a jeho základní úlohy – správa paměti, správa procesů, životní cyklus procesu, přidělování procesoru, správa periferií, problém uváznutí a metody jeho předcházení.
 
@@ -57,7 +57,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 21. [LTI číslicové systémy – vlastnosti (linearita, kauzalita, stabilita), impulsní odezva (FIR/IIR), frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineární diferenční rovnice konstantními koeficienty, systém s lineární a minimální fází.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_systemy/21_linearni_cislicove_systemy.md)
 
-22. Návrh číslicových filtrů – toleranční schéma, základní druhy filtrů (DP, HP, PP, PZ, Allpass), návrh FIR filtrů (metoda oken, metoda vzorkování frekvenční charakteristiky), typy IIR filtrů, porovnání vlastností FIR/IIR filtrů.
+22. [Návrh číslicových filtrů – toleranční schéma, základní druhy filtrů (DP, HP, PP, PZ, Allpass), návrh FIR filtrů (metoda oken, metoda vzorkování frekvenční charakteristiky), typy IIR filtrů, porovnání vlastností FIR/IIR filtrů.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/22_cislicove_filtry/22_cislicove_filtry.md)
 
 23. [DFT/FFT (radix-2) – vlastnosti a výpočetní složitost, linearní a kruhová konvoluce, rychlý výpočet lineární konvoluce pomocí FFT (metoda overlap-add, overlap-save).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md)
 
