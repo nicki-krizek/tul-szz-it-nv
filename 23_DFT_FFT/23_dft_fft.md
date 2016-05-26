@@ -57,6 +57,9 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 	- výsledek kruhové konvoluce je tedy [10 10 10 10] 
 
 - Kruhová konvoluce obecně NEMÁ stejnou hodnotu jako lineární  konvoluce
+- Z kruhové konvoluce lze udělat lineární doplněním nul ke každému signálu 
+	- potřebná délka = délka prvního + délka druhého - 1
+	- v předchozím příkladu by se signály s délkou 4 doplnili 3 nulami, pak by kruhová konvoluce dala stejný výsledek jako lineární
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
 
 ##Rychlý výpočet lineární konvoluce pomocí FFT
