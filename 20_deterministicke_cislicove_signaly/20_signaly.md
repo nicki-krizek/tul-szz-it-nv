@@ -3,20 +3,20 @@
 
 ## Deterministický číslicový signál
 
-Signál je (matematická) funkce, která reprezentuje informaci o vývoji nějaké fyzikální veličiny.\
-Takový signál je v reálném světě obvykle spojitý (analogový) - akustika, elektrický signál, teplota, tlak, etc. Vzorkováním (výběr vzorku v daných intervalech) a kvantováním (přiřazením jedné z konečného množství hodnot) vzniká číslicový signál.\
+Signál je (matematická) funkce, která reprezentuje informaci o vývoji nějaké fyzikální veličiny.
+Takový signál je v reálném světě obvykle spojitý (analogový) - akustika, elektrický signál, teplota, tlak, etc. Vzorkováním (výběr vzorku v daných intervalech) a kvantováním (přiřazením jedné z konečného množství hodnot) vzniká číslicový signál.
 Deterministický číslicový signál je pak každý číslicový signál, u kterého lze v jakémkoliv okamžiku zjistit hodnotu s absolutní jistotou (lze je popsat exaktním matematickým vzorcem, např. ![x[n] = sin(\omega n)](https://latex.codecogs.com/svg.latex?x%5Bn%5D%20%3D%20sin%28%5Comega%20n%29) - opakem jsou stochastické signály, kde jsou funkce popsány statistickým vzorcem.
 
 ## Popis signálu v časové oblasti
 
-Signál ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) - indexovaná nekonečná posloupnost čísel z ![R](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BR%7D) nebo ![C](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BC%7D). \
+Signál ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) - indexovaná nekonečná posloupnost čísel z ![R](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BR%7D) nebo ![C](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BC%7D).
 Vzniká buď vzorkováním spojitého signálu ![x(t)](https://latex.codecogs.com/svg.latex?x%28t%29) v ekvidistantních okamžicích (![T_s](https://latex.codecogs.com/svg.latex?T_s), vzorkovací perioda -> ![1/T_s = F_s](https://latex.codecogs.com/svg.latex?1/T_s%20%3D%20F_s), vzorkovací frekvence)
 
 ![x[n] = x(nT_s)](https://latex.codecogs.com/svg.latex?x%5Bn%5D%20%3D%20x%28nT_s%29)
 
 nebo přirozeně diskrétní sekvencí (denní vývoj cenových akcií). 
 
-Signál lze v časové oblasti rozložit do jednodušších funkcí, např.\
+Signál lze v časové oblasti rozložit do jednodušších funkcí, např.
 
 jednotkový puls
 
@@ -55,7 +55,7 @@ Zobrazení z množiny posloupnosti prvků (časová oblast) do množiny spojitý
 
 kde ![\omega \in \mathbb{R}](https://latex.codecogs.com/svg.latex?%5Comega%20%5Cin%20%5Cmathbb%7BR%7D) je číslicová frekvence
 
-![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojitá komplexní funkce reálného parametru ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). V bodě ![\omega_0](https://latex.codecogs.com/svg.latex?%5Comega_0) se pak jedná o korelaci signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a komplexní exponenciely ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D) (v podstatě jak moc se signál podobá kosinusovce dané frekvence)\
+![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojitá komplexní funkce reálného parametru ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). V bodě ![\omega_0](https://latex.codecogs.com/svg.latex?%5Comega_0) se pak jedná o korelaci signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a komplexní exponenciely ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D) (v podstatě jak moc se signál podobá kosinusovce dané frekvence)
 Ve výsledku se jedná o rozložení signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na součet nekonečně mnoha funkcí ![\cos(\omega n + \Phi(\omega))](https://latex.codecogs.com/svg.latex?%5Ccos%28%5Comega%20n%20&plus;%20%5CPhi%28%5Comega%29%29), nazýváme DTFT spektrum.
 
 Rozděluje se na *magnitudu* (míra podobnosti ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
@@ -147,7 +147,7 @@ Násobení v časové oblasti však odpovídá kruhové konvoluci v oblasti frek
 
 ![porovnání DTFT a okénkované DTFT](https://upload.wikimedia.org/wikipedia/commons/7/72/Spectral_leakage_Sine.svg)
 
-U spektra okénkových funkcí se uvádějí dva hlavní parametry - šířka hlavního laloku a útlum postranních laloků. Ideální je co nejmenší šířku hlavního laloku a co největší útlum laloků postranních, reálně je to vždycky kompromis.\
+U spektra okénkových funkcí se uvádějí dva hlavní parametry - šířka hlavního laloku a útlum postranních laloků. Ideální je co nejmenší šířku hlavního laloku a co největší útlum laloků postranních, reálně je to vždycky kompromis.
 Při vysoké šířce hlavního laloku může dojít ke slévání blízkých frekvenčních komponent, při nízkém útlumu postranních laloků může docházet k maskování slabých frekvenčních komponent, viz obrázek - kosinusovky na frekvencích 1 kHz, 1,1 kHz a 3 kHz(slabá).
 
 ![obrázek laloky dvou okének](http://media.wiley.com/Lux/36/379636.image1.jpg)
@@ -177,7 +177,8 @@ Nejvyšší frekvence obsažená v signálu nesmí být větší než polovina v
 Při nedodržení vzorkovacího teorému dochází k aliasingu - překládání frekvencí ve spektru - a tím k nejednoznačnosti rekonstrukce signálu, viz obrázek.
 
 ![chirp aliasing](http://i.imgur.com/kvacDPJ.png)
-Nahoře zvyšující se tón od 0 do 2 kHz, vzorkovací frekvence 4 kHz (splňuje vzorkovací teorém). \
+
+Nahoře zvyšující se tón od 0 do 2 kHz, vzorkovací frekvence 4 kHz (splňuje vzorkovací teorém). 
 Dole zvyšující se tón od 0 do 4 kHz, vzorkovací frekvence 4 kHz (od poloviny trvání nesplňuje vzorkovací teorém a je přeložen (doslova)).
 
 ## Kvantizace
