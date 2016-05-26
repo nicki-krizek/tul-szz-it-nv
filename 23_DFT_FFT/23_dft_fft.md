@@ -7,15 +7,21 @@ výpočet lineární konvoluce pomocí FFT (metoda overlap-add, overlap-save).
 - Rychlá Fourierova Transformace (Fast Fourier Transform)
 je skupina algoritmů umožňující výpočetně optimalizovaný
 výpočet DFT a IDFT
-- DFT se používá pro transformaci konečné (periodické) řady
-čísel na konečný (periodický) vektor frekvenčních komponent
+- DFT se používá pro transformaci nekonečné (periodické) řady
+čísel na nekonečný (periodický) vektor frekvenčních komponent
 - Výpočetní náročnost DFT vypočtené podle deﬁnice je ![O(N^{2})](https://latex.codecogs.com/svg.latex?O%28N%5E%7B2%7D%29) aritmetických operací
 	- FFT je schopna spočítat stejný výsledek v ![O(N \cdot log(N))](https://latex.codecogs.com/svg.latex?O%28N%20%5Ccdot%20log%28N%29%29)operacích
+**Vlastnosti**
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/vlastnosti.png)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/vlastnosti2.png)
 
 **Radix-2 Cooley-Tukey FFT** 
 
 - je algoritmus určený pro sekvence délky ![N = 2^{k} , k \in Z](https://latex.codecogs.com/svg.latex?N%20%3D%202%5E%7Bk%7D%20%2C%20k%20%5Cin%20Z)
 - Výpočetních úspor je dosaženo díky periodicitě komplexních exponenciál a možnosti vypočítat N-bodovou DFT pomocí dvou N/2-bodových DFT
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/DIT-FFT-butterfly.png/300px-DIT-FFT-butterfly.png)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/pseudokod.png)
 
 ##Lineární a kruhová konvoluce
 ###Lineární konvoluce
@@ -47,9 +53,13 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 - Jedná se tedy o konvoluci h[n] s periodicky prodlouženým signálem x[n] vyhodnocenou na jedné periodě o délce N \
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/kruh_konv_2.png)
 	- vezme se výsledek lineárni konvoluce, seřadí se 2x pod sebe a spodní se posune doprava o délku kruhové konvoluce
-	- překrávající se sečtou a zbytek se opíše, dokud nedostanem (v tomhle případě) 4 čísla 
+	- překrývající se sečtou a zbytek se opíše, dokud nedostanem (v tomhle případě) 4 čísla
+	- výsledek kruhové konvoluce je tedy [10 10 10 10] 
 
 - Kruhová konvoluce obecně NEMÁ stejnou hodnotu jako lineární  konvoluce
+- Z kruhové konvoluce lze udělat lineární doplněním nul ke každému signálu 
+	- potřebná délka = délka prvního + délka druhého - 1
+	- v předchozím příkladu by se signály s délkou 4 doplnili 3 nulami, pak by kruhová konvoluce dala stejný výsledek jako lineární
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
 
 ##Rychlý výpočet lineární konvoluce pomocí FFT

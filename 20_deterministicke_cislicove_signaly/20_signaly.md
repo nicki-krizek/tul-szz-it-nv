@@ -117,6 +117,8 @@ nazýváme ![N](https://latex.codecogs.com/svg.latex?N)-bodová DFT.
 
 Vybráním ![N](https://latex.codecogs.com/svg.latex?N) bodů signálu se v podstatě provádí operace násobení signálu obdélníkovým okénkem (viz část o okénkách).
 
+- Narozdíl od DTFT způsobuje násobení ve spektru *kruhovou* konvoluci v čase, ne lineární - viz otázka [https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md "23")
+
 ### Inverze
 
 Inverzní DFT je dána jako
