@@ -79,14 +79,14 @@ Tento postup je nevhodný pro dlouhé sekvence x[n]
 	- 
 ###Overlap-Add (Bloková konvoluce)
 
-- základní princip je, že při kruhový konvoluci signálu s impulzní odezvou, vznikne část navíc (oproti délce vstupu)
-- výsledkem blokové konvoluce Add je poskládání jednotlivých subkonvolucí za sebe, s tím že překrývající části se sečtou
+- základní princip je, že při kruhové konvoluci signálu s impulzní odezvou, vznikne část navíc (oproti délce vstupu)
+- výsledkem blokové konvoluce Add je poskládání jednotlivých mezivýsledků ![y_{i}](https://latex.codecogs.com/gif.latex?y_%7Bi%7D) za sebe, s tím že překrývající části se sečtou
 ![](http://s33.postimg.org/s1thkqudb/overlap_add.png)
 
 ###Overlap-Save (Bloková konvoluce)
 
 - k prvnímu rámci signálu se přidá zleva padding nul, aby se z kruhové konvoluce stala lineární
 - v dalších rámcích se přidá na začátek místo nul poslední hodnoty z předchozího rámce
-	- následně se pak v subkonvolucích přidané segmenty odstraní a subkonvoluce se poskládají za sebe 
+	- následně se pak v jednotlivých konvolucích přidané segmenty odstraní a mezivýsledky ![y_{i}](https://latex.codecogs.com/gif.latex?y_%7Bi%7D) se poskládají za sebe 
 
 ![](http://s33.postimg.org/wp0x8mwjj/ovelap_save.png)
