@@ -53,7 +53,8 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 - Jedná se tedy o konvoluci h[n] s periodicky prodlouženým signálem x[n] vyhodnocenou na jedné periodě o délce N \
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/kruh_konv_2.png)
 	- vezme se výsledek lineárni konvoluce, seřadí se 2x pod sebe a spodní se posune doprava o délku kruhové konvoluce
-	- překrávající se sečtou a zbytek se opíše, dokud nedostanem (v tomhle případě) 4 čísla 
+	- překrývající se sečtou a zbytek se opíše, dokud nedostanem (v tomhle případě) 4 čísla
+	- výsledek kruhové konvoluce je tedy [10 10 10 10] 
 
 - Kruhová konvoluce obecně NEMÁ stejnou hodnotu jako lineární  konvoluce
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
