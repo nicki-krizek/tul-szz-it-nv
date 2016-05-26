@@ -184,13 +184,13 @@ Typy indexů:
 - vyhledávání je sekvenční projití od kořene k listu
 - operace na B+ stromech je nutné udržovat podle pravidel dále...
 
-**Vložení dat do B+** stromu:
+**Vložení dat do B+ stromu**
 1. najít požadovaný list „L“
 2. vložit data do L - pokud je volný tak pouze zapsat; v opačném případě rozdělit L na nový uzel L a L2, provést redistribuci záznamů, vložit index ukazující z L2 na otce L
 
 Tento postup se může rekurzivně propagovat do celé větve stromu. Tímto strom roste.
 
-**Mazání dat z B+** stromu:
+**Mazání dat z B+ stromu**
 1. najít požadovaný list „L“
 2. odstranit záznam	- pokud je L nejméně z poloviny plný tak smazat; pokud má L pouze (d-1) záznamů provést redistribuci, půjčit si záznamy od sousedních uzlů; jinak spojit L a souseda	
 
@@ -212,7 +212,7 @@ Máme seznam „buckets“ (koše). Jeden primární a případně více další
 **Vyhledávání**  
 Při hledání záznamu, nejprve aplikuje hash funkce, která identifikuje koš, ve kterém se bude daná položka nalézat.
 
-**Vkládání** 
+**Vkládání**
 Použijeme hash funkci, abychom identifikovali správný koš, do kterého budeme vkládat záznam. Pokud zde již není místo, musíme přidat tzv. overflow bucket.
 
 **Mazání** 
