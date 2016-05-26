@@ -66,7 +66,7 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 ##Rychlý výpočet lineární konvoluce pomocí FFT
 Výpočet lin. konvoluce pomocí DFT:
 
-1. Doplnit sekvence nulami h[n] a x[n] na délku N ≥N 1 + N 2 −1
+1. Doplnit sekvence h[n] a x[n] nulami na délku ![N \geq N_{1} + N_{2} - 1](https://latex.codecogs.com/svg.latex?N%20%5Cgeq%20N_%7B1%7D%20&plus;%20N_%7B2%7D%20-%201)
 2. Výpočet N-bodové DFT signálů h[n] a x[n]
 3. Vynásobení Y [k] = H[k]X[k]
 4. Inverzní transformace IDFT z Y [k]
