@@ -49,6 +49,25 @@
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/22_cislicove_filtry/notch_FIR_IIR.png)
 
 - Reálný filtr ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D) vznikne "oříznutím" impulsní odezvy ideálního filtru - čím delší úsek vyřízneme, tím blíže k ideálu
+
+- Ideální pásmová propust má charakteristiku
+
+![A(e^{j \omega}) = \begin{cases}
+1, $\quad \omega_1 \leq |\omega| \leq \omega_2\\
+0, $\quad \text{jinde}
+\end{cases}](https://latex.codecogs.com/svg.latex?A%28e%5E%7Bj%20%5Comega%7D%29%20%3D%20%5Cbegin%7Bcases%7D%201%2C%20%24%5Cquad%20%5Comega_1%20%5Cleq%20%7C%5Comega%7C%20%5Cleq%20%5Comega_2%5C%5C%200%2C%20%24%5Cquad%20%5Ctext%7Bjinde%7D%20%5Cend%7Bcases%7D)
+
+- Dolní propust získáme dosazením ![\omega_1 = 0](https://latex.codecogs.com/svg.latex?%5Comega_1%20%3D%200), horní propust dosazením ![\omega_2 = \pi](https://latex.codecogs.com/svg.latex?%5Comega_2%20%3D%20%5Cpi)
+- Vzorečky pro výpočet ideální frekvenční odezvy PP, DP a HP (stačí dosadit mezní frekvence ![\omega_1](https://latex.codecogs.com/svg.latex?%5Comega_1) a/nebo ![\omega_2](https://latex.codecogs.com/svg.latex?%5Comega_2) + řád filtru ![N](https://latex.codecogs.com/svg.latex?N)):
+
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/22_cislicove_filtry/bleh.png)
+
+- Vícepásmové filtry se dají vyrobit superpozicí amplitudových charakteristik jednotlivých filtrů, a tedy:
+
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/22_cislicove_filtry/hVP.png)
+
+kde ![C_k](https://latex.codecogs.com/svg.latex?C_k) je amplituda propustného pásma ![k](https://latex.codecogs.com/svg.latex?k)-tého filtru
+
 - Reálný filtr se od ideálního liší existencí zvlnění v závěrném a propustném pásmu (![\delta_p](https://latex.codecogs.com/svg.latex?%5Cdelta_p) a ![\delta_s](https://latex.codecogs.com/svg.latex?%5Cdelta_s)) a existencí přechodového pásma (![\omega_c](https://latex.codecogs.com/svg.latex?%5Comega_c))
 - S rostoucím řádem filtru ![N](https://latex.codecogs.com/svg.latex?N) se zužuje přechodové pásmo, ale zvlnění zůstává skoro stejné (Gibbsův jev)
 - Oříznutí impulzní odezvy je v podstatě
@@ -67,7 +86,7 @@ kde ![w_r[n]](https://latex.codecogs.com/svg.latex?w_r%5Bn%5D) je obdélníkové
 - Postup návrhu filtru
 	- Podle požadované tolerance zvlnění zvolím typ okénka
 	- Podle požadované šířky přechodového pásma zvolím délku/řád ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
-	- Podle šílených vzorečků z IRT vypočtu ![L](https://latex.codecogs.com/svg.latex?L) koeficientů impulsní odezvy, které převážím zvoleným okénkem
+	- Podle vzorečků z IRT (PP, DP a HP) vypočtu ![L](https://latex.codecogs.com/svg.latex?L) koeficientů impulsní odezvy, které převážím zvoleným okénkem
 - Parametry nejpoužívanějších oken
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/22_cislicove_filtry/w_params.png)
 - Shrnutí vlastností okének
