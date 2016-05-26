@@ -37,7 +37,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 11. Pojmy šifrování, kódování, symetrické šifry (afinní, Vigener, Hill, jednoduchá transpozice), asymetrické šifry (RSA), Feistelovy šifry, princip, příklady (DES, AES, NDS).
 
-12. Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy.
+12. [Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/12_minimalni_kody.md)
 
 13. Operační systém a jeho základní úlohy – správa paměti, správa procesů, životní cyklus procesu, přidělování procesoru, správa periferií, problém uváznutí a metody jeho předcházení.
 
