@@ -247,9 +247,17 @@ výjimečně se užívají GIPS (BIPS), GFLOPS, TFLOPS, …
 
 *Doba provádění programu TCPU je dána počtem hod. cyklů během programu násobená dobou cyklu Tclk (je-li konst.)*
 
-![Amdáhlův zákonVýkonostní rovnice](26_vykonostni_rovnice.png)
+![Výkonostní rovnice](26_vykonostni_rovnice.png)
 
 *Výkonostní rovnice*
+
+**Příklad**
+
+Počítač zpracovává program, který má 5 miliónů 1-CPI (jednotaktových instrukcí), 1 milión 2-CPI a 1 milión 3-CPI. Kmitočet hodinových taktů je 100 MHz. Jaká je jeho výkonnost v MIPS?
+
+![Příklad použití výkonostní rovnice](26_vykonostni_rovnice_priklad.png)
+
+*Příklad použití výkonostní rovnice*
 
 ### Amhdálův zákon
 Amdahlův zákon je pravidlo používané v informatice k vyjádření maximálního předpokládaného zlepšení systému poté, co je vylepšena pouze některá z jeho částí. Využívá se např. u víceprocesorových systémů k předpovězení teoretického maximálního zrychlení při přidávání dalších procesorů.
