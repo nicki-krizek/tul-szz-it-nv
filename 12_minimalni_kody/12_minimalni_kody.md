@@ -6,7 +6,7 @@
 - algoritmy pro snížení objemu dat
 	- ztrátová komprese (např. jpeg)
 	- bezztrátová komprese (minimální kódy)
-	- 
+	
 ##Minimální kód
 
 - algoritmy snažící se bezztrátově zredukovat velké množství informace
