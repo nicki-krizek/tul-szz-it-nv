@@ -42,6 +42,7 @@
 
 ### PHP
 
+- skriptovací jazyk
 - syntaxe vychází z C a částečně z Unix shellu
 - dynamicky typované proměnné
 - není třeba deklarovat proměnné
@@ -70,7 +71,7 @@
 - verze 5
   - sémantické strukturování stránky
   - multimédia - audio, video bez Flash
-  - podpora offline aplikací
+  - podpora offline aplikací ([HTML5 Local Storage](http://www.w3schools.com/HTML/html5_webstorage.asp))
   - vylepšené formuláře
   - podpora různých zařízení (oproti XHTML)
 - struktura jazyka
