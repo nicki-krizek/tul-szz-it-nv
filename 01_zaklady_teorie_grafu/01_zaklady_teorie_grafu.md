@@ -134,7 +134,7 @@ Algoritmus vychází z libovolného uzlu a udržuje si seznam již objevených u
 
 - seřadí si hrany od nejlevnější po nejdražší a postupně přidává hrany
 - hrana je přidána, pokud alespoň jeden z vrcholů dané hrany ještě nebyl viděn
-- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/kruskal.gif)
+- ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MST_kruskal_en.gif/300px-MST_kruskal_en.gif)
 
 ##Nejkratší cesta
 - hledání nejkratší cesty z vrcholu u do vrcholu v
