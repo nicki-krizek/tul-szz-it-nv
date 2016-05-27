@@ -110,15 +110,17 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 
 ### do hloubky
 - algoritmus vezme první hranu (obvykle nejlevnější), dostane se k dalšímu vrcholu, kde opět vezme první hranu a takto postupuje dokud nenarazí na vrchol, který nemá další hranu, nebo konečný vrchol, v tu chvíli se vrátí na předchozí vrchol a jde druhou hranou 
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklad_teorie_grafu/hloubka.gif)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/hloubka.gif)
 
 ### do šířky
 - algoritmus nejprve vyčerpá všechny dostupné hrany a až pak se přesune na další vrchol  
 - ![](https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif)
+- 
 ##Minimální kostra
+
 **Jarníkův - primův**
 Algoritmus vychází z libovolného uzlu a udržuje si seznam již objevených uzlů a jejich vzdáleností od propojené části grafu. V každém svém kroku připojí ten z uzlů, mezi nímž a projenou částí grafu je hrana nejnižší délky a označí sousedy nově připojeného uzlu za objevené, případně zkrátí vzdálenosti od již známých uzlů, pokud byla nalezena výhodnější hrana. V okamžiku, kdy jsou propojeny všechny uzly, algoritmus terminuje.
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklad_teorie_grafu/jarnik.gif)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/jarnik.gif)
 
 **Borůvkův algoritmus**
 
@@ -126,13 +128,13 @@ Algoritmus vychází z libovolného uzlu a udržuje si seznam již objevených u
 - na začátku všechny vrcholu jako samostatné komponenty
 - algoritmus je pak postupně propojuje pomocí nejlevnějších hran
 - zastaví se jakmile dosáhne jedné komponenty
-- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklad_teorie_grafu/boruvka.gif)
+- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/boruvka.gif)
 
 **Kruskalův algoritmus**
 
 - seřadí si hrany od nejlevnější po nejdražší a postupně přidává hrany
 - hrana je přidána, pokud alespoň jeden z vrcholů dané hrany ještě nebyl viděn
-- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklad_teorie_grafu/kruskal.gif)
+- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/kruskal.gif)
 
 ##Nejkratší cesta
 - hledání nejkratší cesty z vrcholu u do vrcholu v
@@ -141,4 +143,4 @@ Algoritmus vychází z libovolného uzlu a udržuje si seznam již objevených u
 - každý následující vrchol dostane skóre součtem skóre vrcholu a váhy hrany, kterou jsou spojené
 - pokud se do daného vrcholu lze dostat více hranami, tak výsledné skóre tohoto vrcholu je to menší
 - výsledná cesta je pak cesta přes vrcholy s nejmenším skórem
-- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklad_teorie_grafu/dijkstra.gif)
+- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/dijkstra.gif)
