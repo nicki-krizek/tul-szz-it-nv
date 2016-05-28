@@ -255,7 +255,7 @@ byl u jejího předchůdce (tedy h1 má dvakrát větší rozsah než h0). Pokud
 - uloženy jako bity -> každá hodnota v tabulce je jeden bit (true/false)
  
 |    datum   |           místo výskytu          | id_druhu | část_dne | BI AM | BI PM |
-|:----------:|:--------------------------------:|:--------:|:--------:|:-----:|:-----:|
+|------------|----------------------------------|----------|----------|-------|-------|
 | 23.2.2007  | povodí Berounky – oblast Alkazar | 300812   | AM       | 1     | 0     |
 | 14.1.1999  | Lidečko – Pulčínské skály        | 3403412  | PM       | 0     | 1     |
 | 31.11.2009 | Rejvíz – malé mechové jezírko    | 130045   | AM       | 1     | 0     |
