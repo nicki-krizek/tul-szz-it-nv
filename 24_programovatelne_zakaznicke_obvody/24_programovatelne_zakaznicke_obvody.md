@@ -89,6 +89,139 @@
  - vkládání komponent do netlistu (např. z knihoven)
  - omezení možností syntézy
 
+### Základní konstrukce
+
+**Entity a Architecture**
+Základní konstrukce, které jsou povinné.
+
+- *Entita* - „černá skříňka“ se vstupy a výstupy (obdoba grafického symbolu)
+ - Entita nepopisuje chování modulů (nedefinuje funkci)
+- *Architektura* - určuje chování entit
+ - tělo architektury má dvě části: deklarační část (např. definice signálů), příkazová část (uzavřeno do begin - end )
+ - architektura musí být spojena se specifikovanou entitou
+ - rozdílné architektury definují rozdílné pohledy na entity
+
+**Porty** (Brány)
+
+Porty popisují vnější signály entity a jsou charakterizovány:
+
+- jménem (libovolná skupina znaků začínající písmenem)
+- datovým typem (lze spojovat porty stejného typu)
+- módem (určuje směr toku dat) – 5 módů
+ - *IN* – data lze z portu pouze číst
+ - *OUT* – data vycházejí z portu (výstupní signál nemůže být použit jako vstup uvnitř entity)
+ - *BUFFER* – výstup se zpětnou vazbou (může být buzen pouze z vnitřku entity - data mohou z entity pouze vystupovat, lze zpětně číst)
+ - *INOUT* – obousměrný tok (obousměrné vstupy/výstupy)
+ - *LINKAGE* – neznámý směr datového toku nebo obousměrný (návaznost na jiné než VHDL modely, např. Verilog)
+
+![Módy portu](24_mody.png)
+
+*Módy portu*
+
+**Datové objekty**
+
+- *Constants* (konstanty) – mají neměnnou hodnotu
+- *Variables* (proměnné) – používají se jako pomocné objekty (nepředstavují skutečné signály, nelze je použít jako porty, jsou lokální v procesech)
+- *Signals* (signály) – většinou jsou fyzicky přítomné ve formě elektrických signálů
+
+**Příkaz PROCESS**
+
+- představuje nezávislý děj, který se provede při aktivaci
+- užívá se zejména pro popis sekvenčních dějů
+- příkazy uvnitř procesu se vykonávají sekvenčně
+- více procesů v architektuře se vykonává paralelně.
+
+```vhdl
+[jméno] : PROCESS [(clock, reset)] -- seznam citlivých proměnných
+-- deklarace procesu
+BEGIN
+-- příkazy procesu
+END PROCESS [jméno] ;
+```
+
+Seznam citlivých proměnných je při syntéze ignorován, ale je významný pro správné provádění simulace
+
+**Položky LIBRARY a USE**
+
+V systému VHDL je standardně přístupná pouze knihovna Std.standard (není třeba ji připojovat), ostatní je třeba připojit.
+
+- *LIBRARY* – zviditelňuje logická jména návrhových knihoven
+- *USE* zviditelňuje specifikované položky v daném package
+
+Obě položky nutno v návrhu opakovat pro každou entitu a package.
+
+```vhdl
+LIBRARY jméno_knihovny ;
+USE jméno_knihovny.jméno_package.položka ;
+```
+
+**Atributy**
+
+- atributy jsou v podstatě speciální funkce, které poskytují dodatečnou informaci jejich nositelích
+- nositeli mohou být typy, signály, proměnné, vektory, pole, bloky, architektury, jednotky, …
+
+Atributy:
+
+ - předdefinované (typy, pole, signály, objekty)
+ - definované uživatelem (nepříliš standardizované)
+
+```vhdl
+-- syntaxe
+PREFIX’jméno_atributu[(výraz)]
+
+-- nastala-li na clk vzestupná hrana
+IF (clk’event and clk='1') THEN out1 <= data; END IF;
+```
+
+**Package**
+
+- hierarchicky je nad entitou a architekturou
+- položky deklarované v PACKAGE jsou viditelné v celém návrhu
+- vhodné pro deklarace datových typů, komponent, funkcí, procedur apod.
+
+Package obsahuje dvě části:
+
+- deklarační část
+- vlastní tělo (pro definice podprogramů, funkcí apod.) není potřeba pro package pouze s datovými typy
+
+**Komponenty (funkční bloky)**
+
+- vhodné pro skládání hotových funkčních bloků
+- komponenta musí být definována entitou
+- tato entita musí mít přiřazenu architekturu
+- komponenta musí být deklarována uvnitř architektury (zpravidla na začátku) nebo v package
+- lokální signály propojující komponenty musí být deklarovány uvnitř architektury
+
+**Funkce**
+
+- podprogram, který vrací hodnotu (datový typ)
+- funkce mají vstupní operandy a jeden výstupní operand
+- typ hodnoty může být skalární nebo složený
+- ve funkci nemohou být deklarovány signály (pouze konstanty a proměnné – jejich platnost je omezena pouze na funkci)
+
+```vhdl
+FUNCTION jméno_funkce (parametry) RETURN typ IS
+-- deklarace
+BEGIN
+-- sekvenční příkazy
+END jméno_funkce ;
+```
+
+**Procedury**
+
+- podprogram, který modifikuje vstupní parametry
+- módy parametrů mohou být: IN, OUT, INOUT (implicitně IN)
+- proceduře lze předávat signály, konstanty i proměnné
+- z procedury lze volat další proceduru
+
+```vhdl
+PROCEDURE jméno_procedury (seznam_parametrů) IS
+-- deklarace
+BEGIN
+-- sekvenční příkazy
+END jméno_procedury ;
+```
+
 ### Příklad
 V následujícím příkladu je popsáno hradlo XOR v jazyce VHDL
 
@@ -111,3 +244,5 @@ begin
    F <= A xor B;
 end func;
 ```
+
+*Hradlo XOR ve VHDL*
