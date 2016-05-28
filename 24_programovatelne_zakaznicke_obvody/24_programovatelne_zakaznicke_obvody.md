@@ -101,7 +101,87 @@ Programování na základě přepalování/porušování propojek.
 *CPLD*
 
 ## FPGA
+Programovatelná hradlová pole (FPGA, Field Programmable Gate Array) jsou speciální číslicové integrované obvody obsahující různě složité programovatelné bloky propojené konfigurovatelnou maticí spojů.
+
+![FPGA](24_fpga.png)
+
+*FPGA*
+
+### Části obvodů FPGA
+- logické prvky (LE – logic element, LC – logic cell)
+- programovatelné propojky (matice)
+- I/O prvky s registry
+- globální distribuce a řízení hodinových signálů,
+- JTAG rozhraní pro naprogramování a testování,
+- paměti SRAM (embedded RAM)
+- DSP bloky
+- procesorová jádra
+- PLL (fázové závěsy)
+- ochrana proti kopírování
+- interní oscilátor
+
+### Logická buňka
+Příklad logické buňky, skládá se z konfigurovatelného LUTu a klopného obvodu.
+Mnohafunkční LUT může pracovat jako:
+
+- 16-bitový posuvný registr
+- 16-bitová paměť RAM
+- 4vstupový LUT
+
+![Logická buňka](24_clb_slice_lc.png)
+
+*Zleva: Logická buňka (LC) < Řez (Slice) < Konfigurovatelný logický blok (CLB)*
+
+**Look Up Table (LUT)** - blok pro implementaci kombinační logiky
+
+- na principu SRAM
+- na principu multiplexorů
+
+![LUT](24_lut.png)
+
+*LUT*
+
+### Programovatelné propojky
+PSM (Programmable Switch Matrix), propojuje vertikální a horizontální linie vodičů.
+
+![PSM](24_psm.png)
+
+*PSM*
+
+V FPGA se nejčastěji používají programovatelné přepínače na principu:
+
+- **SRAM** (nejčastěji z 5-6 tranzistorů);
+- **antipojistky** (anti-fuses) - amorfní křemík v místě křížení dvou vodičů – nevodivá dieletrická vrstva se zvýšeným napětím prorazí (odpor 100MΩ/50Ω); PLICE (Actel), ViaLink (QuickLogic);
+- **EEPROM/flash** – u FPGA v omezené míře.
+
+### Vstupně výstupní buňky
+- Zajišťují tok dat mezi vnitřní logikou a I/O piny:
+ - přizpůsobují logické úrovně vně a uvnitř čipu,
+ - zesilují výstupní signály,
+ - podporují řadu vstupně-výstupních napěťových standardů.
+- Buňky jsou rozděleny do bank, každou banku lze připojit na jiný napájecí zdroj.
+- Většina buněk může být konfigurována jako vstupní, výstupní nebo obousměrné.
+- Struktura buňky obsahuje většinou 3 základní signálové cesty:
+ - vstupní cesta (data z pinu do vnitřní logiky),
+ - výstupní cesta (přenos dat z vnitřní logiky na výstupní pin,
+ - cesta ovládající třístavový výstup.
+- Ve výstupní cestě je zařazen programovatelný výstupní driver:
+ - umožňuje měnit rychlost přeběhu (2-3 stupně),
+ - určuje výstupní proudové zatížení (2-25 mA),
+ - umožňuje nastavení do stavu vysoké impedance.
+- Součástí I/O buňky jsou:
+ - pull-up a pull-down rezistory,
+ - ochrany proti kladnému i zápornému přepětí,
+ - obvody zajišťující impedanční přizpůsobení (OCT – On-Chip
+-Termination, DCI – Digitally Controlled Impedance),
+ - obvod přidržení úrovně (bus hold, keeper, aktivní terminátor).
+
+![IO buňka](24_io.png)
+
+*IO buňka*
+
 ## Jazyky pro popis technických prostředků
+
 ### Urovně abstrakce
 - **Behaviouristická úroveň**
  - popis chování systému
