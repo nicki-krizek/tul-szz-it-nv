@@ -4,20 +4,6 @@
 ## Síťové programování
 Síťovým programováním rozumíme proces vytváření programů, které jsou spolu schopné komunikovat přes síť. Nemusí se však jednat pouze o komunikaci dvou různých počítačů v síti, programy mohou pomocí síťového rozhraní (localhost) komunikovat mezi sebou i rámci jednoho počítače. Aby programátor nemusel znát podrobně všechny komunikační vrsty a protokoly potřebné k navázaní spojení, poskytuje operační systém rozhraní zvané **síťový socket**. Síťové sockety jsou postaveny na protokolu **TCP/IP** a jejich podporu najdeme ve většině standartně používaných programovacích jazycích.
 
-## Protokol TCP/IP
-**TCP** (Transmission Control Protocol ) je nejpoužívanějším protokolem transportní vrstvy v sadě protokolů **TCP/IP** používaných v síti Internet. Použitím TCP mohou aplikace na počítačích propojených do sítě vytvořit mezi sebou spojení, přes které mohou obousměrně přenášet data. Protokol garantuje spolehlivé doručování a doručování ve správném pořadí. TCP také umožňuje rozlišovat a rozdělovat data pro více aplikací (například webový server a emailový server) běžících na stejném počítači.
-
-**IP Adresa** je číslo, které jednoznačně identifikuje síťové rozhraní v počítačové síti, která používá IP protokol.
-
-- **IPv4** - 62.20.197.2
-- **IPv6** - 2620:0:1cfe:face:b00c::3
-
-**Port** je speciální číslo (0 až 65535), které slouží v počítačových sítích při komunikaci pomocí protokolů TCP a UDP k rozlišení aplikace v rámci počítače. Standartně (http - 80) využívané porty popsány jako [well known](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
-
-- **FTP** - 21
-- **SSH** - 22
-- **HTTP** - 80
-
 ## Sockety
 Socket je obecný model point to point (roura) komunikace. Socket je obecně nezávislý na **TCP/IP** protokolu a poprvé byl představen jako programátorské rozhraní zvané [Berkley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets) v operačním systému BSD (Berkley Software Distribution). Tento model implementují například **Unixové sockety**, které slouží pro meziprocesovou komunikace. V dnešní době je však pod pojmem Socket myšlena spíše implementace **síťových Socketů** postavených na protokolu** TCP/IP**, právě těmi se budeme dále zabývat.
 
@@ -29,7 +15,7 @@ Socket je obecný model point to point (roura) komunikace. Socket je obecně nez
  - **RawIP** - obvykle dostupné jen routerech a nízkoúrovňových službách jako je  (ICMP) ping. (OS již obvykle nepodporují, lze falšovat hlavičky a tak dále.)
 
 ### Síťové sockety
-Socket je jeden **koncový bod** dvoubodového komunikačního spojení mezi dvěma programy na síti. Je svázán s číslem portu, aby TCP ( nebo jiná) vrstva mohla přiřadit data určité aplikaci na tomto portu poslouchající. Koncový bod tvoří dvojice **jméno hostitele** a **číslo portu**. Každé TCP spojení je identifikováno dvěma koncovými body, takzvaný **socketpair**.
+Síťový socket je jeden **koncový bod** dvoubodového komunikačního spojení mezi dvěma programy na síti. Koncový bod tvoří dvojice **jméno hostitele** a **číslo portu**. Každé spojení je identifikováno dvěma koncovými body, takzvaný **socketpair**.
 
 **Níže jsou uvedeny základní funcke poskytované socketem:**
 
