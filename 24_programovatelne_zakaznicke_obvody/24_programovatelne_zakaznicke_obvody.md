@@ -1,7 +1,105 @@
 # 24. - Programovatelné zákaznické obvody
 > Rozdělení a architektury programovatelných zákaznických obvodů, jazyky pro popis technických prostředků, charakteristické rysy jazyka VHDL.
 
-## Rozdělení a architektury programovatelných zakázkových obvodů
+## Rozdělení a architektury programovatelných zakázkových obvodů (FPLD)
+**ASIC** (Application Specific Integrated Circuit), nazývaný i zákaznický integrovaný obvod, je integrovaný obvod navržený a vyráběný pro určitou specifickou aplikaci. Dělíme je takto:
+
+- **Zakázkové** (Custom) - podle uživatele se navrhují se všechny masky technologického procesu
+- **Polozakázkové** (Semi-custom) - podle uživatele se navrhují pouze propojovací masky
+- **Programovatelné** (Programmable) - uživatel sám programuje funkci (např. přerušováním propojek)
+
+**FPLD** (Field Programmable Logic Device) - **Programovatelné** zakázkové IO dělíme na :
+
+- **PLD** (Programmable Logic Device)
+ - *SPLD* (Simple PLD) - pevně daná struktura typu: vstup - pole AND- pole OR- výstup
+ - *CPLD* (Complex PLD) - složitější architektury vycházející z SPLD (vrstevnaté, s centrální propojovací maticí).
+- **FPGA** (Field Programmable Gate Array) - pravidelná struktura programovatelných log. bloků s vodorovnými či svislými propojovacími linkami a propojovacími maticemi
+
+**Typy propojek:**
+
+![Typy propojek](24_propojky.png)
+
+*Typy propojek*
+
+**Nejvýznamnější výrobci FPLD:**
+
+1. Xilinx (49 %)
+2. Altera (40 %)
+3. Lattice Semiconductor (6 %)
+4. Microsemi (pův. Actel) (4 %)
+5. QuickLogic (1 %)
+
+FPGA obvody představují přes 90 % trhu všech FPLD.
+
+**Návrhové systémy:**
+
+- ISE (Xilinx), Quartus (Altera), Diamond (Lattice), Libero (Microsemi),
+- HDL Designer (Mentor Graphics).
+
+## PLD
+Programování na základě přepalování/porušování propojek.
+
+![PLD](24_pld.png)
+
+*PLD*
+
+### SPLD
+
+**PROM**
+
+- programovatelné pole OR
+- počet programovatelných bodů: N = m.(2^n) (n = počet vstupů; m = počet výstupů)
+- EEPROM (Electrically Erasable PROM)
+- použití jako paměť konstant
+
+![PROM](24_prom.png)
+
+*PROM*
+
+**PAL**
+
+- programovatelné pole AND
+- počet programovatelných bodů: N = 2m.k.n
+- omezený počet součinových termů k
+- na výstupu mohou obsahovat klopné obvody
+
+![PAL](24_pal.png)
+
+*PAL*
+
+**GAL**
+
+- vychází z obvodů PAL
+- na výstupu makrobuňka OLMC (Output Logic Macro Cell)
+ - každý I/O lze konfigurovat jako vstup, výstup nebo třístavový výstup
+ - některé z konfigurovatelných parametrů pouze globální
+
+![GAL](24_gal.png)
+
+*GAL*
+
+**PLA**
+
+- programovatelné pole AND i OR
+- počet programovatelných bodů: N = m.k + 2k.n
+- odstraňuje omezení v počtu součinových termů
+
+![PLA](24_pla.png)
+
+*PLA*
+
+### CPLD
+
+- složitostí mezi PLD a FPGA
+- obsahují centrální propojovací matici
+ - **MAPL** (Multiple Array Programmable Logic)
+ - **MACH** (Macro Array CMOS High-density)
+ - **PEEL** (Programmable Electrically Erasable Logic)
+
+![CPLD](24_cpld.png)
+
+*CPLD*
+
 ## FPGA
 ## Jazyky pro popis technických prostředků
 ### Urovně abstrakce
@@ -68,7 +166,7 @@
 - důraz na funkci obvodu (oproštění od detailů)
 - umožňuje opakované používání modelů (knihovny)
 - využití pro dokumentaci a modelování
-- paralelní jazyk (ne sekvenční)
+- **paralelní jazyk** (ne sekvenční)
 - snadná výměna částí návrhů mezi návrháři (IP core)
 - libovolná část návrhu může být osamostatněna
 - model VHDL může být simulován v různých systémech
