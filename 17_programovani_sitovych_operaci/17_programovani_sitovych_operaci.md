@@ -2,7 +2,10 @@
 > Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.
 
 ## Síťové programování
-Síťovou aplikací budeme nadále rozumět takovou aplikaci, která si dokáže přímo vyměňovat data s jinou aplikací umístěnou kdesi (tedy v blíže neurčeném geografickém umístění) v počítačové síti. 
+Síťovým programováním rozumíme proces vytváření programů, které jsou spolu schopné komunikovat přes síť. Nemusí se však jednat pouze o komunikaci dvou různých počítačů v síti, programy mohou pomocí síťového rozhraní (localhost) komunikovat mezi sebou i rámci jednoho počítače. Aby programátor nemusel znát podrobně všechny komunikační vrsty a protokoly potřebné k navázaní spojení, poskytuje operační systém rozhraní zvané **síťový socket**. Síťové sockety jsou postaveny na protokolu **TCP/IP** a jejich podporu najdeme ve většině standartně používaných programovacích jazycích.
+
+## Protokol TCP/IP
+**TCP** (Transmission Control Protocol ) je nejpoužívanějším protokolem transportní vrstvy v sadě protokolů **TCP/IP** používaných v síti Internet. Použitím TCP mohou aplikace na počítačích propojených do sítě vytvořit mezi sebou spojení, přes které mohou obousměrně přenášet data. Protokol garantuje spolehlivé doručování a doručování ve správném pořadí. TCP také umožňuje rozlišovat a rozdělovat data pro více aplikací (například webový server a emailový server) běžících na stejném počítači.
 
 **IP Adresa** je číslo, které jednoznačně identifikuje síťové rozhraní v počítačové síti, která používá IP protokol.
 
@@ -15,20 +18,12 @@ Síťovou aplikací budeme nadále rozumět takovou aplikaci, která si dokáže
 - **SSH** - 22
 - **HTTP** - 80
 
-**URI** (uniform resource identificator) je textový řetězec s definovanou strukturou, který slouží k přesné specifikaci zdroje informací (ve smyslu dokument nebo služba), hlavně za účelem jejich použití pomocí počítačové sítě, zejména Internetu. URL je podmnožinou URI.  (*scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]*)
-
-- **https://example.org/absolute/URI/with/absolute/path/to/resource.txt**
-- **ftp://example.org/resource.txt**
-
-## Protokol TCP/IP
-**TCP** (Transmission Control Protocol ) je nejpoužívanějším protokolem transportní vrstvy v sadě protokolů **TCP/IP** používaných v síti Internet. Použitím TCP mohou aplikace na počítačích propojených do sítě vytvořit mezi sebou spojení, přes které mohou obousměrně přenášet data. Protokol garantuje spolehlivé doručování a doručování ve správném pořadí. TCP také umožňuje rozlišovat a rozdělovat data pro více aplikací (například webový server a emailový server) běžících na stejném počítači.
-
 ## Sockety
 Socket je obecný model point to point (roura) komunikace. Socket je obecně nezávislý na **TCP/IP** protokolu a poprvé byl představen jako programátorské rozhraní zvané [Berkley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets) v operačním systému BSD (Berkley Software Distribution). Tento model implementují například **Unixové sockety**, které slouží pro meziprocesovou komunikace. V dnešní době je však pod pojmem Socket myšlena spíše implementace **síťových Socketů** postavených na protokolu** TCP/IP**, právě těmi se budeme dále zabývat.
 
 ### Typy socketů
 - **Unix Domain Sockets** - Sockety pužívané pro meziprocesovou komunikaci v prostředí Unixu.
-- **Internet Domain Sockets** - Síťové sockety ,podporované napříč platformami.
+- **Internet Domain Sockets** - Síťové sockety, podporované napříč platformami.
  - **TCP** - streamovanáspojovaná komunikace (Nejdříve se musí navázat spojení mezi párem socketů, server socketnaslouchá na portu, klientský navazuje spojení.)
  - **UDP** - nespojovaná datagramová komunikace (S každým zaslaným datagramem se zasílá lokální socke tdescriptor a adresa příjemce.)
  - **RawIP** - obvykle dostupné jen routerech a nízkoúrovňových službách jako je  (ICMP) ping. (OS již obvykle nepodporují, lze falšovat hlavičky a tak dále.)
@@ -56,12 +51,12 @@ Socket je jeden **koncový bod** dvoubodového komunikačního spojení mezi dv�
 ### Komunikace
 Komunikace probíhá tak jak je znázorněno na následujícím obrázku.
 
-![Komunikace pomocí Java socket](17_socket.png)
+![Model komunikace přes Socket](17_socket.png)
 
-*Komunikace pomocí Java socket*
+*Model komunikace přes Socket*
 
 ### Příklad
-Uvedený příklad je v Javě, která má oddělené třídy `Socket` a `ServerSocket'`.
+Uvedený příklad je v Javě, která má oddělené třídy pro `Socket` a `ServerSocket`.
 
 
 **Klient**
@@ -109,4 +104,16 @@ class TCPServer {
 }
 ```
 
-## Blokují a neblokucící operace
+## Blokujíci a neblokující operace
+Každý  socket může být nastaven do dvou módů - **blokujícího** a **neblokujícího**. V blokujícím řežimu je celá aplikace zastavena a čeká se na potvrzení o přijetí dat. To může trvat značnou dobu, po kterou je hlavní vlákno aplikace blokováno. Druhým způsobem je pak neblokující režim, v tomto režimu se požadovaná funkce ihned vrátí (obvykle impleměntováno jako podvlákno) bez ohledu na dokončení vnitřní logiky. Hlavní vlákno tedy v podstatě ihned pokračuje dál ve vykonávání programu. Nemáme však jistotu, že byla odesílaná data správně doručena. Defaultně  jsou vlákna nastavena jako blokující.
+
+- **Blokující operace** - zastaví běh hlavního vlákna, dokud se její běh nedokončí
+ - nevýhody můžeme řešit provaděním operace ve vlastním vlákně (**thread**)
+ - při častém vykonávání blokujících operací může aplikace využít vláken i více najednou (**thread pool**)
+ - případně lze použí **pooling** (cyklicky se ptáme neblokující operací typu ready() jestli jsou data bufferu a v případě úspěchu zahájíme blokujícíc recv())
+- **Neblokující operace** - dovolí hlavnímu vláknu ihned pokračovat v běhu, úspěšné dokončení se však špatně ověřuje
+ - ověření se v tomto případě musí provádět opětovným dotazováním později v programu
+ - v některých jazycích je možné využít takzvaný **callback**
+
+Jako blokující operace jsou záměrně implementovány funkce různých synchronizačních primitiv, viz okruh [27. Paralelní systémy](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/27_paralelni_systemy/27_paralelni_systemy.md).
+
