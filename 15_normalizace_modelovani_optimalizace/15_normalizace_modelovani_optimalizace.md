@@ -48,8 +48,8 @@ Relace se nachází ve druhé normální formě, jestliže je v první normáln�
 
 Následuje příklad pro provedení 2NF. V entitě **Sklad** (viz Tabulka 4) je název zboží, výrobce, telefon na výrobce, cena zboží a množství na skladě. Primárním klíčem (PK) této relace je kombinace atributů název a výrobce.
 
-| Název (PK) | Výrobce (PK) | Telefon | Výrobce | Cena | Množství |
-| --- | --- | --- | --- | --- | --- |
+| Název (PK) | Výrobce (PK) | Telefon | Cena | Množství |
+| --- | --- | --- | --- | --- |
 | Tyčinka milkyway | Milka | +420123456789 | 10Kč | 7000 |
 | Mléčná čokoláda | Orion | +420987654321 | 25Kč | 5800 |
 *Tabulka 4: Entita Sklad v 1NF*
@@ -253,3 +253,12 @@ byl u jejího předchůdce (tedy h1 má dvakrát větší rozsah než h0). Pokud
 - vhodné pro statické tabulky 
 - díky malé kardinalitě vhodné pro dotazy s více podmínkami ve WHERE klauzuli
 - uloženy jako bity -> každá hodnota v tabulce je jeden bit (true/false)
+ 
+|    datum   |           místo výskytu          | id_druhu | část_dne | BI AM | BI PM |
+|:----------:|:--------------------------------:|:--------:|:--------:|:-----:|:-----:|
+| 23.2.2007  | povodí Berounky – oblast Alkazar | 300812   | AM       | 1     | 0     |
+| 14.1.1999  | Lidečko – Pulčínské skály        | 3403412  | PM       | 0     | 1     |
+| 31.11.2009 | Rejvíz – malé mechové jezírko    | 130045   | AM       | 1     | 0     |
+| 1.11.2008  | Niagarské vodopády               | 8459712  | PM       | 0     | 1     |
+| 11.4.2004  | Ostrava – Pod Sýkorovým mostem   | 7239710  | PM       | 0     | 1     |
+*Tabulka 11: Příklad Bitmap indexu*
