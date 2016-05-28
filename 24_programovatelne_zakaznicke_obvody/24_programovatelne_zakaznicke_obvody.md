@@ -108,9 +108,9 @@ Programovatelná hradlová pole (FPGA, Field Programmable Gate Array) jsou speci
 *FPGA*
 
 ### Části obvodů FPGA
-- logické prvky (LE – logic element, LC – logic cell)
-- programovatelné propojky (matice)
-- I/O prvky s registry
+- **logické prvky (LE – logic element, LC – logic cell)**
+- **programovatelné propojky (matice)**
+- **I/O prvky s registry**
 - globální distribuce a řízení hodinových signálů,
 - JTAG rozhraní pro naprogramování a testování,
 - paměti SRAM (embedded RAM)
