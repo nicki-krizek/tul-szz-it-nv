@@ -35,6 +35,10 @@ O šifrovacím algoritmu můžeme prohlásit:
 - **Šifrovací algoritmus může být zlomen** - znamená, že s dostatkem času a prostředků může být nalezen způsob jak dešifrovat jím zašifrované zprávy.
 - **Prakticky nezlomitelný** - je znám postup jak se domoci otevřeného textu, ale ne v rozumném čase (se současnou technologií a znalostmi!).
 
+Asi nejjednoduší metodou zlomení některých šifer je **frekvenční analýza**. Pokud víme, v jakém jazyce byl napsán otevřený text, tak zároveň známe percentuelní zastoupení písmen v otevřeném textu. Pokud  zjistíme frekvenci písmen v zachyceném šifrovaném textu, tak prostým porovnáním frekvencí znaků zjistíme posun. Se znalostí posunu jsme schopni dešifrovat zachycený text.
+
+**Moderní kryptografie je postavena na pricipu, že dvě prvočísla umíme snadno vynásobit, ale jejich faktorizace (rozklad na prvočísla) je výpočetně velmi složitý (u dostatečně velkých čísel).**
+
 ## Šifrování vs kódování
 **Šifrování** si klade za cíl převest prostý text do takové podoby (šifrovaný text), tak aby nebylo možné ho bez znalosti klíče přečíst.
 
@@ -44,6 +48,45 @@ O šifrovacím algoritmu můžeme prohlásit:
 - **zabezepečení** zprávy proti chybám (*opravné kódy*)
 
 ## Symetrické šifry
+### Substituční šifry
+#### Caesarova šifra
+Caesarova šifra je jednoduchou substituční šifrou, jejíž princip spočívá v posunu každého písmene otevřeného textu o konstantní počet míst v abecedě. Ačkoliv se v době Julia Caesara používala jen varianta posunu o 3 písmena, tak název se Caesarova šifra používá pro všechny varianty tohoto šifrovacího systému.
 
+
+#### Tabulka záměny
+Šifrování pomocí tabulky záměny, které je založeno na záměně znaku za jiný bez jakékoli vnitřní souvislosti či na základě znalosti klíče (hesla). Písmena v hesle se při vypisování zbylé abecedy vynechávají.
+
+
+#### Affiní šifra
+Afinní šifra je substituční šifra, která částečně eliminuje zásadní nevýhodu Caesarovy šifry, kterou je málo možností transformace a tím i velmi primitivní kryptoanalýzu.
+
+#### Hillova šifra
+
+### Aditivní šifry
+#### Viegnerova šifra
+Jedná se o speciální případ polyalfabetické šifry, což znamená, že pro šifrování není použita celá abeceda. Caesarova šifra je speciálním případ Vigenèrovy šifry s heslem o délce jeden znak. Vigenèrova šifra používá heslo, jehož znaky určují posunutí otevřeného textu a to tak, že otevřený text se rozdělí na bloky znaků dlouhé stejně jako heslo a každý znak se sečte s odpovídajícím znakem hesla. Vigenèrova šifra způsobuje změny pravděpodobnosti rozložení znaků a tím podstatně znemožňuje kryptoanalýzu na základě analýzy četnosti znaků v textu.
+
+### Transpoziční šifry
+####Mřížka
+
+### Blokové šifry
+#### Feistelovo šifrování
+#### DES
+#### AES
 
 ## Asymetrické šifry
+### RSA
+
+## Extra
+
+### Elektronický podpis
+
+![Elektronický podpis](11_elektronicky_podpis.png)
+
+*Elektronický podpis*
+
+### Asymetrická kryptografie v praxi
+
+![Asymetrická kryptografie  v praxi](11_asymetricka_kryptografie.png)
+
+*Asymetrická kryptografie  v praxi*
