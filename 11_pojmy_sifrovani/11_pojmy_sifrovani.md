@@ -39,6 +39,10 @@ Asi nejjednoduší metodou zlomení některých šifer je **frekvenční analýz
 
 **Moderní kryptografie je postavena na pricipu, že dvě prvočísla umíme snadno vynásobit, ale jejich faktorizace (rozklad na prvočísla) je výpočetně velmi složitý (u dostatečně velkých čísel).**
 
+Celkem dobrý kanál na youtube: [https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg](https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg)
+
+Slidy k tomu v sekci online courses/slides: [http://www.crypto-textbook.com/](http://www.crypto-textbook.com/)
+
 ## Šifrování vs kódování
 **Šifrování** si klade za cíl převest prostý text do takové podoby (šifrovaný text), tak aby nebylo možné ho bez znalosti klíče přečíst.
 
@@ -178,12 +182,110 @@ Principem transpoziční šifry je změna pořadí znaků (jejich permutace) na 
 *Transpoziční mřížka, černá pole značí vystříhaná okénka a červená vršek. Příložením na čtverec a postupným otáčením a přepisováním viditelných znaků text rozluštíme.*
 
 ### Blokové šifry
+
+[http://euler.fd.cvut.cz/predmety/y2kk/kzk-krypto-blok.pdf](http://euler.fd.cvut.cz/predmety/y2kk/kzk-krypto-blok.pdf)
+
 #### Feistelovo šifrování
+Jako Feistelova šifra či Feistelova síť se v kryptografii označuje základní struktura použitá v mnoha blokových šifrách včetně DES. Její výhodou je, že šifrování a dešifrování fungují prakticky stejně, což zjednodušuje a zlevňuje implementaci. Nazývá se podle Horsta Feistela, který tuto konstrukci použil v šifře Lucifer.
+
+![Feistelovo šifrování](11_fiestel.png)
+
+![Příklad Fiestelova šifrování](11_fiestel_priklad.png)
+
+*Příklad Fiestelova šifrování*
+
 #### DES
+Data (Digital) Encryption Standard (DES) je v kryptografii symetrická šifra vyvinutá v 70. letech. V roce 1977 byla zvolena za standard (FIPS 46) pro šifrování dat v civilních státních organizacích v USA a následně se rozšířila i do soukromého sektoru. V současnosti je tato šifra považována za nespolehlivou, protože používá klíč pouze o délce 64 bitů, z toho 8 je kontrolních a 56 efektivních. Navíc algoritmus obsahuje slabiny, které dále snižují bezpečnost šifry. Díky tomu je možné šifru prolomit útokem hrubou silou za méně než 24 hodin. ¨
+
+Možným způsobem jak zvýšit bezpečnost této šifry, je vícenásobná aplikace. Tak vznikl algoritmus Triple DES, který je trojnásobnou aplikací šifry DES. Nejčastěji používaná varianta 3TDES pracuje s klíčem o celkové délce 168 bitů. Triple DES je oproti novějším algoritmům (AES) daleko pomalejší, a proto se postupně přestává používat.
+
+![Diagram pro DES](11_des.png)
+
+*Diagram pro DES*
+
+**Popisováno jako 16 kolová Fiestelova síť s rotací klíče.**
+
+Česky: [http://www.brtnik.eu/des.php](http://www.brtnik.eu/des.php)
+Na youtube: [https://www.youtube.com/watch?v=UgFoqxKY7cY](https://www.youtube.com/watch?v=UgFoqxKY7cY)
+
 #### AES
+Advanced Encryption Standard (AES, česky standard pokročilého šifrování) je standardizovaný algoritmus používaný k šifrování dat v informatice. Jedná se o symetrickou blokovou šifru šifrující i dešifrující stejným klíčem data rozdělená do bloků pevně dané délky. Norma nahradila dříve užívanou šifru DES. Je používána například pro bezdrátové Wi-Fi sítě v rámci zabezpečení WPA2 dle standardu IEEE 802.11i.
+
+- Expanze klíče − podklíče jsou odvozeny z klíče šifry užitím Rijndael programu
+- Inicializační část
+ - Přidání podklíče − každý byte stavu je zkombinován s podklíčem za pomoci operace xor nad všemi bity
+- Iterace
+ - Záměna bytů − nelineární nahrazovací krok, kde je každý byte nahrazen jiným podle vyhledávací tabulky
+ - Prohození řádků − provedení kroku, ve kterém je každý řádek stavu postupně posunut o určitý počet kroků
+ - Kombinování sloupců − zkombinuje čtyři byty v každém sloupci
+ - Přidání podklíče
+- Závěrečná část (nekombinují se sloupce)
+ - Záměna bytů
+ - Prohození řádků
+ - Přidání podklíče
+
+**Záměna bytů**
+Při záměně bytů je každý byte v matici nahrazen pomocí 8bitového zaměňovacího boxu, Rijndeal S-boxu (nelineární substituční funkce měnící jednotlivé bity). Tato operace zajišťuje nelinearitu v šifře. Aby S-box minimalizoval pravděpodobnost možných útoků založených na jednoduchých algebraických vlastnostech, je konstruován tak, aby v něm nevznikaly pevné body a žádné jejich protějšky.
+
+**Prohození řádků**
+Tato operace probíhá na úrovních řádků, kde jednotlivě prohazuje byty v každém řádku o určitý přesah. V případě AES je první řádek ponechán beze změn. Každý byte druhého řádku je posunut o jeden doleva. Stejným způsobem je třetí a čtvrtý řádek posunut o dvě, respektive tři pozice. Pro bloky o velikostech 128 bitů a 192 bitů je postup prohození řádků stejný. V těchto případech je každý sloupec výstupu složen z bytů z každého sloupce na vstupu.
+
+V případě šifry Rijndael mají varianty s většími velikostmi bloků lehce odlišné přesahy. U 256bitového bloku zůstává první řádek beze změn, druhý, třetí a čtvrtý řádek je posunut o 1, 3 a 4 byty − tato změna platí pouze pro šifru Rijndael, neboť AES nepoužívá 256bitové bloky.
+
+**Kombinování sloupců**
+V tomto kroku kombinujeme 4 byty v každém sloupci. Tato funkce vezme čtyři byty jako vstup a vrátí čtyřbytový výstup, kde každý vstupní byte ovlivní všechny výstupní byty. Společně s předchozími kroky zajistí dostatečnou náhodnost v šifře.
+
+**Přidání podklíče**
+Při přidání podklíče je každý byte zkombinován s podklíčem. Pro každou iteraci je podklíč odvozen z hlavního klíče. Každý podklíč má stejnou velikost a je přidán za pomoci kombinace každého bytu stavu s odpovídajícím bytem podklíče užitím XORu nad všemi bity.
+
+![Příklad AES](11_aes.png)
+
+*Příklad AES*
+
+Na youtube je pěkné video: [https://www.youtube.com/watch?v=mlzxpkdXP58](https://www.youtube.com/watch?v=mlzxpkdXP58)
+
+#### NDS
+In cryptography, New Data Seal (NDS) is a block cipher that was designed at IBM in 1975, based on the Lucifer algorithm that became DES.
+
+The cipher uses a block size of 128 bits, and a very large key size of 2048 bits. Like DES it has a 16-round Feistel network structure. The round function uses two fixed 4×4-bit S-boxes, chosen to be non-affine. The key is also treated as an 8×8-bit lookup table, using the first bit of each of the 8 bytes of the half-block as input. The nth bit of the output of this table determines whether or not the two nibbles of the nth byte are swapped after S-box substitution. All rounds use the same table. Each round function ends with a fixed permutation of all 64 bits, preventing the cipher from being broken down and analyzed as a system of simpler independent subciphers.
+
+In 1977, Edna Grossman and Bryant Tuckerman cryptanalyzed NDS using the first known slide attack. This method uses no more than 4096 chosen plaintexts; in their best trial they recovered the key with only 556 chosen plaintexts.
+
+![NDS](11_nds.png)
+
+*Jediný co jsem k tomu kde našel.*
 
 ## Asymetrické šifry
 ### RSA
+**RSA** (iniciály autorů Rivest, Shamir, Adleman) je šifra s veřejným klíčem, jedná se o první algoritmus, který je vhodný jak pro podepisování, tak šifrování. Používá se i dnes, přičemž při dostatečné délce klíče je považován za bezpečný. Bezpečnost RSA je postavena na předpokladu, že rozložit velké číslo n na součin prvočísel p a q (faktorizace) je velmi obtížná úloha. Z čísla n = pq je tedy v rozumném čase prakticky nemožné zjistit činitele p a q, neboť není znám žádný algoritmus faktorizace, který by pracoval v polynomiálním čase vůči velikosti binárního zápisu čísla n. Naproti tomu násobení dvou velkých čísel je elementární úloha.
+
+1. Zvolí dvě různá velká náhodná prvočísla p a q.
+2. Spočítá jejich součin n = pq.
+3. Spočítá hodnotu Eulerovy funkce φ(n) = (p − 1)(q − 1).
+4. Zvolí celé číslo e menší než φ(n), které je s φ(n) nesoudělné.
+5. Nalezne číslo d tak, aby platilo ed ≡ 1 (mod φ(n)).
+
+**Klíče:**
+
+- **Veřejným klíčem** je dvojice (n, e); n se označuje jako modul, e jako šifrovací (veřejný) exponent.
+- **Soukromým klíčem** je dvojice (n, d); d se označuje jako dešifrovací (soukromý) exponent.
+
+**Příklad:**
+
+V tomto příkladu jsou pro jednoduchost použita extrémně malá čísla, v praxi se používají o mnoho řádů větší.
+
+- p = 61; q = 53 (dvě náhodná prvočísla, soukromá)
+- n = pq = 3233 (modul, veřejný)
+- e = 17 (veřejný, šifrovací exponent – číslo menší a nesoudělné s φ(n)=60×52=3120)
+- d = 2753 (soukromý, dešifrovací exponent – tak aby de ≡ 1 (mod φ(n)))
+
+Pro zašifrování zprávy 123 probíhá výpočet:
+
+- šifruj(123) = 12317 mod 3233 = 855 (123 může reprezentovat například znak abecedy)
+
+Pro dešifrování pak:
+
+- dešifruj(855) = 8552753 mod 3233 = 123
 
 ## Extra
 
