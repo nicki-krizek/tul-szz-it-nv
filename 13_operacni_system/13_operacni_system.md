@@ -168,7 +168,7 @@ proti přepsání.
 - **Stavové registry** – cca 10 – 50, vnitřní paměťové buňky procesoru, uchovávají informaci o kontextu
 - **Datové registry** – dle typu procesoru – cca 10 – 50, slouží k výpočtům a zpracování dat při vykonávání instrukce; vypovídají o „síle“ procesoru
 - **Cache** – vyrovnávací paměť mezi vnější pamětí a registry; snižuje zpoždění způsobené přístupem do vnější paměti
- - Velikost od 10k do 4G (64bitové procesory, nová jádra)
+ - Velikost od 10k do řádově jednotek MB (64bitové procesory, nová jádra)
  - L1, L2, L3: úrovně (level 1, level 2…): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
 - **Vnitřní paměť** – RAM:
  - Operační paměť: zde probíhají všechny „operace“; zde je uloženo vše, s čím spuštěný OS pracuje; zde OS aplikuje svou správu paměti.
