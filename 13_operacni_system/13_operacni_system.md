@@ -24,9 +24,9 @@ Operační systém je základní programové vybavení počítače, které je za
 - **Správa programů (procesů)**
  - Zavedení do paměti, přidělení paměti, spuštění
  - Přidělování zdrojů a procesového času
- -Ukončení a uvolnění zdrojů
- -Dobré rozhraní pro programátora
--Správa paměti
+ - Ukončení a uvolnění zdrojů
+ - Dobré rozhraní pro programátora
+ - Správa paměti
  - Přidělování operační paměti
  - Práce s úložišti
 - **I/O operace**
@@ -55,8 +55,9 @@ Operační systém je základní programové vybavení počítače, které je za
  2. Správa uživatelů
  3. Pomocné nástroje - skripty, utility (pomocné programy)
 3. **Rozhraní**
- 1. API - programátorské rozhraní (standartní knihovny, přístup k hw, )
- 2. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu )
+ 1. API - programátorské rozhraní (standartní knihovny, přístup k hw )
+ 2. ABI - binární rozhraní (pravidla definující spolupráci na úrovni strojového kódu mezi procesy a jádrem operačního systému, procesy a jimi používanými knihovnami nebo mezi součástmi aplikací)
+ 3. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu )
 
 ### Režimy procesoru
 Typicky má procesor dva režimy provozu:
@@ -167,7 +168,7 @@ proti přepsání.
 - **Stavové registry** – cca 10 – 50, vnitřní paměťové buňky procesoru, uchovávají informaci o kontextu
 - **Datové registry** – dle typu procesoru – cca 10 – 50, slouží k výpočtům a zpracování dat při vykonávání instrukce; vypovídají o „síle“ procesoru
 - **Cache** – vyrovnávací paměť mezi vnější pamětí a registry; snižuje zpoždění způsobené přístupem do vnější paměti
- - Velikost od 10k do 4G (64bitové procesory, nová jádra)
+ - Velikost od 10k do řádově jednotek MB (64bitové procesory, nová jádra)
  - L1, L2, L3: úrovně (level 1, level 2…): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
 - **Vnitřní paměť** – RAM:
  - Operační paměť: zde probíhají všechny „operace“; zde je uloženo vše, s čím spuštěný OS pracuje; zde OS aplikuje svou správu paměti.
@@ -177,7 +178,7 @@ proti přepsání.
  - Slouží jen jako zdroj dat, případně jako „odkladiště“ čekajících procesů
 
 
-### Metody spravy paměti
+### Metody správy paměti
 
 1. **Přidělování bez dělení do bloků** - typicky pro starší systém, kde běží jen jedna úloha (bez multitaskingu), ve víceúlohových systémech se vše ukládá a vrací do OP z disku
  - Výhody: jednodušší jádro - nemusí obsahovat rutinu pro přidělení paměti
