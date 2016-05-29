@@ -19,27 +19,27 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 2. [Základy teorie dělitelnosti – základní pojmy (NSD, NSN, Eukleidův algoritmus), řetězové zlomky, kongruence modulo m, úplná a redukovaná soustava zbytků, počítání v (Zm, +, .), řešení kongruencí 1. stupně a jejich soustav.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/02_zaklady_teorie_delitelnosti/02_zaklady_teorie_delitelnosti.md)
 
-3. Rekurentní vztahy – základní pojmy, řešení, (ne)homogenní, (ne)lineární rekurentní vztahy, řešení lineárních rekurentních vztahů s konstantními koeficienty a jejich soustav (otázka existence a jednoznačnosti řešení), využití vytvořujících funkcí.
+3. [Rekurentní vztahy – základní pojmy, řešení, (ne)homogenní, (ne)lineární rekurentní vztahy, řešení lineárních rekurentních vztahů s konstantními koeficienty a jejich soustav (otázka existence a jednoznačnosti řešení), využití vytvořujících funkcí.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/03_rekurentni_vztahy/03_rekurentni_vztahy.md)
 
 4. [Základy klasické kombinatoriky – princip inkluze a exkluze, Dirichletův princip, zobecněný binomický koeficient, subfaktoriály, Fibonacciho, Catalanova a Stirlingova čísla, problematika rozkladů – varianty, (ne)rozlišitelné objekty, (ne)rozlišitelné skupiny, využití diofantických rovnic a vytvořujících funkcí v oblasti rozkladů.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/04_zaklady_klasicke_kombinatoriky/04_zaklady_klasicke_kombinatoriky.md)
 
-5. Vytvořující funkce (obyčejná, exponenciální), otevřený a uzavřený tvar, základní operace s vytvořujícími funkcemi, vytvořující funkce (uzavřený tvar) základních posloupností, věžové polynomy.
+5. [Vytvořující funkce (obyčejná, exponenciální), otevřený a uzavřený tvar, základní operace s vytvořujícími funkcemi, vytvořující funkce (uzavřený tvar) základních posloupností, věžové polynomy.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/05_vytvorujici_funkce.md)
 
 6. [Problematika řazení – základní algoritmy a jejich složitost.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/06_problematika_razeni/06_problematika_razeni.md)
 
-7. Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.
+7. [Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/07_casova_narocnost_algoritmu/7_casova_narocnost_algoritmu.md)
 
 8. [Definice konečného automatu, jazyky rozpoznávané konečnými automaty.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/08_konecne_automaty/08_konecne_automaty.md)
 
 9. [Gramatiky, Chomského hierarchie, vztah gramatik ke konečným strojům.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md)
 
-10. Turingův stroj, problém zastavení, totální a parciální rozhodnutelnost tříd problémů, rekurzivní a rekurzivně spočetné množiny, jejich vztah.
+10. [Turingův stroj, problém zastavení, totální a parciální rozhodnutelnost tříd problémů, rekurzivní a rekurzivně spočetné množiny, jejich vztah.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/10_turinguv_stroj/10_turinguv_stroj.md)
 
-11. Pojmy šifrování, kódování, symetrické šifry (afinní, Vigener, Hill, jednoduchá transpozice), asymetrické šifry (RSA), Feistelovy šifry, princip, příklady (DES, AES, NDS).
+11. [Pojmy šifrování, kódování, symetrické šifry (afinní, Vigener, Hill, jednoduchá transpozice), asymetrické šifry (RSA), Feistelovy šifry, princip, příklady (DES, AES, NDS).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/11_pojmy_sifrovani/11_pojmy_sifrovani.md)
 
 12. [Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/12_minimalni_kody.md)
 
-13. Operační systém a jeho základní úlohy – správa paměti, správa procesů, životní cyklus procesu, přidělování procesoru, správa periferií, problém uváznutí a metody jeho předcházení.
+13. [Operační systém a jeho základní úlohy – správa paměti, správa procesů, životní cyklus procesu, přidělování procesoru, správa periferií, problém uváznutí a metody jeho předcházení.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/13_operacni_system/13_operacni_system.md)
 
 14. [Databázové systémy – relační a objektový model dat, NoSQL databáze (typy škálování, teorém CAP).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/14_databazove_systemy/14_databazove_systemy.md)
 
@@ -47,7 +47,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 16. [Jazyk SQL (DDL, DML, množinové operace), uložené procedury a spouště v SQL, transakce (ACID, typy konfliktů, stupně izolace).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/16_jazyk_sql/16_jazyk_sql.md)
 
-17. Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.
+17. [Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.](https://github.com/tomaskrizek/tul-szz-it-nv/tree/master/17_programovani_sitovych_operaci)
 
 18. [WWW aplikace, programování na straně klienta a serveru, jejich možnosti a omezení, nejběžnější používané prostředky a jazyky, uchovávání stavové informace, cookie.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/18_www_aplikace/18_www_aplikace.md)
 
@@ -61,9 +61,9 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 23. [DFT/FFT (radix-2) – vlastnosti a výpočetní složitost, linearní a kruhová konvoluce, rychlý výpočet lineární konvoluce pomocí FFT (metoda overlap-add, overlap-save).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md)
 
-24. Rozdělení a architektury programovatelných zákaznických obvodů, jazyky pro popis technických prostředků, charakteristické rysy jazyka VHDL.
+24. [Rozdělení a architektury programovatelných zákaznických obvodů, jazyky pro popis technických prostředků, charakteristické rysy jazyka VHDL.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/24_programovatelne_zakaznicke_obvody/24_programovatelne_zakaznicke_obvody.md)
 
-25. Zásady návrhu elektronických systémů (základní struktura systému, pravidla synchronního návrhu, přenos signálů mezi časovými doménami).
+25. [Zásady návrhu elektronických systémů (základní struktura systému, pravidla synchronního návrhu, přenos signálů mezi časovými doménami).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/25_zasady_navrhu_elektronickych_systemu/25_zasady_navrhu_elektronickych_systemu.md)
 
 26. [Základní architektury počítačů, architektury mikroprocesorů, architektury signálových a grafických procesorů, architektury mikrořadičů, hodnocení výkonnosti počítačů, Amdahlův zákon, výkonnostní rovnice procesoru, srovnání systémů CISC a RISC.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/26_zakladni_architektury_pocitacu/26_zakladni_architektury_pocitacu.md)
 
