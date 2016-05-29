@@ -55,8 +55,9 @@ Operační systém je základní programové vybavení počítače, které je za
  2. Správa uživatelů
  3. Pomocné nástroje - skripty, utility (pomocné programy)
 3. **Rozhraní**
- 1. API - programátorské rozhraní (standartní knihovny, přístup k hw, )
- 2. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu )
+ 1. API - programátorské rozhraní (standartní knihovny, přístup k hw )
+ 2. ABI - binární rozhraní (pravidla definující spolupráci na úrovni strojového kódu mezi procesy a jádrem operačního systému, procesy a jimi používanými knihovnami nebo mezi součástmi aplikací)
+ 3. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu )
 
 ### Režimy procesoru
 Typicky má procesor dva režimy provozu:
