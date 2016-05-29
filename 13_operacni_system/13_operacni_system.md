@@ -24,9 +24,9 @@ Operační systém je základní programové vybavení počítače, které je za
 - **Správa programů (procesů)**
  - Zavedení do paměti, přidělení paměti, spuštění
  - Přidělování zdrojů a procesového času
- -Ukončení a uvolnění zdrojů
- -Dobré rozhraní pro programátora
--Správa paměti
+ - Ukončení a uvolnění zdrojů
+ - Dobré rozhraní pro programátora
+ - Správa paměti
  - Přidělování operační paměti
  - Práce s úložišti
 - **I/O operace**
