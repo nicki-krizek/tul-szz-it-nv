@@ -178,7 +178,7 @@ proti přepsání.
  - Slouží jen jako zdroj dat, případně jako „odkladiště“ čekajících procesů
 
 
-### Metody spravy paměti
+### Metody správy paměti
 
 1. **Přidělování bez dělení do bloků** - typicky pro starší systém, kde běží jen jedna úloha (bez multitaskingu), ve víceúlohových systémech se vše ukládá a vrací do OP z disku
  - Výhody: jednodušší jádro - nemusí obsahovat rutinu pro přidělení paměti
