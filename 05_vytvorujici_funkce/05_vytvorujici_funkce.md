@@ -70,6 +70,6 @@ Příklad
 
 ##Vežové polynomy
 1. Metoda přes povolený pole
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.png)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.jpg)
 2. Metoda přes zakázaná pole (Inverzní rook polynom)
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/inverse_rook.png)  
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/inverse_rook.jpg)  
