@@ -175,7 +175,7 @@ Pozn.: Na levé straně (![k < 0](https://latex.codecogs.com/svg.latex?k%20%3C%2
   - Musí být dodrženo pravidlo, že v libovolné části výrazu je na levé straně více nebo stejně otevíracích závorek než uzavíracích.
   - Počet způsobů ![C_n](https://latex.codecogs.com/svg.latex?C_n)
 
-- *Kolik permutací lze realizovat pomocí zásobníku?
+- *Kolik permutací lze realizovat pomocí zásobníku?*
   - Nelze vybírat z prázdného zásobníku
   - Vybírat lze pouze zeshora, stejně tak vkládat
   - Počet způsobů opět ![C_n](https://latex.codecogs.com/svg.latex?C_n)
@@ -195,6 +195,14 @@ Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
 ![F(n) = F(n-1) + F(n-2)](https://latex.codecogs.com/svg.latex?F%28n%29%20%3D%20F%28n-1%29%20&plus;%20F%28n-2%29)
 
 ## Rozklady
+
+- Nerozlišitelné objekty
+  - [Rozlišitelné skupiny](#nerozlisitelne-objekty-do-rozlisitelnych-skupin)
+    - Bez omezení
+    - Neprázdné skupiny
+    - S omezujícími podmínkami
+  - [Nerozlišitelné skupiny](#nerozlisitelne-objekty-do-nerozlisitelnych-skupin)
+- [Rozlišitelné objekty](rozlisitelne-objekty)
 
 ### Nerozlišitelné objekty do rozlišitelných skupin
 
@@ -275,6 +283,10 @@ Rozděluji n nerozlišitelných objektů do k rozlišitelných skupin.
 - = počet rozkladů množiny na k tříd
 - = počet ekvivalencí na množině, které mají k tříd ekvivalence
 - = Stirling subset number
+
+![Rozklad množiny o n prvcích na k tříd ekvivalence](04_rozklad_mnoziny.jpg)
+
+*Rozklad množiny o ![n](https://latex.codecogs.com/svg.latex?n) prvcích na ![k](https://latex.codecogs.com/svg.latex?k) tříd ekvivalence*
 
 **Stirling subset number**
 
