@@ -165,6 +165,7 @@ Pro výpočty se používají reprezentanti ze zbytkových tříd, označované 
 ![Z_m = \{0, 1, \ldots, m - 1 \}](https://latex.codecogs.com/svg.latex?Z_m%20%3D%20%5C%7B0%2C%201%2C%20%5Cldots%2C%20m%20-%201%20%5C%7D) ... **úplná soustava nejmenších nezáporných zbytků modlulo m**
 
 ![Zbytková třída modulo m](02_rozklad_celych_cisel_na_zbytkove_tridy.jpg)
+
 *Zbytková třída modulo ![m](https://latex.codecogs.com/svg.latex?m)*
 
 **Redukovaná soustava zbytků modulo m**
