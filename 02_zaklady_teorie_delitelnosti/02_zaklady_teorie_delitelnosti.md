@@ -76,9 +76,9 @@ Pro více čísel: obdobně jako u NSD.
 
 ![180 = 2^2 \cdot 3^2 \cdot 5](https://latex.codecogs.com/svg.latex?180%20%3D%202%5E2%20%5Ccdot%203%5E2%20%5Ccdot%205)
 
-Pro nalezení ![NSD(192, 108, 90)](https://latex.codecogs.com/svg.latex?NSD%28192%2C%20108%2C%2090%29) vezmu z rozkladů ty prvočísla, která se vyskytují *ve všech* rozkladech a to v jejich *nejmenší* mocnině.
+Pro nalezení ![NSD(192, 108, 180)](https://latex.codecogs.com/svg.latex?NSD%28192%2C%20108%2C%20180%29) vezmu z rozkladů ty prvočísla, která se vyskytují *ve všech* rozkladech a to v jejich *nejmenší* mocnině.
 
-![NSD(192, 108, 180) = 2^2 \cdot 3 = 12](https://latex.codecogs.com/svg.latex?NSD%28192%2C%20108%2C%2090%29%20%3D%202%5E2%20%5Ccdot%203%20%3D%2012)
+![NSD(192, 108, 180) = 2^2 \cdot 3 = 12](https://latex.codecogs.com/svg.latex?NSD%28192%2C%20108%2C%20180%29%20%3D%202%5E2%20%5Ccdot%203%20%3D%2012)
 
 Pro nalezení ![NSN(192, 108, 180)](https://latex.codecogs.com/svg.latex?NSN%28192%2C%20108%2C%20180%29) vezmu z rozkladů *všechna* prvočísla a to v jejich *nejvyšší* mocnině.
 
