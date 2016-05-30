@@ -16,7 +16,9 @@
 ![a_0+a_1x+\frac{a_2x^2}{2!}+\frac{a_3x^3}{3!} \dots = \sum_{i=0}^{\infty}\frac{a_i x^i}{i!}](https://latex.codecogs.com/svg.latex?a_0&plus;a_1x&plus;%5Cfrac%7Ba_2x%5E2%7D%7B2%21%7D&plus;%5Cfrac%7Ba_3x%5E3%7D%7B3%21%7D%20%5Cdots%20%3D%20%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%5Cfrac%7Ba_i%20x%5Ei%7D%7Bi%21%7D)
 
 - Má-li tato řada nenulový poloměr konvergence, pak ji nazveme exponenciální vytvořující funkcí dané posloupnosti a označíme ji A(x)
+- Použití v úlohách, kde záleží na pořadí 
 
+Příklad
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/expo_fce.png)
 
 ##Otevřený a uzavřený tvar
@@ -64,4 +66,10 @@
 8. **Násobení (konvoluce)**
 	- ![f(x) \cdot g(x) \Rightarrow a_0b_0,a_0b_1+a_1b_0,a_0b_2+a_1b_1+a_2b_0,\dots](https://latex.codecogs.com/svg.latex?f%28x%29%20%5Ccdot%20g%28x%29%20%5CRightarrow%20a_0b_0%2Ca_0b_1&plus;a_1b_0%2Ca_0b_2&plus;a_1b_1&plus;a_2b_0%2C%5Cdots)
 9. **Postupný součet prvních prvků**
-	- ![\frac{f(x)}{1-x} \Rightarrow a_0,a_0+a_1,a_0+a_1+a_2,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bf%28x%29%7D%7B1-x%7D%20%5CRightarrow%20a_0%2Ca_0&plus;a_1%2Ca_0&plus;a_1&plus;a_2%2C%5Cdots) 
+	- ![\frac{f(x)}{1-x} \Rightarrow a_0,a_0+a_1,a_0+a_1+a_2,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bf%28x%29%7D%7B1-x%7D%20%5CRightarrow%20a_0%2Ca_0&plus;a_1%2Ca_0&plus;a_1&plus;a_2%2C%5Cdots)
+
+##Vežové polynomy
+1. Metoda přes povolený pole
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.png)
+2. Metoda přes zakázaná pole (Inverzní rook polynom)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/inverse_rook.png)  
