@@ -5,13 +5,13 @@
 - Máme posloupnost reálných čísel a_n
 - Vytvořující řadou této posloupnosti rozumíme mocninnou řadu  ![\sum_{i=0}^{\infty} a_ix^i](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20a_ix%5Ei)
 - Je-li tato řada konvergentní pro nějaké ≠0, nazveme tuto řadu obyčejnou vytvořující funkcí této posloupnosti a budeme ji značit a(x)
-- Má-li posloupnost (a_n)jen konečně mnoho nenulových členů, její obyčejná vytvořující funkce je mnohočlen.   
+- Má-li posloupnost (![a_n](https://latex.codecogs.com/svg.latex?a_n))jen konečně mnoho nenulových členů, její obyčejná vytvořující funkce je mnohočlen.   
 
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/obyc_fce.png)
 
 ##Exponenciální vytvořující funkce
 
--Mějme posloupnost reálných čísel (a_n). Exponenciální vytvořující řadou této posloupnosti rozumíme řadu 
+-Mějme posloupnost reálných čísel (![a_n](https://latex.codecogs.com/svg.latex?a_n)). Exponenciální vytvořující řadou této posloupnosti rozumíme řadu 
 
 ![a_0+a_1x+\frac{a_2x^2}{2!}+\frac{a_3x^3}{3!} \dots = \sum_{i=0}^{\infty}\frac{a_i x^i}{i!}](https://latex.codecogs.com/svg.latex?a_0&plus;a_1x&plus;%5Cfrac%7Ba_2x%5E2%7D%7B2%21%7D&plus;%5Cfrac%7Ba_3x%5E3%7D%7B3%21%7D%20%5Cdots%20%3D%20%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%5Cfrac%7Ba_i%20x%5Ei%7D%7Bi%21%7D)
 
@@ -34,7 +34,7 @@ Příklad
 ![\sum_{i=0}^{\infty} i\cdot x^i \Rightarrow 0 \cdot x^0 + 1\cdot x^1 + 2\cdot x^2 +  \dots](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20i%5Ccdot%20x%5Ei%20%5CRightarrow%200%20%5Ccdot%20x%5E0%20&plus;%201%5Ccdot%20x%5E1%20&plus;%202%5Ccdot%20x%5E2%20&plus;%20%5Cdots)
 
 ###Uzavřený tvar
-- generuje posloupnost a_n
+- generuje posloupnost ![a_n](https://latex.codecogs.com/svg.latex?a_n)
 
 ![\frac{1}{1-x} \Rightarrow 1,1,1,1,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7B1-x%7D%20%5CRightarrow%201%2C1%2C1%2C1%2C%5Cdots)
 
