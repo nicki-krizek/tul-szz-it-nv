@@ -83,11 +83,14 @@ daného impulsní odezvou
 
 ![y[n] = x[n] * h[n] = \sum_{k=0}^{N-1}x[k]\cdot h[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20*%20h%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7BN-1%7Dx%5Bk%5D%5Ccdot%20h%5Bn-k%5D)
 
-###FIR (Finite Impulse Response)
+### FIR (Finite Impulse Response)
+
 - jsou systémy s konečnou impulzní odezvou
 - bez zpětné vazby
 - např. ![y[n] = x[n] + x[n - 1]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20&plus;%20x%5Bn%20-%201%5D)
-###IIR (Infinite Impulse Response)
+
+### IIR (Infinite Impulse Response)
+
 - jsou systémy s nekonečnou impulzní odezvou
 - obsahují zpětnou vazbu
 - např. ![y[n] = x[n] + 0,5y[n - 2]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20&plus;%200%2C5y%5Bn%20-%202%5D)
