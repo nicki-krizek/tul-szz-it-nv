@@ -3,13 +3,12 @@
 > Minimální kódy, princip, použití, konstrukce Huffmanova kódu, aritmetické kódy
 
 ###Kódování
-- (Kódování znaků je trestem programátorů za všechny jejich hříchy a nežádoucí dědictví z dob minulých, kdy se šetřilo každým bitem, které do dnešní doby přežívá díky zkostnatělosti Microsoftu :D)
 - Kódování je proces transformace dat (např. pomocí speciální znakové tabulky) do podoby definované příslušným kódovacím algoritmem, za účelem prevence ztráty (či znehodnocení) dat při přenosu nebo snížení celkového objemu dat apod.
 
 **Kódování** je změna vstupní zprávy na zprávu jinou, narozdíl od šifrování není cílem zprávu utajit. Kódujeme za účelem:
 
 - **zmenšení objemu** přenášené zprávy ( *kompresní kódy* - minimální(huffmanův kód), aritmetické, slovníkové)
-- **zabezepečení** zprávy proti chybám (*opravné kódy* - CRC, Hamming)
+- **zabezepečení** zprávy proti chybám (*opravné kódy* - CRC, Hamming, Paritní bit)
 
 ###Kraftova nerovnost
 Kraftova nerovnost je věta užívaná v teorii kódování. Udává omezení na délky kódových slov, které musí splňovat daný kód, aby mohl být kódem prefixovým. Zobecnění Kraftovy nerovnosti pro libovolný jednoznačně dekódovatelný kód se pak nazývá McMillanova věta.
