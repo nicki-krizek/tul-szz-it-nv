@@ -5,6 +5,14 @@
 ## Normalizace v RMD
 Normalizace je sada pravidel, jak postupovat při transformaci struktury entit a relací ER modelu na strukturu fyzického uspořádání tabulek a relací v databázi. Dojde tím k odstranění redundantních dat, omezení složitosti a zabránění tzv. aktualizačních anomálií. Provedení normalizace by mělo vést k přehlednější, rozšiřitelnější a výkonnější databázi. Normalizované schema **musí zachovat všechny závislosti** původního schematu a relací. To znamená, že se musíme pomocí přirozeného spojení dostat k původním datům.
 
+**Aktualizacní anomálie (Codd):**
+
+Relace: *PROGRAM_KINA(PK: JMENO_KINA, PK: JMENO_FILMU, ADRESA, DATUM, CAS)*
+
+- redundance (zmení-li se adresa kina, je nutné ji měnit vícekrát)
+- ztráta informace (nehraje-li kino zrovna nic, ztrácíme jeho adresu)
+- nemožnost evidovat data, aniž by je někdo vybral (chceme-li přidat nové kino s adresou, lze to jen když se tam hraje nejaký film. )
+
 Normalizace se provádí za pomoci **normálních forem** (NF). Mezi ně patří (seřazeno vzestupně):
 - 1. NF,
 - 2. NF,
@@ -12,6 +20,8 @@ Normalizace se provádí za pomoci **normálních forem** (NF). Mezi ně patří
 - BCNF,
 - 4. NF,
 - 5. NF.
+
+![http://programujte.com/galerie/2008/07/200807191347_formy.png](http://programujte.com/galerie/2008/07/200807191347_formy.png)
 
 Pozn.: Obecně lze říci, že u každé databáze není nutné aplikovat všechny zde uvedené NF. Vždy záleží na konkrétním uvážení. Nicméně z praktických důvodů se v mnoha případech provádí normalizace alespoň do 3NF.
 
@@ -114,6 +124,11 @@ Relace je ve čtvrté normální formě tehdy, je-li v BCNF a všechny vícehodn
 
 ### 5. normální forma
 Relace je v páté normální formě jestliže je ve 4NF a nemůže být dále bezeztrátově rozložena. Jinými slovy relace, která má n klíčových atributů (n >= 3) a která se rozloží na relace o n-1 klíčových atributech, nemůže být opětovně spojena operací přirozeného spojení do jedné relace, aniž by došlo ke ztrátě informace.
+
+*Konkrétní příklady 4. a 5. formy jsou dostupné na:*
+
+- [http://www.manualy.net/article.php?articleID=13](http://www.manualy.net/article.php?articleID=13)
+- [http://programujte.com/clanek/2008071900-normalizace-relacnich-databazi/](http://programujte.com/clanek/2008071900-normalizace-relacnich-databazi/)
 
 ## Bezztrátová dekompozice
 **bezztrátová dekompozice** = proces dělení původní relace na více schémat bez ztráty sémantiky 
