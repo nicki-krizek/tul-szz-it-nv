@@ -67,6 +67,23 @@ Pro více čísel: obdobně jako u NSD.
 
 ![a \cdot b = NSN(a, b) \cdot NSD(a, b)](https://latex.codecogs.com/svg.latex?a%20%5Ccdot%20b%20%3D%20NSN%28a%2C%20b%29%20%5Ccdot%20NSD%28a%2C%20b%29)
 
+
+### Kanonické rozklady
+
+![192 = 2^6 \cdot 3](https://latex.codecogs.com/svg.latex?192%20%3D%202%5E6%20%5Ccdot%203)
+
+![108 = 2^2 \cdot 3^3](https://latex.codecogs.com/svg.latex?108%20%3D%202%5E2%20%5Ccdot%203%5E3)
+
+![180 = 2^2 \cdot 3^2 \cdot 5](https://latex.codecogs.com/svg.latex?180%20%3D%202%5E2%20%5Ccdot%203%5E2%20%5Ccdot%205)
+
+Pro nalezení ![NSD(192, 108, 90)](https://latex.codecogs.com/svg.latex?NSD%28192%2C%20108%2C%2090%29) vezmu z rozkladů ty prvočísla, která se vyskytují *ve všech* rozkladech a to v jejich *nejmenší* mocnině.
+
+![NSD(192, 108, 180) = 2^2 \cdot 3 = 12](https://latex.codecogs.com/svg.latex?NSD%28192%2C%20108%2C%2090%29%20%3D%202%5E2%20%5Ccdot%203%20%3D%2012)
+
+Pro nalezení ![NSN(192, 108, 180)](https://latex.codecogs.com/svg.latex?NSN%28192%2C%20108%2C%20180%29) vezmu z rozkladů *všechna* prvočísla a to v jejich *nejvyšší* mocnině.
+
+![NSN(192, 108, 180) = 2^6 \cdot 3^3 \cdot 5 = 8640](https://latex.codecogs.com/svg.latex?NSN%28192%2C%20108%2C%20180%29%20%3D%202%5E6%20%5Ccdot%203%5E3%20%5Ccdot%205%20%3D%208640)
+
 ### Euklidův algoritmus
 
 ![a = b \cdot q_0 + r](https://latex.codecogs.com/svg.latex?a%20%3D%20b%20%5Ccdot%20q_0%20&plus;%20r)
@@ -171,23 +188,24 @@ Pro výpočty se používají reprezentanti ze zbytkových tříd, označované 
 
 | + | 0 | 1 | 2 | 3 |
 |---|---|---|---|---|
-|*0*| 0 | 1 | 2 | 3 |
-|*1*| 1 | 2 | 3 | 0 |
-|*2*| 2 | 3 | 0 | 1 |
-|*3*| 3 | 0 | 1 | 2 |
+|**0**| 0 | 1 | 2 | 3 |
+|**1**| 1 | 2 | 3 | 0 |
+|**2**| 2 | 3 | 0 | 1 |
+|**3**| 3 | 0 | 1 | 2 |
 
 ### Násobení modulo m
 
 - existuje *neutrální prvek* ... ![1](https://latex.codecogs.com/svg.latex?1) (po vynásobení 1 se výsledek nezmění)
+- k jednotlivým prvkům může existovat *inverzní prvek* ... ![a^{-1}](https://latex.codecogs.com/svg.latex?a%5E%7B-1%7D) (![a \cdot a^{-1} = 1](https://latex.codecogs.com/svg.latex?a%20%5Ccdot%20a%5E%7B-1%7D%20%3D%201))
 
 **Příklad** v ![Z_5](https://latex.codecogs.com/svg.latex?Z_5)
 
 | ![\cdot](https://latex.codecogs.com/svg.latex?%5Ccdot) | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|
-|*1*| 1 | 2 | 3 | 4 |
-|*2*| 2 | 4 | 1 | 3 |
-|*3*| 3 | 1 | 4 | 2 |
-|*4*| 4 | 3 | 2 | 1 |
+|**1**| 1 | 2 | 3 | 4 |
+|**2**| 2 | 4 | 1 | 3 |
+|**3**| 3 | 1 | 4 | 2 |
+|**4**| 4 | 3 | 2 | 1 |
 
 Pozn.: Pokud cokoliv vynásobím prvek ze třídy 0, bude i výsledek 0.
 
