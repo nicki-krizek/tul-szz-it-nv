@@ -6,6 +6,11 @@
 - (Kódování znaků je trestem programátorů za všechny jejich hříchy a nežádoucí dědictví z dob minulých, kdy se šetřilo každým bitem, které do dnešní doby přežívá díky zkostnatělosti Microsoftu :D)
 - Kódování je proces transformace dat (např. pomocí speciální znakové tabulky) do podoby definované příslušným kódovacím algoritmem, za účelem prevence ztráty (či znehodnocení) dat při přenosu nebo snížení celkového objemu dat apod.
 
+**Kódování** je změna vstupní zprávy na zprávu jinou, narozdíl od šifrování není cílem zprávu utajit. Kódujeme za účelem:
+
+- **zmenšení objemu** přenášené zprávy ( *kompresní kódy* - minimální(huffmanův kód), aritmetické, slovníkové)
+- **zabezepečení** zprávy proti chybám (*opravné kódy* - CRC, Hamming)
+
 ###Kraftova nerovnost
 Kraftova nerovnost je věta užívaná v teorii kódování. Udává omezení na délky kódových slov, které musí splňovat daný kód, aby mohl být kódem prefixovým. Zobecnění Kraftovy nerovnosti pro libovolný jednoznačně dekódovatelný kód se pak nazývá McMillanova věta.
 
@@ -28,9 +33,13 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 - algoritmy pro snížení objemu dat
 	- ztrátová komprese (např. jpeg)
 	- bezztrátová komprese (minimální kódy)
-	
-##Minimální kód
+####Prefixový kód
+- žádné kódové slovo není prefixem jiného kódového slova
+- každý prefixový kód je jednoznačně dekódovatelný
+- lze je dekódovat znak po znaku(průběžně)
 
+##Minimální(nejkratší) kód
+- je prefixový kód, který má ze všech prefixových kódů dané zdrojové abecedy nejkratší střední délku kódového slova
 - algoritmy snažící se bezztrátově zredukovat velké množství informace
 - RLE Run lenght encoding – opakování znaků 
 - Statistické metody
