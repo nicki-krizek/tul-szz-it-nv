@@ -112,10 +112,10 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 
 ##Skupinové spoždění
 
-- Místo fázové charakteristiky se často uvádí skupinové zpoždění (group delay - GD)
+- Místo fázové charakteristiky (u filtrů s lineární fázovou charakteristikou) se často uvádí skupinové zpoždění (group delay - GD)
 - Udává zpoždění signálu ![e^jωn](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20%5Comega%20n%7D) po průchodu LTI systémem (ve vzorcích)
 - ![τ(ω) = −dφ(ω)/dω](https://latex.codecogs.com/svg.latex?%5Ctau%28%5Comega%29%20%3D%20-%5Cfrac%7Bd%20%5CPhi%28%5Comega%29%7D%7Bd%20%5Comega%7D) 
-- na cviku jsme si psali, že 
+- na cviku jsme si psali pro FIR filtry s lineární fází, že 
 	- skupinové spoždění = ![(N-1)/2](https://latex.codecogs.com/svg.latex?%5Cfrac%7BN-1%7D%7B2%7D), kde ![N](https://latex.codecogs.com/svg.latex?N) je délka filtru 
 
 ##Přenosová funkce
