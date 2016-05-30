@@ -197,12 +197,12 @@ Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
 ## Rozklady
 
 - Nerozlišitelné objekty
-  - [Rozlišitelné skupiny](#nerozlisitelne-objekty-do-rozlisitelnych-skupin)
+  - Rozlišitelné skupiny
     - Bez omezení
     - Neprázdné skupiny
     - S omezujícími podmínkami
-  - [Nerozlišitelné skupiny](#nerozlisitelne-objekty-do-nerozlisitelnych-skupin)
-- [Rozlišitelné objekty](rozlisitelne-objekty)
+  - Nerozlišitelné skupiny
+- Rozlišitelné objekty
 
 ### Nerozlišitelné objekty do rozlišitelných skupin
 
