@@ -22,6 +22,7 @@ např. Fibonacciho rek. vztah ![F_n = F_{n-1} + F_{n-2}](https://latex.codecogs.
 
 ### (Ne)Lineární rek. vztah
 
+- Pokud funkce ![\Phi(a_n, a_{n-1}, \ldots,a_{n-k}, n)](https://latex.codecogs.com/svg.latex?%5CPhi%28a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D%2C%20n%29) je lineární funkcí ![a_n, a_{n-1}, \ldots,a_{n-k}](https://latex.codecogs.com/svg.latex?a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D), 
 
 ![\left(\begin{aligned}
 A(x+y) &= A(x) + A(y) \\ 
@@ -124,11 +125,8 @@ Po dosazení získáváme jednoznačné řešení rekurentního vztahu:
 Nechť ![r_1,r_2,\ldots,r_p](https://latex.codecogs.com/svg.latex?r_1%2Cr_2%2C%5Cldots%2Cr_p) jsou všechny různé kořeny charakteristického polynomu s násobnostmi ![m_1,m_2,\ldots,m_p](https://latex.codecogs.com/svg.latex?m_1%2Cm_2%2C%5Cldots%2Cm_p). Potom obecné řešení je tvaru:
 
 ![\begin{aligned}
-a_n = &K_1^{(1)} \cdot r_1^n + K_2^{(1)} \cdot n \cdot r_1^n + \ldots + K_{m_1}^{(1)} \cdot n^{m_1-1} \cdot r_1^n + \\
-+ &K_1^{(2)} \cdot r_2^n + K_2^{(2)} \cdot n \cdot r_2^n + \ldots + K_{m_2}^{(2)} \cdot n^{m_2-1} \cdot r_2^n + \\
-+ &\ldots + \\
-+ &K_1^{(p)} \cdot r_p^n + K_2^{(p)} \cdot n \cdot r_p^n + \ldots + K_{m_p}^{(p)} \cdot n^{m_p-1} \cdot r_p^n
-\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20a_n%20%3D%20%26K_1%5E%7B%281%29%7D%20%5Ccdot%20r_1%5En%20&plus;%20K_2%5E%7B%281%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_1%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_1%7D%5E%7B%281%29%7D%20%5Ccdot%20n%5E%7Bm_1-1%7D%20%5Ccdot%20r_1%5En%20&plus;%20%5C%5C%20&plus;%20%26K_1%5E%7B%282%29%7D%20%5Ccdot%20r_2%5En%20&plus;%20K_2%5E%7B%282%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_2%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_2%7D%5E%7B%282%29%7D%20%5Ccdot%20n%5E%7Bm_2-1%7D%20%5Ccdot%20r_2%5En%20&plus;%20%5C%5C%20&plus;%20%26%5Cldots%20&plus;%20%5C%5C%20&plus;%20%26K_1%5E%7B%28p%29%7D%20%5Ccdot%20r_p%5En%20&plus;%20K_2%5E%7B%28p%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_p%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_p%7D%5E%7B%28p%29%7D%20%5Ccdot%20n%5E%7Bm_p-1%7D%20%5Ccdot%20r_p%5En%20%5Cend%7Baligned%7D)
+a_n = &K_1^{(1)} \cdot r_1^n + K_2^{(1)} \cdot n \cdot r_1^n + \ldots + K_{m_1}^{(1)} \cdot n^{m_1-1} \cdot r_1^n + \\+ &K_1^{(2)} \cdot r_2^n + K_2^{(2)} \cdot n \cdot r_2^n + \ldots + K_{m_2}^{(2)} \cdot n^{m_2-1} \cdot r_2^n + \\+ &\ldots + \\+ &K_1^{(p)} \cdot r_p^n + K_2^{(p)} \cdot n \cdot r_p^n + \ldots + K_{m_p}^{(p)} \cdot n^{m_p-1} \cdot r_p^n
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20a_n%20%3D%20%26K_1%5E%7B%281%29%7D%20%5Ccdot%20r_1%5En%20&plus;%20K_2%5E%7B%281%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_1%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_1%7D%5E%7B%281%29%7D%20%5Ccdot%20n%5E%7Bm_1-1%7D%20%5Ccdot%20r_1%5En%20&plus;%20%5C%5C&plus;%20%26K_1%5E%7B%282%29%7D%20%5Ccdot%20r_2%5En%20&plus;%20K_2%5E%7B%282%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_2%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_2%7D%5E%7B%282%29%7D%20%5Ccdot%20n%5E%7Bm_2-1%7D%20%5Ccdot%20r_2%5En%20&plus;%20%5C%5C&plus;%20%26%5Cldots%20&plus;%20%5C%5C&plus;%20%26K_1%5E%7B%28p%29%7D%20%5Ccdot%20r_p%5En%20&plus;%20K_2%5E%7B%28p%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_p%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_p%7D%5E%7B%28p%29%7D%20%5Ccdot%20n%5E%7Bm_p-1%7D%20%5Ccdot%20r_p%5En%20%5Cend%7Baligned%7D)
 
 ####Srozumitelně
 
