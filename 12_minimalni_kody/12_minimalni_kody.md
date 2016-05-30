@@ -32,6 +32,7 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 - algoritmy pro snížení objemu dat
 	- ztrátová komprese (např. jpeg)
 	- bezztrátová komprese (minimální kódy)
+
 ####Prefixový kód
 - žádné kódové slovo není prefixem jiného kódového slova
 - každý prefixový kód je jednoznačně dekódovatelný
