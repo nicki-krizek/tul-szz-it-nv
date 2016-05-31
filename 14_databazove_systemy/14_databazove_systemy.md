@@ -27,7 +27,9 @@ Založen na pevném matematickém základu roku 1970 panem E. F. Coddem.
 ### Základní rysy
 - oddělení dat a jejich implementace
 - symetrický přístup k datům - při manipulaci s daty se nezajímáme o přístupové mechanizmy k datům
-- relační kalkul a relační algebra - prostředky pro manipulaci s daty
+- prostředky pro manipulaci s daty:
+ - **relační kalkul**
+ - **relační algebra** 
 
 ### Základní pojmy
 - **databázová relace** - množina (výsledek dotazu, tabulka, aj.); nesmí obsahovat duplicitní prvky
@@ -64,6 +66,18 @@ Každá relační tabulka musí splňovat následující podmínky:
 - každému sloupci musí být přiřazeno jednoznačné jméno (tzv. atribut),
 - v relační tabulce nesmí být dva zcela stejné řádky,
 - dle relační teorie lze pomocí základních operací (sjednocení, kartézský součin, rozdíl, selekce, projekce, přejmenování) uskutečnit veškeré operace s daty.
+
+### Základní operace
+Dle relační teorie lze pomocí základních operací
+
+- sjednocení,
+- kartézský součin,
+- rozdíl,
+- selekce,
+- projekce,
+- přejmenování
+
+uskutečnit veškeré operace s daty.
 
 ## Objektový model dat - OMD
 Objektová databáze je systém správy databází, ve kterém je informace reprezentována formou objektů. To by mělo přirozeněji a věrněji popisovat

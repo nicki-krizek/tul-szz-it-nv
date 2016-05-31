@@ -44,15 +44,15 @@ KA je možné reprezentovat několika způsoby.
 
 1. Formální zápis
 
-  ![A = (Q, \Sigma, \delta, S_1, F)](https://latex.codecogs.com/svg.latex?A%20%3D%20%28Q%2C%20%5CSigma%2C%20%5Cdelta%2C%20q_0%2C%20F%29)
+  ![A = (Q, \Sigma, \delta, S_1, F)](https://latex.codecogs.com/svg.latex?A%20%3D%20%28Q%2C%20%5CSigma%2C%20%5Cdelta%2C%20S_1%2C%20F%29)
 
   ![Q = \{S_1, S_2\}](https://latex.codecogs.com/svg.latex?Q%20%3D%20%5C%7BS_1%2C%20S_2%5C%7D)
 
   ![\Sigma = \{0, 1\}](https://latex.codecogs.com/svg.latex?%5CSigma%20%3D%20%5C%7B0%2C%201%5C%7D)
 
-  ![F = \{S_1\}](https://latex.codecogs.com/svg.latex?F%20%3D%20%5C%7BS_1%5C%7D)
-
   ![\delta: \delta(S_1, 0) = S_2, \delta(S_1, 1) = S_1, \delta(S_2, 0) = S_1, \delta(S_2, 1) = S_2](https://latex.codecogs.com/svg.latex?%5Cdelta%3A%20%5Cdelta%28S_1%2C%200%29%20%3D%20S_2%2C%20%5Cdelta%28S_1%2C%201%29%20%3D%20S_1%2C%20%5Cdelta%28S_2%2C%200%29%20%3D%20S_1%2C%20%5Cdelta%28S_2%2C%201%29%20%3D%20S_2)
+
+  ![F = \{S_1\}](https://latex.codecogs.com/svg.latex?F%20%3D%20%5C%7BS_1%5C%7D)
 
 2. Stavovým diagramem
 

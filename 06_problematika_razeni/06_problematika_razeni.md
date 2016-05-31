@@ -16,7 +16,7 @@ Cílem je nalézt permutaci ![\pi \in S_n](https://latex.codecogs.com/svg.latex?
 - *stabilní* - v seřazené posloupnosti je zachováno pořadí rovnocenných prvků
 - [*interní*](https://en.wikipedia.org/wiki/Internal_sort) - všechna data jsou k dispozici v paměti
 - [*externí*](https://en.wikipedia.org/wiki/External_sorting) - další prvky přichází v průběhu řazení
-- [*časová složitost*](https://cs.wikipedia.org/wiki/Asymptotick%C3%A1_slo%C5%BEitost) (dále jako ![f(n)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29))
+- [*časová složitost*](https://cs.wikipedia.org/wiki/Asymptotick%C3%A1_slo%C5%BEitost) (dále jako ![f(n)](https://latex.codecogs.com/svg.latex?%20f%28n%29))
 - *paměťová složitost*
 
 ## a) Rozšřování setříděné části
@@ -25,9 +25,18 @@ Cílem je nalézt permutaci ![\pi \in S_n](https://latex.codecogs.com/svg.latex?
 
 V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nakonec setříděné části.
 
-![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+**Příklad:**
 
-![f(n) = f(n - 1) + (n - 1)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%3D%20f%28n%20-%201%29%20&plus;%20%28n%20-%201%29)
+- 6, 5, 2, 4, 8
+- **2**, 5, 6, 4, 8
+- **2**, **4**, 6, 5, 8
+- **2**, **4**, **5**, 6, 8
+- **2**, **4**, **5**, **6**, 8
+- **2**, **4**, **5**, **6**, **8**
+
+![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+
+![f(n) = f(n - 1) + (n - 1)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%3D%20f%28n%20-%201%29%20&plus;%20%28n%20-%201%29)
 
 [Řazení výběrem (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_v%C3%BDb%C4%9Brem)
 
@@ -37,9 +46,18 @@ V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nak
 
 Vyberu první prvek z nesetříděné části a zařadím ho na správné místo v setříděné části.
 
-v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+**Příklad:**
 
-pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%29)
+- 6, 5, 2, 4, 8
+- **6**, 5, 2, 4, 8
+- **5**, **6**, 2, 4, 8
+- **2**, **5**, **6**, 4, 8
+- **2**, **4**, **5**, **6**, 8
+- **2**, **4**, **5**, **6**, **8**
+
+v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+
+pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%29)
 
 [Řazení vkládáním (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_vkl%C3%A1d%C3%A1n%C3%ADm)
 
@@ -49,9 +67,18 @@ pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex
 
 ### Bubble Sort
 
-Nesetříděnou posloupnost procházím shora dolů a porovnávám dvojice po sobě jdoucích prvků; dvojice mimo pořadí zaměním.
+Nesetříděnou posloupnost procházím shora dolů a porovnávám dvojice po sobě jdoucích prvků; dvojice mimo pořadí zaměním. Tím se na přední pozici dostane vždy nejmenší prvek.
 
-![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+**Příklad:**
+
+- 6, 5, 2, 4, 8
+- **2**, 6, 5, 4, 8
+- 2, **4**, 6, 5, 8
+- 2, 4, **5**, 6, 8
+- 2, 4, 5, **6**, 8
+- 2, 4, 5, 6, **8**
+
+![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 
 [Bubble Sort (cs wiki)](https://cs.wikipedia.org/wiki/Bublinkov%C3%A9_%C5%99azen%C3%AD)
 
@@ -73,11 +100,15 @@ Kombinace Bubble Sort a Shaker Sort. Střídá se procházecí pořadí.
 
 ### Merge sort
 
-Vstupní posloupnost se rekurzivně dělí na dvě poloviny až jsou poslopnosti délky jedna. Následuje zpětný chod, tj. sestavení setříděné posloupnosti.
+Vstupní posloupnost se rekurzivně dělí na dvě poloviny až jsou poslopnosti délky jedna. Následuje zpětný chod, tj. sestavení setříděné posloupnosti. Při zpětném chodu se sloučí dvě fronty do jedné (nejmenší prvek je vždy na začátku jedné ze dvou front).
 
-![f(n) = 2f(\frac{n}{2}) + n](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%3D%202f%28%5Cfrac%7Bn%7D%7B2%7D%29%20&plus;%20n)
+![Ukázka merge sort](06_merge_sort.jpg)
 
-![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
+*Ukázka algoritmu merge sort*
+
+![f(n) = 2f(\frac{n}{2}) + n](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%3D%202f%28%5Cfrac%7Bn%7D%7B2%7D%29%20&plus;%20n)
+
+![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
 
 [Merge Sort (cs wiki)](https://cs.wikipedia.org/wiki/Merge_sort)
 
@@ -87,9 +118,13 @@ Vstupní posloupnost se rekurzivně dělí na dvě poloviny až jsou poslopnosti
 
 Zvolíme tzv. pivota a posloupnost rozdělíme na dvě části. Jedna z nich obsahuje prvky menší nebo rovny pivotu a druhá obsahuje prvky větší než pivot. Na tyto dvě posloupnosti se rekurzivně aplikuje stejná operace.
 
-složitost v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+![Ukázka algoritmu quick sort](06_quick_sort.jpg)
 
-průměrná složitost ... ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%5Clarge%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
+*Ukázka algoritmu quick sort*
+
+složitost v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+
+průměrná složitost ... ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
 
 ## Odkazy
 

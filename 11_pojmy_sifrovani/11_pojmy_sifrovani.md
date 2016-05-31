@@ -39,6 +39,8 @@ Asi nejjednoduší metodou zlomení některých šifer je **frekvenční analýz
 
 **Moderní kryptografie je postavena na pricipu, že dvě prvočísla umíme snadno vynásobit, ale jejich faktorizace (rozklad na prvočísla) je výpočetně velmi složitý (u dostatečně velkých čísel).**
 
+**V současné době je šifrování velice aktuální, některé procesory mohou mít i vyhrazený kryptografický koprocesor, který akceleruje hardwarově ty nejpoužívanější algoritmy.**
+
 Celkem dobrý kanál na youtube: [https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg](https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg)
 
 Slidy k tomu v sekci online courses/slides: [http://www.crypto-textbook.com/](http://www.crypto-textbook.com/)
@@ -175,7 +177,7 @@ STASNEAVESELE => AYTEIVJTHTAJEQ
 Obdoba Viegnerovy šifry, klíč je však zcela náhodný a stejně dlouhý jako otevřený text. Bez znalosti klíče nerozluštitelná.
 
 ### Transpoziční šifry
-Principem transpoziční šifry je změna pořadí znaků (jejich permutace) na základě předem dohodnutého systém. Jinými slovy transpoziční šifra mění pořadí znaků, nikoliv jejich vzhled. Výhodou této šifry je její jednoduchost, k zašifrování není potřeba hluboká znalost matematiky a zvládne ho i dítě. Většina transpozičních šifer je založena na určitém geometrickém postupu. Text je zapsán do určitého geometrického obrazce a poté jiným způsobem přepsán do výsledného šifrovaného textu. Existuje mnoho variant, například **čtení odzadu**,** čtení každého N-tého písmene**, **text do spirály ve čtverci** nebo **transpoziční mřížka**.
+Principem transpoziční šifry je změna pořadí znaků (jejich permutace) na základě předem dohodnutého systém. Jinými slovy transpoziční šifra mění pořadí znaků, nikoliv jejich vzhled. Výhodou této šifry je její jednoduchost, k zašifrování není potřeba hluboká znalost matematiky a zvládne ho i dítě. Většina transpozičních šifer je založena na určitém geometrickém postupu. Text je zapsán do určitého geometrického obrazce a poté jiným způsobem přepsán do výsledného šifrovaného textu. Existuje mnoho variant, například **čtení odzadu**, **čtení každého N-tého písmene**, **text do spirály ve čtverci** nebo **transpoziční mřížka**.
 
 ![Transpoziční mřížka](11_mrizka.png)
 
@@ -195,9 +197,9 @@ Jako Feistelova šifra či Feistelova síť se v kryptografii označuje základn
 *Příklad Fiestelova šifrování*
 
 #### DES
-Data (Digital) Encryption Standard (DES) je v kryptografii symetrická šifra vyvinutá v 70. letech. V roce 1977 byla zvolena za standard (FIPS 46) pro šifrování dat v civilních státních organizacích v USA a následně se rozšířila i do soukromého sektoru. V současnosti je tato šifra považována za nespolehlivou, protože používá klíč pouze o délce 64 bitů, z toho 8 je kontrolních a 56 efektivních. Navíc algoritmus obsahuje slabiny, které dále snižují bezpečnost šifry. Díky tomu je možné šifru prolomit útokem hrubou silou za méně než 24 hodin. ¨
+Data (Digital) Encryption Standard (DES) je v kryptografii symetrická šifra vyvinutá v 70. letech. V roce 1977 byla zvolena za standard (FIPS 46) pro šifrování dat v civilních státních organizacích v USA a následně se rozšířila i do soukromého sektoru. V současnosti je tato šifra považována za nespolehlivou, protože používá **klíč pouze o délce 64 bitů, z toho 8 je kontrolních a 56 efektivních**. Navíc algoritmus obsahuje slabiny, které dále snižují bezpečnost šifry. Díky tomu je **možné šifru prolomit** útokem hrubou silou za méně než 24 hodin. ¨
 
-Možným způsobem jak zvýšit bezpečnost této šifry, je vícenásobná aplikace. Tak vznikl algoritmus Triple DES, který je trojnásobnou aplikací šifry DES. Nejčastěji používaná varianta 3TDES pracuje s klíčem o celkové délce 168 bitů. Triple DES je oproti novějším algoritmům (AES) daleko pomalejší, a proto se postupně přestává používat.
+Možným způsobem jak zvýšit bezpečnost této šifry, je vícenásobná aplikace. Tak vznikl algoritmus **Triple DES, který je trojnásobnou aplikací šifry DES**. Nejčastěji používaná varianta 3TDES pracuje s klíčem o celkové délce 168 bitů. Triple DES je oproti novějším algoritmům (AES) daleko pomalejší, a proto se postupně **přestává používat**.
 
 ![Diagram pro DES](11_des.png)
 
@@ -209,7 +211,7 @@ Možným způsobem jak zvýšit bezpečnost této šifry, je vícenásobná apli
 Na youtube: [https://www.youtube.com/watch?v=UgFoqxKY7cY](https://www.youtube.com/watch?v=UgFoqxKY7cY)
 
 #### AES
-Advanced Encryption Standard (AES, česky standard pokročilého šifrování) je standardizovaný algoritmus používaný k šifrování dat v informatice. Jedná se o symetrickou blokovou šifru šifrující i dešifrující stejným klíčem data rozdělená do bloků pevně dané délky. Norma nahradila dříve užívanou šifru DES. Je používána například pro bezdrátové Wi-Fi sítě v rámci zabezpečení WPA2 dle standardu IEEE 802.11i.
+Advanced Encryption Standard (algoritmus Rijndael) je standardizovaný algoritmus používaný k šifrování dat v informatice. Jedná se o symetrickou blokovou šifru šifrující i dešifrující stejným klíčem data rozdělená do bloků pevně dané délky. Norma **nahradila dříve užívanou šifru DES**. Je používána například pro bezdrátové Wi-Fi sítě v rámci zabezpečení **WPA2** dle standardu IEEE 802.11i. Používá **klíče délky 128, 192, 256 bitů**.
 
 - Expanze klíče − podklíče jsou odvozeny z klíče šifry užitím Rijndael programu
 - Inicializační část
@@ -257,7 +259,7 @@ In 1977, Edna Grossman and Bryant Tuckerman cryptanalyzed NDS using the first kn
 
 ## Asymetrické šifry
 ### RSA
-**RSA** (iniciály autorů Rivest, Shamir, Adleman) je šifra s veřejným klíčem, jedná se o první algoritmus, který je vhodný jak pro podepisování, tak šifrování. Používá se i dnes, přičemž při dostatečné délce klíče je považován za bezpečný. Bezpečnost RSA je postavena na předpokladu, že rozložit velké číslo n na součin prvočísel p a q (faktorizace) je velmi obtížná úloha. Z čísla n = pq je tedy v rozumném čase prakticky nemožné zjistit činitele p a q, neboť není znám žádný algoritmus faktorizace, který by pracoval v polynomiálním čase vůči velikosti binárního zápisu čísla n. Naproti tomu násobení dvou velkých čísel je elementární úloha.
+**RSA** (iniciály autorů Rivest, Shamir, Adleman) je šifra s veřejným klíčem, jedná se o první algoritmus, který je vhodný jak pro podepisování, tak šifrování. Používá se i dnes, přičemž při dostatečné délce klíče je považován za bezpečný. Bezpečnost RSA je postavena na předpokladu, že rozložit velké číslo n na součin prvočísel p a q (faktorizace) je velmi obtížná úloha. Z čísla n = pq je tedy v rozumném čase prakticky nemožné zjistit činitele p a q, neboť není znám žádný algoritmus faktorizace, který by pracoval v polynomiálním čase vůči velikosti binárního zápisu čísla n. Naproti tomu násobení dvou velkých čísel je elementární úloha. Rozluštění zprávy je možné, ale je to extrémně výpočetně zdlouhavé. Ppočítáme s tím, že se nikomu nevyplatí čekat.
 
 1. Zvolí dvě různá velká náhodná prvočísla p a q.
 2. Spočítá jejich součin n = pq.

@@ -83,11 +83,14 @@ daného impulsní odezvou
 
 ![y[n] = x[n] * h[n] = \sum_{k=0}^{N-1}x[k]\cdot h[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20*%20h%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7BN-1%7Dx%5Bk%5D%5Ccdot%20h%5Bn-k%5D)
 
-###FIR (Finite Impulse Response)
+### FIR (Finite Impulse Response)
+
 - jsou systémy s konečnou impulzní odezvou
 - bez zpětné vazby
 - např. ![y[n] = x[n] + x[n - 1]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20&plus;%20x%5Bn%20-%201%5D)
-###IIR (Infinite Impulse Response)
+
+### IIR (Infinite Impulse Response)
+
 - jsou systémy s nekonečnou impulzní odezvou
 - obsahují zpětnou vazbu
 - např. ![y[n] = x[n] + 0,5y[n - 2]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20x%5Bn%5D%20&plus;%200%2C5y%5Bn%20-%202%5D)
@@ -109,11 +112,48 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 
 ##Skupinové spoždění
 
-- Místo fázové charakteristiky se často uvádí skupinové zpoždění (group delay - GD)
+- Místo fázové charakteristiky (u filtrů s lineární fázovou charakteristikou) se často uvádí skupinové zpoždění (group delay - GD)
 - Udává zpoždění signálu ![e^jωn](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20%5Comega%20n%7D) po průchodu LTI systémem (ve vzorcích)
 - ![τ(ω) = −dφ(ω)/dω](https://latex.codecogs.com/svg.latex?%5Ctau%28%5Comega%29%20%3D%20-%5Cfrac%7Bd%20%5CPhi%28%5Comega%29%7D%7Bd%20%5Comega%7D) 
-- na cviku jsme si psali, že 
+- na cviku jsme si psali pro FIR filtry s lineární fází, že 
 	- skupinové spoždění = ![(N-1)/2](https://latex.codecogs.com/svg.latex?%5Cfrac%7BN-1%7D%7B2%7D), kde ![N](https://latex.codecogs.com/svg.latex?N) je délka filtru 
+
+###Z-transformace
+- Z-transformace diskrétní řady ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je deﬁnována jako:
+	- ![X(z) = \sum_{n = 0}^{N-1} x[n] \cdot z^{-n}](https://latex.codecogs.com/svg.latex?X%28z%29%20%3D%20%5Csum_%7Bn%20%3D%200%7D%5E%7BN-1%7D%20x%5Bn%5D%20%5Ccdot%20z%5E%7B-n%7D)
+- Z-obraz je komplexní funkce komplexní proměnné. Jeho vlastnosti se nejčastěji popisují v z-rovině
+
+###Region konvergence
+- (Region of Convergence - ROC) - hodnoty z, pro které je součet řady konečný
+- DTFT ze Z-obrazu získáme dosazením ![z = e^{j\omega}](https://latex.codecogs.com/svg.latex?z%20%3D%20e%5E%7Bj%5Comega%7D), tedy DTFT je tvořena body na jednotkové kružnici v Z rovině
+- Region konvergence je mezikruží ve formě α<|z|<β
+	- α a β jsme počítali pomocí tabulky častých z-obrazů
+	- kde podle tvaru jmenovatele přenosové funkce, nebo tvaru impulzní odezvy se zjistila velikost a orientace daného limitu
+		- tabulka spíše pro představu, rozhodně nebude potřeba
+		- ![](http://s33.postimg.org/o95a4fx0f/roc.png)
+- ROC nikdy neobsahuje póly - v naprosté většině případů právě póly vymezujii ROC, ale nemusí tomu tak být (např. můžu mit kauzální system s pólem ve vzdálenosti 0.5 a s dalšim ve vzdálenosti 0.3 - 0.5 vymezuje ROC outward, 0.3 už ne)
+- pokud se ROC roztahuje ven -> system je kauzální 
+- pokud se ROC roztahuje dovnitř (k počátku), system je nekauzální
+- pokud ROC je mezikruzi -> system obsahuje kauzalni i nekauzalni prvky
+- pokud ROC obsahuje jednotkovou kružnici (a tudíž lze vypočítat DTFT) -> systém je stabilní.
+
+- Pravostranná sekvence má z-obraz s ROC ve tvaru: |z|>α
+- Levostranná sekvence má z-obraz s ROC ve tvaru: |z|<β
+- Z-obraz je komplexní funkce komplexní proměnné
+- je-li ROC vymezené z obou stran (two-sides) nazýváme ho mezikruží
+- ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
+
+####Nuly a póly
+- Všechny systémy popsané LCCDE lze jednoznačně popsat pomocí Z-transformace jako racionální funkci (viz. přenosová funkce)
+- nuly jsou pak kořeny čitatele a póly kořeny jmenovatele přenosové funkce
+- z pozic nul a pólů v z-rovině můžeme vyčíst chování daného filtru
+	- v blízkosti nul budou dané frekvence tlumeny
+	- v blízkosti pólů budou frekvence zesilovány
+- intenzita zesílení/tlumení je dána vzdáleností od [0;0]
+- ![ukazka frekencni char. filtru a roc](http://noel.feld.cvut.cz/vyu/ada/adacv/img139.png)
+- v pravo dole je z-rovina, filtr má nulu v [0;0] a jeden pól skoro u [1;0]
+	- ve frek. charak. se to projeví velkým zesílením jedné frekvence, v tomto případě zesílení konstantních signálů (f= 0 Hz)
+
 
 ##Přenosová funkce
 
@@ -163,40 +203,4 @@ dochází k fázovému zkreslení
 ###Realizovatelný systém
 - musí být stabilní (ROC musí obsahovat jednotkovou kružnici) a kauzální (ROC musí být kruh rozpínající se vně jednotkové kružnice)
 
-doplnit Z-transformaci a ROC
 
-###Z-transformace
-- Z-transformace diskrétní řady ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je deﬁnována jako:
-	- ![X(z) = \sum_{n = 0}^{N-1} x[n] \cdot z^{-n}](https://latex.codecogs.com/svg.latex?X%28z%29%20%3D%20%5Csum_%7Bn%20%3D%200%7D%5E%7BN-1%7D%20x%5Bn%5D%20%5Ccdot%20z%5E%7B-n%7D)
-- Z-obraz je komplexní funkce komplexní proměnné. Jeho vlastnosti se nejčastěji popisují v z-rovině
-
-###Region konvergence
-- (Region of Convergence - ROC) - hodnoty z, pro které je součet řady konečný
-- DTFT ze Z-obrazu získáme dosazením ![z = e^{j\omega}](https://latex.codecogs.com/svg.latex?z%20%3D%20e%5E%7Bj%5Comega%7D), tedy DTFT je tvořena body na jednotkové kružnici v Z rovině
-- Region konvergence je mezikruží ve formě α<|z|<β
-	- α a β jsme počítali pomocí tabulky častých z-obrazů
-	- kde podle tvaru jmenovatele přenosové funkce, nebo tvaru impulzní odezvy se zjistila velikost a orientace daného limitu
-		- tabulka spíše pro představu, rozhodně nebude potřeba
-		- ![](http://s33.postimg.org/o95a4fx0f/roc.png)
-- ROC nikdy neobsahuje póly - v naprosté většině případů právě póly vymezujii ROC, ale nemusí tomu tak být (např. můžu mit kauzální system s pólem ve vzdálenosti 0.5 a s dalšim ve vzdálenosti 0.3 - 0.5 vymezuje ROC outward, 0.3 už ne)
-- pokud se ROC roztahuje ven -> system je kauzální 
-- pokud se ROC roztahuje dovnitř (k počátku), system je nekauzální
-- pokud ROC je mezikruzi -> system obsahuje kauzalni i nekauzalni prvky
-- pokud ROC obsahuje jednotkovou kružnici (a tudíž lze vypočítat DTFT) -> systém je stabilní.
-
-- Pravostranná sekvence má z-obraz s ROC ve tvaru: |z|>α
-- Levostranná sekvence má z-obraz s ROC ve tvaru: |z|<β
-- Z-obraz je komplexní funkce komplexní proměnné
-- je-li ROC vymezené z obou stran (two-sides) nazýváme ho mezikruží
-- ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
-
-####Nuly a póly
-- Všechny systémy popsané LCCDE lze jednoznačně popsat pomocí Z-transformace jako racionální funkci (viz. přenosová funkce)
-- nuly jsou pak kořeny čitatele a póly kořeny jmenovatele přenosové funkce
-- z pozic nul a pólů v z-rovině můžeme vyčíst chování daného filtru
-	- v blízkosti nul budou dané frekvence tlumeny
-	- v blízkosti pólů budou frekvence zesilovány
-- intenzita zesílení/tlumení je dána vzdáleností od [0;0]
-- ![ukazka frekencni char. filtru a roc](http://noel.feld.cvut.cz/vyu/ada/adacv/img139.png)
-- v pravo dole je z-rovina, filtr má nulu v [0;0] a jeden pól skoro u [1;0]
-	- ve frek. charak. se to projeví velkým zesílením jedné frekvence, v tomto případě zesílení konstantních signálů (f= 0 Hz)

@@ -51,13 +51,13 @@ Operační systém je základní programové vybavení počítače, které je za
  3. zodpovídá za abstrakci HW (poskytuje API - abstraktní vrstva pro lepší programování)
  4. přiděluje HW aplikacím
 2. **Systémové nástroje**
- 1. Správa zařízení (formát disku, kopírování..)
+ 1. Správa zařízení (formát disku, kopírování, ...)
  2. Správa uživatelů
  3. Pomocné nástroje - skripty, utility (pomocné programy)
 3. **Rozhraní**
- 1. API - programátorské rozhraní (standartní knihovny, přístup k hw )
+ 1. API - programátorské rozhraní (standartní knihovny, přístup k hw)
  2. ABI - binární rozhraní (pravidla definující spolupráci na úrovni strojového kódu mezi procesy a jádrem operačního systému, procesy a jimi používanými knihovnami nebo mezi součástmi aplikací)
- 3. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu )
+ 3. UI - uživatelské rozhraní (nemusí být součástí, do jádra se řadí kvůli zvýšení výkonu)
 
 ### Režimy procesoru
 Typicky má procesor dva režimy provozu:
@@ -66,12 +66,12 @@ Typicky má procesor dva režimy provozu:
  - Dostupná celá instrukční sada
  - Lze adresovat celou operační paměť
  - Lze měnit všechny registry procesoru
- - Kernel mode, unprotected mode…
+ - Kernel mode, unprotected mode, ...
 - **Chráněný – s omezením**
  - Pokus vykonat některé instrukce končí chybou
  - Část paměti je skrytá, nelze ji adresovat
  - Pokus o změnu některých registrů končí chybou
- - User mode, protected mode…
+ - User mode, protected mode, ...
 
 **Režim je vlastnost procesoru, OS ji jen využívá. Některé procesory implementují hned několik režimů, takzvaných protection rings (nepoužívá se kvůli přenositelnosti). Přecházení mezi režimy je náročná operace, ale chrání OS před napadením nebo neúmyslným poškozením.**
 
@@ -83,14 +83,14 @@ Typicky má procesor dva režimy provozu:
 - Ovládá HW zařízení, přiděluje HW aplikacím.
 - Odpovídá za abstrakci HW.
 
-**Typy jader:**
+**Typy jader**
 
-- **„Maximální jádro“ - monolytické:**
+- **„Maximální jádro“ - monolytické**
  - Všechny systémové funkce jsou zahrnuty v jádře OS.
  - Rychlé a efektivní.
  - Náročné na pamět.
  - Náchylné k chybám.
-- **„Minimální jádro“ - mikrojádro:** (hlavně realtime OS)
+- **„Minimální jádro“ - mikrojádro** (hlavně realtime OS)
  - Zajišťuje pouze abstrakci HW, správu procesů a komunikaci.
  - Zbylé funkce jsou realizovány jako procesy.
  - Pomalé, kvůli častému přepínaní režimu.
@@ -131,7 +131,7 @@ Během přerušení dochází ke změně **kontextu**. Kontext je vše, co potř
  - Slouží zejména k volání služeb OS = systémová volání a přechod mezi chráněným a nechráněným režimem
  - Ve srovnání s podprogramy má pevnou adresu pro obslužnou rutinu
 
-**Obsluha přerušeni:**
+**Obsluha přerušeni**
 
 1. Uložení aktuálního kontextu.
 2. Volitelně zákaz ostatních přerušení.
@@ -142,7 +142,7 @@ Během přerušení dochází ke změně **kontextu**. Kontext je vše, co potř
 
 ### Start systému
 
-- **Linux:**
+- **Linux**
  1. Spustí se jádro (typicky /boot/vmlinuzXXX)
  2. Osahání dostupného HW
  3. Start démona init, který startuje zbytek systému a řídí ostatní procesy
@@ -150,7 +150,7 @@ Během přerušení dochází ke změně **kontextu**. Kontext je vše, co potř
  5. Start terminálů a možnost přihlášení uživatele
  6. Variabilně start automaticky spouštěných úloh (dle konfigurace)
  7. Variabilně start grafického uživatelského prostředí dle konfigurace
-- **Windows:**
+- **Windows**
  1. Načte se soubor ntldr z kořenového adresáře startovacího oddílu
  2. Je-li v souboru boot.ini definováno menu pro start systému, je zobrazeno
  3. Spuštění detekce HW
@@ -169,7 +169,7 @@ proti přepsání.
 - **Datové registry** – dle typu procesoru – cca 10 – 50, slouží k výpočtům a zpracování dat při vykonávání instrukce; vypovídají o „síle“ procesoru
 - **Cache** – vyrovnávací paměť mezi vnější pamětí a registry; snižuje zpoždění způsobené přístupem do vnější paměti
  - Velikost od 10k do řádově jednotek MB (64bitové procesory, nová jádra)
- - L1, L2, L3: úrovně (level 1, level 2…): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
+ - L1, L2, L3: úrovně (level 1, level 2, ...): čím nižší úroveň, tím je paměť rychlejší a zároveň menší; L1 je v jádře procesoru a na jeho frekvenci, L2 někdy ano, někdy ne
 - **Vnitřní paměť** – RAM:
  - Operační paměť: zde probíhají všechny „operace“; zde je uloženo vše, s čím spuštěný OS pracuje; zde OS aplikuje svou správu paměti.
  - Základní vlastnost: po odpojení napájení data mizí
@@ -183,7 +183,7 @@ proti přepsání.
 1. **Přidělování bez dělení do bloků** - typicky pro starší systém, kde běží jen jedna úloha (bez multitaskingu), ve víceúlohových systémech se vše ukládá a vrací do OP z disku
  - Výhody: jednodušší jádro - nemusí obsahovat rutinu pro přidělení paměti
  - Ochrana paměti: nutná jen kontrola přístupu do oblasti jádra, napřříklad hodnoty z registrů může měnit pouze jádro
-2. **Přidělování pevných bloků pamětí** - po startu systému se paměť rozdělí do bloků 16kB, 32kB… Tyto bloky mají konstatntní velikost po celou dobu běhu systému. Procesy na základě požadavku na paměť dostanou patřičně velký blok.
+2. **Přidělování pevných bloků pamětí** - po startu systému se paměť rozdělí do bloků 16kB, 32kB, ... Tyto bloky mají konstatntní velikost po celou dobu běhu systému. Procesy na základě požadavku na paměť dostanou patřičně velký blok.
  - Výhody: rychlejší přepínání kontextu - více procesů v paměti, jednoduchá správa paměti - pouze tabulka s využitím bloků
  - Nevýhoda: nelze spouštět procesy, které mají nárok větší než je největší blok, neefektivní využití paměti
 3. **Dynamické přidělování paměti** - po startu systému je paměť nerozdělená, procesy po spuštění berou paměť, kolik potřebují. Při ukončení ji uvolní. Náročné na implementaci
@@ -293,12 +293,12 @@ Operační systém poskytuje **abstrakci** přístupu k hardware, ke kterému p�
 
 **Ovladače dělíme na:**
 
-- **Producent:**
+- **Producent**
  - Logická vrstva směrem k OS.
  - Přebírá data od procesů a řadí je do fronty.
  - Závislá jen na typu zařízení, ale ne na HW.
  - Může být obecná pro více zařízení („klávesnice“, „tiskárna“ apod.).
-- **Konzument:**
+- **Konzument**
  - Fyzická vrstva směrem k zařízení (přímá komunikace se zařízením)
  - Odbavuje frontu směrem k zařízení.
  - Závislé na typu HW.
@@ -337,12 +337,12 @@ Dva (a více) provádí současně nějakou operaci nad stejnými daty; přitom 
 *Souběh*
 
 ###Ochrana před souběhem
-**Atomické operace:**
+**Atomické operace**
 
 - Lze u jednoduchých operací či datových struktur.
 - Kritickou sekci realizujeme např. jednou instrukcí.
  
-**Výlučný přístup:**
+**Výlučný přístup**
 
 - Dalšími prostředky zajistíme, že v kritické oblasti s daty pracuje vždy jen jeden proces.
  - Zákaz přerušení
@@ -351,7 +351,7 @@ Dva (a více) provádí současně nějakou operaci nad stejnými daty; přitom 
 ### Transakce
 Aby nedocházelo k nekonzistencím , zavádíme transakce.
 
-**Vlastnosti transakcí:** (ACID)
+**Vlastnosti transakcí** (ACID)
 
 - Atomicity (atomičnost):
  - Operace zahrnuté v transakci se chápou jako atomické.
@@ -365,13 +365,13 @@ Aby nedocházelo k nekonzistencím , zavádíme transakce.
 - Durability (trvalost):
  - Když transakce proběhne, jsou výsledky uloženy a nemohou být ztraceny.
 
-**Kroky:**
+**Kroky**
 
 - Zahájení (begin)
 - Potvrzení (commit): pro potvrzení, že transakce proběhla v pořádku; data jsou změněna, změna je uložena a data zůstávají konzistentní.
 - Vrácení do původního stavu (roll-back): pro „krok zpět“ v situaci, kdy během realizace transakce dojde k chybě.
 
-**Realizace:**
+**Realizace**
 
 - Pesimistická realizace: předpokládáme, že nastane chyba.
  - Změny dat během transakce zaznamenávány do dočasných objektů.

@@ -54,6 +54,24 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 
 **acyklický graf** - graf, ve kterém neexistuje kružnice, nazýváme les
 
+###Možné reprezentace grafu
+- výčet množiny vrcholů a hran V={v1,v2,...,vn} H = {{v1,v3},{v1,v2},...}
+- grafická reprezentace (graf)
+- seznamem vrcholů a seznamy jejich následovníků
+	- v1 -> v3 -> v5
+	- v2 -> v3 -> v5
+	- v4 -> v5
+	- ...
+- matice incidence
+	- sloupce jsou jednotlivé hrany
+	- řádky jsou jednotlivé vrcholy
+	- existence hrany je je zavedena jako jedničky ve spojených vrcholech
+	- tedy v jednom sloupci jsou právě 2 jedničky
+- matice sousednosti
+	- čtvercová matice dle počtu vrcholů
+	- řádky i sloupce odpovídají vrcholům
+	- tam kde jsou vrcholy spojené je nenulové číslo
+
 ##Souvislost grafů
 - graf je souvislý, pokud má právě 1 komponentu
 
