@@ -2,17 +2,17 @@
 > Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.
 
 ## Síťové programování
-Síťovým programováním rozumíme proces vytváření programů, které jsou spolu schopné komunikovat přes síť. Nemusí se však jednat pouze o komunikaci dvou různých počítačů v síti, programy mohou pomocí síťového rozhraní (localhost) komunikovat mezi sebou i rámci jednoho počítače. Aby programátor nemusel znát podrobně všechny komunikační vrsty a protokoly potřebné k navázaní spojení, poskytuje operační systém rozhraní zvané **síťový socket**. Síťové sockety jsou postaveny na protokolu **TCP/IP** a jejich podporu najdeme ve většině standartně používaných programovacích jazycích.
+Síťovým programováním rozumíme proces vytváření programů, které jsou spolu schopné komunikovat přes síť. Nemusí se však jednat pouze o komunikaci dvou různých počítačů v síti, programy mohou pomocí síťového rozhraní (localhost) komunikovat mezi sebou i v rámci jednoho počítače. Aby programátor nemusel znát podrobně všechny komunikační vrsty a protokoly potřebné k navázaní spojení, poskytuje operační systém rozhraní zvané **síťový socket**. Síťové sockety jsou postaveny na protokolu **TCP/IP** a jejich podporu najdeme ve většině běžně používaných programovacích jazycích.
 
 ## Sockety
-Socket je obecný model point to point (roura) komunikace. Socket je obecně nezávislý na **TCP/IP** protokolu a poprvé byl představen jako programátorské rozhraní zvané [Berkley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets) v operačním systému BSD (Berkley Software Distribution). Tento model implementují například **Unixové sockety**, které slouží pro meziprocesovou komunikace. V dnešní době je však pod pojmem Socket myšlena spíše implementace **síťových Socketů** postavených na protokolu **TCP/IP**, právě těmi se budeme dále zabývat.
+Socket je obecný model point to point (roura) komunikace. Socket je obecně nezávislý na **TCP/IP** protokolu a poprvé byl představen jako programátorské rozhraní zvané [Berkley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets) v operačním systému BSD (Berkley Software Distribution). Tento model implementují například **Unixové sockety**, které slouží pro meziprocesovou komunikace. V dnešní době je však pod pojmem Socket myšlena spíše implementace **Síťových socketů** postavených na protokolu **TCP/IP**, právě těmi se budeme dále zabývat.
 
 ### Typy socketů
 - **Unix Domain Sockets** - Sockety pužívané pro meziprocesovou komunikaci v prostředí Unixu.
 - **Internet Domain Sockets** - Síťové sockety, podporované napříč platformami.
- - **TCP** - streamovaná spojovaná komunikace (Nejdříve se musí navázat spojení mezi párem socketů, server socketnaslouchá na portu, klientský navazuje spojení.)
- - **UDP** - nespojovaná datagramová komunikace (S každým zaslaným datagramem se zasílá lokální socke tdescriptor a adresa příjemce.)
- - **RawIP** - obvykle dostupné jen routerech a nízkoúrovňových službách jako je  (ICMP) ping. (OS již obvykle nepodporují, lze falšovat hlavičky a tak dále.)
+ - **TCP** - streamovaná spojovaná komunikace (Nejdříve se musí navázat spojení mezi párem socketů, server socket naslouchá na portu, klientský navazuje spojení.)
+ - **UDP** - nespojovaná datagramová komunikace (S každým zaslaným datagramem se zasílá lokální socket descriptor a adresa příjemce.)
+ - **RawIP** - obvykle dostupné jen routerech a nízkoúrovňových službách jako je  (ICMP) ping. (OS již většinou nepodporují, lze falšovat hlavičky a tak dále.)
 
 ### Síťové sockety
 Síťový socket je jeden **koncový bod** dvoubodového komunikačního spojení mezi dvěma programy na síti. Koncový bod tvoří dvojice **jméno hostitele** a **číslo portu**. Každé spojení je identifikováno dvěma koncovými body, takzvaný **socketpair**.
@@ -35,7 +35,7 @@ Síťový socket je jeden **koncový bod** dvoubodového komunikačního spojen�
 *Převzato z Berkley Sockets spíše pro orientaci, reálně se může v závisloti na implementaci.*
 
 ### Komunikace
-Komunikace probíhá tak jak je znázorněno na následujícím obrázku.
+Komunikace probíhá tak, jak je znázorněno na následujícím obrázku.
 
 ![Model komunikace přes Socket](17_socket.png)
 
@@ -91,12 +91,13 @@ class TCPServer {
 ```
 
 ## Blokujíci a neblokující operace
-Každý  socket může být nastaven do dvou módů - **blokujícího** a **neblokujícího**. V blokujícím řežimu je celá aplikace zastavena a čeká se na potvrzení o přijetí dat. To může trvat značnou dobu, po kterou je hlavní vlákno aplikace blokováno. Druhým způsobem je pak neblokující režim, v tomto režimu se požadovaná funkce ihned vrátí (obvykle impleměntováno jako podvlákno) bez ohledu na dokončení vnitřní logiky. Hlavní vlákno tedy v podstatě ihned pokračuje dál ve vykonávání programu. Nemáme však jistotu, že byla odesílaná data správně doručena. Defaultně  jsou vlákna nastavena jako blokující.
+Každý  socket může být nastaven do dvou módů - **blokujícího** a **neblokujícího**. V blokujícím řežimu je celá aplikace během odesílání dat zastavena a čeká se na potvrzení o přijetí. To může trvat značnou dobu, po kterou je hlavní vlákno aplikace blokováno. Druhým způsobem je pak neblokující režim, v tomto režimu se požadovaná funkce ihned vrátí (obvykle impleměntováno jako podvlákno, které vykoná zbytek práce) bez ohledu na dokončení vnitřní logiky. Hlavní vlákno tedy v podstatě ihned pokračuje dál ve vykonávání programu, ale nemáme jistotu, že byla odesílaná data správně doručena. Defaultně  jsou vlákna nastavena jako blokující.
 
 - **Blokující operace** - zastaví běh hlavního vlákna, dokud se její běh nedokončí
  - nevýhody můžeme řešit provaděním operace ve vlastním vlákně (**thread**)
  - při častém vykonávání blokujících operací může aplikace využít vláken i více najednou (**thread pool**)
- - případně lze použí **pooling** (cyklicky se ptáme neblokující operací typu ready() jestli jsou data bufferu a v případě úspěchu zahájíme blokujícíc recv())
+ - případně lze použí **pooling** (cyklicky se ptáme neblokující operací typu ready() jestli jsou data v bufferu a v případě úspěchu zahájíme blokujícíc recv())
+ - můžeme implementovat **přerušení** na příjem
 - **Neblokující operace** - dovolí hlavnímu vláknu ihned pokračovat v běhu, úspěšné dokončení se však špatně ověřuje
  - ověření se v tomto případě musí provádět opětovným dotazováním později v programu
  - v některých jazycích je možné využít takzvaný **callback**
