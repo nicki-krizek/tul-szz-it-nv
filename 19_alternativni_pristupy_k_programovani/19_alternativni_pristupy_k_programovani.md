@@ -54,7 +54,7 @@ Funkce s více parametry sice v lambda kalkulu neexistují, ale každou takovou 
 
 
 ### Náhrada cyklu rekurzí
-Každý algoritmus využívající rekurzi lze přepsat do nerekurzivního tvaru struktury a naopak. Rekuzze viz rekurze.
+Každý algoritmus využívající rekurzi lze přepsat do nerekurzivního tvaru struktury a naopak. Rekurze viz rekurze.
 
 ```java
 //iterativni pristup
