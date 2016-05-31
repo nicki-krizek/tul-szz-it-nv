@@ -13,13 +13,7 @@ Relace: *PROGRAM_KINA(PK: JMENO_KINA, PK: JMENO_FILMU, ADRESA, DATUM, CAS)*
 - UPDATE (zmení-li se adresa kina, je nutné ji měnit vícekrát)
 - DELETE (nehraje-li kino zrovna nic, ztrácíme jeho adresu)
 
-Normalizace se provádí za pomoci **normálních forem** (NF). Mezi ně patří (seřazeno vzestupně):
-- 1. NF,
-- 2. NF,
-- 3. NF,
-- BCNF,
-- 4. NF,
-- 5. NF.
+Normalizace se provádí za pomoci **normálních forem** (NF). Mezi ně patří:
 
 ![http://programujte.com/galerie/2008/07/200807191347_formy.png](http://programujte.com/galerie/2008/07/200807191347_formy.png)
 
