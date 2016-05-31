@@ -67,6 +67,18 @@ Každá relační tabulka musí splňovat následující podmínky:
 - v relační tabulce nesmí být dva zcela stejné řádky,
 - dle relační teorie lze pomocí základních operací (sjednocení, kartézský součin, rozdíl, selekce, projekce, přejmenování) uskutečnit veškeré operace s daty.
 
+### Základní operace
+Dle relační teorie lze pomocí základních operací
+
+- sjednocení,
+- kartézský součin,
+- rozdíl,
+- selekce,
+- projekce,
+- přejmenování
+
+uskutečnit veškeré operace s daty.
+
 ## Objektový model dat - OMD
 Objektová databáze je systém správy databází, ve kterém je informace reprezentována formou objektů. To by mělo přirozeněji a věrněji popisovat
 skutečný svět a entity modelované v databázi. Lze je rozdělit na **objektově orientované** a **objektově relační**. Objektově orientované jsou si podobné s objekty v objektově orientovaných programovacích jazycích. Pro obě skupiny neexistuje žádný standard. V praktickém využití jej nalezneme minimálně oproti relačnímu modelu.
