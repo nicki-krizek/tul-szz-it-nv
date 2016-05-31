@@ -159,6 +159,8 @@ selektor {
 
 ![SOAP, WSDL a UDDI](18_komunikace_webservices.png)
 
+*Komunikace webservices: Jiří Kosek, http://www.kosek.cz/diplomka/html/websluzby.html*
+
 ### REST
 
 - orientace na práci se zdroji a daty
@@ -166,8 +168,4 @@ selektor {
 - čtyři základní operace: Create, Retrive, Update, Delete
 - využívá metody a stavové kódy HTTP
 - formát pro výměnu dat - JSON, XML, ATOM/RSS, ...
-
-## Zdroje obrázků
-
-18_komunikace_webservices.png ... Jiří Kosek, http://www.kosek.cz/diplomka/html/websluzby.html
 
