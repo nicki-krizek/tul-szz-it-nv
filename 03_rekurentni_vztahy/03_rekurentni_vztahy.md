@@ -18,7 +18,7 @@ např. Fibonacciho rek. vztah ![F_n = F_{n-1} + F_{n-2}](https://latex.codecogs.
 ### (Ne)Homogenní rek. vztah
 
 - Pokud rekurentnímu vztahu vyhovuje nulová sekvence, pak se nazývá homogenní, např. Fibonacciho rek. vztah
-- Pokud rekurentnímu vztahu **ne**vyhovuje nulová sekvence, pak se nezývá nehomogenní, např. ![a_n = a_{n-1} + 1](https://latex.codecogs.com/svg.latex?a_n%20%3D%20a_%7Bn-1%7D%20&plus;%201)
+- Pokud rekurentnímu vztahu **ne**vyhovuje nulová sekvence, pak se nazývá nehomogenní, např. ![a_n = a_{n-1} + 1](https://latex.codecogs.com/svg.latex?a_n%20%3D%20a_%7Bn-1%7D%20&plus;%201)
 
 ### (Ne)Lineární rek. vztah
 
@@ -274,7 +274,7 @@ t(n) &= 3^n \cdot (An^2 + Bn + C)
 
 Bystřejší z nás jistě vidí, že tady nastane problém, neboť ![3^n \cdot Bn](https://latex.codecogs.com/svg.latex?3%5En%20%5Ccdot%20Bn) a ![3^n \cdot C](https://latex.codecogs.com/svg.latex?3%5En%20%5Ccdot%20C) jsou řešením homogenního části rekurentního vztahu (![K_1 \cdot 3^n + K_2 \cdot n \cdot 3^n](https://latex.codecogs.com/svg.latex?K_1%20%5Ccdot%203%5En%20&plus;%20K_2%20%5Ccdot%20n%20%5Ccdot%203%5En)). Dostáváme se tak k bodu *3.* postupu řešení a zkušební řešení bude třeba vynásobit ![n^s](https://latex.codecogs.com/svg.latex?n%5Es) s vhodně zvoleným ![s](https://latex.codecogs.com/svg.latex?s). V tomto případě bude ![s = 2](https://latex.codecogs.com/svg.latex?s%20%3D%202), neboť od druhé mocniny ![n](https://latex.codecogs.com/svg.latex?n) nebude žádný ze sčítanců řešením hom. části.
 
-Já ale bystrý nejsem a nevidím to v tom, tak si to mechanicky vypočítám s původním zkušebním řešením ![t(n)](https://latex.codecogs.com/svg.latex?t%28n%29). Bystří mohou přeskočit.  
+Já ale bystrý nejsem a nevidím to v tom, tak si to můžu mechanicky vypočítat s původním zkušebním řešením ![t(n)](https://latex.codecogs.com/svg.latex?t%28n%29). Bystří mohou přeskočit.  
 ![\begin{aligned}
 a_n - 6a_{n-1} + 9a_{n-2} &= 3^n \cdot (n^2 + 1) \\
 3^n \cdot (An^2 + Bn + C) - 6 \cdot 3^{n-1} \cdot (A{(n-1)}^2 + B(n-1) + C) + 9 \cdot 3^{n-2} \cdot (A{(n-2)}^2 + B(n-2) + C) &= 3^n \cdot (n^2 + 1)\\
@@ -290,7 +290,7 @@ t(n) &= 3^n \cdot (An^2 + Bn + C) \cdot n^2\\
 t(n) &= 3^n \cdot (An^4 + Bn^3 + Cn^2)
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20t%28n%29%20%26%3D%203%5En%20%5Ccdot%20%28An%5E2%20&plus;%20Bn%20&plus;%20C%29%20%5Ccdot%20n%5E2%5C%5C%20t%28n%29%20%26%3D%203%5En%20%5Ccdot%20%28An%5E4%20&plus;%20Bn%5E3%20&plus;%20Cn%5E2%29%20%5Cend%7Baligned%7D)  
 
-A po dosazení do rek. vztahu (na tohle už fakt kašlu, je to pořád stejnej postup, tady je to hozený do [wolframu](http://www.wolframalpha.com/input/?i=3^n+*+%28A*n^4+%2B+B*n^3+%2B+C*n^2%29+-+6+*+3^%28n-1%29+*+%28A*%28n-1%29^4+%2B+B*%28n-1%29^3+%2B+C*%28n-1%29^2%29+%2B+9+*+3^%28n-2%29+*+%28A*%28n-2%29^4+%2B+B*%28n-2%29^3+%2B+C*%28n-2%29^2%29+%3D+3^n+*+%28n^2+%2B+1%29) - vyjde to  
+A po dosazení do rek. vztahu (pořád stejný postup, tady je to hozený do [wolframu](http://www.wolframalpha.com/input/?i=3^n+*+%28A*n^4+%2B+B*n^3+%2B+C*n^2%29+-+6+*+3^%28n-1%29+*+%28A*%28n-1%29^4+%2B+B*%28n-1%29^3+%2B+C*%28n-1%29^2%29+%2B+9+*+3^%28n-2%29+*+%28A*%28n-2%29^4+%2B+B*%28n-2%29^3+%2B+C*%28n-2%29^2%29+%3D+3^n+*+%28n^2+%2B+1%29) - vyjde to  
 ![A = \frac{1}{12}, B = \frac{1}{3}, C = \frac{11}{12}](https://latex.codecogs.com/svg.latex?A%20%3D%20%5Cfrac%7B1%7D%7B12%7D%2C%20B%20%3D%20%5Cfrac%7B1%7D%7B3%7D%2C%20C%20%3D%20%5Cfrac%7B11%7D%7B12%7D)
 
 Po dosazení získáváme výsledek:  
@@ -299,9 +299,11 @@ a_n &= a_n^h + a_n^p\\
 a_n &= K_1 \cdot 3^n + K_2 \cdot n \cdot 3^n + 3^n \cdot (\frac{1}{12} \cdot n^4 + \frac{1}{3} \cdot n^3 + \frac{11}{12} \cdot n^2)
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20a_n%20%26%3D%20a_n%5Eh%20&plus;%20a_n%5Ep%5C%5C%20a_n%20%26%3D%20K_1%20%5Ccdot%203%5En%20&plus;%20K_2%20%5Ccdot%20n%20%5Ccdot%203%5En%20&plus;%203%5En%20%5Ccdot%20%28%5Cfrac%7B1%7D%7B12%7D%20%5Ccdot%20n%5E4%20&plus;%20%5Cfrac%7B1%7D%7B3%7D%20%5Ccdot%20n%5E3%20&plus;%20%5Cfrac%7B11%7D%7B12%7D%20%5Ccdot%20n%5E2%29%20%5Cend%7Baligned%7D)
 
+Rule of thumb - pokud nemohu některé neznámé po dosazení zkušebního řešení do rek. vztahu vypočítat, tak zkušební řešení vynásobím ![n](https://latex.codecogs.com/svg.latex?n) a zkusím znovu.
+
 ###Soustavy rekurentních vztahů
 
-- Na téhle přednášce jsem chyběl, takže dokážu uvést jenom praktický příklad výpočtu - kdo tomu rozumí a je schopen podat nějakou teorii aby měl Kouckej radsot, tak ať doplní
+- Na téhle přednášce jsem chyběl, takže dokážu uvést jenom praktický příklad výpočtu - kdo tomu rozumí a je schopen podat nějakou teorii aby měl Kouckej radost, tak ať doplní
 
 ####Příklad
 
@@ -360,6 +362,63 @@ b_n &= 12 \cdot 2^{n} -2 \cdot \left( \frac{-1}{2}\right)^{n} - 3 \cdot 2^{n} - 
 b_n &= 9 \cdot 2^n - 4 \cdot \left( \frac{-1}{2}\right)^{n}
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20b_n%20%26%3D%202a_%7Bn&plus;1%7D%20-%20a_n%5C%5C%20b_n%20%26%3D%202%20%5Ccdot%20%283%20%5Ccdot%202%5E%7Bn&plus;1%7D%20&plus;%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn&plus;1%7D%29%20-%20%283%20%5Ccdot%202%5E%7Bn%7D%20&plus;%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%29%5C%5C%20b_n%20%26%3D%202%20%5Ccdot%20%282%20%5Ccdot%203%20%5Ccdot%202%5E%7Bn%7D%20&plus;%202%20%5Ccdot%20%5Cfrac%7B-1%7D%7B2%7D%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%29%20-%203%20%5Ccdot%202%5E%7Bn%7D%20-%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%5C%5C%20b_n%20%26%3D%2012%20%5Ccdot%202%5E%7Bn%7D%20-2%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%20-%203%20%5Ccdot%202%5E%7Bn%7D%20-%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%5C%5C%20b_n%20%26%3D%209%20%5Ccdot%202%5En%20-%204%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%20%5Cend%7Baligned%7D)
 
-###Využití vytvořujících funkcí
+###Využití vytvořujících funkcí pro řešení rek. vztahů
 
-to be continued
+(Ta samá přednáška co soustavy rek. vztahů, takže je potřeba kontrola správnosti)
+
+- Mějme rek. vztah  
+![C_{n+k}a_{n+k} + C_{n+k-1}a_{n+k-1} + \ldots + C_na_n = p(n)](https://latex.codecogs.com/svg.latex?C_%7Bn&plus;k%7Da_%7Bn&plus;k%7D%20&plus;%20C_%7Bn&plus;k-1%7Da_%7Bn&plus;k-1%7D%20&plus;%20%5Cldots%20&plus;%20C_na_n%20%3D%20p%28n%29)
+
+####Postup řešení
+1. Obě strany rovnice vynásobíme ![x^{n+k}](https://latex.codecogs.com/svg.latex?x%5E%7Bn&plus;k%7D)  
+![C_{n+k}a_{n+k}x^{n+k} + xC_{n+k-1}a_{n+k-1}x^{n+k-1} + \ldots + x^kC_na_nx^n = p(n)x^{n+k}](https://latex.codecogs.com/svg.latex?C_%7Bn&plus;k%7Da_%7Bn&plus;k%7Dx%5E%7Bn&plus;k%7D%20&plus;%20xC_%7Bn&plus;k-1%7Da_%7Bn&plus;k-1%7Dx%5E%7Bn&plus;k-1%7D%20&plus;%20%5Cldots%20&plus;%20x%5EkC_na_nx%5En%20%3D%20p%28n%29x%5E%7Bn&plus;k%7D)
+2. Sčítáme pro ![n=0,1,\ldots,\infty](https://latex.codecogs.com/svg.latex?n%3D0%2C1%2C%5Cldots%2C%5Cinfty)  
+![C_{n+k} \sum_{n=0}^{\infty}{a_{n+k}x^{n+k}} + x \sum_{n=0}^{\infty}{C_{n+k-1}a_{n+k-1}x^{n+k-1}} + \ldots + x^k \sum_{n=0}^{\infty}{C_na_nx^n} = \sum_{n=0}^{\infty}{p(n)x^{n+k}}](https://latex.codecogs.com/svg.latex?%5Csmall%20C_%7Bn&plus;k%7D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Ba_%7Bn&plus;k%7Dx%5E%7Bn&plus;k%7D%7D%20&plus;%20x%20C_%7Bn&plus;k-1%7D%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Ba_%7Bn&plus;k-1%7Dx%5E%7Bn&plus;k-1%7D%7D%20&plus;%20%5Cldots%20&plus;%20x%5EkC_n%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Ba_nx%5En%7D%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Bp%28n%29x%5E%7Bn&plus;k%7D%7D)
+3. Výrazy ![\sum_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) nahradíme symbolem s vytvořující funkcí ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)  
+![\begin{aligned}
+x^kC_na_nx^n &\rightarrow f(x)\\
+C_{n+k}\sum_{n=0}^{\infty}{a_{n+k}x^{n+k}} &\rightarrow f(x) - a_0 - a_1x - \ldots - a_{k-1}x^{k-1}
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20x%5EkC_na_nx%5En%20%26%5Crightarrow%20f%28x%29%5C%5C%20C_%7Bn&plus;k%7D%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Ba_%7Bn&plus;k%7Dx%5E%7Bn&plus;k%7D%7D%20%26%5Crightarrow%20f%28x%29%20-%20a_0%20-%20a_1x%20-%20%5Cldots%20-%20a_%7Bk-1%7Dx%5E%7Bk-1%7D%20%5Cend%7Baligned%7D)
+4. Vyřešíme funkční rovnici (rovnici s neznámými ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)) sestavenou v předchozím bodě, řešením je uzavřený tvar vytvořující funkce ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)
+5. Nalezneme rozvinutý tvar vytvoř. funkce ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29), hledané ![a_n](https://latex.codecogs.com/svg.latex?a_n) je koeficient u ![x^n](https://latex.codecogs.com/svg.latex?x%5En)
+
+####Příklad
+![a_{n+1} = 2a_n + 1, \quad a_0 = 0](https://latex.codecogs.com/svg.latex?a_%7Bn&plus;1%7D%20%3D%202a_n%20&plus;%201%2C%20%5Cquad%20a_0%20%3D%200)
+
+- Vynásobíme ![x^{n+1}](https://latex.codecogs.com/svg.latex?x%5E%7Bn&plus;1%7D)  
+![\begin{aligned}
+a_{n+1}x^{n+1} &= 2a_nx^{n+1} + x^{n+1}\\
+a_{n+1}x^{n+1} &= 2xa_nx^n + x^nx
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20a_%7Bn&plus;1%7Dx%5E%7Bn&plus;1%7D%20%26%3D%202a_nx%5E%7Bn&plus;1%7D%20&plus;%20x%5E%7Bn&plus;1%7D%5C%5C%20a_%7Bn&plus;1%7Dx%5E%7Bn&plus;1%7D%20%26%3D%202xa_nx%5En%20&plus;%20x%5Enx%20%5Cend%7Baligned%7D)
+
+- Sčítáme pro ![n=0,1,\ldots,\infty](https://latex.codecogs.com/svg.latex?n%3D0%2C1%2C%5Cldots%2C%5Cinfty)  
+![\sum_{n=0}^{\infty}{a_{n+1}x^{n+1}} = 2x\sum_{n=0}^{\infty}{a_nx^n} + x\sum_{n=0}^{\infty}{x^n}](https://latex.codecogs.com/svg.latex?%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Ba_%7Bn&plus;1%7Dx%5E%7Bn&plus;1%7D%7D%20%3D%202x%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Ba_nx%5En%7D%20&plus;%20x%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Bx%5En%7D)
+
+- Sumy nahradíme symbolem s vytvořující funkcí ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)  
+![f(x) - a_0 = 2xf(x) + \frac{x}{1-x}](https://latex.codecogs.com/svg.latex?f%28x%29%20-%20a_0%20%3D%202xf%28x%29%20&plus;%20%5Cfrac%7Bx%7D%7B1-x%7D)  
+(pozn. ze zadání ![a_0 = 0](https://latex.codecogs.com/svg.latex?a_0%20%3D%200))
+
+- Vyřešíme funkční rovnici  
+![\begin{aligned}
+f(x) &= 2xf(x) + \frac{x}{1-x}\\
+f(x) - 2xf(x) &= \frac{x}{1-x}\\
+f(x)(1 - 2x) &= \frac{x}{1-x}\\
+f(x) &= \frac{x}{(1-x)(1-2x)} = \frac{A}{1-x} + \frac{B}{1-2x} \ldots \text{parc. zlomky}\\
+f(x) &= \frac{1}{1-2x} - \frac{1}{1-x}
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20f%28x%29%20%26%3D%202xf%28x%29%20&plus;%20%5Cfrac%7Bx%7D%7B1-x%7D%5C%5C%20f%28x%29%20-%202xf%28x%29%20%26%3D%20%5Cfrac%7Bx%7D%7B1-x%7D%5C%5C%20f%28x%29%281%20-%202x%29%20%26%3D%20%5Cfrac%7Bx%7D%7B1-x%7D%5C%5C%20f%28x%29%20%26%3D%20%5Cfrac%7Bx%7D%7B%281-x%29%281-2x%29%7D%20%3D%20%5Cfrac%7BA%7D%7B1-x%7D%20&plus;%20%5Cfrac%7BB%7D%7B1-2x%7D%20%5Cldots%20%5Ctext%7Bparc.%20zlomky%7D%5C%5C%20f%28x%29%20%26%3D%20%5Cfrac%7B1%7D%7B1-2x%7D%20-%20%5Cfrac%7B1%7D%7B1-x%7D%20%5Cend%7Baligned%7D)
+
+- Nalezneme rozvinutý tvar vytvořující funkce ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)  
+![f(x) = \sum_{n=0}^{\infty}{x^n} + \sum_{n=0}^{\infty}{2^nx^n}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7B2%5Enx%5En%7D%20-%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%7Bx%5En%7D)
+
+- Řešením jsou koeficienty u ![x^n](https://latex.codecogs.com/svg.latex?x%5En)  
+![a_n = 2^n - 1](https://latex.codecogs.com/svg.latex?a_n%20%3D%202%5En%20-%201)
+
+####Soustavy rek. vztahů pomocí vytvořujících funkcí
+
+- Postup řešení je zcela analogický postupu řešení jednoho rekurenčního vztahu pomocí vytvořujících funkcí, tedy:
+###
+1. Každý z rek. vztahů vynásobíme ![x^{n+k}](https://latex.codecogs.com/svg.latex?x%5E%7Bn&plus;k%7D), kde ![k](https://latex.codecogs.com/svg.latex?k) je řád rek. vztahu
+2. Sčítáme pro ![n=0,1,\ldots,\infty](https://latex.codecogs.com/svg.latex?n%3D0%2C1%2C%5Cldots%2C%5Cinfty)
+3. Nekonečné součty nahradíme vhodnými symboly vytvořujících funkcí daných posloupností
+4. Vyřešíme funkční soustavu, řešením jsou uzavřené tvary vytvořujících funkcí hledaných posloupností
+5. Nalezneme rozvinuté tvary nalezených vytvořujících funkcí
