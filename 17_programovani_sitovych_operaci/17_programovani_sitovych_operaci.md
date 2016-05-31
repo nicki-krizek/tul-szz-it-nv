@@ -103,3 +103,16 @@ Každý  socket může být nastaven do dvou módů - **blokujícího** a **nebl
 
 Jako blokující operace jsou záměrně implementovány funkce různých synchronizačních primitiv, viz okruh [27. Paralelní systémy](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/27_paralelni_systemy/27_paralelni_systemy.md).
 
+## TCP/IP
+Rodina protokolů TCP/IP (Transmission Control Protocol/Internet Protocol – „primární přenosový protokol/protokol síťové vrstvy“) obsahuje sadu protokolů pro komunikaci v počítačové síti a je hlavním protokolem celosvětové sítě Internet.
+
+Architektura TCP/IP je členěna do čtyř vrstev (na rozdíl od referenčního modelu OSI se sedmi vrstvami):
+
+- **vrstva síťového rozhraní (network interface)** - Nejnižší vrstva umožňuje přístup k fyzickému přenosovému médiu. Je specifická pro každou síť v závislosti na její implementaci. Příklady sítí: Ethernet, Token ring, FDDI, 100BaseVG, X.25, SMDS.
+- **síťová vrstva (internet layer)** - Vrstva zajišťuje především síťovou adresaci, směrování a předávání datagramů. Protokoly: IP, ARP, RARP, ICMP, IGMP, IGRP, IPSEC. Je implementována ve všech prvcích sítě - směrovačích i koncových zařízeních.
+- **transportní vrstva (transport layer)** - Transportní vrstva je implementována až v koncových zařízeních (počítačích) a umožňuje proto přizpůsobit chování sítě potřebám aplikace. Poskytuje transportní služby kontrolovaným spojením spolehlivým protokolem TCP (transmission control protocol) nebo nekontrolovaným spojením nespolehlivým protokolem UDP (user datagram protocol).
+- **aplikační vrstva (application layer)** - Vrstva aplikací. To jsou programy (procesy), které využívají přenosu dat po síti ke konkrétním službám pro uživatele. Příklady: Telnet, FTP, HTTP, DHCP, DNS.
+
+![TCP/IP](17_tcpiip.png)
+
+*TCP/IP*
