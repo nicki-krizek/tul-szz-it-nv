@@ -9,9 +9,9 @@ Normalizace je sada pravidel, jak postupovat při transformaci struktury entit a
 
 Relace: *PROGRAM_KINA(PK: JMENO_KINA, PK: JMENO_FILMU, ADRESA, DATUM, CAS)*
 
-- redundance (zmení-li se adresa kina, je nutné ji měnit vícekrát)
-- ztráta informace (nehraje-li kino zrovna nic, ztrácíme jeho adresu)
-- nemožnost evidovat data, aniž by je někdo vybral (chceme-li přidat nové kino s adresou, lze to jen když se tam hraje nejaký film. )
+- INSERT (chceme-li přidat nové kino s adresou, lze to jen když se tam hraje nejaký film)
+- UPDATE (zmení-li se adresa kina, je nutné ji měnit vícekrát)
+- DELETE (nehraje-li kino zrovna nic, ztrácíme jeho adresu)
 
 Normalizace se provádí za pomoci **normálních forem** (NF). Mezi ně patří (seřazeno vzestupně):
 - 1. NF,
