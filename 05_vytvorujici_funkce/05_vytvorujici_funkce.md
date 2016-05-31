@@ -4,7 +4,7 @@
 ##Obyčejná vytvořující funkce
 - Máme posloupnost reálných čísel ![a_n](https://latex.codecogs.com/svg.latex?a_n)
 - Vytvořující řadou této posloupnosti rozumíme mocninnou řadu  ![\sum_{i=0}^{\infty} a_ix^i](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20a_ix%5Ei)
-- Je-li tato řada konvergentní pro nějaké ≠0, nazveme tuto řadu obyčejnou vytvořující funkcí této posloupnosti a budeme ji značit a(x)
+- Je-li tato řada konvergentní pro nějaké x≠0, nazveme tuto řadu obyčejnou vytvořující funkcí této posloupnosti a budeme ji značit a(x)
 - Má-li posloupnost (![a_n](https://latex.codecogs.com/svg.latex?a_n))jen konečně mnoho nenulových členů, její obyčejná vytvořující funkce je mnohočlen.   
 
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/obyc_fce.png)
