@@ -27,7 +27,9 @@ Založen na pevném matematickém základu roku 1970 panem E. F. Coddem.
 ### Základní rysy
 - oddělení dat a jejich implementace
 - symetrický přístup k datům - při manipulaci s daty se nezajímáme o přístupové mechanizmy k datům
-- relační kalkul a relační algebra - prostředky pro manipulaci s daty
+- prostředky pro manipulaci s daty:
+ - **relační kalkul**
+ - **relační algebra** 
 
 ### Základní pojmy
 - **databázová relace** - množina (výsledek dotazu, tabulka, aj.); nesmí obsahovat duplicitní prvky
