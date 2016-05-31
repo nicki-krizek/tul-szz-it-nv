@@ -31,8 +31,8 @@ V datové části řešíme algoritmizaci (obecně dvěma krajními implementace
 ### Návrh řídicí části
 Řídicí část řešena:
 
-a) pamětí s mikroprogramem (u velkých řadičů neúměrně roste potřebná paměť)
-b) stavovým automatem (Moore, Mealy)
+1. pamětí s mikroprogramem (u velkých řadičů neúměrně roste potřebná paměť)
+2. stavovým automatem (Moore, Mealy)
 
 ![Schéma řídicí části systému](25_ridici_cast.png)
 
