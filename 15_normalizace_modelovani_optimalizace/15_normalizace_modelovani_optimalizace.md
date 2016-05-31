@@ -171,7 +171,7 @@ Chyby, které je nutné při vytváření DFD eliminovat:
 ## Optimalizace databázových struktur
 **Index** = pomocná datová struktura, která slouží k urychlení základních operací nad záznamy
 
-*(obvykle se automaticky vytvářejí pro klíčivé a unikátní atributy)*
+*(obvykle se automaticky vytvářejí pro klíčové a unikátní atributy)*
 
 Typy indexů:
 - **clustered index** - pokud jsou data uložena skoro stejně jako záznamy v indexu; častá reorganizace; náročné na údržbu při častém vkládání,
