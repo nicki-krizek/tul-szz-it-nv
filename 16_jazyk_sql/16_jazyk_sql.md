@@ -36,7 +36,7 @@ Základním konstruktem pro výběr dat je **SELECT**-**FROM**-**WHERE** blok. K
 
 **Predikáty**: IN, ANY, ALL, SOME, EXISTS
 
-**Poddotaz**: Poddotaz můžeme užít i s porovnávacími operátory, máme-li zaručeno, že 	výsledkem poddotazu je právě jedna hodnota.
+**Poddotaz**: můžeme užít i s porovnávacími operátory, máme-li zaručeno, že výsledkem poddotazu je právě jedna hodnota
 
 **GROUP BY**: tabulka se konceptuálně rozdělí na skupiny, pro které je hodnota zvoleného sloupce konstantní; řádky obsahující v tomto sloupci hodnotu NULL se seskupí do jedné skupiny; získáváme tzv. seskupenou tabulku; každá skupina přispívá do výsledné tabulky **jedním** řádkem; je syntaktická konstrukce jazyka SQL pro agregaci záznamů vybíraných pomocí příkazu SELECT
 
@@ -243,7 +243,8 @@ DROP TABLE example;
 CREATE TRIGGER aktualizuj_platy
 ON lidé
 FOR DELETE
-AS DELETE FROM platy
+AS 
+	DELETE FROM platy
 	WHERE platy.osoba_id = lidé.id 
 ```
 
@@ -263,7 +264,8 @@ my_hello_world;
 
 ``` sql
 CREATE VIEW Prazaci
-AS SELECT k_zamestnance, jmeno_z FROM Zamestnanci
+AS 
+	SELECT k_zamestnance, jmeno_z FROM Zamestnanci
 	WHERE Adresa LIKE ‘%Praha%’;
 
 SELECT k_zamestnance FROM Prazaci 
