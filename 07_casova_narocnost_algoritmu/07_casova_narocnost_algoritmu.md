@@ -32,7 +32,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 | ------- | ----- | ----------------- |
 | ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29) | konstantní | nalezení prvku v hashovací tabulce |
 | ![\mathcal{O}(\log n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog%20n%29) | logaritmická | vyhledání prvku metodou půlení intervalu v seřazeném poli |
-| ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29_ | lineární | vyhledání prvku v neseřazeném poli |
+| ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) | lineární | vyhledání prvku v neseřazeném poli |
 | ![\mathcal{O}(n \cdot \log n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog%20n%29) | linearitmická | merge sort |
 | ![\mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%5E2%29) | kvadratická | řazení pole výběrem |
 | ![\mathcal{O}(n^3)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%5E3%29) | kubická | násobení matic |
