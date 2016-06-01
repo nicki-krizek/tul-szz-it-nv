@@ -304,6 +304,7 @@ Rule of thumb - pokud nemohu některé neznámé po dosazení zkušebního řeš
 ###Soustavy rekurentních vztahů
 
 - Na téhle přednášce jsem chyběl, takže dokážu uvést jenom praktický příklad výpočtu - kdo tomu rozumí a je schopen podat nějakou teorii aby měl Kouckej radost, tak ať doplní
+- Jeden příklad uvádím zde, druhý je v Čendově pdf
 
 ####Příklad
 
@@ -422,3 +423,7 @@ f(x) &= \frac{1}{1-2x} - \frac{1}{1-x}
 3. Nekonečné součty nahradíme vhodnými symboly vytvořujících funkcí daných posloupností
 4. Vyřešíme funkční soustavu, řešením jsou uzavřené tvary vytvořujících funkcí hledaných posloupností
 5. Nalezneme rozvinuté tvary nalezených vytvořujících funkcí
+
+####Příklad
+
+- V Čendově pdf, nemá cenu ho sem přepisovat
