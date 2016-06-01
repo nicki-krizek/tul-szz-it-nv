@@ -58,11 +58,10 @@ Třída problému je *totálně rozhodnutelná* právě tehdy, když existuje TS
 
 **Parciálně rozhodnutelné problémy**
 
-Třída problémů je *parciálně rozhodnutelná* právě tehdy, když existuje TS A, který:
+- Třída problémů je *parciálně rozhodnutelná* právě tehdy, když existuje TS A, který:
 
-- je-li odpověď na daný problém ANO, tak zastaví akceptováním AKC(A),
-- je-li odpověď na daný problém NE, tak buď zastaví zamítnutím ZAM(A) nebo cykluje CYK(A)
-
+  - je-li odpověď na daný problém ANO, tak zastaví akceptováním AKC(A),
+  - je-li odpověď na daný problém NE, tak buď zastaví zamítnutím ZAM(A) nebo cykluje CYK(A)
 
 - Např. *problém zastavení* TS je parciálně rozhodnutelný.
 - Pokud jsou obě třídy problémů ![\mathcal{P}, \overline{{\mathcal{P}}}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D%2C%20%5Coverline%7B%7B%5Cmathcal%7BP%7D%7D%7D) *parciálně rozhodnutelné*, pak je třída problémů ![\mathcal{P}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D) *totálně rozhodnutelná* (tím pádem je i ![\overline{\mathcal{P}}](https://latex.codecogs.com/gif.latex?%5Coverline%7B%5Cmathcal%7BP%7D%7D) totáně rozhodnutelná)
