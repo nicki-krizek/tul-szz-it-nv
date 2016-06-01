@@ -34,7 +34,7 @@ Množina všech slov, které je schopen KA ![A](https://latex.codecogs.com/svg.l
 
 Jazyk ![L](https://latex.codecogs.com/svg.latex?L) je **rozpoznatelný** KA, jestliže existuje KA ![A](https://latex.codecogs.com/svg.latex?A) takový, že ![L = L(A)](https://latex.codecogs.com/svg.latex?L%20%3D%20L%28A%29).
 
-Jazyky, které KA rozpoznávají jsou **regulární**. Viz ![Chomského hierarchie v okruhu 9 (Gramatiky)](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#chomsk%C3%A9ho-hierarchie).
+Jazyky, které KA rozpoznávají jsou **regulární**. Viz [Chomského hierarchie v okruhu 9 (Gramatiky)](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#chomsk%C3%A9ho-hierarchie).
 
 ## Reprezentace automatu
 
