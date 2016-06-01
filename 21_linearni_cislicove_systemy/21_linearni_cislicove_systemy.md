@@ -4,12 +4,16 @@
 frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineární diferenční rovnice 
 s konstantními koeficienty, systém s lineární a minimální fází. 
 
-
- 
-
 ##Vlastnosti
+**Systém** dokáže generovat, zpracovávat, modifikovat a přijímat signály. Signál je projevem činnosti systému.
 
-LTI (Linear Time Invariant) systémy jsou takové systémy, které jsou lineární a časově nezávislé.
+Příklady:
+- Hudební nástroj –lze považovat za systém generující zvuk
+- Zesilovač, ekvalizér –systém, který modifikuje zvukový signál
+- A/D a D/A převodník – transformují jeden typ signálu na jiný
+- Reproduktor –převádí elektrický signál na akustický, atd.
+
+**LTI (Linear Time Invariant)** systémy jsou takové systémy, které jsou lineární a časově nezávislé.
 
 ###Linearita
 Lineární systém je aditivní a homogenní
