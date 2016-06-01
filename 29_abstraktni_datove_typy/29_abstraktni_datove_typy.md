@@ -1,5 +1,6 @@
-# 29. - Abstraktní datové typy
->Abstraktní datové typy, seznam, fronta, zásobník, halda, strom, asociativní pole.
+# 29\. - Abstraktní datové typy
+
+> Abstraktní datové typy, seznam, fronta, zásobník, halda, strom, asociativní pole.
 
 **Abstraktní datové typy (ADT)**
 
@@ -21,6 +22,7 @@
 - určují rozsah hodnot a definované operace pro proměnou daného typu
 
 ## Vlastnosti
+
 Nejdůležitější vlastnosti abstraktního typu dat jsou:
 
 - **Univerzálnost:** - navržený adt je univerzální a může být použit v libovolném programu (jako hodnota libovolný datový typ)
@@ -31,6 +33,7 @@ Nejdůležitější vlastnosti abstraktního typu dat jsou:
 Pokud je ADT programován objektově, jsou většinou tyto vlastnosti splněny.
 
 ## Základní operace
+
 Na abstraktním datovém typu rozlišujeme tři druhy základních operací:
 
 - **konstruktor** zodpovídá za správnou inicializaci a sestavené platné reprezentace datového typu na základě dodaných parametrů
@@ -38,6 +41,7 @@ Na abstraktním datovém typu rozlišujeme tři druhy základních operací:
 - **modifikátor** provádí změnu hodnoty (add, remove, pop)
 
 ## Příklady
+
 K základním abstraktním datovým typům můžeme zařadit následující konstrukce:
 
 - **zásobník** (stack)
@@ -48,10 +52,12 @@ K základním abstraktním datovým typům můžeme zařadit následující kons
 - **zobrazení** (map) - také známé jako **asociativní pole** (hash)
 
 ### Seznam
+
 - kontejner pro ukládání dat předem neznámé délky
 - nerozdíl od množiny (set) se mohou stejné prvky opakovat
 
 Typické operace:
+
 - **add**: vložení hodnoty na konec seznamu
 - **remove**: odstranění hodnoty z určitého indexu (prvky za se přisunou)
 - **get**: čtení hodnoty z určitého indexu
@@ -61,11 +67,14 @@ Typické operace:
 Implementace je obvykle realizována jako:
 
 - **Dynamické pole**
+
   - postaveno na statickém poli pevné velikosti
   - při vkládání kontrolujeme velikost a vnitřního pole a případně ho zvětšíme
   - v kontruktoru obvykle předáváme počáteční velikost vnitřního pole
   - díky vnitřnímu poli umožňuje rychlejší vyhledávání prvku dle indexu (je možné realizovat binární vyhledávání)
+
 - **Spojových seznam**
+
   - jednotlivé prvky jsou reprezentovány vždy jako uzly, které mají odkaz na svého následníka (případně i předchůdce)
   - uzly je nutné při vyhledávání procházet postupně (pouze lineární vyhledávání)
 
@@ -73,15 +82,15 @@ Spojové seznamy (linked list) mohou existovat **jednosměrné** a **obousměrn�
 
 ![Jednosměrný seznam](29_jendosmerny_seznam.png)
 
-*Jednosměrný seznam*
+_Jednosměrný seznam_
 
 ![Obousměrný seznam](29_obousmerny_seznam.png)
 
-*Obousměrný seznam*
+_Obousměrný seznam_
 
 ![Kruhový seznam](29_kruhovy_seznam.png)
 
-*Kruhový seznam*
+_Kruhový seznam_
 
 ### Fronta
 
@@ -89,6 +98,7 @@ Spojové seznamy (linked list) mohou existovat **jednosměrné** a **obousměrn�
 - anglické označení First In First Out (FIFO)
 - implementace pomocí spojových seznamů (výhodný je obousměrný) nebo pole
 - využití:
+
   - plánování procesů v OS (FCFS)
   - meziprocesová komunikace - roura (pipe)
   - síťová komunikace - buffer pro datové pakety (switch, bridge, router)
@@ -103,7 +113,7 @@ Typické operace:
 
 ![Fronta](29_fronta.png)
 
-*Fronta*
+_Fronta_
 
 ### Zásobník
 
@@ -121,22 +131,23 @@ Typické operace:
 
 ![Zásobník](29_zasobnik.png)
 
-*Zásobník*
+_Zásobník_
 
 ### Strom
 
 - hierarchická struktura
 - každý uzel může mít několik synů (přímých potomků)
 - všechny uzly kromě kořenového uzlu mají právě jednoho otce
-- uzel, který nemá žádné potomky (je koncový) se nazývá *list*
+- uzel, který nemá žádné potomky (je koncový) se nazývá _list_
 - vlastnost býti stromem je rekurzivní, každý podstrom je také strom
 - použití:
+
   - halda
   - vyhledávací strom
 
 ![Strom](29_strom.png)
 
-*Strom*
+_Strom_
 
 **Vlastnosti:**
 
@@ -150,7 +161,7 @@ Typické operace:
 
 ![Ukázka stromu](29_strom_preorder_inorder_postorder.png)
 
-*Ukázka stromu*
+_Ukázka stromu_
 
 1. Průchod do šířky
 
@@ -169,30 +180,34 @@ Typické operace:
   - **Postorder** (LRN): A, C, E, D, B, H, I, G, F
 
 #### Halda
+
 - stromová struktura splňující vlastnost haldy, tj. pokud ![B](https://latex.codecogs.com/svg.latex?B) je potomek ![A](https://latex.codecogs.com/svg.latex?A), tak
-  - ![x(B) \geq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro *max heap* nebo
-  - ![x(B) \leq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cleq%20x%28A%29) pro *min heap*
+
+  - ![x(B) \geq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cgeq%20x%28A%29) pro _max heap_ nebo
+  - ![x(B) \leq x(A)](https://latex.codecogs.com/svg.latex?x%28B%29%20%5Cleq%20x%28A%29) pro _min heap_
+
 - vlastnost býti haldou je rekurzivní, všechny podstromy haldy jsou také haldy
+
 - tvar stromu je buď perfektně vyvážený, nebo pokud je poslední úroveň stromu nekompletní, uzly plní strom zleva doprava
 - efektivita operací haldy je klíčová pro mnoho algoritmů
 - často se používá pro implementaci prioritní fronty (na tomto principu funguje heapsort)
 
 ![Binární minimální halda](29_binarni_min_halda.png)
 
-*Binární minimální halda*
+_Binární minimální halda_
 
 Operace s haldou:
 
-|   Operace    | Složitost  | Popis |
-| -----------  | ---------- | ----- |
-| INSERT | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  přidání nového prvku do haldy |
-| DELETE MAX / DELETE MIN | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |  vyjmutí kořenu v max heap nebo v min heap |
-| DELETE(v) | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | smaže uzel „v“ |
-| MIN, MAX | ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29) |  vrátí minimální resp. maximální klíč v haldě |
-| DECREASE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | zmenšení klíče uzlu „v“ o hodnotu „okolik“ |
-| INCRESE KEY(v, okolik) |  ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) |zvětšení klíče uzlu „v“ o hodnotu „okolik“ |
-| MERGE | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) |  spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních |
-| MAKE | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29) | dostane pole N prvku a vytvoří z nich haldu |
+Operace                 | Složitost                                                                                          | Popis
+----------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------
+INSERT                  | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | přidání nového prvku do haldy
+DELETE MAX / DELETE MIN | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | vyjmutí kořenu v max heap nebo v min heap
+DELETE(v)               | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | smaže uzel „v"
+MIN, MAX                | ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29)                   | vrátí minimální resp. maximální klíč v haldě
+DECREASE KEY(v, okolik) | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | zmenšení klíče uzlu „v" o hodnotu „okolik"
+INCRESE KEY(v, okolik)  | ![\mathcal{O}(\log_2 n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Clog_2%20n%29) | zvětšení klíče uzlu „v" o hodnotu „okolik"
+MERGE                   | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29)                   | spojení dvou hald do jedné nové validní haldy obsahující všechny prvky obou původních
+MAKE                    | ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29)                   | dostane pole N prvku a vytvoří z nich haldu
 
 Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
 
@@ -200,16 +215,20 @@ Binární haldu lze reprezentovat do pole (pro prvek n indexováný od nuly):
 - 2n+2 hodnota pro pravý podstrom
 
 ### Zobrazení (Asociativní pole)
+
 - prvkům z množiny klíčů přiřazuje nejvýše jednu hodnotu (klíč => hodnota)
 - různá označení (Hash, HashMap, HashTable, AsociativeArray, Dictionary)
+
   - mapa (Java, C++)
   - slovník (.NET, Python)
   - asociativní pole (Javascript, PHP)
+
 - v porovnání s obecným polem může být klíčem i nečíselný typ datový typ klíče musí pouze implementovat operaci porovnání
+
 - rychlé hledání podle klíče (![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29))
 - nelze prohledávat podle částečného klíče
-- z klíče nelze přímo spočítat umístění prvku v poli - používá se *hashovací funkce*
+- z klíče nelze přímo spočítat umístění prvku v poli - používá se _hashovací funkce_
 
 ![Asociativní pole](29_asociativni_pole.gif)
 
-Více viz hašování v otázce [30. Vyhledávání](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md).
+Více viz hašování v otázce [30\. Vyhledávání](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/29_abstraktni_datove_typy/29_abstraktni_datove_typy.md).
