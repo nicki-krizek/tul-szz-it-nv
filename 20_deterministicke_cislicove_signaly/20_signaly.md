@@ -58,7 +58,7 @@ kde ![\omega \in \mathbb{R}](https://latex.codecogs.com/svg.latex?%5Comega%20%5C
 ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29) je spojitá komplexní funkce reálného parametru ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). V bodě ![\omega_0](https://latex.codecogs.com/svg.latex?%5Comega_0) se pak jedná o korelaci signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a komplexní exponenciely ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D) (v podstatě jak moc se signál podobá kosinusovce dané frekvence)
 Ve výsledku se jedná o rozložení signálu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na součet nekonečně mnoha funkcí ![\cos(\omega n + \Phi(\omega))](https://latex.codecogs.com/svg.latex?%5Ccos%28%5Comega%20n%20&plus;%20%5CPhi%28%5Comega%29%29), nazýváme DTFT spektrum.
 
-Rozděluje se na *magnitudu* (míra podobnosti ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
+DTFT spektrum se rozděluje na *magnitudu* (míra podobnosti ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) a ![e^{j n \omega_0}](https://latex.codecogs.com/svg.latex?e%5E%7Bj%20n%20%5Comega_0%7D))
 
 ![|X(e^{j n \omega_0})|](https://latex.codecogs.com/svg.latex?%7CX%28e%5E%7Bj%20n%20%5Comega_0%7D%29%7C)
 
@@ -93,7 +93,7 @@ Inverze je dána jako
 
   ![h[n]*x[n] \Leftrightarrow H(e^{j n \omega})X(e^{j n \omega})](https://latex.codecogs.com/svg.latex?h%5Bn%5D*x%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29X%28e%5E%7Bj%20n%20%5Comega%7D%29)
 
-  Stejně tak to platí obráceně - násobení signálů v čase je konvolucí ve frekvenci
+- Stejně tak to platí obráceně - násobení signálů v čase je (periodickou) konvolucí ve frekvenci - Teorém o násobení:
   
   ![h[n]x[n] \Leftrightarrow H(e^{j n \omega})*X(e^{j n \omega})](https://latex.codecogs.com/svg.latex?h%5Bn%5Dx%5Bn%5D%20%5CLeftrightarrow%20H%28e%5E%7Bj%20n%20%5Comega%7D%29*X%28e%5E%7Bj%20n%20%5Comega%7D%29)
 
@@ -105,7 +105,9 @@ Inverze je dána jako
 
 ### DFT
 
-DTFT převádí nekonečnou diskrétní řadu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na spojitou funkci číslicové frekvence ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29). Zpětná rekonstrukce signálu ze spektra je možná, pokud známe hodnoty spektra pro všechny číslicové frekvence ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). Pokud je trvání řady konečné, pak je možná perfektní rekonstrukce známe-li N vhodně zvolených frekvenčních bodů. V podstatě se jedná o vhodné ekvidistantní navzorkování DTFT spektra N vzorky tak, že
+DTFT převádí nekonečnou diskrétní řadu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na spojitou funkci číslicové frekvence ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29). Zpětná rekonstrukce signálu ze spektra je možná, pokud známe hodnoty spektra pro všechny číslicové frekvence ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). Pokud je trvání řady konečné, pak je možná perfektní rekonstrukce známe-li N vhodně zvolených frekvenčních bodů. 
+
+V podstatě se jedná o vhodné ekvidistantní navzorkování spojitého DTFT spektra N vzorky tak, že
 
 ![\omega[k] = \frac{2 \pi k}{N}, 0 \leq k \leq N-1](https://latex.codecogs.com/svg.latex?%5Comega%5Bk%5D%20%3D%20%5Cfrac%7B2%20%5Cpi%20k%7D%7BN%7D%2C%200%20%5Cleq%20k%20%5Cleq%20N-1)
 
@@ -117,7 +119,9 @@ nazýváme ![N](https://latex.codecogs.com/svg.latex?N)-bodová DFT.
 
 Vybráním ![N](https://latex.codecogs.com/svg.latex?N) bodů signálu se v podstatě provádí operace násobení signálu obdélníkovým okénkem (viz část o okénkách).
 
-- Narozdíl od DTFT způsobuje násobení ve spektru *kruhovou* konvoluci v čase, ne lineární - viz otázka [https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md "23")
+- Ohledně využití DFT pro rychlou konvoluci - viz otázka [https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/23_dft_fft.md "23")
+
+- DFT spektrum je ze základu oboustranné (od poloviny do konce je spektrum symetrické). Hodnoty od 0 do ![\pi](https://latex.codecogs.com/gif.latex?%5Cpi) budou stejné jako jako hodnoty od ![2\pi](https://latex.codecogs.com/gif.latex?2%5Cpi) do ![\pi](https://latex.codecogs.com/gif.latex?%5Cpi), pouze s opačným znaménkem. V praxi se proto pracuje obvykle s jednostranným spektrem (od 0 do ![\pi](https://latex.codecogs.com/gif.latex?%5Cpi)), které redundantní hodnoty vynechává (zanedbání jejich výpočtu také přispívá ke zrychlení výpočtu FFT).
 
 ### Inverze
 
@@ -127,9 +131,9 @@ Inverzní DFT je dána jako
 
 ## STFT (Short Time Fourier Transform)
 
-Kompromis mezi dobrým rozlišením v čase (vím, kde je v signálu aktivita) a frekvenci (vím, ze kterých kosinusovek se signál skládá - jsem schopen ho dobře analyzovat).
+Pokud aplikuji DFT na hodně dynamický signál (např. řeč), tak mi jeho spektrum nebude moc říkat (hodně dynamický signál bude vykazovat aktivitu velkého množství frekvencí).
 
-Signál je nejprve rozdělen do rámců vhodné velikosti (dle úlohy, např. pro zpracování řeči je vhodné volit délku rámce mezi 10 - 40 ms kvůli kvazi-stacionaritě řeči), obvykle s překryvem okolo 50 %. 
+Řešením tohoto problému je krátkodobá Fourierova transformace - STFT. Signál je nejprve rozdělen do rámců vhodné velikosti (tak aby spektrum v daném rámci bylo co nejvíce stacionární - dle úlohy, např. pro zpracování řeči je vhodné volit délku rámce mezi 10 - 40 ms), obvykle s překryvem okolo 50 %. 
 
 Signál v každém rámci je vynásobem vhodnou okénkovací funkcí (Hamming, Hann, Blackmann...), výběr opět závisí na úloze. Na každý rámec je aplikována DFT.
 
@@ -165,7 +169,7 @@ a nevhodně navzorkované DTFT
 ### Definice
 Je-li ![\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_0) nevyšší frekvencí obsaženou v analogovém signálu ![x_a(t)](https://latex.codecogs.com/svg.latex?x_a%28t%29) (signál je pásmově omezen), pak ![x_a(t)](https://latex.codecogs.com/svg.latex?x_a%28t%29) je možné jednoznačně rekonstruovat z jeho vzorků ![x_a(nT_s)](https://latex.codecogs.com/svg.latex?x_a%28nT_s%29) pokud
 
-![\Omega_s = \frac{2\pi}{T_s} \geq 2\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_s%20%3D%20%5Cfrac%7B2%5Cpi%7D%7BT_s%7D%20%5Cgeq%202%5COmega_0)
+![\Omega_s = \frac{2\pi}{T_s} > 2\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_s%20%3D%20%5Cfrac%7B2%5Cpi%7D%7BT_s%7D%20%3E%202%5COmega_0)
 
 ![\Omega_0](https://latex.codecogs.com/svg.latex?%5COmega_0) se nazývá Nyquistova frekvence
 
