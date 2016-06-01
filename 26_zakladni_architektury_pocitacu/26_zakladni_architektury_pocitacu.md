@@ -219,8 +219,8 @@ Mikrořadič je jednoobvodový (jednočipový, monolitický) μP (mikroprocesor 
 - technologie CMOS
 - střadačová nebo registrová ISA (příp. kombinace)
 - vstupy a výstupy organizovány do bran (nutno nastavit jako vstupní nebo výstupní)
-- integrované speciaální obvody (PWM, ADC či DAC převodníky, komparátory, komunikační sběrnice, radiče displeje atd.)
-- speciaizovane obvody uvnitř (ČASOVAČE, WATCHDOG, REALTIMECLOCK, ŘADIČ PŘERUŠENÍ ...)
+- integrované speciální obvody (PWM, ADC či DAC převodníky, komparátory, komunikační sběrnice, radiče displeje atd.)
+- specializovane obvody uvnitř (ČASOVAČE, WATCHDOG, REALTIMECLOCK, ŘADIČ PŘERUŠENÍ ...)
 
 ## Hodnocení výkonu
 Základní požadavek kladený na počítač je schopnost provádět zpracování informací. Tuto schopnost označujeme jako výkonnost počítače. Výkonnost je obtížné hodnotit jediným číslem – objektivnější je použít tzv. vektor výkonnosti, jehož struktura se vyvíjí. Základem bývá počet operací (příp. instrukcí) za sekundu, buď v pevné nebo pohyblivé řádové čárce. Dalšími složkami mohou být propustnost systému, doba odezvy, stupeň využití, aj. Hodnocení výkonnosti by mělo být podkladem pro optimalizaci.
