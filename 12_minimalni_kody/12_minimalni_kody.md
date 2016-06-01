@@ -65,6 +65,9 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 	- obrázek, kde se neopakují hodnoty sousedních pixelů (např. šachovnice)
 	-  může nastat i případ „záporné komprese“ → zvětšení výsledného souboru 
 
+![rle](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/rle1.png)
+
+
 ###Huffmanův minimální kód  
 - též známé jako prefixový kód
 - využívá optimálního (nejkratšího) prefixového kódu  (kód žádného znaku není 
@@ -85,12 +88,16 @@ sestavení, slabší kompresní poměr
 
 ![ukazka huffmana](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/ukazka_huff.png)
 
+![ukazka huffmana2](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/ukazka_huff2.png)
+
 ###Aritmetické kódování
 - Aritmetické kódování reprezentuje zprávu jako podinterval intervalu <0,1)
 - Výstupem je jedno racionální číslo a tabulka četností
 	- pomocí tabulky zjistíme poměrné rozdělení jednotlivých znaků a následně z daného racionálního čísla sestavíme řetězec
 
 ![ukazka aritm. kod](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/aritm_kod.png)
+
+![ukazka aritm. kod2](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/aritm_kod2.png)
 
 #####Komprese
 - zjistíme pravděpodobnostní rozdělení jednotlivých znaků
