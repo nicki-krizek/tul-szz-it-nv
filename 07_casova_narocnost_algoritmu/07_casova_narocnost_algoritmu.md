@@ -76,11 +76,11 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 - Vyhledávání prvku v nesetříděném poli
   - Nejhorší složitost ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29)
   - Průměrná složitost ![\mathcal{O}(\frac{n}{2})](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Cfrac%7Bn%7D%7B2%7D%29)
-  - **Pozn. autora**: Zde to asi nemá význam příliš rozlišovat, jelikož se jedná o stejnou složitost, která se liší pouze konstantou.
+  - *Pozn. autora*: Zde to asi nemá význam příliš rozlišovat, jelikož se jedná o stejnou složitost, která se liší pouze konstantou.
 
 ## Úlohy P, NP, NP-úplné
 
-![Porovnání P, NP, NP-úplných úloh](07_p_np_np_complete.png]
+![Porovnání P, NP, NP-úplných úloh](07_p_np_np_complete.png)
 
 1. Úlohy P (polynomial time)
   - Úlohy řešitelné v polynomiálním čase ![\mathcal{O}(f(n)) \subset \mathcal{O}(n^k)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28f%28n%29%29%20%5Csubset%20%5Cmathcal%7BO%7D%28n%5Ek%29)
@@ -90,7 +90,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
 2. Úlohy NP (non-deterministic polynomial time)
   - Úlohy, jejichž *řešení lze ověřit v polynomiálním čase*
-  - Patří sem všechny úlohy z P, ale kromětoho i další, které už nepatří do P, např.:
+  - Patří sem všechny úlohy z P, ale kromě toho i další, které už nepatří do P, např.:
     - Faktorizace - rozklad na prvočísla (asymetrická kryptografie)
     - Návrh desek plošných spojů
     - Problém obchodního cestujícího
