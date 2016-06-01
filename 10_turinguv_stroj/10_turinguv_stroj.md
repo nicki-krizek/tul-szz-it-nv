@@ -66,6 +66,8 @@ Třída problému je *totálně rozhodnutelná* právě tehdy, když existuje TS
 - Např. *problém zastavení* TS je parciálně rozhodnutelný.
 - Pokud jsou obě třídy problémů ![\mathcal{P}, \overline{{\mathcal{P}}}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D%2C%20%5Coverline%7B%7B%5Cmathcal%7BP%7D%7D%7D) *parciálně rozhodnutelné*, pak je třída problémů ![\mathcal{P}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D) *totálně rozhodnutelná* (tím pádem je i ![\overline{\mathcal{P}}](https://latex.codecogs.com/gif.latex?%5Coverline%7B%5Cmathcal%7BP%7D%7D) totáně rozhodnutelná)
 
+*Pozn.:* Existují i problémy, které nejsou ani parciálně rozhodnutelné, např. problém **ne**zastavení TS.
+
 ### Rekurzivní a rekurzivně spočetné množiny
 
 #### Rekurzivně spočetná množina
