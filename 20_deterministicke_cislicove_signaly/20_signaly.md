@@ -37,6 +37,10 @@ pak signál ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je ![N](https
 
 ## DTFT (Discrete Time Fourier Transform)
 
+### Účel Fourierovy transformace
+
+Ze signálu, který nese informaci, jak se veličina vyvíjí **v čase** (případně v prostoru - pro obraz), přecházím pomocí Fourierovy informace do **frekvenční oblasti**, ve které vidím, jak jsou v signálu zastoupené jednotlivé frekvence.
+
 ### Základem
 
 Komplexní exponenciela
