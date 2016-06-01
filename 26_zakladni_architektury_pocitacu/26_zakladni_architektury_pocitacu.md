@@ -203,6 +203,8 @@ Z pohledu instrukčního cyklu jsou architektury založeny většinou na vnitřn
 - velmi vysoký výkon na paralelní výpočty
 - masivní paralelizace (používá se ke kryptoanylýze například pro lámání hashe)
 - specializovaná architektura na vektorové a maticové operace (filtry, konvoluce, transformace)
+- oproti CPU, které má obecně mnohem větší sběrnici (třeba 64bit) májí GPU procesory menší sběrnici, jelikož pracují s malými čísly, ale zase těch procesorů tam je velké množství
+![Model GPU](http://www.quantalea.net/static/app/tutorial/content/images/gpuModel.jpg)
 
 ## Architektura mikrořadičů
 Mikrořadič je jednoobvodový (jednočipový, monolitický) μP (mikroprocesor doplněný paměťmi a periferiemi). Vyznačují se velkou spolehlivostí a kompaktností, proto jsou určeny především pro jednoúčelové aplikace do vestavěných systémů.
