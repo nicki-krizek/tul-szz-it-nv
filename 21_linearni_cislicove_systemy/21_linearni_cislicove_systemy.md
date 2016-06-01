@@ -108,6 +108,8 @@ Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.c
 
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_systemy/frekv_char.png)
 
+- na cvikách jsme ji vždycky počítali z diferenční rovnice systému (jako zlomek koeficientů x vuci koeficientum y)
+
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
 - magnitudová charakteristika ![|H(ejω)|](https://latex.codecogs.com/svg.latex?%7CH%28e%5E%7Bj%5Comega%7D%29%7C)
