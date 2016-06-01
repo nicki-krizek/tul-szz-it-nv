@@ -103,7 +103,10 @@ daného impulsní odezvou
 
 Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme ![H(ejω)](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29)
 
+
 Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
+
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_lti_cislicove_filtry/frekv_char.png)
 
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
