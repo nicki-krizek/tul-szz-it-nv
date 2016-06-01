@@ -105,7 +105,7 @@ Inverze je dána jako
 
 ### DFT
 
-DTFT převádí nekonečnou diskrétní řadu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na spojitou funkci číslicové frekvence ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29). Zpětná rekonstrukce signálu ze spektra je možná, pokud známe hodnoty spektra pro všechny číslicové frekvence \omega. Pokud je trvání řady konečné, pak je možná perfektní rekonstrukce známe-li N vhodně zvolených frekvenčních bodů. V podstatě se jedná o vhodné ekvidistantní navzorkování DTFT spektra N vzorky tak, že
+DTFT převádí nekonečnou diskrétní řadu ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) na spojitou funkci číslicové frekvence ![X(e^{j\omega})](https://latex.codecogs.com/svg.latex?X%28e%5E%7Bj%5Comega%7D%29). Zpětná rekonstrukce signálu ze spektra je možná, pokud známe hodnoty spektra pro všechny číslicové frekvence ![\omega](https://latex.codecogs.com/svg.latex?%5Comega). Pokud je trvání řady konečné, pak je možná perfektní rekonstrukce známe-li N vhodně zvolených frekvenčních bodů. V podstatě se jedná o vhodné ekvidistantní navzorkování DTFT spektra N vzorky tak, že
 
 ![\omega[k] = \frac{2 \pi k}{N}, 0 \leq k \leq N-1](https://latex.codecogs.com/svg.latex?%5Comega%5Bk%5D%20%3D%20%5Cfrac%7B2%20%5Cpi%20k%7D%7BN%7D%2C%200%20%5Cleq%20k%20%5Cleq%20N-1)
 
