@@ -72,4 +72,7 @@ Příklad
 1. Metoda přes povolený pole
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.jpg)
 2. Metoda přes zakázaná pole (Inverzní rook polynom)
+
+	- Při vytváření konkrétního počtu pro 5 věží, máme kombinaci 5 veží na 5 řádcích a variace 5 věží na 7 sloupcích, a pak od každého odebíráme (jelikož jsme tam vždy jednu vež přidali)
+
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/inverse_rook.jpg)  
