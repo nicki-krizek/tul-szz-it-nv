@@ -106,7 +106,7 @@ Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme !
 
 Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
 
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_sytemy/frekv_char.png)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_systemy/frekv_char.png)
 
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
