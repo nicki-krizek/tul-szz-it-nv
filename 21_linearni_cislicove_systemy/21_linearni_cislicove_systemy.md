@@ -104,7 +104,7 @@ daného impulsní odezvou
 
 Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme ![H(ejω)](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29)
 
-Získáme ji aplikací DTFT na odezvu systému ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D)
+Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
 
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
@@ -175,7 +175,7 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 - Linear constant coeﬃcient diﬀerence equation (LCCDE)
 - Speciální případ diferenčních rovnic popisující LTI systémy
 
-![y[n] = \sum_{k=0}^{q}b[k]x[n-k] - \sum_{k=1}^{p}a[k]x[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7Bq%7Db%5Bk%5Dx%5Bn-k%5D%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bp%7Da%5Bk%5Dx%5Bn-k%5D)
+![y[n] = \sum_{k=0}^{q}b[k]x[n-k] - \sum_{k=1}^{p}a[k]y[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7Bq%7Db%5Bk%5Dx%5Bn-k%5D%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bp%7Da%5Bk%5Dy%5Bn-k%5D)
 
 - Vztah rekurzivně deﬁnující výstup ze systému jako lineární kombinaci hodnot vstupu a minulých hodnot výstupu
 
