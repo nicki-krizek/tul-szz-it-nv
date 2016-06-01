@@ -42,6 +42,8 @@ Příklad
 
 ![\frac{x}{(1-x)^2} \Rightarrow 0,1,2,3,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bx%7D%7B%281-x%29%5E2%7D%20%5CRightarrow%200%2C1%2C2%2C3%2C%5Cdots)
 
+##vytvořující funkce (uzavřený tvar) základních posloupností
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/vytv_fce.png)
 
 ##Operace s vytvořujícími funkcemi
 ![f(x) = \sum_{n=0}^{\infty} a_nx^n ; g(x) = \sum_{n=0}^{\infty} b_nx^n](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20a_nx%5En%20%3B%20g%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20b_nx%5En)
