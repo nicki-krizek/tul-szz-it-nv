@@ -129,8 +129,8 @@ Konkrétní číslo se pak vybírá takové, aby šlo zapsat pomocí co nejmén�
 - sudá parita - kontrolní bit doplní jedničku(nebo nulu) tak, aby byl v daném řádku (či sloupci) sudý počet jedniček
 
 ###Hammingův bezpečnostní kód
-- je schopný detekovat 2 chyby
-- je schopný opravit 1 chybu
+- rozšířený hammingův kód (8,4) je schopný detekovat 2 chyby a opravit 1 chybu
+- hammingův kód (7,4) je schopný opravit 1 chybu
 
 ####Kódování
 Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve tvaru \
@@ -154,6 +154,8 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
   
 ###CRC bezpečnostní kód (Cyclic redundancy check)
 - cyklické kódy vychází z polynomu
+- slouží k detekci chyb, ale neupravují je
+- Optimální n-bitové CRC umí detekovat jakoukoli 2-bitovou chybu v čísle ![2^n-1](https://latex.codecogs.com/svg.latex?2%5En-1) (data). Běžné hodnoty n jsou 5, 8, 12, 16 a 32
 
 ![b = [1,0,0,1,1]\\B_x = x^4 + x + 1](https://latex.codecogs.com/svg.latex?b%20%3D%20%5B1%2C0%2C0%2C1%2C1%5D%20%5C%5C%20B_x%20%3D%20x%5E4%20&plus;%20x%20&plus;%201)
 
