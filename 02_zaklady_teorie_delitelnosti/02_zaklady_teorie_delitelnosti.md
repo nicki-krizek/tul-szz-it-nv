@@ -24,7 +24,7 @@ Relace *býti dělitelem* ... ![\mid](https://latex.codecogs.com/svg.latex?%7C)
 
 ![D \in \mathbb{N}^+](https://latex.codecogs.com/svg.latex?D%20%5Cin%20%5Cmathbb%7BN%7D%5E&plus;) je *společný násobek* čísel  ![a, b \in \mathbb{N}^+](https://latex.codecogs.com/svg.latex?a%2C%20b%20%5Cin%20%5Cmathbb%7BN%7D%5E&plus;), jestliže
 
-![a \mid D~\wedge~b \mid D](https://latex.codecogs.com/svg.latex?a%20%5Cmid%20D%7E%5Cwedge%7Eb%20%5Cmid%20D) ... (tento násobek dělí obě čísla)
+![a \mid D~\wedge~b \mid D](https://latex.codecogs.com/svg.latex?a%20%5Cmid%20D%7E%5Cwedge%7Eb%20%5Cmid%20D) ... (obě čísla dělí tento násobek beze zbytku)
 
 ![max(a, b) \leq D \leq a \cdot b](https://latex.codecogs.com/svg.latex?max%28a%2C%20b%29%20%5Cleq%20D%20%5Cleq%20a%20%5Ccdot%20b)
 
