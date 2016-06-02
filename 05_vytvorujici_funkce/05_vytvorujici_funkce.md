@@ -4,6 +4,7 @@
 ##Obyčejná vytvořující funkce
 - Vytvořující funkce nám definuje posloupnost 
 - je to tedy jedna z možností zápisu posloupností, ovšem ne všechny posloupnosti lze vyjádřit pomocí vytvořujících funkcí (anebo jdou, ale takoáv funkce bude asi hodně složitá)
+	- výhodou je zapsání nekonečné posloupnosti pomocí funkce
 - Máme posloupnost reálných čísel ![a_n](https://latex.codecogs.com/svg.latex?a_n)
 - Vytvořující řadou této posloupnosti rozumíme mocninnou řadu  ![\sum_{i=0}^{\infty} a_ix^i](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20a_ix%5Ei)
 - Je-li tato řada konvergentní pro nějaké x≠0, nazveme tuto řadu obyčejnou vytvořující funkcí této posloupnosti a budeme ji značit a(x)
