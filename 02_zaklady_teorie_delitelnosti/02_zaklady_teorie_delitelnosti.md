@@ -152,9 +152,9 @@ Konguence *se stejným modulem* lze upravovat.
 ### Rozklad na třídy ekvivalence
 
 Kongruence je (viz [9. Gramatiky - Vlastnosti binárních relací](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#vlastnosti-bin%C3%A1rn%C3%ADch-relac%C3%AD)):
-  - reflexivní,
-  - symetrická,
-  - tranzitivní.
+  - reflexivní ![\forall a \in A: a \varrho a](https://latex.codecogs.com/svg.latex?%5Cforall%20a%20%5Cin%20A%3A%20a%20%5Cvarrho%20a),
+  - symetrická ![\forall a, b \in A: a \varrho b \leftrightarrow b \varrho a](https://latex.codecogs.com/svg.latex?%5Cforall%20a%2C%20b%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cleftrightarrow%20b%20%5Cvarrho%20a),
+  - tranzitivní ![\forall a, b, c \in A: a \varrho b \wedge b \varrho c \rightarrow a \varrho c](https://latex.codecogs.com/svg.latex?%5Cforall%20a%2C%20b%2C%20c%20%5Cin%20A%3A%20a%20%5Cvarrho%20b%20%5Cwedge%20b%20%5Cvarrho%20c%20%5Crightarrow%20a%20%5Cvarrho%20c).
 
 Tzn., relace ![\equiv_m](https://latex.codecogs.com/svg.latex?%5Cequiv_m) (býti kongruentní modulo m) na množině ![\mathbb{Z}](https://latex.codecogs.com/svg.latex?%5Cmathbb%7BZ%7D) definuje rozklad množiny na třídy ekvivalence, které se nazývají *zbytkové třídy modulo m*.
 
