@@ -66,7 +66,7 @@ Vytvořený stroj B je ovšm také TS. Pokud na vstup stroje B dáme jeho vlastn
 - stroj B cykluje právě tehdy, pokud stroj B zastaví,
 - stroj B zastaví právě tehdy, pokud stroj B cykluje.
 
-![Halting problem B spor](10_halting_problem_paradox.jpg)
+![Halting problem B spor](10_halting_problem_B_paradox.jpg)
 
 Jedná se o paradox, což dokazuje, že nelze sestavit TS, který by o libovolném TS rozhodl, zda zastaví pro slovo w. Halting problém je tedy nerozhodnutelný (resp. parciálně rozhodnutelný).
 
