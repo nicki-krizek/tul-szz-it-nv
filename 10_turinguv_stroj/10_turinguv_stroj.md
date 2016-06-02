@@ -43,6 +43,33 @@ TS ![T](https://latex.codecogs.com/gif.latex?T) se definuje nad vstupní abecedo
 
 ### Problém zastavení
 
+Existuje takový Turingův stroj, který do dokázal rozhodnout, zda pro libovolný TS M a vstupní slovo w stroj M zastaví?
+
+Takový TS **neexistuje**, dokazuje se sporem.
+
+**Důkaz:**
+
+Uvažujeme, že existuje výše popsaný TS, který označíme A.
+
+![Halting problem A](10_halting_problem_A.jpg)
+
+Na vstupu je kód stroje M a slovo w. Tento TS ukončí činnost akceptováním, pokud TS M zastaví pro slovo w. Svoji činnost ukončí zamítnutím, pokud stroj M pro dané slovo cykluje.
+
+TS A rozšíříme na TS B tak, že:
+- vstupem bude pouze kód stroje a ten bude zároveň i vstupním slovem,
+- stroj B bude cyklovat právě tehdy, když stroj A skončí akceptováním (když stroj M zastaví),
+- stroj B zastaví, pokud stroj A skončí zatítnutím (a tedy stroj M cykluje).
+
+![Halting problem B](10_halting_problem_B.jpg)
+
+Vytvořený stroj B je ovšm také TS. Pokud na vstup stroje B dáme jeho vlastní kód, dochází ke sporu, protože:
+- stroj B cykluje právě tehdy, pokud stroj B zastaví,
+- stroj B zastaví právě tehdy, pokud stroj B cykluje.
+
+![Halting problem B spor](10_halting_problem_paradox.jpg)
+
+Jedná se o paradox, což dokazuje, že nelze sestavit TS, který by o libovolném TS rozhodl, zda zastaví pro slovo w. Halting problém je tedy nerozhodnutelný (resp. parciálně rozhodnutelný).
+
 ### Totální a parciální rozhodnutelnost problémů
 
 Máme třídu problémů na které lze odpovědět ANO/NE a k nim odpovídající algoritmus (TS), který všechny tyto problémy řeší.
