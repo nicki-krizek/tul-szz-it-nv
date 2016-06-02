@@ -82,7 +82,7 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 **Strom** - je acyklický a souvislý graf
 
 
-**Kostra grafu** - minimální souvislý podgraf, který obsahuje všechny vrcholy
+**Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
 
 ##Eulerovský graf
 
