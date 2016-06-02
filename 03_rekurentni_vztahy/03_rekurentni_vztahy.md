@@ -79,28 +79,28 @@ r^n - r^{n-1} - r^{n-2} &= 0 \\
 r^{n-2} \cdot (r^2 - r - 1) &= 0 \\
 r^2 - r - 1 &= 0 \\
 r_{1,2} &= \frac{-1 \pm \sqrt{5}}{2}
-\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20r%5En%20-%20r%5E%7Bn-1%7D%20-%20r%5E%7Bn-2%7D%20%26%3D%200%20%5C%5C%20r%5E%7Bn-2%7D%20%5Ccdot%20%28r%5E2%20-%20r%20-%201%29%20%26%3D%200%20%5C%5C%20r%5E2%20-%20r%20-%201%20%26%3D%200%20%5C%5C%20r_%7B1%2C2%7D%20%26%3D%20%5Cfrac%7B-1%20%5Cpm%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5Cend%7Baligned%7D)
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20r%5En%20-%20r%5E%7Bn-1%7D%20-%20r%5E%7Bn-2%7D%20%26%3D%200%20%5C%5C%20r%5E%7Bn-2%7D%20%5Ccdot%20%28r%5E2%20-%20r%20-%201%29%20%26%3D%200%20%5C%5C%20r%5E2%20-%20r%20-%201%20%26%3D%200%20%5C%5C%20r_%7B1%2C2%7D%20%26%3D%20%5Cfrac%7B1%20%5Cpm%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5Cend%7Baligned%7D)
 
 Obecné řešení je potom lineární kombinací těchto kořenů, tedy
 
-![F_n = K_1 \cdot \left(\frac{-1 + \sqrt{5}}{2}\right)^n + K_2 \cdot \left(\frac{-1 - \sqrt{5}}{2}\right)^n](https://latex.codecogs.com/svg.latex?F_n%20%3D%20K_1%20%5Ccdot%20%5Cleft%28%5Cfrac%7B-1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B-1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En)
+![F_n = K_1 \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^n + K_2 \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^n](https://latex.codecogs.com/svg.latex?F_n%20%3D%20K_1%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En)
 
 Pokud známe počáteční podmínky (![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích hodnot re. vztahu), můžeme řešení určit jednoznačně. Pro Fibonacciho posloupnost jsou počáteční hodnoty definovány jako ![F_0 = 0, F_1 = 1](https://latex.codecogs.com/svg.latex?F_0%20%3D%200%2C%20F_1%20%3D%201), jednoznačné řešení rek. vztahu je možné vypočítat dosazením těchto počátečních podmínek a spočtením soustavy ![k](https://latex.codecogs.com/svg.latex?k) rovnic o ![k](https://latex.codecogs.com/svg.latex?k) neznámých:
 
 ![\begin{aligned}
-F_0: 0 &= K_1 \cdot \left( \frac{-1 + \sqrt{5}}{2}\right)^0 + K_2 \cdot \left(\frac{-1 - \sqrt{5}}{2}\right)^0 \\
-F_1: 1 &= K_1 \cdot \left( \frac{-1 + \sqrt{5}}{2}\right)^1 + K_2 \cdot \left(\frac{-1 - \sqrt{5}}{2}\right)^1 \\
+F_0: 0 &= K_1 \cdot \left( \frac{1 + \sqrt{5}}{2}\right)^0 + K_2 \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^0 \\
+F_1: 1 &= K_1 \cdot \left( \frac{1 + \sqrt{5}}{2}\right)^1 + K_2 \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^1 \\
 \\
 \hline
 \\
 F_0: 0 &= K_1 + K_2 \\
-F_1: 1 &= K_1 \cdot \frac{-1 + \sqrt{5}}{2} + K_2 \cdot \frac{-1 - \sqrt{5}}{2} \\
+F_1: 1 &= K_1 \cdot \frac{1 + \sqrt{5}}{2} + K_2 \cdot \frac{1 - \sqrt{5}}{2} \\
 \\
 \hline
 \\
 K_1 &= -K_2\\
-1 &= K_1 \cdot \frac{-1 + \sqrt{5}}{2} - K_1 \cdot \frac{-1 - \sqrt{5}}{2} \\
-2 &= -K_1 + K_1 \cdot \sqrt{5} + K_1 + K_1 \cdot \sqrt{5} \\
+1 &= K_1 \cdot \frac{1 + \sqrt{5}}{2} - K_1 \cdot \frac{1 - \sqrt{5}}{2} \\
+2 &= K_1 + K_1 \cdot \sqrt{5} - K_1 + K_1 \cdot \sqrt{5} \\
 2 &= 2 \cdot K_1 \cdot \sqrt{5}\\
 1 &= K_1 \cdot \sqrt{5}\\
 K_1 &= \frac{1}{\sqrt{5}}\\
@@ -109,11 +109,11 @@ K_1 &= \frac{1}{\sqrt{5}}\\
 \\
 K_1 &= \frac{1}{\sqrt{5}}\\
 K_2 &= \frac{-1}{\sqrt{5}}
-\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20F_0%3A%200%20%26%3D%20K_1%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E0%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B-1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E0%20%5C%5C%20F_1%3A%201%20%26%3D%20K_1%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E1%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B-1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E1%20%5C%5C%20%5C%5C%20%5Chline%20%5C%5C%20F_0%3A%200%20%26%3D%20K_1%20&plus;%20K_2%20%5C%5C%20F_1%3A%201%20%26%3D%20K_1%20%5Ccdot%20%5Cfrac%7B-1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%20&plus;%20K_2%20%5Ccdot%20%5Cfrac%7B-1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5C%5C%20%5C%5C%20%5Chline%20%5C%5C%20K_1%20%26%3D%20-K_2%5C%5C%201%20%26%3D%20K_1%20%5Ccdot%20%5Cfrac%7B-1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%20-%20K_1%20%5Ccdot%20%5Cfrac%7B-1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5C%5C%202%20%26%3D%20-K_1%20&plus;%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%20&plus;%20K_1%20&plus;%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%20%5C%5C%202%20%26%3D%202%20%5Ccdot%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%5C%5C%201%20%26%3D%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%5C%5C%20K_1%20%26%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%5C%5C%20%5C%5C%20%5Chline%20%5C%5C%20K_1%20%26%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%5C%5C%20K_2%20%26%3D%20%5Cfrac%7B-1%7D%7B%5Csqrt%7B5%7D%7D%20%5Cend%7Baligned%7D)
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20F_0%3A%200%20%26%3D%20K_1%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E0%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E0%20%5C%5C%20F_1%3A%201%20%26%3D%20K_1%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E1%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5E1%20%5C%5C%20%5C%5C%20%5Chline%20%5C%5C%20F_0%3A%200%20%26%3D%20K_1%20&plus;%20K_2%20%5C%5C%20F_1%3A%201%20%26%3D%20K_1%20%5Ccdot%20%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%20&plus;%20K_2%20%5Ccdot%20%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5C%5C%20%5C%5C%20%5Chline%20%5C%5C%20K_1%20%26%3D%20-K_2%5C%5C%201%20%26%3D%20K_1%20%5Ccdot%20%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%20-%20K_1%20%5Ccdot%20%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%20%5C%5C%202%20%26%3D%20K_1%20&plus;%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%20-%20K_1%20&plus;%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%20%5C%5C%202%20%26%3D%202%20%5Ccdot%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%5C%5C%201%20%26%3D%20K_1%20%5Ccdot%20%5Csqrt%7B5%7D%5C%5C%20K_1%20%26%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%5C%5C%20%5C%5C%20%5Chline%20%5C%5C%20K_1%20%26%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%5C%5C%20K_2%20%26%3D%20%5Cfrac%7B-1%7D%7B%5Csqrt%7B5%7D%7D%20%5Cend%7Baligned%7D)
 
 Po dosazení získáváme jednoznačné řešení rekurentního vztahu:
 
-![F_n = \frac{1}{\sqrt{5}} \cdot \left(\frac{-1 + \sqrt{5}}{2}\right)^n + \frac{-1}{\sqrt{5}} \cdot \left(\frac{-1 - \sqrt{5}}{2}\right)^n](https://latex.codecogs.com/svg.latex?F_n%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%20%5Ccdot%20%5Cleft%28%5Cfrac%7B-1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En%20&plus;%20%5Cfrac%7B-1%7D%7B%5Csqrt%7B5%7D%7D%20%5Ccdot%20%5Cleft%28%5Cfrac%7B-1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En)
+![F_n = \frac{1}{\sqrt{5}} \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^n + \frac{-1}{\sqrt{5}} \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^n](https://latex.codecogs.com/svg.latex?F_n%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En%20&plus;%20%5Cfrac%7B-1%7D%7B%5Csqrt%7B5%7D%7D%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En)
 
 ###Charakteristický polynom
 
