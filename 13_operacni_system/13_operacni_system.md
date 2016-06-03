@@ -183,10 +183,26 @@ proti přepsání.
 1. **Přidělování bez dělení do bloků** - typicky pro starší systém, kde běží jen jedna úloha (bez multitaskingu), ve víceúlohových systémech se vše ukládá a vrací do OP z disku
  - Výhody: jednodušší jádro - nemusí obsahovat rutinu pro přidělení paměti
  - Ochrana paměti: nutná jen kontrola přístupu do oblasti jádra, napřříklad hodnoty z registrů může měnit pouze jádro
-2. **Přidělování pevných bloků pamětí** - po startu systému se paměť rozdělí do bloků 16kB, 32kB, ... Tyto bloky mají konstatntní velikost po celou dobu běhu systému. Procesy na základě požadavku na paměť dostanou patřičně velký blok.
+2. **Přidělování pevných bloků pamětí (segmentace)** - po startu systému se paměť rozdělí do bloků 16kB, 32kB, ... Tyto bloky mají konstatntní velikost po celou dobu běhu systému. Procesy na základě požadavku na paměť dostanou patřičně velký blok.
  - Výhody: rychlejší přepínání kontextu - více procesů v paměti, jednoduchá správa paměti - pouze tabulka s využitím bloků
  - Nevýhoda: nelze spouštět procesy, které mají nárok větší než je největší blok, neefektivní využití paměti
 3. **Dynamické přidělování paměti** - po startu systému je paměť nerozdělená, procesy po spuštění berou paměť, kolik potřebují. Při ukončení ji uvolní. Náročné na implementaci
+
+**Memory Management Unit (MMU)** - speciální jednotka procesoru, která řeší:
+  - Řízení přístupu k operační paměti
+  - Řízení cache
+  - Překlad logické adresy na fyzickou a zpět
+
+**Stránkování**
+
+- Paměť je rozdělena na stránky
+- Stránka má pevnou velikost a proces může mít přidělen více stránek
+- Logická adresa se pak přeloží na fyzickou adresu pomocí *tabulky stránek*
+- Řeší fragmentaci
+- Umožňuje lepší optimalizaci (odkládání na disk)
+- Používán v moderích OS
+
+**Odkládání na disk** - pokud je v systému povoleno, umožňuje zapsat část paměti na disk a uvolnit tím místo v RAM. Typicky se odloží procesy, které již dlouho neběžely.
 
 **Memory Allocator** - správa paměti, většinou v kernelu, přiděluje volné bloky dle algoritmu, optimalizace na rychlost - paměť je “levnější”.
 
@@ -211,7 +227,8 @@ Při překladu programů se generují konkrétní adresy, to je problém. Nejen 
 - **Obraz kódu programu** - kopie originálního programu načtená do paměti
 - **Paměť** (typicky oblast ve virtuální paměti), která obsahuje:
  - Kód
- - Data
+ - Statická data
+ - Halda (dynamická data)
  - Zásobník (pro volání procedur, skoky a další události)
 - **Práva** - informace o vlastníkovi procesu a o oprávněních procesu
 - **Kontext** - registry procesoru, fyzické paměťové adresy
@@ -219,10 +236,25 @@ Při překladu programů se generují konkrétní adresy, to je problém. Nejen 
 - **Informace o zdrojích** uložena v datových strukturách nazývaných PCB – process control blocks (přesná podoba dána OS)
 - **Virtuální paměť** - „iluze“ souvislého paměťového prostoru pro procesy (ve skutečnosti různě fragmentováno a fyzicky různě implementováno)
 
+### Process Control Block (PCB)
+
+- Datová struktura obsahující informace o procesu
+- Uložena v chráněné oblasti paměti
+- Obsahuje informace jako:
+  - Číslo procesu
+  - Priorita
+  - Vlastník
+  - Oprávnění
+  - Otevřené soubory
+  - Spotřebovaný čas procesoru
+  - Používané zdroje
+  - Proměnné prostředí
+  - Popis adresního prostoru procesu
+
 ### Přidělování procesoru
 Aby systém fungoval jak má, je nutné, aby současně zpracovával více procesů, musí tedy docházet ke střídání činnosti, kterou realizuje procesor.
 
-- **Nepreemtivní (kooperativní) multirprocesing** - Využívali jej starší OS, proces se musí procesorového času vzdát sám, což není optimální. Pokud by byl program naprogramován chybně, proces se nevzdá procesorového času a celý systém může zamrznou vlivem jednoho špatného vlákna.
+- **Nepreemtivní (kooperativní) multiprocesing** - Využívali jej starší OS, proces se musí procesorového času vzdát sám, což není optimální. Pokud by byl program naprogramován chybně, proces se nevzdá procesorového času a celý systém může zamrznou vlivem jednoho špatného vlákna.
 - **Preemptivní multiprocesing** - Plánovací modul OS určije, komu přidělí procesorový čas a jaký proces pozastaví. Je to výhodnější, programátor nemusí řešit jak se budou vlákna střídat. Je ale stále nutné řešit synchronizaci prostředků, které vlákna mohou vyžívat
 
 ### Strategio rozhodování o spuštění procesů 
