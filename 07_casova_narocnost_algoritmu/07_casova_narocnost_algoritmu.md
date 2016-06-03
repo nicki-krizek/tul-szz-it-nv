@@ -82,6 +82,8 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
 ![Porovnání P, NP, NP-úplných úloh](07_p_np_np_complete.png)
 
+[Video na youtube](https://www.youtube.com/watch?v=YX40hbAHx3s)
+
 1. Úlohy P (polynomial time)
   - Úlohy řešitelné v polynomiálním čase ![\mathcal{O}(f(n)) \subset \mathcal{O}(n^k)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28f%28n%29%29%20%5Csubset%20%5Cmathcal%7BO%7D%28n%5Ek%29)
   - Příklady:
