@@ -1,4 +1,4 @@
-# Návrh číslicových filtrů
+# 22. - Návrh číslicových filtrů
 
 > Návrh číslicových filtrů – toleranční schéma, základní druhy filtrů (DP, HP, PP, PZ, Allpass), návrh FIR filtrů (metoda oken, metoda vzorkování frekvenční charakteristiky), typy IIR filtrů, porovnání vlastností FIR/IIR filtrů.
 
