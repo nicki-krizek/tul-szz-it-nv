@@ -22,7 +22,7 @@ Máme n objektů, vybíráme k-tice.
 
   ![A^k_n = n \cdot (n-1) \cdot \ldots \cdot (n-k+1) = \frac{n!}{(n-k)!}](https://latex.codecogs.com/svg.latex?A%5Ek_n%20%3D%20n%20%5Ccdot%20%28n-1%29%20%5Ccdot%20%5Cldots%20%5Ccdot%20%28n-k&plus;1%29%20%3D%20%5Cfrac%7Bn%21%7D%7B%28n-k%29%21%7D)
 
-  **Příklad**: Mám k dispozici pět lidí. Kolika způsoby z nich můžu vybrat trojici?
+  **Příklad**: Na startu stojí šest závodníků, kolika způsoby se mohou závodnící umístit na stupni vítězů.
 
 - **S opakováním**
 
@@ -54,6 +54,8 @@ Máme n objektů, vybíráme k-tice.
 
   ![P(n_1, n_2, \ldots, n_k) = \frac{(n_1 + n_2 + \ldots + n_k)}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}](https://latex.codecogs.com/svg.latex?P%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_k%29%20%3D%20%5Cfrac%7B%28n_1%20&plus;%20n_2%20&plus;%20%5Cldots%20&plus;%20n_k%29%7D%7Bn_1%21%20%5Ccdot%20n_2%21%20%5Ccdot%20%5Cldots%20%5Ccdot%20n_k%21%7D)
 
+  **Příklad**: Osm studentů má na koleji připraveno ubytování ve třech pokojích. Dva jsou třílůžkové a jedna Dvoulužkový. Kolik je způsobů rozdělení studentů do pokojů?
+
 ### Kombinace k-té třídy
 
 = *neuspořádané k-tice*
@@ -74,6 +76,8 @@ Máme n objektů, vybíráme k-tice.
   - ![\sum^n_{k=0} C^k_n = 2^n](https://latex.codecogs.com/svg.latex?%5Csum%5En_%7Bk%3D0%7D%20C%5Ek_n%20%3D%202%5En)
   - ![\sum^n_{k=0} (-1)^k C^k_n = 0](https://latex.codecogs.com/svg.latex?%5Csum%5En_%7Bk%3D0%7D%20%28-1%29%5Ek%20C%5Ek_n%20%3D%200)
 
+  **Příklad**: Mám k dispozici pět lidí. Kolika způsoby z nich můžu vybrat trojici?
+
 - **S opakováním**
 
   n různých exemplářů, každý v libovolném počtu
@@ -85,6 +89,8 @@ Máme n objektů, vybíráme k-tice.
   - 1 reprezentuje, že vyberu objekt
   - 0 se použije jako oddělovač
   - sestavím bitový řetězec, kde použiju n-1 oddělovačů a k výběrů
+
+  **Příklad**: V hospodě mají 4 druhy piva, kolika způsoby si mohu dát 2 libovolná.
 
 ## Základní kombinatorická pravidla
 
@@ -200,13 +206,15 @@ Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
 
 ## Rozklady
 
-- Nerozlišitelné objekty
-  - Rozlišitelné skupiny
+- **Nerozlišitelné objekty**
+  - _Rozlišitelné skupiny_
     - Bez omezení
     - Neprázdné skupiny
     - S omezujícími podmínkami
-  - Nerozlišitelné skupiny
-- Rozlišitelné objekty
+  - _Nerozlišitelné skupiny_
+- **Rozlišitelné objekty**
+ - _Rozlišitelné skupiny_
+ - _Nerozlišitelné skupiny_
 
 ### Nerozlišitelné objekty do rozlišitelných skupin
 
@@ -280,7 +288,7 @@ Rozděluji n nerozlišitelných objektů do k rozlišitelných skupin.
 
 ![f(x) = \mathbf{\prod^n_{i=1} \frac{1}{1-x^i}}](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Cmathbf%7B%5Cprod%5En_%7Bi%3D1%7D%20%5Cfrac%7B1%7D%7B1-x%5Ei%7D%7D)
 
-### Rozlišitelné objekty
+### Rozlišitelné objekty do rozlišitelných skupin
 
 - n rozlišitelných objektů
 - k rozlišitelných skupin
@@ -329,3 +337,6 @@ Kolik existuje permutací na n-prvkové množině, které lze zapsat ve tvaru so
 ![\begin{bmatrix}n\\n\end{bmatrix} = 1](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5Cn%5Cend%7Bbmatrix%7D%20%3D%201)
 
 ![\begin{bmatrix}n\\k\end{bmatrix} = \begin{bmatrix}n-1\\k-1\end{bmatrix} + (n-1) \cdot \begin{bmatrix}n-1\\k\end{bmatrix}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bbmatrix%7Dn%5C%5Ck%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7Dn-1%5C%5Ck-1%5Cend%7Bbmatrix%7D%20&plus;%20%28n-1%29%20%5Ccdot%20%5Cbegin%7Bbmatrix%7Dn-1%5C%5Ck%5Cend%7Bbmatrix%7D)
+
+### Rozlišitelné objekty do nerozlišitelných skupin
+Tuto problematiku jsme neřešili.
