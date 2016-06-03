@@ -139,13 +139,16 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
 
 ![hamming](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/hamming.png)
 
-- první paritní bit kontroluje všechny bity, co mají nastaven least significant bit v bitové reprezentaci pozice (např. 1 -> **1** ; 3 -> 1**1** ; 5 -> 10**1**)
+- první paritní bit kontroluje všechny bity, co mají nastaven least significant bit v bitové reprezentaci pozice (např. 1 -> **1** ; 3 -> 1**1** ; 5 -> 10**1**), kromě sebe samozřejmě, tu hodnotu teprve musí vypočítat
 - druhý paritní bit kontroluje všechny bity, co mají nastaven second least significant bit v bitové reprezentaci pozice (napr 2 -> **1**0 ; 3 -> **1**1 ; 6 -> 1**1**0)
 - ... 
 - tedy první paritní bit se počítá jako XOR bitů na lichých pozicích 3,5,7,9... apod.
 
 ####Dekódování
 - vypočítá se tzv. Syndromový vektor, kde je jeho jednotlivé prvky vypočítají podobně jako paritní bity při kódování
+	- vektor je stejně dlouhý jako počet paritních bitů, které byly použity při jeho zakódování
+	- první prvek syndromu se vypočítá jako XOR pozic, které opět mají ve své bin. reprezentaci LSB, tentokrát i s paritním bitem
+	- ...
 - pokud je tento vektor nenulový, chyba je pak na pozici číselného vyjádření vektoru
 - pokud je nulový, přijmutý řetězec je bez chyb
 
