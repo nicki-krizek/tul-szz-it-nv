@@ -6,13 +6,13 @@
 
 Máme n objektů, vybíráme k-tice.
 
-### Variace k-té třídy
-
-= *uspořádané* k-tice prvků
-
 ![Rozdělení](04_rozdeleni.png)
 
 *Rozdělení pojmů*
+
+### Variace k-té třídy
+
+= *uspořádané* k-tice prvků
 
 - **Bez opakování** (všechny prvky různé)
 
@@ -114,13 +114,13 @@ Prakticky: n krabiček, n+1 kuliček ... jedna krabička musí obsahovat dvě ku
 
 ### Princip inkluze a exkluze
 
-Některé kombinatorické úlohy je jednodušší řešit tak, že nehledám, které objekty splňují dané vlastnosti, ale místo toho najdu objekty, které dané vlastnosti *nesplňují* a ty odečtu od celku.
+Některé kombinatorické úlohy je jednodušší řešit tak, že nehledám, které objekty **splňují** dané vlastnosti, ale místo toho najdu objekty, které dané vlastnosti **nesplňují** a ty odečtu od celku.
 
 ![N](https://latex.codecogs.com/svg.latex?N) ... počet objektů
 
 ![\alpha_i](https://latex.codecogs.com/svg.latex?%5Calpha_i) ... potenciální vlastnosti objektů
 
-![N(\alpha_i)](https://latex.codecogs.com/svg.latex?N%28%5Calpha_i%29) ... objekty, které mají vlastnost ![\alpha_i](https://latex.codecogs.com/svg.latex?%5Calpha_i)
+![N(\alpha_i)](https://latex.codecogs.com/svg.latex?N%28%5Calpha_i%29) ... objekty, které **mají** vlastnost ![\alpha_i](https://latex.codecogs.com/svg.latex?%5Calpha_i)
 
 ![N(\overline{\alpha_i})](https://latex.codecogs.com/svg.latex?N%28%5Coverline%7B%5Calpha_i%7D%29) ... objekty, které **nemají** vlastnost ![\alpha_i](https://latex.codecogs.com/svg.latex?%5Calpha_i)
 
