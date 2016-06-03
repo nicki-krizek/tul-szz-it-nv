@@ -6,13 +6,13 @@
 
 Máme n objektů, vybíráme k-tice.
 
-### Variace k-té třídy
-
-= *uspořádané* k-tice prvků
-
 ![Rozdělení](04_rozdeleni.png)
 
 *Rozdělení pojmů*
+
+### Variace k-té třídy
+
+= *uspořádané* k-tice prvků
 
 - **Bez opakování** (všechny prvky různé)
 
