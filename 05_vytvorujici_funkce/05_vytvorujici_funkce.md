@@ -2,6 +2,9 @@
 >Vytvořující funkce (obyčejná, exponenciální), otevřený a uzavřený tvar, základní operace s vytvořujícími funkcemi, vytvořující funkce (uzavřený tvar) základních posloupností, věžové polynomy.
 
 ##Obyčejná vytvořující funkce
+- Vytvořující funkce nám definuje posloupnost 
+- je to tedy jedna z možností zápisu posloupností, ovšem ne všechny posloupnosti lze vyjádřit pomocí vytvořujících funkcí (anebo jdou, ale takoáv funkce bude asi hodně složitá)
+	- výhodou je zapsání nekonečné posloupnosti pomocí funkce
 - Máme posloupnost reálných čísel ![a_n](https://latex.codecogs.com/svg.latex?a_n)
 - Vytvořující řadou této posloupnosti rozumíme mocninnou řadu  ![\sum_{i=0}^{\infty} a_ix^i](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D0%7D%5E%7B%5Cinfty%7D%20a_ix%5Ei)
 - Je-li tato řada konvergentní pro nějaké x≠0, nazveme tuto řadu obyčejnou vytvořující funkcí této posloupnosti a budeme ji značit a(x)
@@ -42,6 +45,8 @@ Příklad
 
 ![\frac{x}{(1-x)^2} \Rightarrow 0,1,2,3,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bx%7D%7B%281-x%29%5E2%7D%20%5CRightarrow%200%2C1%2C2%2C3%2C%5Cdots)
 
+##vytvořující funkce (uzavřený tvar) základních posloupností
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/vytv_fce.png)
 
 ##Operace s vytvořujícími funkcemi
 ![f(x) = \sum_{n=0}^{\infty} a_nx^n ; g(x) = \sum_{n=0}^{\infty} b_nx^n](https://latex.codecogs.com/svg.latex?f%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20a_nx%5En%20%3B%20g%28x%29%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20b_nx%5En)
@@ -69,6 +74,10 @@ Příklad
 	- ![\frac{f(x)}{1-x} \Rightarrow a_0,a_0+a_1,a_0+a_1+a_2,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bf%28x%29%7D%7B1-x%7D%20%5CRightarrow%20a_0%2Ca_0&plus;a_1%2Ca_0&plus;a_1&plus;a_2%2C%5Cdots)
 
 ##Vežové polynomy
+
+-Věžové polynomy jsou polynomy, jejichž koeficienty udávají, kolika různými způsoby lze na daná políčka šachovnice rozmístit určený počet neohrožujících se věží (tzn. žádné 2 věže nesmí být na stejném řádku či sloupci)
+- tuto metodu lze použít k výpočtu počtu kombinací pro jiné (i reálné) problematiky  
+
 1. Metoda přes povolený pole
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.jpg)
 2. Metoda přes zakázaná pole (Inverzní rook polynom)

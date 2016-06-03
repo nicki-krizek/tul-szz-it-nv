@@ -4,12 +4,16 @@
 frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineární diferenční rovnice 
 s konstantními koeficienty, systém s lineární a minimální fází. 
 
-
- 
-
 ##Vlastnosti
+**Systém** dokáže generovat, zpracovávat, modifikovat a přijímat signály. Signál je projevem činnosti systému.
 
-LTI (Linear Time Invariant) systémy jsou takové systémy, které jsou lineární a časově nezávislé.
+Příklady:
+- Hudební nástroj –lze považovat za systém generující zvuk
+- Zesilovač, ekvalizér –systém, který modifikuje zvukový signál
+- A/D a D/A převodník – transformují jeden typ signálu na jiný
+- Reproduktor –převádí elektrický signál na akustický, atd.
+
+**LTI (Linear Time Invariant)** systémy jsou takové systémy, které jsou lineární a časově nezávislé.
 
 ###Linearita
 Lineární systém je aditivní a homogenní
@@ -23,9 +27,9 @@ Lineární systém je aditivní a homogenní
 
 ![F(ax_1 + bx_2) = aF(x_1) + bF(x_2)](https://latex.codecogs.com/svg.latex?F%28ax_%7B1%7D%20&plus;%20bx_%7B2%7D%29%20%3D%20aF%28x_%7B1%7D%29%20&plus;%20bF%28x_%7B2%7D%29)
 
-- odezva na lineární kombinaci budících signálů je rovna lineární kombinaci odezev na jednotlivé budící signály
+- výstup systému pro lineární kombinaci budících signálů je roven lineární kombinaci výstupů na jednotlivé budící signály
 
-- z linearity vyplývá princip superpozice (odezvu systému lze složit z odezev na dílčí buzení)
+- z linearity vyplývá princip superpozice (výstup systému lze složit z výstupu na dílčí buzení)
 
 **Příklad lineárního systému**
 
@@ -39,7 +43,7 @@ Lineární systém je aditivní a homogenní
 
 
 ###Kauzalita
-Odezva kauzálního systému závisí pouze na současných a minulých hodnotách
+Výstup kauzálního systému závisí pouze na současných a minulých hodnotách
 
 - Kauzální systém : ![y(t) = x(t) + x(t-1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t-1%29)
 
@@ -54,9 +58,8 @@ Obecně lze říct že systém je stabilní, pokud amplituda jeho výstupu neros
 
 
 ###Invariantnost vůči (časovému) posunu
-- Nechť ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D) je odezva systému ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) na ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D)
+- Nechť ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D) je výstup systému ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) na ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D)
 - Pak ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) je invariantní vůči posunu, pokud pro libovolné zpoždění ![n_0](https://latex.codecogs.com/svg.latex?n_0)
-platí, že odezva na ![x[n - n_0]](https://latex.codecogs.com/svg.latex?x%5Bn%20-%20n_0%5D) je ![y[n - n_0]](https://latex.codecogs.com/svg.latex?y%5Bn%20-%20n_0%5D).
 
 ###Popis LTI systému
 
@@ -64,7 +67,7 @@ lze popsat pomocí:
 
 - Impulzní odezva
 	- výčtem prvků: ![h[n] = [2,-1]](https://latex.codecogs.com/svg.latex?h%5Bn%5D%20%3D%20%5B2%2C-1%5D)
-	- diferenční rovnicí: ![y[n] = 2\delta[n] - \delta[n-1]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%202%5Cdelta%5Bn%5D%20-%20%5Cdelta%5Bn-1%5D)
+- Diferenční rovnicí: ![y[n] = 2\delta[n] - \delta[n-1]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%202%5Cdelta%5Bn%5D%20-%20%5Cdelta%5Bn-1%5D)
 - Frekvenční charakteristika
 	- ![H(e^{j \omega}) = 2 \cdot x(e^{-j \cdot \omega \cdot 0}) - 1 \cdot x(e^{-j \cdot \omega \cdot 1})](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%20%5Comega%7D%29%20%3D%202%20%5Ccdot%20x%28e%5E%7B-j%20%5Ccdot%20%5Comega%20%5Ccdot%200%7D%29%20-%201%20%5Ccdot%20x%28e%5E%7B-j%20%5Ccdot%20%5Comega%20%5Ccdot%201%7D%29)
 - Přenosová funkce
@@ -72,7 +75,7 @@ lze popsat pomocí:
 
 ##Impulsní odezva (FIR/IIR)
 
-- je odezva LTI systémů na tzv. Diracův jednotkový impulz (značen písmenem ![\delta](https://latex.codecogs.com/svg.latex?%5Cdelta))
+- je výstup LTI systémů na tzv. jednotkový impulz (značen písmenem ![\delta](https://latex.codecogs.com/svg.latex?%5Cdelta))
 - Impulsní odezva jednoznačně charakterizuje LTI systém (stejně jako dif. rovnice)
 - značí se ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
 
@@ -100,7 +103,12 @@ daného impulsní odezvou
 
 Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme ![H(ejω)](https://latex.codecogs.com/svg.latex?H%28e%5E%7Bj%5Comega%7D%29)
 
-Získáme ji aplikací DTFT na odezvu systému ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D)
+
+Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
+
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_systemy/frekv_char.png)
+
+- na cvikách jsme ji vždycky počítali z diferenční rovnice systému (jako zlomek koeficientů x vuci koeficientum y)
 
 Obvykle se uvádí ve formě dvou reálných funkcí:
 
@@ -171,7 +179,7 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 - Linear constant coeﬃcient diﬀerence equation (LCCDE)
 - Speciální případ diferenčních rovnic popisující LTI systémy
 
-![y[n] = \sum_{k=0}^{q}b[k]x[n-k] - \sum_{k=1}^{p}a[k]x[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7Bq%7Db%5Bk%5Dx%5Bn-k%5D%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bp%7Da%5Bk%5Dx%5Bn-k%5D)
+![y[n] = \sum_{k=0}^{q}b[k]x[n-k] - \sum_{k=1}^{p}a[k]y[n-k]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20%3D%20%5Csum_%7Bk%3D0%7D%5E%7Bq%7Db%5Bk%5Dx%5Bn-k%5D%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bp%7Da%5Bk%5Dy%5Bn-k%5D)
 
 - Vztah rekurzivně deﬁnující výstup ze systému jako lineární kombinaci hodnot vstupu a minulých hodnot výstupu
 

@@ -82,37 +82,39 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 **Strom** - je acyklický a souvislý graf
 
 
-**Kostra grafu** - minimální souvislý podgraf, který obsahuje všechny vrcholy
+**Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
 
 ##Eulerovský graf
 
 - tzv. "jednotažky", lze je nakreslit jedním tahem
-- je souvislý graf G (opbecně s paralelními hranami), kde existuje eulerův tah (je jendo jestli otevřený nebo uzavřený)
+- je souvislý graf G (obecně s paralelními hranami), kde existuje eulerův tah (je jedno jestli otevřený nebo uzavřený)
 
 **Eulerovský tah**
 
-- takový u-v tah, který obsahuje každou hranu právě 1
+- takový u-v tah, který obsahuje každou hranu právě jednou
 - otevřený u != v
 - uzavřený u=v (**eulerovská kružnice**)
 
 **Kritérium eulerovskosti**
 
-- souvislý graf ke eulerovský práve tehdy, když má všechny vrcholy sudého stupně, nebo právě 2 vrcholy lichého
+- souvislý graf je eulerovský práve tehdy, když má všechny vrcholy sudého stupně, nebo právě 2 vrcholy lichého
 - pokud má všechny sudé, tak existuje eulerovská kružnice
-- pokád má 2 liché, tka existuje neuzavřený eul. tah, který začíná v libovolném 1 z vrcholů lichého stupně a končí v tom druhém 
+- pokád má 2 liché, tak existuje neuzavřený eul. tah, který začíná v libovolném 1 z vrcholů lichého stupně a končí v tom druhém 
 
 **Problém čínského listonoše**
 - hledáme uzavřený sled nejmenší možné váhy, který obsahuje každou hranu alespoň jednou
 
-##Hamiltnovské grafy
+##Hamiltonovské grafy
 
-**Hamiltnovská kružnice** - kružnice, která je faktorem (obsahuje každý vrchol právě jednou)
+**Hamiltonovská kružnice** - kružnice, která je *faktorem* (podgraf, který obsahuje všechny původní vrcholy)
 
-**Hamiltnosvký graf** - je graf co obsahuje hamil. kružnici
+**Hamiltonosvký graf** - je graf co obsahuje hamil. kružnici
+
+**Úplný graf** ![K_n](https://latex.codecogs.com/gif.latex?K_n) - graf, který má všchny možné hrany, počet jeho hran je ![|E| = \binom{|V|}{2} = \frac{n!}{2!\cdot (n-2)!} = \mathbf{\frac{n \cdot (n-1)}{2}}](https://latex.codecogs.com/gif.latex?%7CE%7C%20%3D%20%5Cbinom%7B%7CV%7C%7D%7B2%7D%20%3D%20%5Cfrac%7Bn%21%7D%7B2%21%5Ccdot%20%28n-2%29%21%7D%20%3D%20%5Cmathbf%7B%5Cfrac%7Bn%20%5Ccdot%20%28n-1%29%7D%7B2%7D%7D)
 
 **Problém obchodního cestujícího** 
 
-- Kn - úplný hranově ohodnocený graf, má (n-1!)/2 hran
+- Máme úplný, ohodnocený graf
 - hledáme hamilt. kružnici nejmenší možné váhy 
 
 ##Rovinné grafy
@@ -129,11 +131,13 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 ### do hloubky
 - algoritmus vezme první hranu (obvykle nejlevnější), dostane se k dalšímu vrcholu, kde opět vezme první hranu a takto postupuje dokud nenarazí na vrchol, který nemá další hranu, nebo konečný vrchol, v tu chvíli se vrátí na předchozí vrchol a jde druhou hranou 
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/hloubka.gif)
+- při procházení do hloubky se využívá zásobník
 
 ### do šířky
 - algoritmus nejprve vyčerpá všechny dostupné hrany a až pak se přesune na další vrchol  
 - ![](https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif)
-- 
+- při procházení do šířky se využívá fronta
+
 ##Minimální kostra
 
 **Jarníkův - primův**

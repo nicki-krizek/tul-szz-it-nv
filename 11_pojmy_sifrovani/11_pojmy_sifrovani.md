@@ -54,6 +54,22 @@ Slidy k tomu v sekci online courses/slides: [http://www.crypto-textbook.com/](ht
 - **zabezepečení** zprávy proti chybám (*opravné kódy*)
 
 ## Symetrické šifry
+
+- Substituční šifry
+  - Caesarova šifra (posun znaků o pevný počet)
+  - Tabulka záměny (na začátek šifrovací abecedy se dá heslo)
+  - Affiní šifra (vynásobení konstantou a přičtení)
+  - Hillova šifra (násobení matic)
+- Aditivní šifry
+  - Viegnerova šifra (opakuje se heslo, sečtení znaků)
+  - Vermanova šifra (stejně dlouhé heslo jako šifrovaný text)
+- Transpoziční šifry (znaky se nechají, mění se jejich pozice)
+- Blokové šifry
+  - Feistelova šifra
+  - DES
+  - AES
+  - NDS
+
 ### Substituční šifry
 #### Caesarova šifra
 Caesarova šifra je jednoduchou substituční šifrou, jejíž princip spočívá v posunu každého písmene otevřeného textu o konstantní počet míst v abecedě. Ačkoliv se v době Julia Caesara používala jen varianta posunu o 3 písmena, tak název se Caesarova šifra používá pro všechny varianty tohoto šifrovacího systému.
@@ -141,6 +157,8 @@ THEINITIAL => ASDXWXAXJM
 
 Dešifrujte NTBWWFYN pomocí Hillovy matice H(3, 2; 7, 5).
 
+*Pozn.:* Délka vstupní abecedy je 26, všechna záporná čísla (získaná např. při výopčtu inverzní matice) jsou převedena na kladná pomocí mod 26.
+
 ![\[\large B = NTBWWFYN \rightarrow \begin{pmatrix} N & T\\ B & W\\ W & F\\ Y & N\\ \end{pmatrix} = \begin{pmatrix} 13 & 19\\ 1 & 22\\ 22 & 5\\ 24 & 13\\ \end{pmatrix}\]](https://latex.codecogs.com/svg.latex?%5Clarge%20B%20%3D%20NTBWWFYN%20%5Crightarrow%20%5Cbegin%7Bpmatrix%7D%20N%20%26%20T%5C%5C%20B%20%26%20W%5C%5C%20W%20%26%20F%5C%5C%20Y%20%26%20N%5C%5C%20%5Cend%7Bpmatrix%7D%20%3D%20%5Cbegin%7Bpmatrix%7D%2013%20%26%2019%5C%5C%201%20%26%2022%5C%5C%2022%20%26%205%5C%5C%2024%20%26%2013%5C%5C%20%5Cend%7Bpmatrix%7D)
 
 ![\[\large H = \begin{pmatrix} 3 & 2\\ 7 & 5 \end{pmatrix} \rightarrow \begin{pmatrix} 3 & 2 & | & 1 & 0\\ 7 & 5 & | & 0 & 1 \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & | & 5 & 24\\ 0 & 1 & | & 19 & 3 \end{pmatrix} = H^{-1}\]
@@ -153,9 +171,9 @@ NTBWWFYN => KFHMXXDR
 
 ### Aditivní šifry
 #### Viegnerova šifra
-Jedná se o speciální případ polyalfabetické šifry, což znamená, že pro šifrování není použita celá abeceda. Caesarova šifra je speciálním případ Vigenèrovy šifry s heslem o délce jeden znak. Vigenèrova šifra používá heslo, jehož znaky určují posunutí otevřeného textu a to tak, že otevřený text se rozdělí na bloky znaků dlouhé stejně jako heslo a každý znak se sečte s odpovídajícím znakem hesla. Vigenèrova šifra způsobuje změny pravděpodobnosti rozložení znaků a tím podstatně znemožňuje kryptoanalýzu na základě analýzy četnosti znaků v textu. (obvykle se pro šifrování používá spíše Viegnerův čtverec - předpočítané kombinace)
+Jedná se o speciální případ polyalfabetické šifry, což znamená, že pro šifrování není použita celá abeceda. Caesarova šifra je speciálním případ Vigenèrovy šifry s heslem o délce jeden znak. Viegenèrova šifra používá heslo, jehož znaky určují posunutí otevřeného textu a to tak, že otevřený text se rozdělí na bloky znaků dlouhé stejně jako heslo a každý znak se sečte s odpovídajícím znakem hesla. Vigenèrova šifra způsobuje změny pravděpodobnosti rozložení znaků a tím podstatně znemožňuje kryptoanalýzu na základě analýzy četnosti znaků v textu. (obvykle se pro šifrování používá spíše Viegnerův čtverec - předpočítané kombinace)
 
-**Ci = Ti  Ki mod m** - šifrování
+**Ci = Ti + Ki mod m** - šifrování
 
 Ti = Ci - Ki mod m - dešifrování
 
@@ -259,13 +277,19 @@ In 1977, Edna Grossman and Bryant Tuckerman cryptanalyzed NDS using the first kn
 
 ## Asymetrické šifry
 ### RSA
-**RSA** (iniciály autorů Rivest, Shamir, Adleman) je šifra s veřejným klíčem, jedná se o první algoritmus, který je vhodný jak pro podepisování, tak šifrování. Používá se i dnes, přičemž při dostatečné délce klíče je považován za bezpečný. Bezpečnost RSA je postavena na předpokladu, že rozložit velké číslo n na součin prvočísel p a q (faktorizace) je velmi obtížná úloha. Z čísla n = pq je tedy v rozumném čase prakticky nemožné zjistit činitele p a q, neboť není znám žádný algoritmus faktorizace, který by pracoval v polynomiálním čase vůči velikosti binárního zápisu čísla n. Naproti tomu násobení dvou velkých čísel je elementární úloha. Rozluštění zprávy je možné, ale je to extrémně výpočetně zdlouhavé. Ppočítáme s tím, že se nikomu nevyplatí čekat.
+**RSA** (iniciály autorů Rivest, Shamir, Adleman) je šifra s veřejným klíčem, jedná se o první algoritmus, který je vhodný jak pro podepisování, tak šifrování. Používá se i dnes, přičemž při dostatečné délce klíče je považován za bezpečný. Bezpečnost RSA je postavena na předpokladu, že rozložit velké číslo n na součin prvočísel p a q (faktorizace) je velmi obtížná úloha. Z čísla n = pq je tedy v rozumném čase prakticky nemožné zjistit činitele p a q, neboť není znám žádný algoritmus faktorizace, který by pracoval v polynomiálním čase vůči velikosti binárního zápisu čísla n. Naproti tomu násobení dvou velkých čísel je elementární úloha. Rozluštění zprávy je možné, ale je to extrémně výpočetně zdlouhavé. Počítáme s tím, že se nikomu nevyplatí čekat.
 
 1. Zvolí dvě různá velká náhodná prvočísla p a q.
 2. Spočítá jejich součin n = pq.
 3. Spočítá hodnotu Eulerovy funkce φ(n) = (p − 1)(q − 1).
 4. Zvolí celé číslo e menší než φ(n), které je s φ(n) nesoudělné.
 5. Nalezne číslo d tak, aby platilo ed ≡ 1 (mod φ(n)).
+
+*Šifrování zprávy:* ![c = m^e (mod~n)](https://latex.codecogs.com/svg.latex?c%20%3D%20m%5Ee%20%28mod%7En%29)
+
+*Dešifrování zprávy:* ![m = c^d (mod~n)](https://latex.codecogs.com/svg.latex?m%20%3D%20c%5Ed%20%28mod%7En%29)
+
+*Pozn.:* Eulerova funkce ... počet přirozených čísel do n, která jsou s n nesoudělná
 
 **Klíče:**
 
@@ -283,11 +307,24 @@ V tomto příkladu jsou pro jednoduchost použita extrémně malá čísla, v pr
 
 Pro zašifrování zprávy 123 probíhá výpočet:
 
-- šifruj(123) = 12317 mod 3233 = 855 (123 může reprezentovat například znak abecedy)
+- šifruj(123) = 123^17 mod 3233 = 855 (123 může reprezentovat například znak abecedy)
 
 Pro dešifrování pak:
 
-- dešifruj(855) = 8552753 mod 3233 = 123
+- dešifruj(855) = 855^2753 mod 3233 = 123
+
+**Příklad s menšími exponenty**
+
+- Choose p = 3 and q = 11
+- Compute n = p * q = 3 * 11 = 33
+- Compute φ(n) = (p - 1) * (q - 1) = 2 * 10 = 20
+- Choose e such that 1 < e < φ(n) and e and n are coprime. Let e = 7
+- Compute a value for d such that (d * e) % φ(n) = 1. One solution is d = 3 [(3 * 7) % 20 = 1]
+- Public key is (e, n) => (7, 33)
+- Private key is (d, n) => (3, 33)
+- The encryption of m = 2 is c = 2^7 % 33 = 29
+- The decryption of c = 29 is m = 29^3 % 33 = 2
+
 
 ## Extra
 
