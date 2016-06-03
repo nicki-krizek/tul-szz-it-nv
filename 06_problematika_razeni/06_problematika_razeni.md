@@ -14,10 +14,43 @@ Cílem je nalézt permutaci ![\pi \in S_n](https://latex.codecogs.com/svg.latex?
 
 - *na místě* - pro řazení se nepoužívá žádná další datová struktura (např. další pole)
 - *stabilní* - v seřazené posloupnosti je zachováno pořadí rovnocenných prvků
+- *přirozený* - rychleji zpracuje seřazenou množinu, opakem je nepřirozený
 - [*interní*](https://en.wikipedia.org/wiki/Internal_sort) - všechna data jsou k dispozici v paměti
 - [*externí*](https://en.wikipedia.org/wiki/External_sorting) - další prvky přichází v průběhu řazení
-- [*časová složitost*](https://cs.wikipedia.org/wiki/Asymptotick%C3%A1_slo%C5%BEitost) (dále jako ![f(n)](https://latex.codecogs.com/svg.latex?%20f%28n%29))
-- *paměťová složitost*
+- složitost 
+ - [*časová složitost*](https://cs.wikipedia.org/wiki/Asymptotick%C3%A1_slo%C5%BEitost) (dále jako ![f(n)](https://latex.codecogs.com/svg.latex?%20f%28n%29)) viz okruh [7 - Časová náročnost algoritmů](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/07_casova_narocnost_algoritmu/07_casova_narocnost_algoritmu.md)
+ - *paměťová složitost*
+
+## Rozlišujeme
+
+a. Postupné rozšřování setříděné části
+- Selection sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+- Insertion sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+
+b. Záměnu dvojic po sobě jsdoucích prvků
+- Bubble sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+- Sinking sort ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+- Shaker ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
+
+c. Divide and Conquer
+- Merge sort ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
+- Quick sort ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
+
+d. Sorting by distribution
+ - Radix sort
+ - Bucket sort
+
+| Anglicky       | Česky             | Nejlepší   | Průměrně   | Nejhorší   | Dodatečná pamět | Stabilní  | Přirozené | Metoda    |
+|----------------|-------------------|------------|------------|------------|-----------------|-----------|-----------|-----------|
+| Selection sort | Řazení výběrem    | O(n²)      | O(n²)      | O(n²)      | O(1)            | zprav. ne | ne        | výběr     |
+| Insertion sort | Řazení vkládáním  | O(n)       | O(n²)      | O(n²)      | O(1)            | ano       | ano       | vkládání  |
+| Bubble sort    | Bublinkové řazení | O(n)       | O(n²)      | O(n²)      | O(1)            | ano       | ano       | záměna    |
+| Merge sort     | Řazení slučováním | O(n log n) | O(n log n) | O(n log n) | O(log n)        | ano       | ano       | slučování |
+| Quicksort      | Rychlé řazení     | O(n log n) | O(n log n) | O(n²)      | O(log n)        | ne        | ne        | záměna    |
+
+[Sorting Algorhitm Animations](http://www.sorting-algorithms.com/)
+
+[Rozbor mnoha algoritmu](https://www.algoritmy.net/article/75/Porovnani-algoritmu)
 
 ## a) Rozšřování setříděné části
 
@@ -38,9 +71,8 @@ V každém kroku vybere z nesetříděné části nejmenší prvek a vloží nak
 
 ![f(n) = f(n - 1) + (n - 1)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%3D%20f%28n%20-%201%29%20&plus;%20%28n%20-%201%29)
 
-[Řazení výběrem (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_v%C3%BDb%C4%9Brem)
-
-[Selection Sort (en wiki)](https://en.wikipedia.org/wiki/Selection_sort)
+- [Řazení výběrem (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_v%C3%BDb%C4%9Brem)
+- [Selection Sort (en wiki)](https://en.wikipedia.org/wiki/Selection_sort)
 
 ### Insertion Sort
 
@@ -59,9 +91,8 @@ v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs
 
 pro téměř seřazenou posloupnost ... ![f(n) \in \mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%29)
 
-[Řazení vkládáním (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_vkl%C3%A1d%C3%A1n%C3%ADm)
-
-[Insertion Sort (en wiki)](https://en.wikipedia.org/wiki/Insertion_sort)
+- [Řazení vkládáním (cs wiki)](https://cs.wikipedia.org/wiki/%C5%98azen%C3%AD_vkl%C3%A1d%C3%A1n%C3%ADm)
+- [Insertion Sort (en wiki)](https://en.wikipedia.org/wiki/Insertion_sort)
 
 ## b) Záměna dvojic mimo pořadí
 
@@ -80,9 +111,8 @@ Nesetříděnou posloupnost procházím shora dolů a porovnávám dvojice po so
 
 ![f(n) \in \mathcal{O}(n^2)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%5E2%29)
 
-[Bubble Sort (cs wiki)](https://cs.wikipedia.org/wiki/Bublinkov%C3%A9_%C5%99azen%C3%AD)
-
-[Bubble Sort (en wiki)](https://en.wikipedia.org/wiki/Bubble_sort)
+- [Bubble Sort (cs wiki)](https://cs.wikipedia.org/wiki/Bublinkov%C3%A9_%C5%99azen%C3%AD)
+- [Bubble Sort (en wiki)](https://en.wikipedia.org/wiki/Bubble_sort)
 
 ### Sinking Sort
 
@@ -92,9 +122,8 @@ Stejné jako bubble sort, akorát procházím od zdola nahoru.
 
 Kombinace Bubble Sort a Shaker Sort. Střídá se procházecí pořadí.
 
-[Koktejlové řazení (cs wiki)](https://cs.wikipedia.org/wiki/Koktejlov%C3%A9_%C5%99azen%C3%AD)
-
-[Cocktail Shaker Sort (en wiki)](https://en.wikipedia.org/wiki/Cocktail_shaker_sort)
+- [Koktejlové řazení (cs wiki)](https://cs.wikipedia.org/wiki/Koktejlov%C3%A9_%C5%99azen%C3%AD)
+- [Cocktail Shaker Sort (en wiki)](https://en.wikipedia.org/wiki/Cocktail_shaker_sort)
 
 ## c) Divide and conquer
 
@@ -110,9 +139,8 @@ Vstupní posloupnost se rekurzivně dělí na dvě poloviny až jsou poslopnosti
 
 ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
 
-[Merge Sort (cs wiki)](https://cs.wikipedia.org/wiki/Merge_sort)
-
-[Merge Sort (en wiki)](https://en.wikipedia.org/wiki/Merge_sort)
+- [Merge Sort (cs wiki)](https://cs.wikipedia.org/wiki/Merge_sort)
+- [Merge Sort (en wiki)](https://en.wikipedia.org/wiki/Merge_sort)
 
 ### Quick sort
 
@@ -126,7 +154,5 @@ složitost v nejhorším případě ... ![f(n) \in \mathcal{O}(n^2)](https://lat
 
 průměrná složitost ... ![f(n) \in \mathcal{O}(n \cdot \log_2 n)](https://latex.codecogs.com/svg.latex?%20f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28n%20%5Ccdot%20%5Clog_2%20n%29)
 
-## Odkazy
-
-[Sorting Algorhitm Animations](http://www.sorting-algorithms.com/)
-
+- [Quick Sort (cs wiki)](https://cs.wikipedia.org/wiki/Quicksort)
+- [Quick Sort (en wiki)](https://en.wikipedia.org/wiki/Quicksort)
