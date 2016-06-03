@@ -14,7 +14,7 @@ Cílem je nalézt permutaci ![\pi \in S_n](https://latex.codecogs.com/svg.latex?
 
 - *na místě* - pro řazení se nepoužívá žádná další datová struktura (např. další pole)
 - *stabilní* - v seřazené posloupnosti je zachováno pořadí rovnocenných prvků
-- *přirozený* - rychleji zpracuje seřazenou množinu, opakem je nepřirozený
+- *přirozený* - rychleji zpracuje (částečně) seřazenou množinu, u nepřirozeného to nehraje roli
 - [*interní*](https://en.wikipedia.org/wiki/Internal_sort) - všechna data jsou k dispozici v paměti
 - [*externí*](https://en.wikipedia.org/wiki/External_sorting) - další prvky přichází v průběhu řazení
 - složitost 
