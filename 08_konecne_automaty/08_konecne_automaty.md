@@ -132,5 +132,16 @@ Konečné automaty jsou silnější nástroj než kombinační logika.
 
 ## Uzávěrové vlastnosti
 
-> Mohla by na to dojít řeč v souvislosti s jazyky rozpoznávanými KA, ale není to úplně součástí otázky, nevím zda uvést.
+Automat rozpoznávající libovolný jazyk lze sestavit tak, že sestavím více jednodušších automatů, které pak vhodně spojím. Lze použít následující pravidla (uzávěrové vlastnosti):
+
+![\\L_1 \cup L_2\\
+L_1 \cap L_2 \\
+\Sigma^* - L_1 = L_1^c\\
+L_1 - L_2~(L_1 \setminus L_2) = L_1 \cap L_2^c\\
+(L_1 \cap L_2)^c = L_1^c \cup L_2^c\\
+(L_1 \cup L_2)^c = L_1^c \cap L_2^c\\
+L_1 \cdot L_2 = \{uw; u \in L_1~\&~w \in L_2\}\\
+L_1^0 = \{e\}, ~L_1^1 = L_1, ~L_1^2 = L_1 \cdot L_1, \ldots \\
+L_1^+ = \bigcup_{n=1}^{\infty } L_1^n,~L_1^* = \bigcup_{n=0}^{\infty } L_1^n\\
+L_1 \cdot \varnothing = \varnothing,~ \varnothing \cdot L_2 = \varnothing](https://latex.codecogs.com/svg.latex?%5C%5CL_1%20%5Ccup%20L_2%5C%5C%20L_1%20%5Ccap%20L_2%20%5C%5C%20%5CSigma%5E*%20-%20L_1%20%3D%20L_1%5Ec%5C%5C%20L_1%20-%20L_2%7E%28L_1%20%5Csetminus%20L_2%29%20%3D%20L_1%20%5Ccap%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccap%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccup%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccup%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccap%20L_2%5Ec%5C%5C%20L_1%20%5Ccdot%20L_2%20%3D%20%5C%7Buw%3B%20u%20%5Cin%20L_1%7E%5C%26%7Ew%20%5Cin%20L_2%5C%7D%5C%5C%20L_1%5E0%20%3D%20%5C%7Be%5C%7D%2C%20%7EL_1%5E1%20%3D%20L_1%2C%20%7EL_1%5E2%20%3D%20L_1%20%5Ccdot%20L_1%2C%20%5Cldots%20%5C%5C%20L_1%5E&plus;%20%3D%20%5Cbigcup_%7Bn%3D1%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%2C%7EL_1%5E*%20%3D%20%5Cbigcup_%7Bn%3D0%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%5C%5C%20L_1%20%5Ccdot%20%5Cvarnothing%20%3D%20%5Cvarnothing%2C%7E%20%5Cvarnothing%20%5Ccdot%20L_2%20%3D%20%5Cvarnothing)
 
