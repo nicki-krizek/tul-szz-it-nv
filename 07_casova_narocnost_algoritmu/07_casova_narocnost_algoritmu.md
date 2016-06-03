@@ -12,19 +12,7 @@
 - ![f: \mathbb{N} \rightarrow \mathbb{R}^+](https://latex.codecogs.com/svg.latex?f%3A%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BR%7D%5E&plus;)
 - ![g: \mathbb{N} \rightarrow \mathbb{R}^+](https://latex.codecogs.com/svg.latex?g%3A%20%5Cmathbb%7BN%7D%20%5Crightarrow%20%5Cmathbb%7BR%7D%5E&plus;)
 
-## ![\mathcal{O}](https://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cmathcal%7BO%7D) (Velké O)
-
-- Omezuje růst funkce shora
-- Používá se nejčastěji pro udávání asymptotické složitosti algoritmů (oproti ostatním dvěma notacím)
-- Říká, že funkce ![f](https://latex.codecogs.com/svg.latex?f) **neroste rychleji** než kladný násobek funkce ![g](https://latex.codecogs.com/svg.latex?g)
-
-**Zápis**
-
-![f(n) \in \mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28g%28n%29%29) (![f(n)](https://latex.codecogs.com/svg.latex?f%28n%29) je prvkem velkého ![\mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29)) právě tehdy, když:
-
-![\exists K > 0 ~ \exists n_0~\forall n > n_0 ~ f(n) \leq K \cdot g(n)](https://latex.codecogs.com/svg.latex?%5Cexists%20K%20%3E%200%20%7E%20%5Cexists%20n_0%7E%5Cforall%20n%20%3E%20n_0%20%7E%20f%28n%29%20%5Cleq%20K%20%5Ccdot%20g%28n%29)
-
-### Porovnání složitostí
+## Porovnání složitostí
 
 V tabulce seřazeno od nejrychlejší po nejnáročnější.
 
@@ -39,6 +27,18 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
 | ![\mathcal{O}(2^n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%282%5En%29) | exponenciální |  |
 | ![\mathcal{O}(n!)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%21%29) | faktoriálová | problém obchodního cestujícího hrubou silou |
 | ![\mathcal{O}(n^n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%5En%29) | | |
+
+## ![\mathcal{O}](https://latex.codecogs.com/svg.latex?%5CLARGE%20%5Cmathcal%7BO%7D) (Velké O)
+
+- Omezuje růst funkce shora
+- Používá se nejčastěji pro udávání asymptotické složitosti algoritmů (oproti ostatním dvěma notacím)
+- Říká, že funkce ![f](https://latex.codecogs.com/svg.latex?f) **neroste rychleji** než kladný násobek funkce ![g](https://latex.codecogs.com/svg.latex?g)
+
+**Zápis**
+
+![f(n) \in \mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29%20%5Cin%20%5Cmathcal%7BO%7D%28g%28n%29%29) (![f(n)](https://latex.codecogs.com/svg.latex?f%28n%29) je prvkem velkého ![\mathcal{O}(g(n))](https://latex.codecogs.com/svg.latex?f%28n%29)) právě tehdy, když:
+
+![\exists K > 0 ~ \exists n_0~\forall n > n_0 ~ f(n) \leq K \cdot g(n)](https://latex.codecogs.com/svg.latex?%5Cexists%20K%20%3E%200%20%7E%20%5Cexists%20n_0%7E%5Cforall%20n%20%3E%20n_0%20%7E%20f%28n%29%20%5Cleq%20K%20%5Ccdot%20g%28n%29)
 
 ## ![\Omega](https://latex.codecogs.com/svg.latex?%5CLARGE%20%5COmega) (Velké omega)
 
