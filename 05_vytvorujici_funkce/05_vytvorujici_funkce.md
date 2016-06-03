@@ -83,7 +83,7 @@ Příklad
 
 -Věžové polynomy jsou polynomy, jejichž koeficienty udávají, kolika různými způsoby lze na daná políčka šachovnice rozmístit určený počet neohrožujících se věží (tzn. žádné 2 věže nesmí být na stejném řádku či sloupci)
 - tuto metodu lze použít k výpočtu počtu kombinací pro jiné (i reálné) problematiky
-- naoř. spočítat kolik existuje možností pro 4 programátory, kde každý má své preference programovacího jazyku  
+- např. spočítat kolik existuje možností pro 4 programátory, kde každý má své preference programovacího jazyku  
 
 1. Metoda přes povolený pole
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.jpg)
