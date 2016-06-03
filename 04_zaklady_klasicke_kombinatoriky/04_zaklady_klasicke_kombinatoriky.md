@@ -169,6 +169,18 @@ Pozn.: Na levé straně (![k < 0](https://latex.codecogs.com/svg.latex?k%20%3C%2
 
 ![(x+y)^n = \sum^n_{k=0} C^k_n \cdot x^k \cdot y^{n-k}](https://latex.codecogs.com/svg.latex?%28x&plus;y%29%5En%20%3D%20%5Csum%5En_%7Bk%3D0%7D%20C%5Ek_n%20%5Ccdot%20x%5Ek%20%5Ccdot%20y%5E%7Bn-k%7D)
 
+### Multinomický vzorec
+
+Zobecnění binomické věty pro více proměnných.
+
+![(x_1 + x_2 + \ldots + x_r)^n = \sum_{\substack{(n_1, n_2, \ldots, n_r)\\ n_1 + n_2 + \ldots + n_r = n \\0 \leq n_i}} P(n_1, n_2, \ldots, n_r) \cdot x_1^{n_1} \cdot x_2^{n_2}\cdot \ldots \cdot x_r^{n_r}](https://latex.codecogs.com/svg.latex?%28x_1%20&plus;%20x_2%20&plus;%20%5Cldots%20&plus;%20x_r%29%5En%20%3D%20%5Csum_%7B%5Csubstack%7B%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_r%29%5C%5C%20n_1%20&plus;%20n_2%20&plus;%20%5Cldots%20&plus;%20n_r%20%3D%20n%20%5C%5C0%20%5Cleq%20n_i%7D%7D%20P%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_r%29%20%5Ccdot%20x_1%5E%7Bn_1%7D%20%5Ccdot%20x_2%5E%7Bn_2%7D%5Ccdot%20%5Cldots%20%5Ccdot%20x_r%5E%7Bn_r%7D)
+
+### Newtonův vzorec
+
+Nechť ![|x| < 1, \alpha \in \mathbb{R}](https://latex.codecogs.com/svg.latex?%7Cx%7C%20%3C%201%2C%20%5Calpha%20%5Cin%20%5Cmathbb%7BR%7D), potom:
+
+![(1 + x)^{\alpha} = 1 + \alpha x + \frac{\alpha(\alpha - 1)}{2!}x^2 + \frac{\alpha(\alpha - 1)(\alpha - 2)}{3!}x^3 + \ldots + \frac{\alpha(\alpha - 1)\cdot \ldots \cdot (\alpha - k + 1)}{k!}x^k](https://latex.codecogs.com/svg.latex?%281%20&plus;%20x%29%5E%7B%5Calpha%7D%20%3D%201%20&plus;%20%5Calpha%20x%20&plus;%20%5Cfrac%7B%5Calpha%28%5Calpha%20-%201%29%7D%7B2%21%7Dx%5E2%20&plus;%20%5Cfrac%7B%5Calpha%28%5Calpha%20-%201%29%28%5Calpha%20-%202%29%7D%7B3%21%7Dx%5E3%20&plus;%20%5Cldots%20&plus;%20%5Cfrac%7B%5Calpha%28%5Calpha%20-%201%29%5Ccdot%20%5Cldots%20%5Ccdot%20%28%5Calpha%20-%20k%20&plus;%201%29%7D%7Bk%21%7Dx%5Ek)
+
 ## Catalanova čísla
 
 ![C_n = \binom{2n}{n} - \binom{2n}{n-1} = \frac{1}{n+1} \cdot \binom{2n}{n}](https://latex.codecogs.com/svg.latex?C_n%20%3D%20%5Cbinom%7B2n%7D%7Bn%7D%20-%20%5Cbinom%7B2n%7D%7Bn-1%7D%20%3D%20%5Cfrac%7B1%7D%7Bn&plus;1%7D%20%5Ccdot%20%5Cbinom%7B2n%7D%7Bn%7D)
@@ -194,7 +206,28 @@ Pozn.: Na levé straně (![k < 0](https://latex.codecogs.com/svg.latex?k%20%3C%2
 
 Kolik existuje permutací, ve kterých žádný prvek není na svém místě?
 
+Použije se princip IE, kde ![\alpha_i](https://latex.codecogs.com/svg.latex?%5Calpha_i) je vlastnost, že ![i](https://latex.codecogs.com/svg.latex?i)-tý prvek je na svém místě.
+
+![D(n) = N(\overline{\alpha_1}, \overline{\alpha_2}, \ldots, \overline{\alpha_n}) = N - \sum_{i=1}^n N(\alpha_i) + \sum_{1\leq i_1 < i_2 \leq n} N(\alpha_{i_1}, \alpha_{i_2}) - \ldots](https://latex.codecogs.com/svg.latex?D%28n%29%20%3D%20N%28%5Coverline%7B%5Calpha_1%7D%2C%20%5Coverline%7B%5Calpha_2%7D%2C%20%5Cldots%2C%20%5Coverline%7B%5Calpha_n%7D%29%20%3D%20N%20-%20%5Csum_%7Bi%3D1%7D%5En%20N%28%5Calpha_i%29%20&plus;%20%5Csum_%7B1%5Cleq%20i_1%20%3C%20i_2%20%5Cleq%20n%7D%20N%28%5Calpha_%7Bi_1%7D%2C%20%5Calpha_%7Bi_2%7D%29%20-%20%5Cldots)
+
+![\\
+N = n! \\
+N(\alpha_i) = (n-1)!~\ldots~C^1_n \\
+N(\alpha_{i_1}, \alpha_{i_2}) = (n-2)!~\ldots~C^2_n](https://latex.codecogs.com/svg.latex?%5C%5C%20N%20%3D%20n%21%20%5C%5C%20N%28%5Calpha_i%29%20%3D%20%28n-1%29%21%7E%5Cldots%7EC%5E1_n%20%5C%5C%20N%28%5Calpha_%7Bi_1%7D%2C%20%5Calpha_%7Bi_2%7D%29%20%3D%20%28n-2%29%21%7E%5Cldots%7EC%5E2_n)
+
+![D_n = n! - C^1_n(n-1)! + C^2_n(n-2)! - \ldots + (-1)^nC^n_n0!](https://latex.codecogs.com/svg.latex?D_n%20%3D%20n%21%20-%20C%5E1_n%28n-1%29%21%20&plus;%20C%5E2_n%28n-2%29%21%20-%20%5Cldots%20&plus;%20%28-1%29%5EnC%5En_n0%21)
+
+![D_n = n! - \frac{n!(n-1)!}{1!(n-1)!} + \frac{n!(n-2)!}{2!(n-2)!} - \ldots + (-1)^n \frac{n!0!}{n!0!}](https://latex.codecogs.com/svg.latex?D_n%20%3D%20n%21%20-%20%5Cfrac%7Bn%21%28n-1%29%21%7D%7B1%21%28n-1%29%21%7D%20&plus;%20%5Cfrac%7Bn%21%28n-2%29%21%7D%7B2%21%28n-2%29%21%7D%20-%20%5Cldots%20&plus;%20%28-1%29%5En%20%5Cfrac%7Bn%210%21%7D%7Bn%210%21%7D)
+
+![D_n = n! \underbrace{\begin{bmatrix}
+1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \ldots + (-1)^n\frac{1}{n!}
+\end{bmatrix}}_{rozvoj~rady~e^{-1}}](https://latex.codecogs.com/svg.latex?D_n%20%3D%20n%21%20%5Cunderbrace%7B%5Cbegin%7Bbmatrix%7D%201%20-%20%5Cfrac%7B1%7D%7B1%21%7D%20&plus;%20%5Cfrac%7B1%7D%7B2%21%7D%20-%20%5Cfrac%7B1%7D%7B3%21%7D%20&plus;%20%5Cldots%20&plus;%20%28-1%29%5En%5Cfrac%7B1%7D%7Bn%21%7D%20%5Cend%7Bbmatrix%7D%7D_%7Brozvoj%7Erady%7Ee%5E%7B-1%7D%7D)
+
 ![D(n) = \frac{n!}{e}](https://latex.codecogs.com/svg.latex?D%28n%29%20%3D%20%5Cfrac%7Bn%21%7D%7Be%7D)
+
+![D_k(n)](https://latex.codecogs.com/svg.latex?D_k%28n%29) ... počet permutací na n-prvkové množině, kde právě k prvků je na svém místě
+
+![D_k(n) = C^k_n D(n-k)](https://latex.codecogs.com/svg.latex?D_k%28n%29%20%3D%20C%5Ek_n%20D%28n-k%29)
 
 ### Fibonacciho čísla
 
