@@ -73,10 +73,17 @@ Příklad
 9. **Postupný součet prvních prvků**
 	- ![\frac{f(x)}{1-x} \Rightarrow a_0,a_0+a_1,a_0+a_1+a_2,\dots](https://latex.codecogs.com/svg.latex?%5Cfrac%7Bf%28x%29%7D%7B1-x%7D%20%5CRightarrow%20a_0%2Ca_0&plus;a_1%2Ca_0&plus;a_1&plus;a_2%2C%5Cdots)
 
+**Získání hodnoty n-tého prvku posloupnosti**
+
+- lze ho získat jako n-tá derivace vytvořující funkce, vydělená n faktorial
+ 
+![a[n] = \frac{f^n(x)}{n!}](https://latex.codecogs.com/gif.latex?a%5Bn%5D%20%3D%20%5Cfrac%7Bf%5En%28x%29%7D%7Bn%21%7D)
+
 ##Vežové polynomy
 
 -Věžové polynomy jsou polynomy, jejichž koeficienty udávají, kolika různými způsoby lze na daná políčka šachovnice rozmístit určený počet neohrožujících se věží (tzn. žádné 2 věže nesmí být na stejném řádku či sloupci)
-- tuto metodu lze použít k výpočtu počtu kombinací pro jiné (i reálné) problematiky  
+- tuto metodu lze použít k výpočtu počtu kombinací pro jiné (i reálné) problematiky
+- naoř. spočítat kolik existuje možností pro 4 programátory, kde každý má své preference programovacího jazyku  
 
 1. Metoda přes povolený pole
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.jpg)
