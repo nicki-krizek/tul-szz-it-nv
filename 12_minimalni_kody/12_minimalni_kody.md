@@ -139,8 +139,8 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
 
 ![hamming](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/hamming.png)
 
-- první paritní bit kontroluje všechny bity, co mají nastaven least significant bit v bitové reprezentaci pozice (pořadí)
-- druhý paritní bit kontroluje všechny bity, co mají nastaven second least significant bit v bitové reprezentaci pozice (pořadí)
+- první paritní bit kontroluje všechny bity, co mají nastaven least significant bit v bitové reprezentaci pozice (např. 1 -> **1** ; 3 -> 1**1** ; 5 -> 10**1**)
+- druhý paritní bit kontroluje všechny bity, co mají nastaven second least significant bit v bitové reprezentaci pozice (napr 2 -> **1**0 ; 3 -> **1**1 ; 6 -> 1**1**0)
 - ... 
 - tedy první paritní bit se počítá jako XOR bitů na lichých pozicích 3,5,7,9... apod.
 
