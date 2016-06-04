@@ -2,9 +2,11 @@
 
 > Gramatiky, Chomského hierarchie, vztah gramatik ke konečným strojům.
 
-## Formální definice
+Gramatika se skládá z množiny pravidel, pomocí kterých může být každé slovo předepsaným způsobem vygenerováno z předem daného počátečního symbolu. Máme nějakou abecedu symbolů (řekněme třeba a, b), což odpovídá **terminálním symbolům**. Dále máme nějaké proměnné zvané též **neterminální symboly**, například X, Y. Pak potřebujeme počáteční proměnnou, ze které je možné odvodit všechna slova, která umí gramatika generovat. Řekněmě, že počáteční symbol bude X. Nakonec k tomu přidáme **přepisovací pravidla**, pomocí kterých je možné přepisovat terminální a neterminální symboly na jiné. Generování probíhá tak, že vezmeme **počáteční symbol**, na něj aplikujeme kterékoli z pravidel, na získaný řetězec opět aplikujeme kterékoli z pravidel a tak dále, dokud nevygenerujeme požadované slovo. Pokud je pro každé slovo nejvýše jeden postup generování, gramatika je **jednoznačná**.
 
-Gramatika ![G](https://latex.codecogs.com/svg.latex?G) je čtveřice ![G = (\Pi, \Sigma, S, P)](https://latex.codecogs.com/svg.latex?G%20%3D%20%28%5CPi%2C%20%5CSigma%2C%20S%2C%20P%29), kde
+**Formální definice:**
+
+Gramatika ![G](https://latex.codecogs.com/svg.latex?G) je uspořádaná čtveřice ![G = (\Pi, \Sigma, S, P)](https://latex.codecogs.com/svg.latex?G%20%3D%20%28%5CPi%2C%20%5CSigma%2C%20S%2C%20P%29), kde
 
 ![\Pi](https://latex.codecogs.com/svg.latex?%5CPi) je množina neterminálů,
 
@@ -14,9 +16,13 @@ Gramatika ![G](https://latex.codecogs.com/svg.latex?G) je čtveřice ![G = (\Pi,
 
 ![P](https://latex.codecogs.com/svg.latex?P) je konečná množina přepisovacích pravidel.
 
-### Přeloženo
+**Konvence:**
 
-Mám nějakou abecedu symbolů, což odpovídá terminálním symbolům. Řekněmě, že máme písmena a, b. Dále mám nějaké proměnné (neterminální symboly), třeba X, Y. Pak potřebuju ještě počáteční proměnnou ze které je možné odvodit všechna slova, která umí gramatika generovat. Řekněmě, že počáteční symbol bude X. Nakonec k tomu přidám přepisovací pravidla, pomocí kterých můžu přepisovat terminální a neterminální symboly na jiné.
+- jednotlivé terminály značíme – a, b, c, …
+- řetězce terminálů značíme – u, v, w, …
+- jednotlivé neterminály – A, B, C … X, Y, Z
+- řetězce neterminálů a terminálů – α, β, γ, …
+- prázdný řetězec značíme symbolem e nebo také ε
 
 ### Přepisovací pravidla
 
@@ -186,5 +192,6 @@ Pro relaci částečného uspořádání ![\leq](https://latex.codecogs.com/svg.
 
 ## Syntaktická analýza
 
-> Nevím, jestli to zde uvádět. Patří sem věci jako derivační strom, determinismus, jednoznačnost gramatiky, levá a pravá derivace.
+![Příklad syntaktické analýzy](09_syntakticka_analyza.png)
 
+*Příklad syntaktické analýzy*
