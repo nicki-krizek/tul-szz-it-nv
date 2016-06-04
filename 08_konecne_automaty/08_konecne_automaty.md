@@ -2,7 +2,9 @@
 
 > Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
 
-Konečný automat (KA) je jednoduchý výpočetní model, je reprezentován pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní **slovo** (posloupnost znaků dané abecedy) bylo **rozpoznáno** (akceptováno).
+Konečný automat (KA) je teoretický výpočetní model reprezentovaný pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní **slovo** (posloupnost znaků dané abecedy) bylo **rozpoznáno** (akceptováno).
+
+ *Konečné automaty se používají například při vyhodnocování regulárních výrazů. Obvykle jsou tedy součástí lexikálního analyzátoru v překladačích.*
 
 Definice základních pojmů jako slovo a abeceda je vysvětleno zde: http://www.matematika.cz/formalni-jazyky
 
@@ -23,6 +25,8 @@ Konečným automatem je uspořádaná pětice ![A = (Q, \Sigma, \delta, q_0, F)]
 - ![q_0 \in Q](https://latex.codecogs.com/svg.latex?q_0%20%5Cin%20Q) je počáteční stav,
 
 - ![F \subset Q](https://latex.codecogs.com/svg.latex?F%20%5Csubset%20Q) je množina koncových stavů.
+
+Složitější automaty lze vytvářet spojováním jednodušších automatů do komplexních celku. Má-li být například rozpoznáno zřetězení slov, je možné zapojit seriově dva automaty, kde každý rozpozná pouze dílčí část požadovaného slova.
 
 ## Jazyk rozpoznávaný KA
 
