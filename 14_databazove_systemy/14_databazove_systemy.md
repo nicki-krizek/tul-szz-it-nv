@@ -119,9 +119,8 @@ Nevýhody:
 ### Škálování
 Schopnost přidat vlastnosti, aby byly uspokojeny nové nároky uživatelů.
 
-**vertikální škálování** - přidání zdrojů do již existujícího systému, aby se zvýšila jeho kapacita, průchodnost atd. (např. přidat procesor, paměť, ...)
-
-**horizontální škálování** - přidání nových uzlů (např. nový počítač do již existující infrastruktury)
+- **vertikální škálování** - přidání zdrojů do již existujícího systému, aby se zvýšila jeho kapacita, průchodnost atd. (např. přidat procesor, paměť, ...)
+- **horizontální škálování** - přidání nových uzlů (např. nový počítač do již existující infrastruktury)
 
 ### CAP teorém
 Při návrhu distribuované aplikace je nutné brát v potaz následující požadavky:
