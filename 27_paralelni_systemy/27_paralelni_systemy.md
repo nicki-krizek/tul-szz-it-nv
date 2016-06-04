@@ -56,7 +56,7 @@ Přepínání změn kontextu:
   - **Nevýhoda** - složitější implementace
   - Nové Win, MacOS, unixové systémy
 
-Podle rozbržení času:
+Podle rozvržení času:
 
 - **Krátkodobé plánování** (_short-term_)
 
