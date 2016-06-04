@@ -7,28 +7,50 @@
 - V porovnání s KA je to silnější nástroj
 - Rozpoznává jazyky typu 0
 - Stejně složité úlohy jsou schopny řešit i Postovy stroje nebo Konečné stroje se dvěma a více zásobníky
-- Základní části:
-  1. Páska
+
+**Základní části:**
+
+  1. **Páska**
     - Slouží jako paměť
-    - Nekonečná
-  2. Čtecí hlava
+    - Nekonečná (doprava)
+  2. **Čtecí hlava**
     - Určuje pozici na pásce
     - Umožňuje čtení/zápis libovolného znaku na pásku
     - Pohybuje se vždy o jeden krok doleva (L) nebo doprava (R)
-  3. Program
-    - Zapisovali jsme jako konečný, ohodnocený a orientovaný graf
-    - Lze zapsat i pomocí insturkcí
+  3. **Program**
+    - Zapisovali jsme jako konečný, ohodnocený a orientovaný graf (lze zapsat i pomocí insturkcí)
     - Definuje počáteční stav
     - Definuje množinu koncových stavů
     - Graf znázorňuje přechody mezi jednotlivými stavy a činnost čtecí hlavy (čtení, zápis, posun)
-- Na začátku pásky je zapsáno vstupní slovo, čtecí hlava je na začátku
-- Činnost TS: Pro libovolné vstupní slovo TS A buď
-  - Zastaví (STOP)
-    - Akceptuje slovo ... AKC(A)
-    - Zamítne slovo ... ZAM(A)
-  - Cykluje ... CYK(A)
+    - Jednotlivé hrany grafu jsou ohodnoceny (čtený symbol, přepisuje na, pohyb hlavy vlevo/vpravo)
+    - Na začátku pásky je zapsáno vstupní slovo, čtecí hlava je na začátku
 
-### Formální definice
+![Ukázka Turingova stroje](10_ts.png)
+
+*Ukázka Turingova stroje*
+
+![Graf Turingova stroje](10_graf.png)
+
+*Graf Turingova stroje*
+
+**Způsoby zastavení konečných strojů:**
+
+  - **Akceptování** (AKC) - (přijetím) slova w (ANO)
+   - dosáhne-li stroj stavu STOP (koncového) a výpočet pak končí
+  - **Zamítnutí** (ZAM) - slova w (NE)
+   - hlava je nad nejlevějším polem a je dán příkaz pohybu vlevo-
+   - dosáhne-li výpočet jistého stavu odkud nevede cesta pro právě přečtený symbol
+  - **Cyklování** (CYK) - znamená, že se stroj dostal do cyklu, kdy se periodicky opakuje jeho činnost bez možnosti zastavení.
+
+Turingovy stroje lze považovat za **ekvivaletní**, pokud **akceptují stejná slova**.
+
+**Turingův stroj lze považovat za:**
+
+  1. **AKCEPTOR** - akceptuje rekurzívní nebo rekurzivně spočetné množiny.
+  2. **GENERÁTOR** - vyčísluje totálně rekurzívní nebo částečně rekurzívní funkce.
+  3. **ALGORITMUS** - rozhoduje nebo částečně rozhoduje třídu problémů typu ano/ne.
+
+**Formální definice:**
 
 TS ![T](https://latex.codecogs.com/gif.latex?T) se definuje nad vstupní abecedou ![\Sigma](https://latex.codecogs.com/gif.latex?%5CSigma).
 
@@ -42,8 +64,7 @@ TS ![T](https://latex.codecogs.com/gif.latex?T) se definuje nad vstupní abecedo
 - ![F](https://latex.codecogs.com/gif.latex?F) je množina koncových stavů
 
 ## Totální a parciální rozhodnutelnost problémů
-
->Máme třídu problémů na které lze odpovědět ANO/NE a k nim odpovídající algoritmus (TS), který všechny tyto problémy řeší.
+Máme třídu problémů na které lze odpovědět ANO/NE a k nim odpovídající algoritmus (TS), který všechny tyto problémy řeší.
 
 ### Totálně rozhodnutelné problémy
 
