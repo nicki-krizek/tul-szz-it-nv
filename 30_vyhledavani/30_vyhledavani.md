@@ -6,23 +6,23 @@
 
 Postupné sekvenční procházení prvků seznamu od začátku do konce, známe také jako **sekvenční vyhledávaní**.
 
-- Složitost vyhledávání je **![\mathcal{O}(N)](https://latex.codecogs.com/svg.download?%5Cmathcal%7BO%7D%28N%29)**.
+- Složitost vyhledávání je **O(N)**.
 
-  - Nejlepší je ![\mathcal{O}(1)](https://latex.codecogs.com/svg.download?%5Cmathcal%7BO%7D%281%29), je-li prvek na první pozici.
-  - Průměrně pak ![\mathcal{O}(1)](https://latex.codecogs.com/svg.download?%5Cmathcal%7BO%7D%28N/2%29).
-  - Nejhorší ![\mathcal{O}(N)](https://latex.codecogs.com/svg.download?%5Cmathcal%7BO%7D%28N%29), je-li prvek na poslední pozici.
+  - Nejlepší je O(1), je-li prvek na první pozici.
+  - Průměrně pak O(N/2).
+  - Nejhorší O(N), je-li prvek na poslední pozici.
 
 - Narozdíl od binárního vyhledávání lze použít na **neuspořádaný** (neseřazený) seznam.
 
 - V některých případech jde o jediný možný způsob prohledávání (spojový seznam).
 
-**Princip:** (máme pole **_p_** a prvek **_h_**)
+**Princip:** (máme pole **p** a prvek **h**)
 
-- Porovnáme první prvek pole _p_ s prvkem _h_.
+- Porovnáme první prvek pole p s prvkem h.
 - Pokud se rovnají vrátíme index prvku jako výsledek.
-- V opačném případě posuneme ukazatel a porovnáme další prvek z _p_ s prvkem _h_.
+- V opačném případě posuneme ukazatel a porovnáme další prvek z p s prvkem h.
 - Tento postup opakujeme, dokud nenajdeme požadovanou hodnotu nebo nedorazíme na konec pole.
-- Jsme-li na konci a žádný prvek nyvyhověl _h_, tak se v poli požadovaná hodnota nenachází.
+- Jsme-li na konci a žádný prvek nyvyhověl h, tak se v poli požadovaná hodnota nenachází.
 
 ```java
 /**
@@ -43,17 +43,17 @@ Postupné sekvenční procházení prvků seznamu od začátku do konce, známe 
 
 Vyhledávací algoritmus na pricipu **půlení intervalu**.
 
-- Složitost procházení je **![\mathcal{O}(\log_{2}(N)))](https://latex.codecogs.com/svg.download?%5Cmathcal%7BO%7D%28%5Clog_%7B2%7D%28N%29%29%29)**, tedy lepší (rychlejší) než u lineárního vyhledávání.
+- Složitost procházení je **O(log2(N))**, tedy lepší (rychlejší) než u lineárního vyhledávání.
 - Funguje pouze na **uspořádáném** (seřazeném) seznamu.
 - Algoritmus je typu divide and conquer a možný je rekurzivní i iterativní zápis. (iteratívní nevolá funkce a je nepatrně rychlejší)
 
-**Princip:** (máme pole **_p_** a prvek **_h_**)
+**Princip:** (máme pole **p** a prvek **h**)
 
-- Porovnáme prostřední prvek pole _p_ s prvkem _h_.
+- Porovnáme prostřední prvek pole p s prvkem h.
 - Pokud se rovnají vrátíme ho jako výsledek.
-- V případě, že je _h_ menší, musí se hledaný prvek v vyskytovat ve zbytku pole nalevo. (a naopak)
+- V případě, že je h menší, musí se hledaný prvek v vyskytovat ve zbytku pole nalevo. (a naopak)
 - Tento postup opakujeme (rekurzivně) na zbytkovém poli. (v kódu níže reprezentováno jako zarážky)
-- Zbyde-li nám pouze dílčí pole s jedním prvkem a jeho hodnota neodpovídá _h_, hodnota _h_ se v poli nevyskytuje.
+- Zbyde-li nám pouze dílčí pole s jedním prvkem a jeho hodnota neodpovídá h, hodnota h se v poli nevyskytuje.
 
 ```java
     /**
@@ -81,7 +81,7 @@ Vyhledávací algoritmus na pricipu **půlení intervalu**.
 
 Datová struktura založená na binárním stromu, v němž jsou jednotlivé prvky (uzly) uspořádány tak, aby v tomto stromu bylo možné rychle vyhledávat danou hodnotu.
 
-- Postaveno na principu binárního vyhledávání. (vyvážený BST strom má složitost vyhledávání ![\mathcal{O}(\log_{2}(N)))](https://latex.codecogs.com/svg.download?%5Cmathcal%7BO%7D%28%5Clog_%7B2%7D%28N%29%29%29)
+- Postaveno na principu binárního vyhledávání. (vyvážený BST strom má složitost vyhledávání O(log2(N))
 - Jedná se o binární strom, každý uzel tedy má nanejvýš dva potomky − levého a pravého.
 - Každému uzlu je přiřazen určitý klíč. Podle hodnot těchto klíčů jsou uzly uspořádány.
 - Levý podstrom uzlu obsahuje pouze klíče menší než je klíč tohoto uzlu.
@@ -114,7 +114,7 @@ Zde nastává několik případů ke zvážení.
 
 - _Odstranění listu_: Odstranění uzlu bez potomků se jednoduše provede odstraněním uzlu ze stromu.
 - _Odstranění uzlu s jedním potomkem_: Provede se nahrazením uzlu uzlem potomka.
-- _Odstranění uzlu se dvěma potomky_: Nechť se odstraněný uzel nazývá _N_. Pak je hodnota uzlu _N_ nahrazena nejbližší vyšší (nejlevější uzel pravého podstromu), nebo nižší hodnotou (nejpravější uzel levého podstromu). Takový uzel má nanejvýš jednoho potomka, lze jej tedy ze stromu vyjmout podle jednoho z předchozích pravidel.
+- _Odstranění uzlu se dvěma potomky_: Nechť se odstraněný uzel nazývá N. Pak je hodnota uzlu N nahrazena nejbližší vyšší (nejlevější uzel pravého podstromu), nebo nižší hodnotou (nejpravější uzel levého podstromu). Takový uzel má nanejvýš jednoho potomka, lze jej tedy ze stromu vyjmout podle jednoho z předchozích pravidel.
 
 _Procházení_
 
@@ -122,7 +122,7 @@ Průchod binárním vyhledávacím stromem nijak nevyužívá jeho speciální v
 
 ### B strom
 
-Druh stromu, který zavádí limity na maximální (konstantou _n_), i minimální (![\frac{n}{2}](https://latex.codecogs.com/svg.download?%5Cfrac%7Bn%7D%7B2%7D)) počet potomků vrcholu. B-strom je díky této vlastnosti vyvážený, operace přidání, vyjmutí i vyhledávání tedy probíhají v logaritmickém čase. Tato struktura je často používána v aplikacích, kdy není celá struktura uložena v paměti RAM, ale v nějaké sekundární paměti, jako je pevný disk (například databáze). Protože přístup do tohoto typu paměti je náročný na čas (hlavně vyhledání náhodné položky), snažíme se minimalizovat počet přístupů do této paměti.
+Druh stromu, který zavádí limity na maximální (konstantou n), i minimální (n/2) počet potomků vrcholu. B-strom je díky této vlastnosti vyvážený, operace přidání, vyjmutí i vyhledávání tedy probíhají v logaritmickém čase. Tato struktura je často používána v aplikacích, kdy není celá struktura uložena v paměti RAM, ale v nějaké sekundární paměti, jako je pevný disk (například databáze). Protože přístup do tohoto typu paměti je náročný na čas (hlavně vyhledání náhodné položky), snažíme se minimalizovat počet přístupů do této paměti.
 
 **B+ Strom** - všechny hodnoty musí být v listech.
 
@@ -131,8 +131,8 @@ Druh stromu, který zavádí limity na maximální (konstantou _n_), i minimáln
 _B strom_
 
 - Všechny listy (tj.uzly které nemají žádné potomky) jsou na stejné úrovni (ve stejné hloubce).
-- Všechny vnitřní uzly kromě kořene mají maximálně _n_ a minimálně ![\frac{n}{2}](https://latex.codecogs.com/svg.download?%5Cfrac%7Bn%7D%7B2%7D) potomků.
-- Kořen má nejvýše _n_ potomků, spodní hranice není omezena.
+- Všechny vnitřní uzly kromě kořene mají maximálně n a minimálně n/2 potomků.
+- Kořen má nejvýše n potomků, spodní hranice není omezena.
 
 Strom je vyvažován požadavkem, aby byly všechny listy na stejné úrovni. Tato hloubka pozvolna roste s tím, jak do stromu přidáváme další data, nebo klesá spolu s vymazáváním dat ze stromu.
 
@@ -201,14 +201,14 @@ _2-3 strom vkládání_
 
 _Odstranění uzlu_
 
-Nejprve je nutné vyhledat větev, kterou budeme odebírat. Poté se odebere větev z jejího rodiče _r_.
+Nejprve je nutné vyhledat větev, kterou budeme odebírat. Poté se odebere větev z jejího rodiče r.
 
-- Pokud se sníží počet potomků _r_ ze tří na dva u 2-3 stromu provedou se jednoduché změny viz obrázek 11.
-- Jestliže počet potomků _r_ se sníží ze dvou na jeden
+- Pokud se sníží počet potomků r ze tří na dva u 2-3 stromu provedou se jednoduché změny viz obrázek 11.
+- Jestliže počet potomků r se sníží ze dvou na jeden
 
-  - _r_ se sloučí se svými dvěma sourozenci a vzniknou tak dvě větve, které si rozdělí potomky.
-  - _r_ převezme jednu větev z jednoho ze svých sourozenců, který leží vedle.
-  - Pokud po odebrání _r_ má dohromady se svým sourozencem jen tři potomky vezme si _r_ jednu větev ze svého rodiče.
+  - r se sloučí se svými dvěma sourozenci a vzniknou tak dvě větve, které si rozdělí potomky.
+  - r převezme jednu větev z jednoho ze svých sourozenců, který leží vedle.
+  - Pokud po odebrání r má dohromady se svým sourozencem jen tři potomky vezme si r jednu větev ze svého rodiče.
 
 ![2-3 strom odebírání](30_23_strom_odebirani.png)
 
@@ -229,7 +229,7 @@ Na tomto principu jsou postaveny různé datové typy nebo databázové indexi, 
 
 Platí tedy:
 
-- Rychlejší než lineární nebo binární vyhledávání, ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29).
+- Rychlejší než lineární nebo binární vyhledávání, O(1).
 - Je potřeba celý klíč.
 - Nejsou možné intervalové dotazy.
 - Nebezpečí kolize (dva klíče ukazují na stejná data)
