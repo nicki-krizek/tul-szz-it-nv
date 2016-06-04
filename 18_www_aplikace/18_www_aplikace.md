@@ -127,11 +127,11 @@ selektor {
 ## Uchovávání stavové informace
 
 - HTTP - bezestavový protokol
-- předávání stavových informací
-  a. součást URL
-  b. data formuláře
-  c. cookies
-  d. externí zdroj - session, databáze
+- předávání stavových informací  
+  - součást URL
+  - data formuláře
+  - cookies
+  - externí zdroj - session, databáze
 
 ### Cookie
 
