@@ -60,10 +60,10 @@ Následuje příklad pro provedení 2NF. V entitě **Sklad** (viz Tabulka 4) je 
 
 Telefon výrobce ovšem není závislý na celém klíči, ale pouze na atributu výrobce. To by vedlo k aktualizační anomálii a to k té, že pokud by se vymazaly veškeré výrobky od výrobce Milka, ztratilo by se telefoní číslo na výrobce Milka, což není zrovna žádané. Řešením je opět rozpad na dvě entity - **Výrobek** (viz Tabulka 5) a **Výrobce** (viz Tabulka 6).
 
-| Název (PK) | ID Výrobce (PK) | Cena | Množství |
+| ID Výrobce (PK) | Název (PK) | Cena | Množství |
 | --- | --- | --- | --- |
-| Tyčinka milkyway | 1 | 10Kč | 7000 |
-| Mléčná čokoláda | 2 | 25Kč | 5800 |
+| 1 | Tyčinka milkyway | 10Kč | 7000 |
+| 2 | Mléčná čokoláda | 25Kč | 5800 |
 *Tabulka 5: Entita Výrobek v 2NF*
 
 | ID Výrobce (PK) | Název | Telefon |
