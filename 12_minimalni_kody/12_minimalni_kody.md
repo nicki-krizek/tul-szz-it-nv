@@ -86,9 +86,30 @@ slovem s nejkratší délkou.
 **Nevýhody**: nutnost uložení binárního stromu nebo jiné informace pro jeho opětovné 
 sestavení, slabší kompresní poměr 
 
-![ukazka huffmana](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/ukazka_huff.png)
+Příklad: znakový řetězec **ABRAKADABRA**
 
-![ukazka huffmana2](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/ukazka_huff2.png)
+1. Zjistím jednotlivé četnosti: A (5x – 0,46), B (2x – 0,18), R (2x – 0,18), D (1x – 0,09), K (1x – 0,09)
+2. Sestrojím tabulku četností:
+ - Levý sloupec seřazeno dle četnosti, dále pak podle abecedy. (závislé na implementaci)
+ - Posledním dvou nejméně četným znakům přiřadím 0 a 1. (pořadí opět závislé na implementaci)
+ - Do dalšího sloupce přesunu vyhodnocené znaky jako jeden složený a zbytek jen opíšu.
+ - Opět vše seřadím a kroky opakuji analogicky až do konce.
+3. Výsledný kód je spojením dílčích kódů vzniklých při spojování. (čteno odzadu) 
+4. A(1), B(01), R(001), D(0000), K(0001)
+
+| Četnost | Kód  | Četnost  | Kód | Četnost | Kód  | Četnost | Kód |
+|--------|---|---------|---|----------|---|-----------|---|
+| A 0,46 |   | A 0,46  |   | A 0,46   |   | DKRB 0,54 | 0 |
+| B 0,18 |   | B 0,18  |   | DKR 0,36 | 0 | A 0,46    | 1 |
+| R 0,18 |   | DK 0,18 | 0 | B 0,18   | 1 |           |   |
+| D 0,09 | 0 | R 0,18  | 1 |          |   |           |   |
+| K 0,09 | 1 |         |   |          |   |           |   |
+
+Výsledný řetězec: **ABRAKADABRA** (11 znaků - 88 bitů) = 1 01 001 1 0001 1 0000 1 01 001 1 = **10100110001100001010011** (23 bitů)
+
+*Výsledek je distribuován spolu s tabulkou kódu, díky prefixovosti je pak možné řetězec jednoznačné rekonstruovat opětovným přepsáním zpět.*
+
+**Kompresní poměr:** (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0,26 = **26%**
 
 ###Aritmetické kódování
 - Aritmetické kódování reprezentuje zprávu jako podinterval intervalu <0,1)
