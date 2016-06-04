@@ -257,7 +257,7 @@ Aby systém fungoval jak má, je nutné, aby současně zpracovával více proce
 - **Nepreemtivní (kooperativní) multiprocesing** - Využívali jej starší OS, proces se musí procesorového času vzdát sám, což není optimální. Pokud by byl program naprogramován chybně, proces se nevzdá procesorového času a celý systém může zamrznou vlivem jednoho špatného vlákna.
 - **Preemptivní multiprocesing** - Plánovací modul OS určije, komu přidělí procesorový čas a jaký proces pozastaví. Je to výhodnější, programátor nemusí řešit jak se budou vlákna střídat. Je ale stále nutné řešit synchronizaci prostředků, které vlákna mohou vyžívat
 
-### Strategio rozhodování o spuštění procesů 
+### Strategie rozhodování o spuštění procesů 
 
 1. **Dlouhodobá** - při pokusu o spuštění programu se zjišťuje, zda byl vytvořen proces; určuje počet současně běžících procesů
 2. **Střednědobá** - ve všech systémech s virtuální pamětí; odklad procesů do záložní paměti; odstraňovány jsou dlouhodobě nespuštěné nebo s nízkou prioritou
