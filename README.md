@@ -27,7 +27,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 6. [Problematika řazení – základní algoritmy a jejich složitost.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/06_problematika_razeni/06_problematika_razeni.md)
 
-7. [Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/07_casova_narocnost_algoritmu/7_casova_narocnost_algoritmu.md)
+7. [Časová náročnost algoritmů. Průměrné a nejhorší chování. Úlohy P, NP a NP-úplné.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/07_casova_narocnost_algoritmu/07_casova_narocnost_algoritmu.md)
 
 8. [Definice konečného automatu, jazyky rozpoznávané konečnými automaty.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/08_konecne_automaty/08_konecne_automaty.md)
 
