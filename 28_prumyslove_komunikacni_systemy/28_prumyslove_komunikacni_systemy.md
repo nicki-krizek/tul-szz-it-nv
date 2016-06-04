@@ -137,9 +137,11 @@ Komunikace na sběrnici CAN probíhá tak, že každý uzel může za určitých
 - po přijetí 5 bitů stejné úrovně musí být přijat bit opačné úrovně a je vyjmut (odstraněn)
 - je-li přijat 6\. bit stejné úrovně, je indikována chyba
 
-![Typy CAN](28_typy_can.png)
-
-_Typy CAN_
+<p align="center">
+<img src="28_typy_can.png" alt="Typy CAN">
+<br>
+<i>Typy CAN</i>
+</p>
 
 Komunikační protokol CAN definuje formát přenášených zpráv na aplikační úrovni. Zprávy jsou přenášené v tzv. rámcích. V definici CAN jsou určeny čtyři typy rámců:
 
@@ -217,9 +219,11 @@ Rámec přeplnění (**OVERLOAD FRAME**) Rámec přeplnění má obdobnou strukt
 - **10GBASE-T** Ethernet s rychlostí 10 Gbit/s, nazývaný Ten Gigabit Ethernet (nebo také EFM – Ethernet on the first mile). Do vzdálenosti 55 metrů lze využít kabeláž kategorie 6\. Pro využití plné délky 100 je nutné použít kategorii 6a (augmented Category 6 – šířka pásma 500 MHz). Někteří výrobci prodávají kabely kategorie 7, které jsou označeny jako kompatibilní s 10GBASE-T. V současné době (rok 2007) je ve vývoji nestíněná varianta UTP kabeláže kategorie 6a.
 - **40GBASE** a **100GBASE** s rychlostí 40 a 100 Gbps by měl používat optická vlákna; měděné kabely do délky alespoň 10 metrů
 
-![Ethernetový rámec](28_ethernet_frame.png)
-
-_Ethernetový rámec_
+<p align="center">
+<img src="28_ethernet_frame.png" alt="Ethernetový rámec">
+<br>
+<i>Ethernetový rámec</i>
+</p>
 
 ### Modbus
 
@@ -244,9 +248,11 @@ Protokol Modbus definuje dva sériové vysílací režimy, Modbus RTU a Modbus A
 
 **Datagram**
 
-![MODBUS datagram](28_modbus_datagram.png)
-
-_MODBUS datagram_
+<p align="center">
+<img src="28_modbus_datagram.png" alt="MODBUS datagram">
+<br>
+<i>MODBUS datagram</i>
+</p>
 
 V soušasné době jsou implementována MODBUS komunikace po sítích:
 
@@ -278,11 +284,19 @@ Sběrnice SPI (_Serial Peripheral Interface_) představuje jednu z forem sériov
 - CPU supervizory
 - RTC obvody
 
-![SPI více násobné](28_spi_vicenasobne.png)
+<p align="center">
+<img src="28_spi_vicenasobne.png" alt="SPI více násobné">
+<br>
+<i>SPI více násobné</i>
+</p>
 
 _Způsob komunikace s více zařízeními pomocí výběru uzlu signálem SSEL. Čím více existuje uzlů typu slave, tím větší množství pinů CSx je nutné použít. Vzhledem k tomu, že v danou chvíli může být vybrána jen jedna komunikující dvojice uzlů, lze mezi uzel typu master a ostatní uzly vložit demultiplexor pracující v režimu výběru „jedna z n"._
 
-![SPI zřetězení](28_spi_zretezeni.png)
+<p align="center">
+<img src="28_spi_zretezeni.png" alt="SPI zřetězení">
+<br>
+<i>SPI zřetězení</i>
+</p>
 
 _Propojení zařízení do řetězu (daisy chain) vede ke snížení požadovaného počtu vodičů, ale také k prodloužení cesty (a tím i času) dat při jejich vysílání a příjmu. V případě, že jedno z připojených zařízení nebude funkční, celý řetězec se rozpadne._
 
@@ -328,7 +342,11 @@ Každá stanice připojená na I2C má přidělenou 7 resp. 10 bitovou adresu. P
 
 Každý vysílaný byte a vyslaná adresa je následována vysláním jednoho bitu ACK. Vysílající stanice jej vysílá v úrovni H. Přijímající stanice potvrzuje přijetí tím, že v době vysílání ACK připojí SDA na úroveň L. Pokud vysílající stanice nedostane potvrzení příjmu, ukončí vysílání podmínkou STOP.
 
-![I2C](28_i2c.png)
+<p align="center">
+<img src="28_i2c.png" alt="I2C">
+<br>
+<i>I2C</i>
+</p>
 
 _Zapojení uzlů na sběrnici I2C_
 
@@ -342,9 +360,11 @@ Standard RS-232, resp. jeho poslední varianta RS-232C z roku 1969, je postupně
 - <http://www.root.cz/clanky/seriovy-port-rs-232c/>
 - <https://cs.wikipedia.org/wiki/RS-232>
 
-![RS232](28_rs232.png)
-
-_RS232_
+<p align="center">
+<img src="28_rs232.png" alt="RS232">
+<br>
+<i>RS232</i>
+</p>
 
 Zkratka       | Jméno                 | Popis                                                                                                                                                                                                                                              | PinD-Sub DB25 | PinD-Sub DE9 | Směr u DTE (např. PC, samčí konektor) | Směr u DCE (např. modem, samičí konektor)
 ------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------ | ------------------------------------- | -----------------------------------------
@@ -359,9 +379,11 @@ DCD, CD, RLSD | (Data) Carrier Detect | Logickou jedničkou na tomto vstupu prot
 DTR           | Data Terminal Ready   | Logickou jedničkou na tomto výstupu DTE signalizuje protistraně svoji připravenost. Protistrana (např. modem) se tím aktivuje nebo zase deaktivuje. Modem obvykle odpovídá nastavením DSR na logickou jedničku.                                    | 20            | 4            | Výstup                                | Vstup
 RI            | Ring Indicator        | Logická jednička signalizuje do DTE příchozí hovor, tedy že někdo požaduje datové spojení („ring" je anglicky „zvonit"; zvl. u telefonního modemu).                                                                                                | 22            | 9            | Vstup                                 | Výstup
 
-![Průběh signálu při přenosu znaku K](28_rs232_prenos.png)
-
-_Průběh signálu při přenosu znaku „K" (ASCII kód 75, binárně 01001011) bez parity a s jedním stopbitem._
+<p align="center">
+<img src="28_rs232_prenos.png" alt="Průběh signálu při přenosu znaku „K" (ASCII kód 75, binárně 01001011) bez parity a s jedním stopbitem.">
+<br>
+<i>Průběh signálu při přenosu znaku „K" (ASCII kód 75, binárně 01001011) bez parity a s jedním stopbitem.</i>
+</p>
 
 ### USB
 
@@ -379,9 +401,11 @@ Specifikace USB obsahuje čtyři základní typy datových přenosů:
 - **Přerušovací** (interrupt) přenosy slouží k včasnému a spolehlivému doručení dat, nejčastěji pro asynchronní události.
 - **Izochronní** (isochronous) přenosy zabírají předem smluvené množství přenosového pásma a mají předem dohodnuté zpoždění. Tento druh přenosů je také nazýván proudový přenos v reálném čase (streaming real-time transfer).
 
-![USB topologie](28_usb_topologie.png)
-
-_USB topologie_
+<p align="center">
+<img src="28_usb_topologie.png" alt="USB topologie">
+<br>
+<i>USB topologie</i>
+</p>
 
 **Plug and Play**
 
@@ -504,9 +528,11 @@ PCI Express **Link** reprezentuje komunikační kanál mezi dvěma zařízeními
 
 - Zajímavé a užitečné je, že i v konektoru ×16 je možné použít kartu, která má menší počet drah (×1, ×2 atd.). Taková karta bude pracovat, i když samozřejmě na nižší rychlosti.*
 
-![Struktura PCI-e](28_pcie.png)
-
-_Struktura PCI-e_
+<p align="center">
+<img src="28_pcie.png" alt="Struktura PCI-e">
+<br>
+<i>Struktura PCI-e</i>
+</p>
 
 Podobně jako sběrnice PCI, tak i sběrnice PCI Express je sestavena ze zařízení, která jsou vzájemně propojena a zajišťují nezbytné funkce sběrnice. Jedné se o zařizení:
 
