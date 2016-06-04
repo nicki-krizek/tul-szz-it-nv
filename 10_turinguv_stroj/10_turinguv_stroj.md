@@ -2,7 +2,6 @@
 >Turingův stroj, problém zastavení, totální a parciální rozhodnutelnost tříd problémů, rekurzivní a rekurzivně spočetné množiny, jejich vztah.
 
 ## Turingův stroj
-
 - Teoretický model počítače popsaný matematikem Alanem Turingem
 - Lze pomocí něj implementovat libovolný algoritmus (algoritmus a TS stroj často chápáno jako synonymum)
 - V porovnání s KA je to silnější nástroj
@@ -42,13 +41,40 @@ TS ![T](https://latex.codecogs.com/gif.latex?T) se definuje nad vstupní abecedo
 - ![q_0](https://latex.codecogs.com/gif.latex?q_0) je počáteční stav
 - ![F](https://latex.codecogs.com/gif.latex?F) je množina koncových stavů
 
-### Problém zastavení
+## Totální a parciální rozhodnutelnost problémů
 
-Existuje takový Turingův stroj, který do dokázal rozhodnout, zda pro libovolný TS M a vstupní slovo w stroj M zastaví?
+>Máme třídu problémů na které lze odpovědět ANO/NE a k nim odpovídající algoritmus (TS), který všechny tyto problémy řeší.
 
-Takový TS **neexistuje**, dokazuje se sporem.
+### Totálně rozhodnutelné problémy
 
-**Důkaz:**
+Třída problému je **totálně rozhodnutelná** právě tehdy, když existuje TS A, který pro všechny problémy z dané třídy zastaví svoji činnost a vydá odpověď (AKC/ZAM), tedy **nikdy necykluje**.
+
+Příklad:
+  - Problém ekvivalence automatů
+  - Problém odvození v kontextových gramatikách
+
+Pokud je třída problémů *totálně rozhodnutelná*, tak je i *parciálně rozhodnutelná* (neplatí naopak!)
+
+### Parciálně rozhodnutelné problémy
+
+- Třída problémů je **parciálně rozhodnutelná** právě tehdy, když existuje TS A, který:
+
+  - je-li odpověď na daný problém ANO, tak zastaví **akceptováním** AKC(A),
+  - je-li odpověď na daný problém NE, tak buď zastaví **zamítnutím** ZAM(A) nebo **cykluje** CYK(A)
+
+Příklad:
+   - *problém zastavení* TS je parciálně rozhodnutelný
+
+Pokud jsou obě třídy problémů ![\mathcal{P}, \overline{{\mathcal{P}}}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D%2C%20%5Coverline%7B%7B%5Cmathcal%7BP%7D%7D%7D) (chápeme jako doplňěk, tvořený z negací všech problémů původní třídy) *parciálně rozhodnutelné*, pak je třída problémů ![\mathcal{P}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D) *totálně rozhodnutelná* (tím pádem je i ![\overline{\mathcal{P}}](https://latex.codecogs.com/gif.latex?%5Coverline%7B%5Cmathcal%7BP%7D%7D) totáně rozhodnutelná).
+
+*Poznámka:* Existují i problémy, které nejsou ani parciálně rozhodnutelné, např. problém **ne**zastavení TS.
+
+## Problém zastavení
+>Existuje takový Turingův stroj, který do dokázal rozhodnout, zda pro libovolný TS M a vstupní slovo w stroj M zastaví?
+
+**Takový TS neexistuje**, problém zastavení pro Turingovy stroje je nerozhodnutelný.
+
+**Důkaz sporem:**
 
 Uvažujeme, že existuje výše popsaný TS, který označíme A.
 
@@ -63,7 +89,7 @@ TS A rozšíříme na TS B tak, že:
 
 ![Halting problem B](10_halting_problem_B.jpg)
 
-Vytvořený stroj B je ovšm také TS. Pokud na vstup stroje B dáme jeho vlastní kód, dochází ke sporu, protože:
+Vytvořený stroj B je ovšem také TS. Pokud na vstup stroje B dáme jeho vlastní kód, dochází ke sporu, protože:
 - stroj B cykluje právě tehdy, pokud stroj B zastaví,
 - stroj B zastaví právě tehdy, pokud stroj B cykluje.
 
@@ -71,50 +97,25 @@ Vytvořený stroj B je ovšm také TS. Pokud na vstup stroje B dáme jeho vlastn
 
 Jedná se o paradox, což dokazuje, že nelze sestavit TS, který by o libovolném TS rozhodl, zda zastaví pro slovo w. Halting problém je tedy nerozhodnutelný (resp. parciálně rozhodnutelný).
 
-### Totální a parciální rozhodnutelnost problémů
+## Rekurzivní a rekurzivně spočetné množiny
 
-Máme třídu problémů na které lze odpovědět ANO/NE a k nim odpovídající algoritmus (TS), který všechny tyto problémy řeší.
-
-**Totálně rozhodnutelné problémy**
-
-Třída problému je *totálně rozhodnutelná* právě tehdy, když existuje TS A, který pro všechny problémy z dané třídy zastaví svoji činnost a vydá odpověď (AKC/ZAM) - tedy nikdy necykluje.
-
-- Příklady:
-  - Problém ekvivalence automatů
-  - Problém odvození v kontextových gramatikách
-- Pokud je třída problémů *totálně rozhodnutelná*, tak je i *parciálně rozhodnutelná* (neplatí naopak!)
-
-**Parciálně rozhodnutelné problémy**
-
-- Třída problémů je *parciálně rozhodnutelná* právě tehdy, když existuje TS A, který:
-
-  - je-li odpověď na daný problém ANO, tak zastaví akceptováním AKC(A),
-  - je-li odpověď na daný problém NE, tak buď zastaví zamítnutím ZAM(A) nebo cykluje CYK(A)
-
-- Např. *problém zastavení* TS je parciálně rozhodnutelný.
-- Pokud jsou obě třídy problémů ![\mathcal{P}, \overline{{\mathcal{P}}}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D%2C%20%5Coverline%7B%7B%5Cmathcal%7BP%7D%7D%7D) *parciálně rozhodnutelné*, pak je třída problémů ![\mathcal{P}](https://latex.codecogs.com/gif.latex?%5Cmathcal%7BP%7D) *totálně rozhodnutelná* (tím pádem je i ![\overline{\mathcal{P}}](https://latex.codecogs.com/gif.latex?%5Coverline%7B%5Cmathcal%7BP%7D%7D) totáně rozhodnutelná)
-
-*Pozn.:* Existují i problémy, které nejsou ani parciálně rozhodnutelné, např. problém **ne**zastavení TS.
-
-### Rekurzivní a rekurzivně spočetné množiny
-
-#### Rekurzivně spočetná množina
-
-Množina ![S \subset \Sigma^*](https://latex.codecogs.com/gif.latex?S%20%5Csubset%20%5CSigma%5E*) se nazývá **rekurzivně spočetná** právě tehdy, když existuje TS, který
-
-1. akceptuje každé slovo ![w \in S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20S)
-2. buď zamítne nebo cykluje pro slova ![w \in \Sigma^* - S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20%5CSigma%5E*%20-%20S)
-
-#### Rekurzivní množina
+### Rekurzivní množina
 
 Množina ![S \subset \Sigma^*](https://latex.codecogs.com/gif.latex?S%20%5Csubset%20%5CSigma%5E*) se nazývá **rekurzivní** právě tehdy, když existuje TS, který
 
-1. akceptuje všechna slova ![w \in S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20S),
-2. zamítne všechna ostatní slova ![w \in \Sigma^* - S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20%5CSigma%5E*%20-%20S) (a tedy *nikdy necykluje*)
+1. **akceptuje** všechna slova ![w \in S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20S),
+2. **zamítne** všechna ostatní slova ![w \in \Sigma^* - S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20%5CSigma%5E*%20-%20S) (a tedy *nikdy necykluje*)
+
+### Rekurzivně spočetná množina
+
+Množina ![S \subset \Sigma^*](https://latex.codecogs.com/gif.latex?S%20%5Csubset%20%5CSigma%5E*) se nazývá **rekurzivně spočetná** právě tehdy, když existuje TS, který
+
+1. **akceptuje** každé slovo ![w \in S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20S)
+2. buď **zamítne** nebo **cykluje** pro slova ![w \in \Sigma^* - S](https://latex.codecogs.com/gif.latex?w%20%5Cin%20%5CSigma%5E*%20-%20S)
 
 Množina ![S \subset \Sigma^*](https://latex.codecogs.com/gif.latex?S%20%5Csubset%20%5CSigma%5E*) je *rekurzivní* právě tehdy, když obě množiny ![S, \Sigma^* - S](https://latex.codecogs.com/gif.latex?S%2C%20%5CSigma%5E*%20-%20S) jsou *rekurzivně spočetné*.
 
-#### Vztah mezi RSM a RM
+### Vztah mezi RSM a RM
 
 ![RM \subsetneqq RSM](https://latex.codecogs.com/gif.latex?RM%20%5Csubsetneqq%20RSM) ... rekurzivní množiny jsou podmnožinami rekurzivně spočetných množin
 
@@ -122,6 +123,4 @@ Množina ![S \subset \Sigma^*](https://latex.codecogs.com/gif.latex?S%20%5Csubse
 
 *Vztah RM a RSM*
 
-Existuje i množina, která není ani RSM. Daný jazyk tím pádem *není rozpoznatelný* Turingovým strojem.
-
-
+Existuje i množina, která **není ani RSM**. Daný jazyk tím pádem **není rozpoznatelný Turingovým strojem**.
