@@ -47,9 +47,9 @@ Komunikační systémy pro tato odvětví by měly být:
 
 Uvedená směs sběrnic je hodně různoroda a můžeme jí rozdělit do několika pomyslných skupin podle specifického použití. (moje neoficiální dělení)
 
-- **Průmyslové** (CAN, RS-232 a asi i Ethernet)
+- **Průmyslové** (CAN, RS-485, RS-422, (průmyslový) Ethernet, RS-232)
 
-  - pracují na vzdálenost desítky metrů
+  - pracují na vzdálenost desítek metrů
   - nejsou potřeba velké přenosové rychlosti
   - odolné proti rušení (kompromis na úkor přenosové rychlosti)
   - hardware je obvykle odolný na vysoké teploty, prach a elektromagnetické záření
@@ -71,9 +71,9 @@ Uvedená směs sběrnic je hodně různoroda a můžeme jí rozdělit do několi
 
 ## Používané systémy
 
-**USART**
+**UART/USART**
 
-Synchronní / asynchronní sériové rozhraní USART (Universal Synchronous / Asynchronous Receiver and Transmitter). Jde o zařízení pro sériovou komunikaci, které lze nastavit buď pro asynchronní režim (SCI – např. pro linky RS232 resp. RS485), anebo pro synchronní režim (běžně označovaný jako SPI).
+Univerzální synchronní / asynchronní sériové rozhraní USART (Universal Synchronous / Asynchronous Receiver and Transmitter). Jde o zařízení pro sériovou komunikaci, které lze nastavit buď pro asynchronní režim (SCI – např. pro linky RS-232 resp. RS-485), anebo pro synchronní režim (běžně označovaný jako SPI). USART se od UARTu liší možností synchroní komunikace.
 
 ### CAN
 
