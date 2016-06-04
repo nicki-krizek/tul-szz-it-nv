@@ -2,11 +2,13 @@
 
 > Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
 
-## Formální definice
+Konečný automat (KA) je jednoduchý výpočetní model, je reprezentován pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní **slovo** (posloupnost znaků dané abecedy) bylo **rozpoznáno** (akceptováno).
 
-Konečným automatem je
+Definice základních pojmů jako slovo a abeceda je vysvětleno zde: http://www.matematika.cz/formalni-jazyky
 
-![A = (Q, \Sigma, \delta, q_0, F)](https://latex.codecogs.com/svg.latex?A%20%3D%20%28Q%2C%20%5CSigma%2C%20%5Cdelta%2C%20q_0%2C%20F%29), kde
+**Formální definice:**
+
+Konečným automatem je uspořádaná pětice ![A = (Q, \Sigma, \delta, q_0, F)](https://latex.codecogs.com/svg.latex?A%20%3D%20%28Q%2C%20%5CSigma%2C%20%5Cdelta%2C%20q_0%2C%20F%29), kde
 
 - ![Q](https://latex.codecogs.com/svg.latex?Q) je konečná množina všech stavů (stavový prostor),
 
@@ -22,13 +24,11 @@ Konečným automatem je
 
 - ![F \subset Q](https://latex.codecogs.com/svg.latex?F%20%5Csubset%20Q) je množina koncových stavů.
 
-### Přeloženo
-
-Konečný automat (KA) je reprezentován pomocí stavů. Je schopen pracovat s nějakými vstupními znaky, kterým se říká abeceda. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní - tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové. Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní slovo (posloupnost znaků dané abecedy) bylo rozpoznáno (akceptováno).
-
 ## Jazyk rozpoznávaný KA
 
-Množina všech slov, které je schopen KA ![A](https://latex.codecogs.com/svg.latex?A) rozpoznat tvoří jazyk ![L(A)](https://latex.codecogs.com/svg.latex?L%28A%29). Formálně:
+Množina všech slov, které je schopen KA ![A](https://latex.codecogs.com/svg.latex?A) rozpoznat tvoří jazyk ![L(A)](https://latex.codecogs.com/svg.latex?L%28A%29).
+
+**Formálně:**
 
 ![L(A) = \{w \in \Sigma^*; \delta(q_0, w) \in F\} \subset \Sigma^*](https://latex.codecogs.com/svg.latex?L%28A%29%20%3D%20%5C%7Bw%20%5Cin%20%5CSigma%5E*%3B%20%5Cdelta%28q_0%2C%20w%29%20%5Cin%20F%5C%7D%20%5Csubset%20%5CSigma%5E*)
 
@@ -38,9 +38,9 @@ Jazyky, které KA rozpoznávají jsou **regulární**. Viz [Chomského hierarchi
 
 ## Reprezentace automatu
 
-Následující KA rozpoznává binární čísla, která mají sudý počet nul. 
+*Následující KA rozpoznává binární čísla, která mají sudý počet nul.*
 
-KA je možné reprezentovat několika způsoby.
+KA je možné reprezentovat několika způsoby:
 
 1. Formální zápis
 
@@ -117,18 +117,15 @@ Pomocí PKKI připíšu slovo ![b^i](https://latex.codecogs.com/svg.latex?b%5Ei)
 - Stejně silný jako DKA (rozpoznávají stejné jazyky).
 - Lze převést na DKA.
 - Může být jednodušší na návrh.
- 
+
 ## Porovnání síly konečných automatů
 
 ![Porovnani konecnych stroju](08_porovnani_konecnych_stroju.png)
 
-Turingův stroj je nejsilnější a dokáže realizovat libovolný algoritmus.
-
-Slabším nástrojem je zásobníkový automat (KSZ1).
-
-Poté jsou konečné automaty, které jsou schopny rozpoznávat regulární jazyky.
-
-Konečné automaty jsou silnější nástroj než kombinační logika.
+- Turingův stroj je nejsilnější a dokáže realizovat libovolný algoritmus.
+- Slabším nástrojem je zásobníkový automat (KSZ1).
+- Poté jsou konečné automaty, které jsou schopny rozpoznávat regulární jazyky.
+- Konečné automaty jsou silnější nástroj než kombinační logika.
 
 ## Uzávěrové vlastnosti
 
@@ -144,4 +141,3 @@ L_1 \cdot L_2 = \{uw; u \in L_1~\&~w \in L_2\}\\
 L_1^0 = \{e\}, ~L_1^1 = L_1, ~L_1^2 = L_1 \cdot L_1, \ldots \\
 L_1^+ = \bigcup_{n=1}^{\infty } L_1^n,~L_1^* = \bigcup_{n=0}^{\infty } L_1^n\\
 L_1 \cdot \varnothing = \varnothing,~ \varnothing \cdot L_2 = \varnothing](https://latex.codecogs.com/svg.latex?%5C%5CL_1%20%5Ccup%20L_2%5C%5C%20L_1%20%5Ccap%20L_2%20%5C%5C%20%5CSigma%5E*%20-%20L_1%20%3D%20L_1%5Ec%5C%5C%20L_1%20-%20L_2%7E%28L_1%20%5Csetminus%20L_2%29%20%3D%20L_1%20%5Ccap%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccap%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccup%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccup%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccap%20L_2%5Ec%5C%5C%20L_1%20%5Ccdot%20L_2%20%3D%20%5C%7Buw%3B%20u%20%5Cin%20L_1%7E%5C%26%7Ew%20%5Cin%20L_2%5C%7D%5C%5C%20L_1%5E0%20%3D%20%5C%7Be%5C%7D%2C%20%7EL_1%5E1%20%3D%20L_1%2C%20%7EL_1%5E2%20%3D%20L_1%20%5Ccdot%20L_1%2C%20%5Cldots%20%5C%5C%20L_1%5E&plus;%20%3D%20%5Cbigcup_%7Bn%3D1%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%2C%7EL_1%5E*%20%3D%20%5Cbigcup_%7Bn%3D0%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%5C%5C%20L_1%20%5Ccdot%20%5Cvarnothing%20%3D%20%5Cvarnothing%2C%7E%20%5Cvarnothing%20%5Ccdot%20L_2%20%3D%20%5Cvarnothing)
-
