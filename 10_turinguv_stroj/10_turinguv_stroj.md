@@ -3,7 +3,8 @@
 
 ## Turingův stroj
 
-- Lze pomocí něj implementovat libovolný algoritmus
+- Teoretický model počítače popsaný matematikem Alanem Turingem
+- Lze pomocí něj implementovat libovolný algoritmus (algoritmus a TS stroj často chápáno jako synonymum)
 - V porovnání s KA je to silnější nástroj
 - Rozpoznává jazyky typu 0
 - Stejně složité úlohy jsou schopny řešit i Postovy stroje nebo Konečné stroje se dvěma a více zásobníky
