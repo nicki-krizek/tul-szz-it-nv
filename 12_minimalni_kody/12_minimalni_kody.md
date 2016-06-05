@@ -55,9 +55,6 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 - Použití: zřídka pro kompresi textů, častěji pro obrazovou informaci
 - Princip: opakující se symboly se kódují dvojicí (počet opakování , symbol)
 - Na výstupní stream se pak často aplikuje některá ze statistických metod (velmi rozdílná pravděpodobnost hlavně u počtu opakování)
-- Příklad
-	- Vstup: AAAABBCDDDDABD
-    - Výstup: 4A2B1C4D1A1B1D
 - pro jaké obrázky RLE výhodné?
 	- obrázek s mnoha vodorovnými čarami
 -  pro jaké obrázky RLE neefektivní?
@@ -65,8 +62,24 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 	- obrázek, kde se neopakují hodnoty sousedních pixelů (např. šachovnice)
 	-  může nastat i případ „záporné komprese“ → zvětšení výsledného souboru 
 
-![rle](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/rle1.png)
+*Kódování:**
 
+1. Postupně čteme znaky na vstupu a ukládáme si počet jejich opakování.
+2. Když se znak změní, zapíšeme na výstup hodnotu čítače a opakovaný znak.
+3. Čítač resetujeme na jedničku a pokračujeme pro nový znak od opět od bodu jedna.
+
+| A | A | A |  A | F | F | F |  F |  C | H | H |  H |
+|:-:|:-:|:-:|:--:|:-:|:-:|:-:|:--:|:--:|:-:|:-:|:--:|
+|   |   |   | 4A |   |   |   | 4F | 1C |   |   | 3H |
+
+Výsledek: AAAAFFFFCHHH (12 znaků) => **4A4F1C3H** (8 znaků)
+
+Kompresní poměr: (nová délka) / (stará délka) = 8 / 12 = 0.66 => **66%**
+
+**Dekódování:**
+Postup dekódování je obdobný, čteme vstup a jakmile narazíme na číslo tak ho přepíšeme jako rozvinutý tvar opakujících se znaků za číslem.
+
+_Tento postup není specifický pro textové soubory, lze ho s úpravami aplikovat i pro binární reprezentaci._
 
 ###Huffmanův minimální kód  
 - též známé jako prefixový kód
