@@ -62,7 +62,9 @@ Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoz
 	- obrázek, kde se neopakují hodnoty sousedních pixelů (např. šachovnice)
 	-  může nastat i případ „záporné komprese“ → zvětšení výsledného souboru 
 
-*Kódování:**
+**Příklad: znakový řetězec AAAAFFFFCHHH**
+
+*Kódování:*
 
 1. Postupně čteme znaky na vstupu a ukládáme si počet jejich opakování.
 2. Když se znak změní, zapíšeme na výstup hodnotu čítače a opakovaný znak.
@@ -76,7 +78,8 @@ Výsledek: AAAAFFFFCHHH (12 znaků) => **4A4F1C3H** (8 znaků)
 
 Kompresní poměr: (nová délka) / (stará délka) = 8 / 12 = 0.66 => **66%**
 
-**Dekódování:**
+*Dekódování:*
+
 Postup dekódování je obdobný, čteme vstup a jakmile narazíme na číslo tak ho přepíšeme jako rozvinutý tvar opakujících se znaků za číslem.
 
 _Tento postup není specifický pro textové soubory, lze ho s úpravami aplikovat i pro binární reprezentaci._
@@ -99,7 +102,7 @@ slovem s nejkratší délkou.
 **Nevýhody**: nutnost uložení binárního stromu nebo jiné informace pro jeho opětovné 
 sestavení, slabší kompresní poměr 
 
-Příklad: znakový řetězec **ABRAKADABRA**
+**Příklad: znakový řetězec ABRAKADABRA**
 
 1. Zjistím jednotlivé četnosti: A (5x – 0,46), B (2x – 0,18), R (2x – 0,18), D (1x – 0,09), K (1x – 0,09)
 2. Sestrojím tabulku četností:
@@ -120,9 +123,9 @@ Příklad: znakový řetězec **ABRAKADABRA**
 
 Výsledný řetězec: **ABRAKADABRA** (11 znaků - 88 bitů) = 1 01 001 1 0001 1 0000 1 01 001 1 = **10100110001100001010011** (23 bitů)
 
-*Výsledek je distribuován spolu s tabulkou kódu, díky prefixovosti je pak možné řetězec jednoznačné rekonstruovat opětovným přepsáním zpět.*
+Kompresní poměr: (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0,26 = **26%**
 
-**Kompresní poměr:** (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0,26 = **26%**
+*Výsledek je distribuován spolu s tabulkou kódu, díky prefixovosti je pak možné řetězec jednoznačné rekonstruovat opětovným přepsáním zpět.*
 
 ###Aritmetické kódování
 - Aritmetické kódování reprezentuje zprávu jako podinterval intervalu <0,1)
