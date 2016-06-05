@@ -26,7 +26,7 @@ Konečným automatem je uspořádaná pětice ![A = (Q, \Sigma, \delta, q_0, F)]
 
 - ![F \subset Q](https://latex.codecogs.com/svg.latex?F%20%5Csubset%20Q) je množina koncových stavů.
 
-Složitější automaty lze vytvářet spojováním jednodušších automatů do komplexních celku. Má-li být například rozpoznáno zřetězení slov, je možné zapojit seriově dva automaty, kde každý rozpozná pouze dílčí část požadovaného slova.
+Složitější automaty lze vytvářet spojováním jednodušších automatů do komplexních celků s využitím tzv. uzávěrových vlastností.
 
 ## Jazyk rozpoznávaný KA
 
