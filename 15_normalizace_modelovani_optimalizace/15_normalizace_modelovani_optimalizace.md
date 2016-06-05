@@ -99,13 +99,13 @@ Z entity Zaměstnanec (viz Tabulka 7) je vidět kromě závislosti všech atribu
 | --- | --- | --- |
 | 1 | Jihlava | 58601 |
 | 2 | Praha 10 | 10000 |
-*Tabulka 9: Entita Město ve 3NF*
+*Tabulka 9: Entita Město ve 2NF*
 
 | ID | Funkce | Plat |
 | --- | --- | --- |
 | 1 | CEO | 150000 |
 | 2 | Senior Software Architect | 80000 |
-*Tabulka 10: Entita Funkce ve 3NF*
+*Tabulka 10: Entita Funkce ve 2NF*
 
 ### Boyce Coddova normální forma (BCNF)
 Boyce Coddova normální forma se pokládá za variaci třetí normální formy. Je vymezena stejnými pravidly jako 3NF. Říká, že 3NF musí platit i mezi hodnotami uvnitř složeného kandidátního klíče.
