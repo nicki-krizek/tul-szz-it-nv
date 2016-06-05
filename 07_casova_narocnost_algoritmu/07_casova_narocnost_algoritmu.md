@@ -64,6 +64,7 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
   - Nejhorší složitost ... složitost, v nejhorším možném případě
   - Průměrná složitost ... složitost úlohy v průměrném případě
 - Tyto hodnoty nemusí být stejné
+- Zatímco složitost v nejhorším případě lze analyticky spočítat, průměrnou složitost je u řady algoritmů nutno zjistit statisticky.
 
 **Příklad**
 
@@ -101,5 +102,3 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
   - Jsou úlohy, které jsou NP, nejsou P a *lze na ně převést všechny ostatní NP úlohy*
   - Pokud by se našlo řešení NP-úplné úlohy, které by bylo schopné řešit danou úlohu v polynomiálním čase, znamenalo by to, že ![P = NP](https://latex.codecogs.com/svg.latex?P%20%3D%20NP) (všechny NP úlohy bychom dokázali vyřešit v polynomiálním čase)
   - Konsenzus je, že ![P \neq NP](https://latex.codecogs.com/svg.latex?P%20%5Cneq%20NP), ale zatím to nebylo dokázáno (jedná se o jeden z [Millenium Prize Problems](https://en.wikipedia.org/wiki/Millennium_Prize_Problems))
-  
-
