@@ -1,7 +1,6 @@
 # 1. - Základy teorie grafů
 
->  souvislost, kostra grafu, eulerovské, hamiltonovské a rovinné grafy.
-Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkratší cesta.
+>Základy teorie grafů – souvislost, kostra grafu, eulerovské, hamiltonovské a rovinné grafy. Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkratší cesta.
 
 ## Základní pojmy
 
