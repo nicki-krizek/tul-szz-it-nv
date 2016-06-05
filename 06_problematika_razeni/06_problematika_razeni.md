@@ -120,7 +120,7 @@ Stejné jako bubble sort, akorát procházím od zdola nahoru.
 
 ### Shaker Sort
 
-Kombinace Bubble Sort a Shaker Sort. Střídá se procházecí pořadí.
+Kombinace Bubble Sort a Sinking Sort. Střídá se procházecí pořadí.
 
 - [Koktejlové řazení (cs wiki)](https://cs.wikipedia.org/wiki/Koktejlov%C3%A9_%C5%99azen%C3%AD)
 - [Cocktail Shaker Sort (en wiki)](https://en.wikipedia.org/wiki/Cocktail_shaker_sort)
