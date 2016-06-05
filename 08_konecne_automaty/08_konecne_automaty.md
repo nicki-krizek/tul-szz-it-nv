@@ -111,6 +111,10 @@ Nyní si musím vhodně zvolit slova, abych potom došel ke sporu. Zvolím si ji
 
 Pomocí PKKI připíšu slovo ![b^i](https://latex.codecogs.com/svg.latex?b%5Ei). Výsledná slova sice patří do stejné třídy, ale jazyk nemůže být sjednocením některých takových tříd, protože ![i \neq j](https://latex.codecogs.com/svg.latex?i%20%5Cneq%20j) a slovo ![a^i b^i](https://latex.codecogs.com/svg.latex?a%5Ei%20b%5Ei) patří do jazyka ![L](https://latex.codecogs.com/svg.latex?L), zatímco slovo ![a^i b^j](https://latex.codecogs.com/svg.latex?a%5Ei%20b%5Ej) do jazyka ![L](https://latex.codecogs.com/svg.latex?L) nepatří. Docházím ke **sporu** a tím pádem mohu prohlásit, že jazyk ![L](https://latex.codecogs.com/svg.latex?L) *není rozpoznatelný KA (jakýmkoliv)*.
 
+### Lidsky řečeno
+
+Předpokládám, že automat má ![n_0](https://latex.codecogs.com/svg.latex?n_0) stavů. Zvolím si vhodně  ![n_0+1](https://latex.codecogs.com/svg.latex?n_0&plus;1) slov. Podle Dirichletova principu některá dvě tato slova padnou do stejného stavu. Za obě tato slova připíšu to samé tak, aby jedno z výsledných slov patřilo do jazyka ![L](https://latex.codecogs.com/svg.latex?L), zatímco druhé ne. Nicméně z vlastností přechodové funkce vyplývá, že obě slova opět musí padnout do stejného stavu. Kámen úrazu je v tom, že o tomto stavu nemůžeme rozhodnout, jesli je finálním nebo ne. Ať ho označíme jakýmkoliv způsobem, dojdeme ke sporu, že automat rozpoznává jazyk ![L](https://latex.codecogs.com/svg.latex?L).
+
 ## Nedeterministické automaty
 
 - Oproti deterministickému KA (DKA):
