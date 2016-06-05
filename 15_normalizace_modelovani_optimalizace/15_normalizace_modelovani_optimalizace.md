@@ -129,6 +129,8 @@ Relace je v páté normální formě jestliže je ve 4NF a nemůže být dále b
 ## Bezztrátová dekompozice
 **bezztrátová dekompozice** = proces dělení původní relace na více schémat bez ztráty sémantiky 
 
+- spojení tabulek, které vzniknou dekompozicí musí dát přesně původní tabulku (musí se zachovat závislosti)
+
 S dekompozicí se setkáme při normalizování jednotlivých entit.
 
 ## Datové modelování (ER diagramy)
