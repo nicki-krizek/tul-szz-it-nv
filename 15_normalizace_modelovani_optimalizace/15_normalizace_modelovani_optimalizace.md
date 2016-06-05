@@ -81,7 +81,7 @@ Volně přeloženo lze říci, že tranzitivní závislost je taková závislost
 
 Následuje příklad pro provedení 3NF. Firma chce uchovávat informace o zaměstnancích v entitě **Zaměstnanec** (viz Tabulka 7).
 
-| ID | Jméno | Příjmení | Město | PSČ | Funkce | Plat |
+| ID (PK) | Jméno | Příjmení | Město | PSČ | Funkce | Plat |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Jack | Smith | Jihlava | 58601 | CEO | 150000 |
 | 2 | Franta | Vomáčka | Praha 10 | 10000 | Senior Software Architect | 80000 |
@@ -89,19 +89,19 @@ Následuje příklad pro provedení 3NF. Firma chce uchovávat informace o zamě
 
 Z entity Zaměstnanec (viz Tabulka 7) je vidět kromě závislosti všech atributů na klíči ještě závislost PSČ a Města a závislost Platu na Funkci. Závislost ID -> Město -> PSČ je tranzitivní závislost PSČ na klíči, stejně tak závislost ID -> Funkce -> Plat. Řešením problému je opět rozpad na více relací, v tomto případě dokonce na 3, protože jsme 3NF porušili rovnou dvakrát. Novými entitami jsou **Město** (viz Tabulka 9) a **Funkce** (viz Tabulka 10).
 
-| ID | Jméno | Příjmení | Město ID | Funkce ID |
+| ID (PK) | Jméno | Příjmení | Město ID | Funkce ID |
 | --- | --- | --- | --- | --- |
 | 1 | Jack | Smith | 1 | 1 |
 | 2 | Franta | Vomáčka | 2 | 2 |
 *Tabulka 8: Entita Zaměstnanec ve 3NF*
 
-| ID | Město | PSČ |
+| ID (PK) | Město | PSČ |
 | --- | --- | --- |
 | 1 | Jihlava | 58601 |
 | 2 | Praha 10 | 10000 |
 *Tabulka 9: Entita Město ve 2NF*
 
-| ID | Funkce | Plat |
+| ID (PK) | Funkce | Plat |
 | --- | --- | --- |
 | 1 | CEO | 150000 |
 | 2 | Senior Software Architect | 80000 |
