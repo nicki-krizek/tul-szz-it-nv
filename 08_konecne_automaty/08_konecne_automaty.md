@@ -2,7 +2,7 @@
 
 > Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
 
-Konečný automat (KA) je teoretický výpočetní model reprezentovaný pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní **slovo** (posloupnost znaků dané abecedy) bylo **rozpoznáno** (akceptováno).
+Konečný automat (KA) je teoretický výpočetní model reprezentovaný pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud automat přečte **celé slovo**, ukončí svoji činnost a nachází-li se v **koncovém stavu**, vstupní slovo (posloupnost znaků dané abecedy) bylo **rozpoznáno (akceptováno)**. V opačném případě (není v koncovém stavu) slovo **není rozpoznáno (je zamítnuto)**.
 
  *Konečné automaty se používají například při vyhodnocování regulárních výrazů. Obvykle jsou tedy součástí lexikálního analyzátoru v překladačích.*
 
@@ -26,7 +26,7 @@ Konečným automatem je uspořádaná pětice ![A = (Q, \Sigma, \delta, q_0, F)]
 
 - ![F \subset Q](https://latex.codecogs.com/svg.latex?F%20%5Csubset%20Q) je množina koncových stavů.
 
-Složitější automaty lze vytvářet spojováním jednodušších automatů do komplexních celku. Má-li být například rozpoznáno zřetězení slov, je možné zapojit seriově dva automaty, kde každý rozpozná pouze dílčí část požadovaného slova.
+Složitější automaty lze vytvářet spojováním jednodušších automatů do komplexních celků s využitím tzv. uzávěrových vlastností.
 
 ## Jazyk rozpoznávaný KA
 
@@ -111,7 +111,11 @@ Nyní si musím vhodně zvolit slova, abych potom došel ke sporu. Zvolím si ji
 
 ![a^i \sim a^j \overset{PKKI}{\Rightarrow} \underbrace{a^i b^i}_{\in L} \sim \underbrace{a^i b^j}_{\notin L}](https://latex.codecogs.com/svg.latex?a%5Ei%20%5Csim%20a%5Ej%20%5Coverset%7BPKKI%7D%7B%5CRightarrow%7D%20%5Cunderbrace%7Ba%5Ei%20b%5Ei%7D_%7B%5Cin%20L%7D%20%5Csim%20%5Cunderbrace%7Ba%5Ei%20b%5Ej%7D_%7B%5Cnotin%20L%7D)
 
-Pomocí PKKI připíšu slovo ![b^i](https://latex.codecogs.com/svg.latex?b%5Ei). Výsledná slova by měla stále patřit do stejné třídy, což nepatří, protože ![i \neq j](https://latex.codecogs.com/svg.latex?i%20%5Cneq%20j) a slovo ![a^i b^i](https://latex.codecogs.com/svg.latex?a%5Ei%20b%5Ei) patří do jazyka ![L](https://latex.codecogs.com/svg.latex?L), zatímco slovo ![a^i b^j](https://latex.codecogs.com/svg.latex?a%5Ei%20b%5Ej) do jazyka ![L](https://latex.codecogs.com/svg.latex?L) nepatří. Docházím ke **sporu** a tím pádem mohu prohlásit, že jazyk ![L](https://latex.codecogs.com/svg.latex?L) *není rozpoznatelný KA (jakýmkoliv)*.
+Pomocí PKKI připíšu slovo ![b^i](https://latex.codecogs.com/svg.latex?b%5Ei). Výsledná slova sice patří do stejné třídy, ale jazyk nemůže být sjednocením některých takových tříd, protože ![i \neq j](https://latex.codecogs.com/svg.latex?i%20%5Cneq%20j) a slovo ![a^i b^i](https://latex.codecogs.com/svg.latex?a%5Ei%20b%5Ei) patří do jazyka ![L](https://latex.codecogs.com/svg.latex?L), zatímco slovo ![a^i b^j](https://latex.codecogs.com/svg.latex?a%5Ei%20b%5Ej) do jazyka ![L](https://latex.codecogs.com/svg.latex?L) nepatří. Docházím ke **sporu** a tím pádem mohu prohlásit, že jazyk ![L](https://latex.codecogs.com/svg.latex?L) *není rozpoznatelný KA (jakýmkoliv)*.
+
+### Lidsky řečeno
+
+Předpokládám, že automat má ![n_0](https://latex.codecogs.com/svg.latex?n_0) stavů. Zvolím si vhodně  ![n_0+1](https://latex.codecogs.com/svg.latex?n_0&plus;1) slov. Podle Dirichletova principu některá dvě tato slova padnou do stejného stavu. Za obě tato slova připíšu to samé tak, aby jedno z výsledných slov patřilo do jazyka ![L](https://latex.codecogs.com/svg.latex?L), zatímco druhé ne. Nicméně z vlastností přechodové funkce vyplývá, že obě slova opět musí padnout do stejného stavu. Kámen úrazu je v tom, že o tomto stavu nemůžeme rozhodnout, jesli je finálním nebo ne. Ať ho označíme jakýmkoliv způsobem, dojdeme ke sporu, že automat rozpoznává jazyk ![L](https://latex.codecogs.com/svg.latex?L).
 
 ## Nedeterministické automaty
 
@@ -127,7 +131,7 @@ Pomocí PKKI připíšu slovo ![b^i](https://latex.codecogs.com/svg.latex?b%5Ei)
 ![Porovnani konecnych stroju](08_porovnani_konecnych_stroju.png)
 
 - Turingův stroj je nejsilnější a dokáže realizovat libovolný algoritmus.
-- Slabším nástrojem je zásobníkový automat (KSZ1).
+- Slabším nástrojem je zásobníkový automat s jedním zásobníkem (KSZ1). Nedeterministické jsou zde silnější, než deterministické (narozdíl od KA).
 - Poté jsou konečné automaty, které jsou schopny rozpoznávat regulární jazyky.
 - Konečné automaty jsou silnější nástroj než kombinační logika.
 
@@ -145,3 +149,7 @@ L_1 \cdot L_2 = \{uw; u \in L_1~\&~w \in L_2\}\\
 L_1^0 = \{e\}, ~L_1^1 = L_1, ~L_1^2 = L_1 \cdot L_1, \ldots \\
 L_1^+ = \bigcup_{n=1}^{\infty } L_1^n,~L_1^* = \bigcup_{n=0}^{\infty } L_1^n\\
 L_1 \cdot \varnothing = \varnothing,~ \varnothing \cdot L_2 = \varnothing](https://latex.codecogs.com/svg.latex?%5C%5CL_1%20%5Ccup%20L_2%5C%5C%20L_1%20%5Ccap%20L_2%20%5C%5C%20%5CSigma%5E*%20-%20L_1%20%3D%20L_1%5Ec%5C%5C%20L_1%20-%20L_2%7E%28L_1%20%5Csetminus%20L_2%29%20%3D%20L_1%20%5Ccap%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccap%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccup%20L_2%5Ec%5C%5C%20%28L_1%20%5Ccup%20L_2%29%5Ec%20%3D%20L_1%5Ec%20%5Ccap%20L_2%5Ec%5C%5C%20L_1%20%5Ccdot%20L_2%20%3D%20%5C%7Buw%3B%20u%20%5Cin%20L_1%7E%5C%26%7Ew%20%5Cin%20L_2%5C%7D%5C%5C%20L_1%5E0%20%3D%20%5C%7Be%5C%7D%2C%20%7EL_1%5E1%20%3D%20L_1%2C%20%7EL_1%5E2%20%3D%20L_1%20%5Ccdot%20L_1%2C%20%5Cldots%20%5C%5C%20L_1%5E&plus;%20%3D%20%5Cbigcup_%7Bn%3D1%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%2C%7EL_1%5E*%20%3D%20%5Cbigcup_%7Bn%3D0%7D%5E%7B%5Cinfty%20%7D%20L_1%5En%5C%5C%20L_1%20%5Ccdot%20%5Cvarnothing%20%3D%20%5Cvarnothing%2C%7E%20%5Cvarnothing%20%5Ccdot%20L_2%20%3D%20%5Cvarnothing)
+
+**Sjednocení** vytvořím tak, že vezmu oba dílčí automaty a výsledek prohlásím za **jeden nedeterministický automat**. Následně mohu použít determinizační algoritmus na sestavení deterministického automatu. Lze také použít způsob jako u průniku, ale konečné stavy budou ty, kde **aspoň jeden** ze stavů původního automatu je **konečným**.
+
+**Průnik** lze vytvořit tím, že stavy nového automatu budou **kartézským součinem** stavů obou původních automatů. Například, mají-li oba původní automaty 3 stavy, nový automat bude mít 9 stavů a to (1,1), (1,2), (1,3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2) a (3, 3). Analogicky s přechody, má-li první automat přechod na daný symbol ze stavu 1 do stavu 2, nový automat bude mít tento přechod ze stavu (1, 1) do (2, 1), z (1, 2) do (2, 2) a (1, 3) do (2, 3). Konečné stavy jsou ty, kde **všechny** dílčí stavy původních automatů jsou konečnými stavy, tj. aby stav (3, 2) byl konečný, tak stav 3 prvního automatu a zároveň stav 2 druhého automatu musí být konečnými stavy.
