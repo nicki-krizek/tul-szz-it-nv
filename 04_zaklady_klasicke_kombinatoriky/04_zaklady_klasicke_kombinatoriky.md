@@ -52,7 +52,7 @@ Máme n objektů, vybíráme k-tice.
   - ...
   - ![n_k](https://latex.codecogs.com/svg.latex?n_k) ... prvků k. druhu
 
-  ![P(n_1, n_2, \ldots, n_k) = \frac{(n_1 + n_2 + \ldots + n_k)}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}](https://latex.codecogs.com/svg.latex?P%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_k%29%20%3D%20%5Cfrac%7B%28n_1%20&plus;%20n_2%20&plus;%20%5Cldots%20&plus;%20n_k%29%7D%7Bn_1%21%20%5Ccdot%20n_2%21%20%5Ccdot%20%5Cldots%20%5Ccdot%20n_k%21%7D)
+  ![P(n_1, n_2, \ldots, n_k) = \frac{(n_1 + n_2 + \ldots + n_k)!}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}](https://latex.codecogs.com/gif.latex?P%28n_1%2C%20n_2%2C%20%5Cldots%2C%20n_k%29%20%3D%20%5Cfrac%7B%28n_1%20&plus;%20n_2%20&plus;%20%5Cldots%20&plus;%20n_k%29%21%7D%7Bn_1%21%20%5Ccdot%20n_2%21%20%5Ccdot%20%5Cldots%20%5Ccdot%20n_k%21%7D)
 
   **Příklad**: Osm studentů má na koleji připraveno ubytování ve třech pokojích. Dva jsou třílůžkové a jedna Dvoulužkový. Kolik je způsobů rozdělení studentů do pokojů?
 

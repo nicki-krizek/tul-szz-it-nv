@@ -6,9 +6,9 @@
 **SQL** = Structured Query Language; standardizovaný strukturovaný dotazovací jazyk, který je používán pro práci s daty v relačních databázích; založen na relačním kalkulu a [relační algebře](https://cs.wikipedia.org/wiki/Rela%C4%8Dn%C3%AD_algebra)
 
 SQL příkazy se dělí na čtyři základní skupiny:
-- **DML** - příkazy pro manipulaci s daty (SELECT, INSERT, UPDATE, DELETE, ...),
-- **DDL** - příkazy pro definici dat (CREATE, ALTER, DROP, ...),
-- **DCL** - příkazy pro řízení přístupových práv (GRANT, REVOKE),
+- **DML** (data manipulation language) - příkazy pro manipulaci s daty (SELECT, INSERT, UPDATE, DELETE, ...),
+- **DDL** (data definition language) - příkazy pro definici dat (CREATE, ALTER, DROP, ...),
+- **DCL** (data control language) - příkazy pro řízení přístupových práv (GRANT, REVOKE),
 - příkazy pro řízení transakcí (START TRANSACTION, COMMIT, ROLLBACK).
 
 ###Množinové operace
@@ -18,6 +18,8 @@ SQL příkazy se dělí na čtyři základní skupiny:
 - **selekce** (restrikce) - je unární relační operace odpovídající výběru řádků z tabulky na základě nějakého kritéria
 - **projekce** - je relační operace, která odpovídá výběru sloupců z tabulky (tedy se omezíme pouze na některé atributy)
 - **přejmenování** - má formální význam a využívá se zejména v souvislosti s join pro přejmenování atributu A na B
+
+[množinové operace](https://www.interval.cz/clanky/sql-skladani-dotazu/)
 
 ###Typy dat v SQL (SQL92)
 **Numerické typy** - INTEGER, SMALLINT, NUMERIC, DECIMAL, FLOAT, REAL, DOUBLE  PRECISION
