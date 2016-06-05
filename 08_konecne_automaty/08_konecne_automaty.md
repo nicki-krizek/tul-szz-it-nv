@@ -2,7 +2,7 @@
 
 > Definice konečného automatu, jazyky rozpoznávané konečnými automaty.
 
-Konečný automat (KA) je teoretický výpočetní model reprezentovaný pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud se automat dostane do koncového stavu, ukončí svoji činnost a vstupní **slovo** (posloupnost znaků dané abecedy) bylo **rozpoznáno** (akceptováno).
+Konečný automat (KA) je teoretický výpočetní model reprezentovaný pomocí konečného počtu stavů (odtud slovo konečný). Je schopen pracovat s nějakými vstupními znaky, kterým se říká **abeceda**. Ze vstupu čte postupně znaky této abecedy. S každým přečtením znaku se může přesunout do jiného vnitřního stavu. Jeden z těchto stavů se označí za vstupní (šipka dovnitř), tam automat začíná svojí činnost. Některé (lze i žádné) stavy se označí jako koncové (šipka ven). Pokud automat přečte celé **slovo**, ukončí svoji činnost a vstupní **slovo** (posloupnost znaků dané abecedy) bylo **rozpoznáno** (akceptováno), ukončil-li svoji činnost v **koncovém stavu**. V opačném případě **slovo** rozpoznáno není (je zamítnuto).
 
  *Konečné automaty se používají například při vyhodnocování regulárních výrazů. Obvykle jsou tedy součástí lexikálního analyzátoru v překladačích.*
 
@@ -34,9 +34,7 @@ Množina všech slov, které je schopen KA ![A](https://latex.codecogs.com/svg.l
 
 **Formálně:**
 
-![L(A) = \{w \in \Sigma^*; \delta(q_0, w) \in F\} \subset \Sigma^*](https://latex.codecogs.com/svg.latex?L%28A%29%20%3D%20%5C%7Bw%20%5Cin%20%5CSigma%5E*%3B%20%5Cdelta%28q_0%2C%20w%29%20%5Cin%20F%5C%7D%20%5Csubset%20%5CSigma%5E*)
-
-Jazyk ![L](https://latex.codecogs.com/svg.latex?L) je **rozpoznatelný** KA, jestliže existuje KA ![A](https://latex.codecogs.com/svg.latex?A) takový, že ![L = L(A)](https://latex.codecogs.com/svg.latex?L%20%3D%20L%28A%29).
+![L(A) = \{w \in \Sigma^*; \delta(q_0, w) \in F\} \subset \Sigma^*](https://latex.codecogs.com/svg.latex?L%28A%29%20%3D%20%5C%7Bw%20%5Cin%20%5CSigma%5E*%3B%20%5Cdelta%28q_0%2C%20w%29%20%5Cin%20F%5C%7D%20%5Csubset%20%5CSigma%5E*)by měla stále patřit do stejné třídy, což nepatří L(A)](https://latex.codecogs.com/svg.latex?L%20%3D%20L%28A%29).
 
 Jazyky, které KA rozpoznávají jsou **regulární**. Viz [Chomského hierarchie v okruhu 9 (Gramatiky)](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/09_gramatiky/09_gramatiky.md#chomsk%C3%A9ho-hierarchie).
 
