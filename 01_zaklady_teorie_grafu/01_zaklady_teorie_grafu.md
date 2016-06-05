@@ -142,6 +142,7 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 
 **Jarníkův - primův**
 Algoritmus vychází z libovolného uzlu a udržuje si seznam již objevených uzlů a jejich vzdáleností od propojené části grafu. V každém svém kroku připojí ten z uzlů, mezi nímž a projenou částí grafu je hrana nejnižší délky a označí sousedy nově připojeného uzlu za objevené, případně zkrátí vzdálenosti od již známých uzlů, pokud byla nalezena výhodnější hrana. V okamžiku, kdy jsou propojeny všechny uzly, algoritmus terminuje.
+
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/jarnik.gif)
 
 **Borůvkův algoritmus**
@@ -150,13 +151,15 @@ Algoritmus vychází z libovolného uzlu a udržuje si seznam již objevených u
 - na začátku všechny vrcholu jako samostatné komponenty
 - algoritmus je pak postupně propojuje pomocí nejlevnějších hran
 - zastaví se jakmile dosáhne jedné komponenty
-- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/boruvka.gif)
+
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/01_zaklady_teorie_grafu/boruvka.gif)
 
 **Kruskalův algoritmus**
 
 - seřadí si hrany od nejlevnější po nejdražší a postupně přidává hrany
 - hrana je přidána, pokud alespoň jeden z vrcholů dané hrany ještě nebyl viděn
-- ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MST_kruskal_en.gif/300px-MST_kruskal_en.gif)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MST_kruskal_en.gif/300px-MST_kruskal_en.gif)
 
 ##Nejkratší cesta
 - hledání nejkratší cesty z vrcholu u do vrcholu v
