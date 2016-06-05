@@ -152,7 +152,7 @@ Nechť ![\varrho](https://latex.codecogs.com/svg.latex?%5Cvarrho) je binární r
 
   ![\forall a \in A: a \varrho a](https://latex.codecogs.com/svg.latex?%5Cforall%20a%20%5Cin%20A%3A%20a%20%5Cvarrho%20a)
 
-  Všechny prvky z ![A](https://latex.codecogs.com/svg.latex?A) jsou v relaci sami se sebou.
+  Všechny prvky z ![A](https://latex.codecogs.com/svg.latex?A) jsou v relaci samy se sebou.
 
 2. **Symetrie**
 
