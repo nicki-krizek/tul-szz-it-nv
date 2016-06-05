@@ -7,6 +7,8 @@ Normalizace je sada pravidel, jak postupovat při transformaci struktury entit a
 
 **Aktualizacní anomálie (Codd):**
 
+-  aktualizační anomálie je nechtěný vedlejší efekt operace nad databází, při kterém dojde ke ztrátě nebo nekonzistenci dat
+
 Relace: *PROGRAM_KINA(PK: JMENO_KINA, PK: JMENO_FILMU, ADRESA, DATUM, CAS)*
 
 - INSERT (chceme-li přidat nové kino s adresou, lze to jen když se tam hraje nejaký film)
