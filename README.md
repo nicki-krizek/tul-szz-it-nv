@@ -47,7 +47,7 @@ Pokud naleznete nějakou chybu, budeme rádi za pull request s opravou.
 
 16. [Jazyk SQL (DDL, DML, množinové operace), uložené procedury a spouště v SQL, transakce (ACID, typy konfliktů, stupně izolace).](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/16_jazyk_sql/16_jazyk_sql.md)
 
-17. [Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.](https://github.com/tomaskrizek/tul-szz-it-nv/tree/master/17_programovani_sitovych_operaci)
+17. [Programování síťových operací, koncepce socketů a jejich využití, blokující a neblokující komunikační operace.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/17_programovani_sitovych_operaci/17_programovani_sitovych_operaci.md)
 
 18. [WWW aplikace, programování na straně klienta a serveru, jejich možnosti a omezení, nejběžnější používané prostředky a jazyky, uchovávání stavové informace, cookie.](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/18_www_aplikace/18_www_aplikace.md)
 
