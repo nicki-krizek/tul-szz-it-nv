@@ -22,6 +22,7 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 - uspořádáná dvojice G = (V,H)
  - V je konečná množina vrcholů
  - H je podmnožina množiny **uspořádaných** dvojic ![H\subseteq V\times V](https://latex.codecogs.com/svg.latex?H%5Csubseteq%20V%5Ctimes%20V)
+ - u->v != v->u
 
 ### Možné reprezentace grafu
 - **výčet množiny** vrcholů a hran V={v1,v2,...,vn} H = {{v1,v3},{v1,v2},...}
@@ -62,28 +63,45 @@ Vybrané grafové algoritmy – prohledávání grafu, minimální kostra, nejkr
 
 ### Další důležité pojmy
 
+**PodGraf** - graf vzniklý odebráním vrcholů či hran z původního grafu
+
+**Faktor grafu** - podgraf obsahující všechny vrcholy
+
+**Acyklický graf** - graf, ve kterém neexistuje kružnice
+
+**Strom** - souvislý acyklický graf, kde ekvivaletně platí:
+
+- G je strom
+- G je acyklycký a zároveň |V| = |H| - 1
+- G je souvislý a zároveň |V| = |H| - 1
+- Pro mezi libovolnými vrcholy existuje právě jedna cesta
+
+**Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
+
+**Isomorfní graf** - graf který vznikne grafickým přeházením, či přeznačením hran
+
+**Homeomorfní graf** - je takový graf, který je buď izomorfní, nebo je-li možné izomorfismu dosáhnout pomocí konečné počtu operací půlení hran
+
+**Úplný graf** - je takový, kde je každý vrchol propojen s každým a rozlišujeme
+
+- K5 - úplný graf (pentagram)
+- K3,3 - úplný bipartiní graf (dvě trojice, kde je každý vrchol propojen se všemi v protější trojici)
+
 **Stupeň vrcholu**
 
-- pro vrchol v z množiny V je ![d_{G}(v)](https://latex.codecogs.com/svg.latex?d_%7BG%7D%28v%29) stupeň vrcholu v grafu G
-- počet hran grafu G incidentních s vrcholem V
-- ![d_{G}(v) = |\left \{ e\in H | v \in e \right \}|](https://latex.codecogs.com/svg.latex?d_%7BG%7D%28v%29%20%3D%20%7C%5Cleft%20%5C%7B%20e%5Cin%20H%20%7C%20v%20%5Cin%20e%20%5Cright%20%5C%7D%7C)
+- *Neorientovaný graf* (značíme deg(u))
+ - počet hran, které do daného vrcholu zasahují
+ - případné smyčky počítáme dvakrát
+- *Orientovaný graf* (rozlišujeme deg+(u) a deg-(u))
+ - deg+(u) počet vstupních hran vrcholu u
+ - deg-(u) počet výstupních hran vrcholu u
+ - celkový stupeň uzlu je roven součtu vstupujících a vystupujících hran
 
 **Skóre grafu** - posloupnost stupňů vrcholů grafu G seřazená nerostoucím způsobem
 
-**Acyklický graf** - graf, ve kterém neexistuje kružnice, nazýváme strom
+**Souvislý graf** - je takový, který má právě 1 komponentu (mezi libovolnou dvojici vrcholů existuje u-v cesta)
 
-**Úplný graf** ![K_n](https://latex.codecogs.com/gif.latex?K_n) - graf, který má všchny možné hrany, počet jeho hran je ![|E| = \binom{|V|}{2} = \frac{n!}{2!\cdot (n-2)!} = \mathbf{\frac{n \cdot (n-1)}{2}}](https://latex.codecogs.com/gif.latex?%7CE%7C%20%3D%20%5Cbinom%7B%7CV%7C%7D%7B2%7D%20%3D%20%5Cfrac%7Bn%21%7D%7B2%21%5Ccdot%20%28n-2%29%21%7D%20%3D%20%5Cmathbf%7B%5Cfrac%7Bn%20%5Ccdot%20%28n-1%29%7D%7B2%7D%7D)
-
-### Souvislost grafů
-Graf je souvislý, pokud má právě 1 komponentu souvislosti.
-
-**Komponenta souvislosti grafu** - maximální (co se do počtu vrcholů týče) souvislá část grafu
-
-- souvislý graf je graf, ve kterém pro libovolnou dvojici vrcholů existuje u-v cesta
-
-**Strom** - je acyklický a souvislý graf
-
-**Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
+**Komponenta grafu** - maximální souvislý podgraf
 
 ## Eulerovský graf
 
