@@ -8,10 +8,10 @@ s konstantními koeficienty, systém s lineární a minimální fází.
 **Systém** dokáže generovat, zpracovávat, modifikovat a přijímat signály. Signál je projevem činnosti systému.
 
 Příklady:
-- Hudební nástroj –lze považovat za systém generující zvuk
-- Zesilovač, ekvalizér –systém, který modifikuje zvukový signál
-- A/D a D/A převodník – transformují jeden typ signálu na jiný
-- Reproduktor –převádí elektrický signál na akustický, atd.
+- Hudební nástroj - lze považovat za systém generující zvuk
+- Zesilovač, ekvalizér - systém, který modifikuje zvukový signál
+- A/D a D/A převodník - transformují jeden typ signálu na jiný
+- Reproduktor - převádí elektrický signál na akustický, atd.
 
 **LTI (Linear Time Invariant)** systémy jsou takové systémy, které jsou lineární a časově nezávislé.
 
