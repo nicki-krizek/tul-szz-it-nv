@@ -125,7 +125,7 @@ Pomocí PKKI připíšu slovo ![b^i](https://latex.codecogs.com/svg.latex?b%5Ei)
 ![Porovnani konecnych stroju](08_porovnani_konecnych_stroju.png)
 
 - Turingův stroj je nejsilnější a dokáže realizovat libovolný algoritmus.
-- Slabším nástrojem je zásobníkový automat (KSZ1).
+- Slabším nástrojem je zásobníkový automat s jedním zásobníkem (KSZ1). Nedeterministické jsou zde silnější, než deterministické (narozdíl od KA).
 - Poté jsou konečné automaty, které jsou schopny rozpoznávat regulární jazyky.
 - Konečné automaty jsou silnější nástroj než kombinační logika.
 
