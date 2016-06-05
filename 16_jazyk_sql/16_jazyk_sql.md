@@ -19,6 +19,8 @@ SQL příkazy se dělí na čtyři základní skupiny:
 - **projekce** - je relační operace, která odpovídá výběru sloupců z tabulky (tedy se omezíme pouze na některé atributy)
 - **přejmenování** - má formální význam a využívá se zejména v souvislosti s join pro přejmenování atributu A na B
 
+[množinové operace](https://www.interval.cz/clanky/sql-skladani-dotazu/)
+
 ###Typy dat v SQL (SQL92)
 **Numerické typy** - INTEGER, SMALLINT, NUMERIC, DECIMAL, FLOAT, REAL, DOUBLE  PRECISION
 
