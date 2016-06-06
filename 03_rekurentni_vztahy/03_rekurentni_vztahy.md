@@ -51,7 +51,7 @@ C_n \cdot C_{n-k} \neq 0
 
 ####Platí
 1. Vztahu ![(**)](https://latex.codecogs.com/svg.latex?%28**%29) vyhovuje nekonečně mnoho posloupností (existuje nekonečně mnoho řešení)
-2. Pokud je zadáno ![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích prvků posloupnosti, pak je posloupnost *jednoznačně definována* (existuje právě jedno řešení)
+2. Pokud je zadáno ![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích prvků posloupnosti, pak je posloupnost *jednoznačně definována* (existuje právě jedno řešení - jedna poosloupnost čísel)
 3. Jsou-li ![\{a_n^{(1)}\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E%7B%281%29%7D%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) a ![\{a_n^{(2)}\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E%7B%282%29%7D%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29), pak i jejich libovolná kombinace bude řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29)
 4. Existuje ![k](https://latex.codecogs.com/svg.latex?k) lineárně nezávislých řešení vztahu ![(**)](https://latex.codecogs.com/svg.latex?%28**%29). Každé další řešení je pak lineární kombinací těchto lin. nezávislých řešení
 
@@ -139,10 +139,7 @@ Prakticky 3 možné varianty (a jejich libovolné kombinace)
 	- Příklad: obecné řešení ve tvaru ![a_n = (K_1 + K_2 \cdot n + K_3 \cdot n^2) \cdot r^n](https://latex.codecogs.com/svg.latex?a_n%20%3D%20%28K_1%20&plus;%20K_2%20%5Ccdot%20n%20&plus;%20K_3%20%5Ccdot%20n%5E2%29%20%5Ccdot%20r%5En) pro trojnásobný kořen ![r](https://latex.codecogs.com/svg.latex?r)
 3. Komplexní kořeny
 	- Převádějí se do goniometrického tvaru  
-![\begin{aligned}
-a \pm bi &= \sqrt{a^2 + b^2} \cdot (cos(n\phi) + isin(n\phi))\\
-\phi &= arctan \left(\frac{b}{a}\right)
-\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20a%20%5Cpm%20bi%20%26%3D%20%5Csqrt%7Ba%5E2%20&plus;%20b%5E2%7D%20%5Ccdot%20%28cos%28n%5Cphi%29%20&plus;%20isin%28n%5Cphi%29%29%5C%5C%20%5Cphi%20%26%3D%20arctan%20%5Cleft%28%5Cfrac%7Bb%7D%7Ba%7D%5Cright%29%20%5Cend%7Baligned%7D)
+![a_n = K_1 \cdot (\sqrt{a^2 + b^2})^n \cdot cos(n\phi) + K_2 \cdot (\sqrt{a^2 + b^2})^n \cdot isin(n\phi)](https://latex.codecogs.com/svg.latex?a_n%20%3D%20K_1%20%5Ccdot%20%28%5Csqrt%7Ba%5E2%20&plus;%20b%5E2%7D%29%5En%20%5Ccdot%20cos%28n%5Cphi%29%20&plus;%20K_2%20%5Ccdot%20%28%5Csqrt%7Ba%5E2%20&plus;%20b%5E2%7D%29%5En%20%5Ccdot%20isin%28n%5Cphi%29)
 
 	- Výsledek ve tvaru  
 ![a_n = K_1 \cdot (\sqrt{a^2 + b^2})^n \cdot cos(n\phi) + K_2 \cdot (\sqrt{a^2 + b^2})^n \cdot sin(n\phi)](https://latex.codecogs.com/svg.latex?a_n%20%3D%20K_1%20%5Ccdot%20%28%5Csqrt%7Ba%5E2%20&plus;%20b%5E2%7D%29%5En%20%5Ccdot%20cos%28n%5Cphi%29%20&plus;%20K_2%20%5Ccdot%20%28%5Csqrt%7Ba%5E2%20&plus;%20b%5E2%7D%29%5En%20%5Ccdot%20sin%28n%5Cphi%29)
