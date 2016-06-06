@@ -17,8 +17,8 @@ např. Fibonacciho rek. vztah ![F_n = F_{n-1} + F_{n-2}](https://latex.codecogs.
 
 ### (Ne)Homogenní rek. vztah
 
-- Pokud rekurentnímu vztahu vyhovuje nulová sekvence, pak se nazývá homogenní, např. Fibonacciho rek. vztah
-- Pokud rekurentnímu vztahu **ne**vyhovuje nulová sekvence, pak se nazývá nehomogenní, např. ![a_n = a_{n-1} + 1](https://latex.codecogs.com/svg.latex?a_n%20%3D%20a_%7Bn-1%7D%20&plus;%201)
+- Pokud rekurentnímu vztahu vyhovuje nulová posloupnost, pak se nazývá homogenní, např. Fibonacciho rek. vztah (říká se, že vztah má *triviální řešení*)
+- Pokud rekurentnímu vztahu **ne**vyhovuje nulová posloupnost, pak se nazývá nehomogenní, např. ![a_n = a_{n-1} + 1](https://latex.codecogs.com/svg.latex?a_n%20%3D%20a_%7Bn-1%7D%20&plus;%201)
 
 ### (Ne)Lineární rek. vztah
 
@@ -52,13 +52,13 @@ C_n \cdot C_{n-k} \neq 0
 ####Platí
 1. Vztahu ![(**)](https://latex.codecogs.com/svg.latex?%28**%29) vyhovuje nekonečně mnoho posloupností (existuje nekonečně mnoho řešení)
 2. Pokud je zadáno ![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích prvků posloupnosti, pak je posloupnost *jednoznačně definována* (existuje právě jedno řešení)
-3. Jsou-li ![\{a_n^1\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E1%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) a ![\{a_n^2\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E2%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29), pak i jejich libovolná kombinace bude řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29)
+3. Jsou-li ![\{a_n^{(1)}\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E%7B%281%29%7D%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) a ![\{a_n^{(2)}\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E%7B%282%29%7D%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29), pak i jejich libovolná kombinace bude řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29)
 4. Existuje ![k](https://latex.codecogs.com/svg.latex?k) lineárně nezávislých řešení vztahu ![(**)](https://latex.codecogs.com/svg.latex?%28**%29). Každé další řešení je pak lineární kombinací těchto lin. nezávislých řešení
 
-![\begin{aligned}
-\{a_n^1\}, \{a_n^2\}, \ldots, \{a_n^k\} \text{ } &...... \text{ } k \text{ lin. nez. \v{r}e\v{s}en\'i, pak} \\
-a_n = K_1 \cdot \{a_n^1\} + K_2 \cdot \{a_n^2\} + \ldots + K_k \cdot \{a_n^k\} \text{ } &...... \text{ Obecn\'e \v{r}e\v{s}en\'i vztahu }(**) \text{ pro } K_1,\ldots,K_k \in \mathbb{R}
-\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20%5C%7Ba_n%5E1%5C%7D%2C%20%5C%7Ba_n%5E2%5C%7D%2C%20%5Cldots%2C%20%5C%7Ba_n%5Ek%5C%7D%20%5Ctext%7B%20%7D%20%26......%20%5Ctext%7B%20%7D%20k%20%5Ctext%7B%20lin.%20nez.%20%5Cv%7Br%7De%5Cv%7Bs%7Den%5C%27i%2C%20pak%7D%20%5C%5C%20a_n%20%3D%20K_1%20%5Ccdot%20%5C%7Ba_n%5E1%5C%7D%20&plus;%20K_2%20%5Ccdot%20%5C%7Ba_n%5E2%5C%7D%20&plus;%20%5Cldots%20&plus;%20K_k%20%5Ccdot%20%5C%7Ba_n%5Ek%5C%7D%20%5Ctext%7B%20%7D%20%26......%20%5Ctext%7B%20Obecn%5C%27e%20%5Cv%7Br%7De%5Cv%7Bs%7Den%5C%27i%20vztahu%20%7D%28**%29%20%5Ctext%7B%20pro%20%7D%20K_1%2C%5Cldots%2CK_k%20%5Cin%20%5Cmathbb%7BR%7D%20%5Cend%7Baligned%7D)
+  ![\begin{aligned}
+\{a_n^{(1)}\}, \{a_n^{(2)}\}, \ldots, \{a_n^{(k)}\} \text{ } &...... \text{ } k \text{ lin. nez. \v{r}e\v{s}en\'i, pak} \\
+a_n = K_1 \cdot \{a_n^{(1)}\} + K_2 \cdot \{a_n^{(2)}\} + \ldots + K_k \cdot \{a_n^{(k)}\} \text{ } &...... \text{ Obecn\'e \v{r}e\v{s}en\'i vztahu }(**) \text{ pro } K_1,\ldots,K_k \in \mathbb{R}
+\end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20%5C%7Ba_n%5E%7B%281%29%7D%5C%7D%2C%20%5C%7Ba_n%5E%7B%282%29%7D%5C%7D%2C%20%5Cldots%2C%20%5C%7Ba_n%5E%7B%28k%29%7D%5C%7D%20%5Ctext%7B%20%7D%20%26......%20%5Ctext%7B%20%7D%20k%20%5Ctext%7B%20lin.%20nez.%20%5Cv%7Br%7De%5Cv%7Bs%7Den%5C%27i%2C%20pak%7D%20%5C%5C%20a_n%20%3D%20K_1%20%5Ccdot%20%5C%7Ba_n%5E%7B%281%29%7D%5C%7D%20&plus;%20K_2%20%5Ccdot%20%5C%7Ba_n%5E%7B%282%29%7D%5C%7D%20&plus;%20%5Cldots%20&plus;%20K_k%20%5Ccdot%20%5C%7Ba_n%5E%7B%28k%29%7D%5C%7D%20%5Ctext%7B%20%7D%20%26......%20%5Ctext%7B%20Obecn%5C%27e%20%5Cv%7Br%7De%5Cv%7Bs%7Den%5C%27i%20vztahu%20%7D%28**%29%20%5Ctext%7B%20pro%20%7D%20K_1%2C%5Cldots%2CK_k%20%5Cin%20%5Cmathbb%7BR%7D%20%5Cend%7Baligned%7D)
 
 ####Řešení homogenního rek. vztahu
 
@@ -85,7 +85,7 @@ Obecné řešení je potom lineární kombinací těchto kořenů, tedy
 
 ![F_n = K_1 \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^n + K_2 \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^n](https://latex.codecogs.com/svg.latex?F_n%20%3D%20K_1%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En%20&plus;%20K_2%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En)
 
-Pokud známe počáteční podmínky (![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích hodnot re. vztahu), můžeme řešení určit jednoznačně. Pro Fibonacciho posloupnost jsou počáteční hodnoty definovány jako ![F_0 = 0, F_1 = 1](https://latex.codecogs.com/svg.latex?F_0%20%3D%200%2C%20F_1%20%3D%201), jednoznačné řešení rek. vztahu je možné vypočítat dosazením těchto počátečních podmínek a spočtením soustavy ![k](https://latex.codecogs.com/svg.latex?k) rovnic o ![k](https://latex.codecogs.com/svg.latex?k) neznámých:
+Pokud známe počáteční podmínky (![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích hodnot rek. vztahu), můžeme řešení určit jednoznačně. Pro Fibonacciho posloupnost jsou počáteční hodnoty definovány jako ![F_0 = 0, F_1 = 1](https://latex.codecogs.com/svg.latex?F_0%20%3D%200%2C%20F_1%20%3D%201), jednoznačné řešení rek. vztahu je možné vypočítat dosazením těchto počátečních podmínek a spočtením soustavy ![k](https://latex.codecogs.com/svg.latex?k) rovnic o ![k](https://latex.codecogs.com/svg.latex?k) neznámých:
 
 ![\begin{aligned}
 F_0: 0 &= K_1 \cdot \left( \frac{1 + \sqrt{5}}{2}\right)^0 + K_2 \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^0 \\
@@ -117,8 +117,8 @@ Po dosazení získáváme jednoznačné řešení rekurentního vztahu:
 
 ###Charakteristický polynom
 
-- Polynom obsahující konstantní koeficienty rek. vztahu (v předchozí kapitole to bylo ![r^2 - r - 1 = 0](https://latex.codecogs.com/svg.latex?r%5E2%20-%20r%20-%201%20%3D%200))
-- Jeho řešení (kořeny) udává tvar obecného řešení rek. vztahu
+- Polynom obsahující konstantní koeficienty rek. vztahu (v předchozí kapitole to bylo ![r^2 - r - 1](https://latex.codecogs.com/svg.latex?r%5E2%20-%20r%20-%201))
+- Kořeny *charakteristické rovnice* (![r^2 - r - 1 = 0](https://latex.codecogs.com/svg.latex?r%5E2%20-%20r%20-%201%20%3D%200)) udávají tvar obecného řešení rek. vztahu
 
 ####Platí: 
 
@@ -365,8 +365,6 @@ b_n &= 9 \cdot 2^n - 4 \cdot \left( \frac{-1}{2}\right)^{n}
 
 ###Využití vytvořujících funkcí pro řešení rek. vztahů
 
-(Ta samá přednáška co soustavy rek. vztahů, takže je potřeba kontrola správnosti)
-
 - Mějme rek. vztah  
 ![C_{n+k}a_{n+k} + C_{n+k-1}a_{n+k-1} + \ldots + C_na_n = p(n)](https://latex.codecogs.com/svg.latex?C_%7Bn&plus;k%7Da_%7Bn&plus;k%7D%20&plus;%20C_%7Bn&plus;k-1%7Da_%7Bn&plus;k-1%7D%20&plus;%20%5Cldots%20&plus;%20C_na_n%20%3D%20p%28n%29)
 
@@ -416,8 +414,8 @@ f(x) &= \frac{1}{1-2x} - \frac{1}{1-x}
 
 ####Soustavy rek. vztahů pomocí vytvořujících funkcí
 
-- Postup řešení je zcela analogický postupu řešení jednoho rekurenčního vztahu pomocí vytvořujících funkcí, tedy:
-###
+Postup řešení je zcela analogický postupu řešení jednoho rekurenčního vztahu pomocí vytvořujících funkcí, tedy:
+
 1. Každý z rek. vztahů vynásobíme ![x^{n+k}](https://latex.codecogs.com/svg.latex?x%5E%7Bn&plus;k%7D), kde ![k](https://latex.codecogs.com/svg.latex?k) je řád rek. vztahu
 2. Sčítáme pro ![n=0,1,\ldots,\infty](https://latex.codecogs.com/svg.latex?n%3D0%2C1%2C%5Cldots%2C%5Cinfty)
 3. Nekonečné součty nahradíme vhodnými symboly vytvořujících funkcí daných posloupností
