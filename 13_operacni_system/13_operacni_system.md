@@ -218,7 +218,15 @@ proti přepsání.
 4. **Next FIT** - přidělí se první blok, který se po posledním použitým blokem, optimalizace FirstFitu - snaha o rychlejší hledání.
  - Nevýhody - sklony k fragmentaci (měřením se ukazuje, že výrazněji, než předchozí metody)
 
-Při překladu programů se generují konkrétní adresy, to je problém. Nejen kvůli tomu se využívá **virtualizace paměti**, proces má svůj kontejner s virtuálními adresami a fyzické adresy vidí pouze jádro operačního systému. Virtuální prostor se dále děli na stránky o kterých si OS drží statistiku využití a pokud dochází pamět, začne **swapovat,** neboli odkládat málo používané stránky na pevný disk. Pokud jsou naopak odložené stránky potřeba, dochází k navrácení do operační paměti.
+# Správa paměti ve Windows, Linux, ...
+
+- Paměť je rozdělena do stránek o pevné velikosti
+- Když proces potřebuje paměť, jádro mu přidělí tolik stránek, kolik je potřeba
+- Jádro OS si udržuje tabulku stránek, kde má informace, kterému procesu patří daná stránka
+- Každý proces má oddělený adresní prostor, v rámci kterého používá *virtuální adresy*
+- Jádro OS řídí chod MMU, která zajišťuje překlad *virtuálních adres* na *fyzické adresy*
+- Pokud je v systému povoleno **swapování** (odkládání na disk), tak systém může odsunout stránky nejméně používaných procesů na disk a tím uvolnit místo v RAM
+- Pokud se odložený proces opět spustí, paměť je z disku přesunuta opět do RAMů jelikož tato operace chvíli trvá, tak je proces mezitím blokovaný, protože čeká na přístup do paměti
 
 ## Správa procesů
 
