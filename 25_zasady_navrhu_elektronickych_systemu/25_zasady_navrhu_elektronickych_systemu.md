@@ -33,6 +33,10 @@ V datové části řešíme algoritmizaci (obecně dvěma krajními implementace
 
 1. pamětí s mikroprogramem (u velkých řadičů neúměrně roste potřebná paměť)
 2. stavovým automatem (Moore, Mealy)
+ - **Mealy** - výstup závisí na vstupu a současném stavu; obvykleméně stavů 
+ - **Moore** - výstup závisí pouze na současném stavu, obvykle více stavů; o jeden takt spožděn
+
+[Více o Mealy vs Moore v angličtině.](http://www.tutorialspoint.com/automata_theory/moore_and_mealy_machines.htm)
 
 ![Schéma řídicí části systému](25_ridici_cast.png)
 
