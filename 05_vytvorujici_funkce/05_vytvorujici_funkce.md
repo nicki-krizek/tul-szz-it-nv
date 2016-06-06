@@ -81,13 +81,22 @@ Příklad
 
 ##Vežové polynomy
 
--Věžové polynomy jsou polynomy, jejichž koeficienty udávají, kolika různými způsoby lze na daná políčka šachovnice rozmístit určený počet neohrožujících se věží (tzn. žádné 2 věže nesmí být na stejném řádku či sloupci)
+- Věžové polynomy jsou polynomy, jejichž koeficienty udávají, kolika různými způsoby lze na daná políčka šachovnice rozmístit určený počet neohrožujících se věží (tzn. žádné 2 věže nesmí být na stejném řádku či sloupci)
 - tuto metodu lze použít k výpočtu počtu kombinací pro jiné (i reálné) problematiky
 - např. spočítat kolik existuje možností pro 4 programátory, kde každý má své preference programovacího jazyku  
 - věž. polynomy jsou invariantní vůči posunu (lze libovolně prohazovat řádky a sloupce, viz. př. s inverzním polynomem)
 
 1. Metoda přes povolený pole
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook.jpg)
+
+Metoda pomocí rozkladu na nezávislá pole
+
+- zvolím si bod, kam pomyslně dosadim věž (ideálně tak, aby vznikly nezávislá pole), v tu chvíli se mi to rozdělí na 2 části, která zpracuji zvlášť
+	- tu část, kde věž "je", musím vynásobit x
+- výsledek je pak součet rozložených dvou částí
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook_rozlozeny.jpg)
+
+
 2. Metoda přes zakázaná pole (Inverzní rook polynom)
 
 	- Při vytváření konkrétního počtu pro 5 věží, máme kombinaci 5 veží na 5 řádcích a variace 5 věží na 7 sloupcích, a pak od každého odebíráme (jelikož jsme tam vždy jednu vež přidali)
