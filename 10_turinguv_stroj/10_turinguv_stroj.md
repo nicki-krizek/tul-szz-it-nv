@@ -33,7 +33,7 @@
 
 *Graf Turingova stroje*
 
-**Způsoby zastavení konečných strojů:**
+**Výsledek činnosti Turingova stroje:**
 
   - **Akceptování** (AKC) - (přijetím) slova w (ANO)
    - dosáhne-li stroj stavu STOP (koncového) a výpočet pak končí
