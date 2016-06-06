@@ -341,17 +341,17 @@ Postup:
 
 1. Ověřím řešitelnost (viz výše): Pro všechny dvojice kongruencí musí platit, že NSD modulů nesmí dělit rozdíl pravých stran.
 
-2. Vypočítám ![M = NSN(m_1, m_2, \ldots, m_n)](https://latex.codecogs.com/gif.latex?M%20%3D%20NSN%28m_1%2C%20m_2%2C%20%5Cldots%2C%20m_n%29)
+2. Vypočítám ![M = NSN(m_1, m_2, \ldots, m_n)](https://latex.codecogs.com/svg.latex?M%20%3D%20NSN%28m_1%2C%20m_2%2C%20%5Cldots%2C%20m_n%29)
 
-3. Naleznu ![M_i](https://latex.codecogs.com/gif.latex?M_i) taková, že dělí ![m_i](https://latex.codecogs.com/gif.latex?m_i) a zároveň jsou po dvou nesoudělná.
+3. Naleznu ![M_i](https://latex.codecogs.com/svg.latex?M_i) taková, že dělí ![m_i](https://latex.codecogs.com/svg.latex?m_i) a zároveň jsou po dvou nesoudělná.
 
-![M_i | m_i~\wedge \forall i \neq j~NSD(M_i, M_j) = 1](https://latex.codecogs.com/gif.latex?M_i%20%7C%20m_i%7E%5Cwedge%20%5Cforall%20i%20%5Cneq%20j%7ENSD%28M_i%2C%20M_j%29%20%3D%201)
+  ![M_i | m_i~\wedge \forall i \neq j~NSD(M_i, M_j) = 1](https://latex.codecogs.com/svg.latex?M_i%20%7C%20m_i%7E%5Cwedge%20%5Cforall%20i%20%5Cneq%20j%7ENSD%28M_i%2C%20M_j%29%20%3D%201)
 
 4. Řešení soustavy získam jako kongruenci
 
-![x \equiv x_1b_1 + x_2b_2 + \ldots + x_nb_n~(M)](https://latex.codecogs.com/gif.latex?x%20%5Cequiv%20x_1b_1%20&plus;%20x_2b_2%20&plus;%20%5Cldots%20&plus;%20x_nb_n%7E%28M%29)
+  ![x \equiv x_1b_1 + x_2b_2 + \ldots + x_nb_n~(M)](https://latex.codecogs.com/svg.latex?x%20%5Cequiv%20x_1b_1%20&plus;%20x_2b_2%20&plus;%20%5Cldots%20&plus;%20x_nb_n%7E%28M%29)
 
-5. Jednotlivá ![x_i](https://latex.codecogs.com/gif.latex?x_i) získám pomocí řešení dílčích soustav kongruencí:
+5. Jednotlivá ![x_i](https://latex.codecogs.com/svg.latex?x_i) získám pomocí řešení dílčích soustav kongruencí:
 
-![x_i \equiv 0~ (\frac{M}{M_i})~\wedge~x_i \equiv 1~(M_i)](https://latex.codecogs.com/gif.latex?x_i%20%5Cequiv%200%7E%20%28%5Cfrac%7BM%7D%7BM_i%7D%29%7E%5Cwedge%7Ex_i%20%5Cequiv%201%7E%28M_i%29)
+  ![x_i \equiv 0~ (\frac{M}{M_i})~\wedge~x_i \equiv 1~(M_i)](https://latex.codecogs.com/svg.latex?x_i%20%5Cequiv%200%7E%20%28%5Cfrac%7BM%7D%7BM_i%7D%29%7E%5Cwedge%7Ex_i%20%5Cequiv%201%7E%28M_i%29)
 
