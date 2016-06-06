@@ -79,6 +79,15 @@ V tabulce seřazeno od nejrychlejší po nejnáročnější.
   - Průměrná složitost ![\mathcal{O}(\frac{n}{2})](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28%5Cfrac%7Bn%7D%7B2%7D%29)
   - *Pozn. autora*: Zde to asi nemá význam příliš rozlišovat, jelikož se jedná o stejnou složitost, která se liší pouze konstantou.
 
+### Amortizovaná složitost
+
+**Příklad: dynamické pole**
+
+- Vložení prvku má nejhorší časovou složitost ![\mathcal{O}(n)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%28n%29), protože při přidání prvku může být potřeba zvětšit velikost celého pole
+- Reálně se ovšem po zvětšení pole vložení dalších n prvků nijak nezpomalí
+- **Amortizovaná složitost** "rozpočítá" náročnost n operací mezi n prvků. V tomto případě by došlo n krát k vložení (konstnatní složitost) a k jednomu rozšíření pole (lineární složitost). Tyto složitosti se sečtou a vydělí počtem prvků.
+- Ve výsledku je amortizovaná složitost vkládání do dynamického pole ![\mathcal{O}(1)](https://latex.codecogs.com/svg.latex?%5Cmathcal%7BO%7D%281%29).
+
 ## Úlohy P, NP, NP-úplné
 
 ![Porovnání P, NP, NP-úplných úloh](07_p_np_np_complete.png)

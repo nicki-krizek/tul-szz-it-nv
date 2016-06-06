@@ -343,7 +343,7 @@ Postup:
 
 2. Vypočítám ![M = NSN(m_1, m_2, \ldots, m_n)](https://latex.codecogs.com/svg.latex?M%20%3D%20NSN%28m_1%2C%20m_2%2C%20%5Cldots%2C%20m_n%29)
 
-3. Naleznu ![M_i](https://latex.codecogs.com/svg.latex?M_i) taková, že dělí ![m_i](https://latex.codecogs.com/svg.latex?m_i) a zároveň jsou po dvou nesoudělná.
+3. Naleznu ![M_i](https://latex.codecogs.com/svg.latex?M_i) taková, že dělí původní ![m_i](https://latex.codecogs.com/svg.latex?m_i) a zároveň jsou po dvou nesoudělná.
 
   ![M_i | m_i~\wedge \forall i \neq j~NSD(M_i, M_j) = 1](https://latex.codecogs.com/svg.latex?M_i%20%7C%20m_i%7E%5Cwedge%20%5Cforall%20i%20%5Cneq%20j%7ENSD%28M_i%2C%20M_j%29%20%3D%201)
 
