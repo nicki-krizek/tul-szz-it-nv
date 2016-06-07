@@ -195,8 +195,6 @@ V FPGA se nejčastěji používají programovatelné přepínače na principu:
  - popis spojovací tabulkou mezi logickými prvky
  - jednoznačný přechod na úroveň tranzistorů
 
-![HDL formy popisu](24_hdl.png)
-
 ### Formy popisu
 
 ![Formy popisu](24_popisy.png)
