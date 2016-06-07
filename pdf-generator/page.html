@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs" class=" is-copy-enabled is-u2f-enabled">  
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">    
+    <meta charset='utf-8'>    
+    <!-- nacteme CSS souboru z GitHubu, takze to vypada stejne jak tam -->
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-387cfeaa25ac463275aa2c2daaedb1e54d868005181afe4a5e50659e9a19f2bc.css" integrity="sha256-OHz+qiWsRjJ1qiwtqu2x5U2GgAUYGv5KXlBlnpoZ8rw=" media="all" rel="stylesheet" />    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-ca9b58477bbdd109d33bb26e79b74b80b46b29715d2811b49daaaebbacd880f0.css" integrity="sha256-yptYR3u90QnTO7JuebdLgLRrKXFdKBG0naquu6zYgPA=" media="all" rel="stylesheet" />
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function() {
+        // Scriptik pro vycentrovani obrazku, neco podobneho by bylo sikovne pro tabulky...
+        $("#readme").find("p > em").each(function() {
+          if($(this).parent().prev().find("img").length > 0) {
+            $(this).parent().prev().css("text-align","center");
+            $(this).parent().css("text-align","center");
+          }
+        });
+      });
+    </script>
+    <style>      
+      /* Odstraneni okraje stranky */
+      .readme .markdown-body, .readme .plain {
+        border: 0px;
+        padding: 0px;       
+      }     
+    </style>    
+  </head>    
+  <body>    
+    <div id="readme" class="readme blob instapaper_body">      
+      <replaceme />    
+    </div>    
+  </body>    
+</html>
