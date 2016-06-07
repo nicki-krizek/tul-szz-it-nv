@@ -109,8 +109,8 @@ Rodina protokolů TCP/IP (Transmission Control Protocol/Internet Protocol – �
 
 Architektura TCP/IP je členěna do čtyř vrstev (na rozdíl od referenčního modelu OSI se sedmi vrstvami):
 
-- **vrstva síťového rozhraní (network interface)** - Nejnižší vrstva umožňuje přístup k fyzickému přenosovému médiu. Je specifická pro každou síť v závislosti na její implementaci. Příklady sítí: Ethernet, Token ring, FDDI, 100BaseVG, X.25, SMDS.
-- **síťová vrstva (internet layer)** - Vrstva zajišťuje především síťovou adresaci, směrování a předávání datagramů. Protokoly: IP, ARP, RARP, ICMP, IGMP, IGRP, IPSEC. Je implementována ve všech prvcích sítě - směrovačích i koncových zařízeních.
+- **vrstva síťového rozhraní (network interface)** - Nejnižší vrstva umožňuje přístup k fyzickému přenosovému médiu. Je specifická pro každou síť v závislosti na její implementaci. Příklady sítí: Ethernet, Token ring, FDDI, 100BaseVG, X.25, SMDS. Protokol ARP.
+- **síťová vrstva (internet layer)** - Vrstva zajišťuje především síťovou adresaci, směrování a předávání datagramů. Protokoly: IP (IPv4, IPv6), ICMP, IGMP, IPSEC. Je implementována ve všech prvcích sítě - směrovačích i koncových zařízeních.
 - **transportní vrstva (transport layer)** - Transportní vrstva je implementována až v koncových zařízeních (počítačích) a umožňuje proto přizpůsobit chování sítě potřebám aplikace. Poskytuje transportní služby kontrolovaným spojením spolehlivým protokolem TCP (transmission control protocol) nebo nekontrolovaným spojením nespolehlivým protokolem UDP (user datagram protocol).
 - **aplikační vrstva (application layer)** - Vrstva aplikací. To jsou programy (procesy), které využívají přenosu dat po síti ke konkrétním službám pro uživatele. Příklady: Telnet, FTP, HTTP, DHCP, DNS.
 
