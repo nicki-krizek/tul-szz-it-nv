@@ -4,9 +4,9 @@
 ## Základní pojmy
 **Procesorem** se rozumí základní jednotka počítače, tj. logický automat pro zpracování informací, obsahující aritmetickou jednotku a řadič (počítač bez periferních zařízení a bez hlavní paměti), chování je definováno programem.
 
-**Mikroprocesor** je malý procesor vyráběný technologií velké integrace, určen především na výpočty a logické funkce, je přednostně orientován na operace nad slovy. Mikroprocesor nemůže samostatně pracovat! 
+**Mikroprocesor** je malý procesor vyráběný technologií velké integrace, určen především na výpočty a logické funkce, je přednostně orientován na operace nad slovy. Mikroprocesor nemůže samostatně pracovat, protože ke své funkci potřebuje další periferie, které nejsou součástí mikroprocesoru (např. paměť). Označení mikroprocesor se používá pro integrovaný obvod, jehož součástí může být i více CPU.
 
-**Mikrořadič** (microcontroller, monolitický mikropočítač, jednočipový mikropočítač) je mikropočítač v jednom integrovaném obvodu. Většinou k němu stačí připojit krystalový rezonátor, napájení, vstupní a výstupní zařízení a samozřejmě vložit program, podle něhož bude pracovat.
+**Mikrořadič** (microcontroller, monolitický mikropočítač, jednočipový mikropočítač) je mikropočítač v jednom integrovaném obvodu, ve kterém je integrovaná i RAM, ROM a případně další perifirie. Většinou k němu stačí připojit krystalový rezonátor, napájení, vstupní a výstupní zařízení a samozřejmě vložit program, podle něhož bude pracovat. 
 
 ## Architektury počítačů
 *Architektura počítačů je metoda vytváření počítačových systémů z menších celků.*
@@ -18,11 +18,16 @@ Architektura je globální pohled na všechny podstatné vlastnosti počítačů
 - **realizaci** – popis návrhu a vnitřní struktury jednotlivých FB
 - **funkci** – popis chování počítače jako celku
 
-Počítač tvoří:
+Procesor (**CPU**) tvoří:
 
-- **CPU** (Central Processing Unit) - procesor
 - **ALU** (Arithmetical and Logical Unit) – aritmeticko-logická jednotka
 - **CU** (Control / Central Unit) – řadič, řídicí jednotka
+
+Počítač tvoří:
+
+- CPU
+- paměť
+- vstupy/výstupy
 
 ### Von Neumanova koncepce
 Charakteristické vlastnosti lze shrnout do následujících bodů:
@@ -47,7 +52,7 @@ Charakteristické vlastnosti lze shrnout do následujících bodů:
 Základní principy (rozdíly vůči von Neumannově archit.):
 
 1. paměť programu je oddělena od paměti dat - možnost ve stejném okamžiku načítat instrukci a přistupovat k datové paměti - datová a programová paměť mohou mít odlišnou organizaci
-2. oddělené sběrnice
+2. oddělené sběrnice pro program a data
 3. řízení procesoru je odděleno od řízení vstupních a výstupních jednotek (nejsou napojeny přímo na ALU)
 
 **Možnost rychlejšího zpracování většího objemu dat.**
@@ -122,7 +127,7 @@ Souhrn vlastností počítačového systému viděného z pohledu programátora 
 
 **CISC**
 
-Complex Instruction Set Computer. Dříve byly operační paměti výrazně pomalejší než procesory (doba přístupu byla několik taktů CPU), zpomalování výpočtů opakovaným načítáním instrukcí, snaha rozšiřovat instrukční soubor, mnoho složitých instrukcí používaných jen zřídka.
+Complex Instruction Set Computer. Rozsáhlý instrukční soubor, obsahuje i mnoho složitých instrukcí používaných jen zřídka.
 
 - proměnná délka instrukcí
 - zpracování instrukcí ve více strojových cyklech (CPI ~ 5-10)
@@ -164,6 +169,10 @@ Reduced Instruction Set Computer, (použit poprvé 1974) počátkem 80.let prvn�
 - spekulativní provádění instrukcí
 - nadále dochází k dalšímu rozšiřování instrukční sady, zaměřené hlavně do multimediální oblasti a grafiky
 - většinou se zachovává zpětná kompatibilita
+
+**Praktický rozdíl mezi CRISC a RISC**
+
+Procesory od Intel, AMD jsou CRISC, zatímco ARM (v mobilních zařízeních) jsou RISC. Díky jednoduchosti RISC architektury (řídících obvodů na procesoru) je možné dosáhnout mnohem menší spotřeby než u CRISC.
 
 ## Architektura signálových procesorů
 Digitální signálový procesor nebo také digitální signální procesor (zkratka **DSP**) je mikroprocesor, jehož návrh je optimalizován pro algoritmy používané při zpracování digitálně reprezentovaných signálů. Hlavním nárokem na systém bývá průběžné zpracování velkého množství dat „protékajících“ procesorem. Často slouží jako hardwarová implementace různých číslicových filtrů.
