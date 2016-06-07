@@ -295,7 +295,7 @@ K uváznutí dojde jen při splnění všech následujících podmínek:
 - **Neodnímatelnost** (_No preemption_) - Jakmile proces zmíněný prostředek vlastní, nelze mu ho bezpečně odejmout, musí ho sám vrátit.
 - **Čekání do kruhu** (_Circular wait_) - Každý proces čeká na svého předchůdce – jakmile se kruh uzavře nastane deadlock.
 
-**Souběh** (_race conditions_) je v počítačových programech způsoben (chybným) současným zpracováním sdílených dat. Pokud by byla data zpracována postupně, k chybě by nedošlo. Problémem je, že ke změně dat dojde ve chvíli, kdy se se stejnými daty již pracuje jiná úloha, too způsobuje anomálie a nekonzistenci konečného výsledku.
+**Souběh** (_race conditions_) je v počítačových programech způsoben (chybným) současným zpracováním sdílených dat. Pokud by byla data zpracována postupně, k chybě by nedošlo. Problémem je, že ke změně dat dojde ve chvíli, kdy se se stejnými daty již pracuje jiná úloha, to způsobuje anomálie a nekonzistenci konečného výsledku.
 
 **Kritická oblast** je označení dat, která jsou souběhem ohrožena.
 
