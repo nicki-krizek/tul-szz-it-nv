@@ -22,10 +22,10 @@ např. Fibonacciho rek. vztah ![F_n = F_{n-1} + F_{n-2}](https://latex.codecogs.
 
 ### (Ne)Lineární rek. vztah
 
-- Pokud funkce ![\Phi(a_n, a_{n-1}, \ldots,a_{n-k}, n)](https://latex.codecogs.com/svg.latex?%5CPhi%28a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D%2C%20n%29) je lineární funkcí ![a_n, a_{n-1}, \ldots,a_{n-k}](https://latex.codecogs.com/svg.latex?a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D), 
+- Pokud funkce ![\Phi(a_n, a_{n-1}, \ldots,a_{n-k}, n)](https://latex.codecogs.com/svg.latex?%5CPhi%28a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D%2C%20n%29) je lineární funkcí ![a_n, a_{n-1}, \ldots,a_{n-k}](https://latex.codecogs.com/svg.latex?a_n%2C%20a_%7Bn-1%7D%2C%20%5Cldots%2Ca_%7Bn-k%7D),
 
 ![\left(\begin{aligned}
-A(x+y) &= A(x) + A(y) \\ 
+A(x+y) &= A(x) + A(y) \\
 A(\alpha x) &= \alpha A(x)
 \end{aligned}
 \right)](https://latex.codecogs.com/svg.latex?%5Cleft%28%5Cbegin%7Baligned%7D%20A%28x&plus;y%29%20%26%3D%20A%28x%29%20&plus;%20A%28y%29%20%5C%5C%20A%28%5Calpha%20x%29%20%26%3D%20%5Calpha%20A%28x%29%20%5Cend%7Baligned%7D%20%5Cright%29)
@@ -36,8 +36,8 @@ pak se jedná o lineární rek. vztah
 
 ## Lineární rekurentní vztahy s konstantními koeficienty
 
-- Označme 
- 
+- Označme
+
 ![(*)\ldots\ldots C_na_n + C_{n-1}a_{n-1} + \ldots + C_{n-k}a_{n-k} = p(n)](https://latex.codecogs.com/svg.latex?%28*%29%5Cldots%5Cldots%20C_na_n%20&plus;%20C_%7Bn-1%7Da_%7Bn-1%7D%20&plus;%20%5Cldots%20&plus;%20C_%7Bn-k%7Da_%7Bn-k%7D%20%3D%20p%28n%29) jako nehomogenní rek. vztah a
 
 ![(**)\ldots\ldots C_na_n + C_{n-1}a_{n-1} + \ldots + C_{n-k}a_{n-k} = 0](https://latex.codecogs.com/svg.latex?%28**%29%5Cldots%5Cldots%20C_na_n%20&plus;%20C_%7Bn-1%7Da_%7Bn-1%7D%20&plus;%20%5Cldots%20&plus;%20C_%7Bn-k%7Da_%7Bn-k%7D%20%3D%200) jako homogenní rek. vztah, pro oba platí
@@ -47,9 +47,9 @@ C_n, C_{n-1},\ldots,C_{n-k} \in \mathbb{R} \\
 C_n \cdot C_{n-k} \neq 0
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20C_n%2C%20C_%7Bn-1%7D%2C%5Cldots%2CC_%7Bn-k%7D%20%5Cin%20%5Cmathbb%7BR%7D%20%5C%5C%20C_n%20%5Ccdot%20C_%7Bn-k%7D%20%5Cneq%200%20%5Cend%7Baligned%7D)
 
-###Homogenní vztahy
+### Homogenní vztahy
 
-####Platí
+#### Platí
 1. Vztahu ![(**)](https://latex.codecogs.com/svg.latex?%28**%29) vyhovuje nekonečně mnoho posloupností (existuje nekonečně mnoho řešení)
 2. Pokud je zadáno ![k](https://latex.codecogs.com/svg.latex?k) po sobě jdoucích prvků posloupnosti, pak je posloupnost *jednoznačně definována* (existuje právě jedno řešení - jedna poosloupnost čísel)
 3. Jsou-li ![\{a_n^{(1)}\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E%7B%281%29%7D%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) a ![\{a_n^{(2)}\}_{n=0}^{\infty}](https://latex.codecogs.com/svg.latex?%5C%7Ba_n%5E%7B%282%29%7D%5C%7D_%7Bn%3D0%7D%5E%7B%5Cinfty%7D) řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29), pak i jejich libovolná kombinace bude řešením ![(**)](https://latex.codecogs.com/svg.latex?%28**%29)
@@ -60,21 +60,21 @@ C_n \cdot C_{n-k} \neq 0
 a_n = K_1 \cdot \{a_n^{(1)}\} + K_2 \cdot \{a_n^{(2)}\} + \ldots + K_k \cdot \{a_n^{(k)}\} \text{ } &...... \text{ Obecn\'e \v{r}e\v{s}en\'i vztahu }(**) \text{ pro } K_1,\ldots,K_k \in \mathbb{R}
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20%5C%7Ba_n%5E%7B%281%29%7D%5C%7D%2C%20%5C%7Ba_n%5E%7B%282%29%7D%5C%7D%2C%20%5Cldots%2C%20%5C%7Ba_n%5E%7B%28k%29%7D%5C%7D%20%5Ctext%7B%20%7D%20%26......%20%5Ctext%7B%20%7D%20k%20%5Ctext%7B%20lin.%20nez.%20%5Cv%7Br%7De%5Cv%7Bs%7Den%5C%27i%2C%20pak%7D%20%5C%5C%20a_n%20%3D%20K_1%20%5Ccdot%20%5C%7Ba_n%5E%7B%281%29%7D%5C%7D%20&plus;%20K_2%20%5Ccdot%20%5C%7Ba_n%5E%7B%282%29%7D%5C%7D%20&plus;%20%5Cldots%20&plus;%20K_k%20%5Ccdot%20%5C%7Ba_n%5E%7B%28k%29%7D%5C%7D%20%5Ctext%7B%20%7D%20%26......%20%5Ctext%7B%20Obecn%5C%27e%20%5Cv%7Br%7De%5Cv%7Bs%7Den%5C%27i%20vztahu%20%7D%28**%29%20%5Ctext%7B%20pro%20%7D%20K_1%2C%5Cldots%2CK_k%20%5Cin%20%5Cmathbb%7BR%7D%20%5Cend%7Baligned%7D)
 
-####Řešení homogenního rek. vztahu
+#### Řešení homogenního rek. vztahu
 
 - Úloha hledání řešení ![(**)](https://latex.codecogs.com/svg.latex?%28**%29) se redukuje na nalezení lineární kombinace ![k](https://latex.codecogs.com/svg.latex?k) lineárně nezávislých řešení
 - Základní myšlenka: ![a_n = r^n, r \neq 0](https://latex.codecogs.com/svg.latex?a_n%20%3D%20r%5En%2C%20r%20%5Cneq%200)
 
 pak je možno rek. vztah (opět Fibonacci) zapsat jako
 
-![\begin{aligned} 
+![\begin{aligned}
 F_n &= F_{n-1} + F_{n-2} \\
 r^n &= r^{n-1} + r^{n-2} \\
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20F_n%20%26%3D%20F_%7Bn-1%7D%20&plus;%20F_%7Bn-2%7D%20%5C%5C%20r%5En%20%26%3D%20r%5E%7Bn-1%7D%20&plus;%20r%5E%7Bn-2%7D%20%5C%5C%20%5Cend%7Baligned%7D)
 
 a po vhodných úpravách nalézt jeho obecné řešení pomocí kořenů (zde kvadratické) rovnice:
 
-![\begin{aligned} 
+![\begin{aligned}
 r^n - r^{n-1} - r^{n-2} &= 0 \\
 r^{n-2} \cdot (r^2 - r - 1) &= 0 \\
 r^2 - r - 1 &= 0 \\
@@ -115,12 +115,12 @@ Po dosazení získáváme jednoznačné řešení rekurentního vztahu:
 
 ![F_n = \frac{1}{\sqrt{5}} \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^n + \frac{-1}{\sqrt{5}} \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^n](https://latex.codecogs.com/svg.latex?F_n%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B5%7D%7D%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20&plus;%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En%20&plus;%20%5Cfrac%7B-1%7D%7B%5Csqrt%7B5%7D%7D%20%5Ccdot%20%5Cleft%28%5Cfrac%7B1%20-%20%5Csqrt%7B5%7D%7D%7B2%7D%5Cright%29%5En)
 
-###Charakteristický polynom
+### Charakteristický polynom
 
 - Polynom obsahující konstantní koeficienty rek. vztahu (v předchozí kapitole to bylo ![r^2 - r - 1](https://latex.codecogs.com/svg.latex?r%5E2%20-%20r%20-%201))
 - Kořeny *charakteristické rovnice* (![r^2 - r - 1 = 0](https://latex.codecogs.com/svg.latex?r%5E2%20-%20r%20-%201%20%3D%200)) udávají tvar obecného řešení rek. vztahu
 
-####Platí: 
+#### Platí:
 
 Nechť ![r_1,r_2,\ldots,r_p](https://latex.codecogs.com/svg.latex?r_1%2Cr_2%2C%5Cldots%2Cr_p) jsou všechny různé kořeny charakteristického polynomu s násobnostmi ![m_1,m_2,\ldots,m_p](https://latex.codecogs.com/svg.latex?m_1%2Cm_2%2C%5Cldots%2Cm_p). Potom obecné řešení je tvaru:
 
@@ -128,13 +128,13 @@ Nechť ![r_1,r_2,\ldots,r_p](https://latex.codecogs.com/svg.latex?r_1%2Cr_2%2C%5
 a_n = &K_1^{(1)} \cdot r_1^n + K_2^{(1)} \cdot n \cdot r_1^n + \ldots + K_{m_1}^{(1)} \cdot n^{m_1-1} \cdot r_1^n + \\+ &K_1^{(2)} \cdot r_2^n + K_2^{(2)} \cdot n \cdot r_2^n + \ldots + K_{m_2}^{(2)} \cdot n^{m_2-1} \cdot r_2^n + \\+ &\ldots + \\+ &K_1^{(p)} \cdot r_p^n + K_2^{(p)} \cdot n \cdot r_p^n + \ldots + K_{m_p}^{(p)} \cdot n^{m_p-1} \cdot r_p^n
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20a_n%20%3D%20%26K_1%5E%7B%281%29%7D%20%5Ccdot%20r_1%5En%20&plus;%20K_2%5E%7B%281%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_1%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_1%7D%5E%7B%281%29%7D%20%5Ccdot%20n%5E%7Bm_1-1%7D%20%5Ccdot%20r_1%5En%20&plus;%20%5C%5C&plus;%20%26K_1%5E%7B%282%29%7D%20%5Ccdot%20r_2%5En%20&plus;%20K_2%5E%7B%282%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_2%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_2%7D%5E%7B%282%29%7D%20%5Ccdot%20n%5E%7Bm_2-1%7D%20%5Ccdot%20r_2%5En%20&plus;%20%5C%5C&plus;%20%26%5Cldots%20&plus;%20%5C%5C&plus;%20%26K_1%5E%7B%28p%29%7D%20%5Ccdot%20r_p%5En%20&plus;%20K_2%5E%7B%28p%29%7D%20%5Ccdot%20n%20%5Ccdot%20r_p%5En%20&plus;%20%5Cldots%20&plus;%20K_%7Bm_p%7D%5E%7B%28p%29%7D%20%5Ccdot%20n%5E%7Bm_p-1%7D%20%5Ccdot%20r_p%5En%20%5Cend%7Baligned%7D)
 
-####Srozumitelně
+#### Srozumitelně
 
 Prakticky 3 možné varianty (a jejich libovolné kombinace)
 
 1. Jednonásobné kořeny
 	- V příkladu s Fibonaccim
-	- Příklad: obecné řešení ve tvaru ![a_n = K_1 \cdot (r_1)^n + K_2 \cdot (r_2)^n](https://latex.codecogs.com/svg.latex?a_n%20%3D%20K_1%20%5Ccdot%20%28r_1%29%5En%20&plus;%20K_2%20%5Ccdot%20%28r_2%29%5En) pro jednonásobné kořeny ![r_1](https://latex.codecogs.com/svg.latex?r_1) a ![r_2](https://latex.codecogs.com/svg.latex?r_2) 
+	- Příklad: obecné řešení ve tvaru ![a_n = K_1 \cdot (r_1)^n + K_2 \cdot (r_2)^n](https://latex.codecogs.com/svg.latex?a_n%20%3D%20K_1%20%5Ccdot%20%28r_1%29%5En%20&plus;%20K_2%20%5Ccdot%20%28r_2%29%5En) pro jednonásobné kořeny ![r_1](https://latex.codecogs.com/svg.latex?r_1) a ![r_2](https://latex.codecogs.com/svg.latex?r_2)
 2. ![m](https://latex.codecogs.com/svg.latex?m)-násobný kořen
 	- Příklad: obecné řešení ve tvaru ![a_n = (K_1 + K_2 \cdot n + K_3 \cdot n^2) \cdot r^n](https://latex.codecogs.com/svg.latex?a_n%20%3D%20%28K_1%20&plus;%20K_2%20%5Ccdot%20n%20&plus;%20K_3%20%5Ccdot%20n%5E2%29%20%5Ccdot%20r%5En) pro trojnásobný kořen ![r](https://latex.codecogs.com/svg.latex?r)
 3. Komplexní kořeny
@@ -149,18 +149,18 @@ Příklad kombinace:
 - Kořeny: ![r_1 = 1, r_{2,3} = 3](https://latex.codecogs.com/svg.latex?r_1%20%3D%201%2C%20r_%7B2%2C3%7D%20%3D%203)
 - Obecné řešení: ![a_n = K_1 \cdot 1^n + (K_2 + K_3 \cdot n) \cdot 3^n](https://latex.codecogs.com/svg.latex?a_n%20%3D%20K_1%20%5Ccdot%201%5En%20&plus;%20%28K_2%20&plus;%20K_3%20%5Ccdot%20n%29%20%5Ccdot%203%5En)
 
-###Nehomogenní vztahy
+### Nehomogenní vztahy
 
 Připomínka: ![(*)\ldots\ldots C_na_n + C_{n-1}a_{n-1} + \ldots + C_{n-k}a_{n-k} = p(n)](https://latex.codecogs.com/svg.latex?%28*%29%5Cldots%5Cldots%20C_na_n%20&plus;%20C_%7Bn-1%7Da_%7Bn-1%7D%20&plus;%20%5Cldots%20&plus;%20C_%7Bn-k%7Da_%7Bn-k%7D%20%3D%20p%28n%29)
 
-####Platí
+#### Platí
 
 1. Vztah ![(*)](https://latex.codecogs.com/svg.latex?%28*%29) má nekonečně mnoho řešení
 2. Každé řešení je tvaru ![a_n = a_n^h + a_n^p](https://latex.codecogs.com/svg.latex?a_n%20%3D%20a_n%5Eh%20&plus;%20a_n%5Ep), kde  
 ![a_n^h](https://latex.codecogs.com/svg.latex?a_n%5Eh) je obecné řešení homogenního rekurentního vztahu ![(**)](https://latex.codecogs.com/svg.latex?%28**%29) odpovídajícího vztahu ![(*)](https://latex.codecogs.com/svg.latex?%28*%29)  
 ![a_n^p](https://latex.codecogs.com/svg.latex?a_n%5Ep) je partikulární řešení vztahu ![(*)](https://latex.codecogs.com/svg.latex?%28*%29) (tj. libovolná konkrétní posloupnost vyhovující vztahu ![(*)](https://latex.codecogs.com/svg.latex?%28*%29))
 
-####Řešení nehomogenního rek. vztahu
+#### Řešení nehomogenního rek. vztahu
 
 - ![a_n^h](https://latex.codecogs.com/svg.latex?a_n%5Eh) se dá nalézt stejně jako u homogenních vztahů, tzn. položit levou stranu ![(*)](https://latex.codecogs.com/svg.latex?%28*%29) rovnou 0 a nakládat s ním jako s homogenním vztahem.  
 - ![a_n^p](https://latex.codecogs.com/svg.latex?a_n%5Ep) se hledá podle toho co zbylo na pravé straně rovnice, tzn ![p(n)](https://latex.codecogs.com/svg.latex?p%28n%29), nejčastěji dosazením ![a_n^p = t(n)](https://latex.codecogs.com/svg.latex?a_n%5Ep%20%3D%20t%28n%29) dle následující tabulky:  
@@ -182,14 +182,14 @@ B \cdot \sin{(\alpha n)} \quad &| \quad L \cdot \sin{(\alpha n)}  \\
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20p%28n%29%20%5Cquad%20%26%7C%20%5Cquad%20t%28n%29%5C%5C%20%5Chline%20K...konst%20%5Cquad%20%26%7C%20%5Cquad%20A...konst%5C%5C%20%5Chline%20n%5Et%5Cquad%20%26%7C%20%5Cquad%20A_tn%5Et%20&plus;%20A_%7Bt-1%7Dn%5E%7Bt-1%7D%20&plus;%20%5Cldots%20&plus;%20A_0%20%5C%5C%20%5Chline%20r%5En%20%5Cquad%20%26%7C%20%5Cquad%20Ar%5En%20%5C%5C%20%5Chline%20r%5En%20%5Ccdot%20n%5Et%20%5Cquad%20%26%7C%20%5Cquad%20r%5En%20%5Ccdot%20%28A_tn%5Et%20&plus;%20A_%7Bt-1%7Dn%5E%7Bt-1%7D%20&plus;%20%5Cldots%20&plus;%20A_0%29%20%5C%5C%20%5Chline%20A%20%5Ccdot%20%5Ccos%7B%28%5Calpha%20n%29%7D%20%5Cquad%20%26%7C%20%5Cquad%20K%20%5Ccdot%20%5Ccos%7B%28%5Calpha%20n%29%7D%20%5C%5C%20%5Chline%20B%20%5Ccdot%20%5Csin%7B%28%5Calpha%20n%29%7D%20%5Cquad%20%26%7C%20%5Cquad%20L%20%5Ccdot%20%5Csin%7B%28%5Calpha%20n%29%7D%20%5C%5C%20%5Chline%20%5Cend%7Baligned%7D)
 - Je-li pravá strana ![(*)](https://latex.codecogs.com/svg.latex?%28*%29) lineární kombinací prvků ![p(n)](https://latex.codecogs.com/svg.latex?p%28n%29) z tabulky, pak bude řešení ve tvaru lineární kombinace prvků ![t(n)](https://latex.codecogs.com/svg.latex?t%28n%29)
 
-#####Postup
+##### Postup
 1. Zkusím dosadit ![t(n)](https://latex.codecogs.com/svg.latex?t%28n%29) z tabulky
 2. Pokud žádný ze sčítanců zkušebního řešení není řešením příslušného homogenního rek. vztahu, pak platí ![a_n^p = t(n)](https://latex.codecogs.com/svg.latex?a_n%5Ep%20%3D%20t%28n%29)
 3. Je-li některý ze sčítanců zkušebního řešení řešením příslušného homogenního vztahu, pak  
 ![a_n^p = n^s \cdot t(n)](https://latex.codecogs.com/svg.latex?a_n%5Ep%20%3D%20n%5Es%20%5Ccdot%20t%28n%29)  
 kde ![s](https://latex.codecogs.com/svg.latex?s) je nejmenší přirozená mocnina taková, že žádný ze sčítanců již není řešením homogenního rek. vztahu
 
-#####Příklad
+##### Příklad
 
 ![\begin{aligned}
 1)\quad a_n &= 6a_{n-1} - 9a_{n-2} + n \cdot 2^n\\
@@ -298,12 +298,12 @@ a_n &= K_1 \cdot 3^n + K_2 \cdot n \cdot 3^n + 3^n \cdot (\frac{1}{12} \cdot n^4
 
 Rule of thumb - pokud nemohu některé neznámé po dosazení zkušebního řešení do rek. vztahu vypočítat, tak zkušební řešení vynásobím ![n](https://latex.codecogs.com/svg.latex?n) a zkusím znovu.
 
-###Soustavy rekurentních vztahů
+### Soustavy rekurentních vztahů
 
 - Na téhle přednášce jsem chyběl, takže dokážu uvést jenom praktický příklad výpočtu - kdo tomu rozumí a je schopen podat nějakou teorii aby měl Kouckej radost, tak ať doplní
 - Jeden příklad uvádím zde, druhý je v Čendově pdf
 
-####Příklad
+#### Příklad
 
 Mějme soustavu rek. vztahů:  
 ![\begin{aligned}
@@ -360,12 +360,12 @@ b_n &= 12 \cdot 2^{n} -2 \cdot \left( \frac{-1}{2}\right)^{n} - 3 \cdot 2^{n} - 
 b_n &= 9 \cdot 2^n - 4 \cdot \left( \frac{-1}{2}\right)^{n}
 \end{aligned}](https://latex.codecogs.com/svg.latex?%5Cbegin%7Baligned%7D%20b_n%20%26%3D%202a_%7Bn&plus;1%7D%20-%20a_n%5C%5C%20b_n%20%26%3D%202%20%5Ccdot%20%283%20%5Ccdot%202%5E%7Bn&plus;1%7D%20&plus;%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn&plus;1%7D%29%20-%20%283%20%5Ccdot%202%5E%7Bn%7D%20&plus;%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%29%5C%5C%20b_n%20%26%3D%202%20%5Ccdot%20%282%20%5Ccdot%203%20%5Ccdot%202%5E%7Bn%7D%20&plus;%202%20%5Ccdot%20%5Cfrac%7B-1%7D%7B2%7D%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%29%20-%203%20%5Ccdot%202%5E%7Bn%7D%20-%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%5C%5C%20b_n%20%26%3D%2012%20%5Ccdot%202%5E%7Bn%7D%20-2%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%20-%203%20%5Ccdot%202%5E%7Bn%7D%20-%202%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%5C%5C%20b_n%20%26%3D%209%20%5Ccdot%202%5En%20-%204%20%5Ccdot%20%5Cleft%28%20%5Cfrac%7B-1%7D%7B2%7D%5Cright%29%5E%7Bn%7D%20%5Cend%7Baligned%7D)
 
-###Využití vytvořujících funkcí pro řešení rek. vztahů
+### Využití vytvořujících funkcí pro řešení rek. vztahů
 
 - Mějme rek. vztah  
 ![C_{n+k}a_{n+k} + C_{n+k-1}a_{n+k-1} + \ldots + C_na_n = p(n)](https://latex.codecogs.com/svg.latex?C_%7Bn&plus;k%7Da_%7Bn&plus;k%7D%20&plus;%20C_%7Bn&plus;k-1%7Da_%7Bn&plus;k-1%7D%20&plus;%20%5Cldots%20&plus;%20C_na_n%20%3D%20p%28n%29)
 
-####Postup řešení
+#### Postup řešení
 1. Obě strany rovnice vynásobíme ![x^{n+k}](https://latex.codecogs.com/svg.latex?x%5E%7Bn&plus;k%7D)  
 ![C_{n+k}a_{n+k}x^{n+k} + xC_{n+k-1}a_{n+k-1}x^{n+k-1} + \ldots + x^kC_na_nx^n = p(n)x^{n+k}](https://latex.codecogs.com/svg.latex?C_%7Bn&plus;k%7Da_%7Bn&plus;k%7Dx%5E%7Bn&plus;k%7D%20&plus;%20xC_%7Bn&plus;k-1%7Da_%7Bn&plus;k-1%7Dx%5E%7Bn&plus;k-1%7D%20&plus;%20%5Cldots%20&plus;%20x%5EkC_na_nx%5En%20%3D%20p%28n%29x%5E%7Bn&plus;k%7D)
 2. Sčítáme pro ![n=0,1,\ldots,\infty](https://latex.codecogs.com/svg.latex?n%3D0%2C1%2C%5Cldots%2C%5Cinfty)  
@@ -378,7 +378,7 @@ C_{n+k}\sum_{n=0}^{\infty}{a_{n+k}x^{n+k}} &\rightarrow f(x) - a_0 - a_1x - \ldo
 4. Vyřešíme funkční rovnici (rovnici s neznámými ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)) sestavenou v předchozím bodě, řešením je uzavřený tvar vytvořující funkce ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29)
 5. Nalezneme rozvinutý tvar vytvoř. funkce ![f(x)](https://latex.codecogs.com/svg.latex?f%28x%29), hledané ![a_n](https://latex.codecogs.com/svg.latex?a_n) je koeficient u ![x^n](https://latex.codecogs.com/svg.latex?x%5En)
 
-####Příklad
+#### Příklad
 ![a_{n+1} = 2a_n + 1, \quad a_0 = 0](https://latex.codecogs.com/svg.latex?a_%7Bn&plus;1%7D%20%3D%202a_n%20&plus;%201%2C%20%5Cquad%20a_0%20%3D%200)
 
 - Vynásobíme ![x^{n+1}](https://latex.codecogs.com/svg.latex?x%5E%7Bn&plus;1%7D)  
@@ -409,7 +409,7 @@ f(x) &= \frac{1}{1-2x} - \frac{1}{1-x}
 - Řešením jsou koeficienty u ![x^n](https://latex.codecogs.com/svg.latex?x%5En)  
 ![a_n = 2^n - 1](https://latex.codecogs.com/svg.latex?a_n%20%3D%202%5En%20-%201)
 
-####Soustavy rek. vztahů pomocí vytvořujících funkcí
+#### Soustavy rek. vztahů pomocí vytvořujících funkcí
 
 Postup řešení je zcela analogický postupu řešení jednoho rekurenčního vztahu pomocí vytvořujících funkcí, tedy:
 
@@ -419,6 +419,6 @@ Postup řešení je zcela analogický postupu řešení jednoho rekurenčního v
 4. Vyřešíme funkční soustavu, řešením jsou uzavřené tvary vytvořujících funkcí hledaných posloupností
 5. Nalezneme rozvinuté tvary nalezených vytvořujících funkcí
 
-####Příklad
+#### Příklad
 
 - V Čendově pdf, nemá cenu ho sem přepisovat
