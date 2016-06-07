@@ -12,6 +12,11 @@ var htmlpage = fs.readFileSync('page.html').toString(); // pomocna HTML stranka,
 var i = 0;
 var pdfFiles = [];
 
+// Vytvoreni slozky pro PDFka
+if (!fs.existsSync('pdf')){
+    fs.mkdirSync('pdf');
+}
+
 // Slo by to udelat i paralerne a puvodne jsem to tak mel, ale nic moc to navic neprineslo...
 function next() {
     console.log("=> Zpracovávaná URL: " + urls[i]);
