@@ -290,10 +290,10 @@ Rozšíření Flynna:
 
 K uváznutí dojde jen při splnění všech následujících podmínek:
 
-- **Vzájemné vyloučení** (_Mutual exclusion_) - Prostředek může v jednom okamžiku používat jenom jeden proces (jinak dojde k chybě) – proces může sahat na scaner a ne zároveň i na tiskárnu.
+- **Vzájemné vyloučení** (_Mutual exclusion_) - Prostředek může v jednom okamžiku používat jenom jeden proces (jinak dojde k chybě) – když jeden proces používá scanner, žádný jiný ho v tu chvíli nemůže použít taky.
 - **Drž a čekej** (_Hold & Wait_) - Proces může žádat o další prostředky, i když už má nějaké přiděleny.
 - **Neodnímatelnost** (_No preemption_) - Jakmile proces zmíněný prostředek vlastní, nelze mu ho bezpečně odejmout, musí ho sám vrátit.
-- **Čekání do kruhu** (_Circular wait_) - Každý proces čeká na svého předchůdce – jakmile se kruh uzavře nastane.
+- **Čekání do kruhu** (_Circular wait_) - Každý proces čeká na svého předchůdce – jakmile se kruh uzavře nastane deadlock.
 
 **Souběh** (_race conditions_) je v počítačových programech způsoben (chybným) současným zpracováním sdílených dat. Pokud by byla data zpracována postupně, k chybě by nedošlo. Problémem je, že ke změně dat dojde ve chvíli, kdy se se stejnými daty již pracuje jiná úloha, too způsobuje anomálie a nekonzistenci konečného výsledku.
 
