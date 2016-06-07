@@ -13,6 +13,8 @@ Relace *býti dělitelem* ... ![\mid](https://latex.codecogs.com/svg.latex?%7C)
 - ![b](https://latex.codecogs.com/svg.latex?b) ... *dělitel* čísla ![a](https://latex.codecogs.com/svg.latex?a)
 - ![a](https://latex.codecogs.com/svg.latex?a) ... *násobek* čísla ![b](https://latex.codecogs.com/svg.latex?b)
 - ![q](https://latex.codecogs.com/svg.latex?q) ... podíl
+- čísla 1, −1, p a −p se nazývají nevlastní (triviální) dělitelé čísel p (případně −p)
+- existují-li ještě další dělitelé, nazývají se vlastní dělitelé (netriviální)
 
 **Společný dělitel**
 
