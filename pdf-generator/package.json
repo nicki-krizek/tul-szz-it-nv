@@ -1,0 +1,16 @@
+{
+  "name": "pdf-generator",
+  "version": "0.0.1",
+  "description": "Generator PDF SSZ Tul",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Milan Lochovsky",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-merge": "0.0.4",
+    "phantom": "^2.1.3",
+    "wkhtmltopdf": "^0.3.1"
+  }
+}
