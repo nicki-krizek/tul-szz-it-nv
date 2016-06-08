@@ -5,6 +5,7 @@ frekvenční charakteristika, přenosová funkce, skupinové zpoždění, lineá
 s konstantními koeficienty, systém s lineární a minimální fází. 
 
 ##Vlastnosti
+
 **Systém** dokáže generovat, zpracovávat, modifikovat a přijímat signály. Signál je projevem činnosti systému.
 
 Příklady:
@@ -16,8 +17,11 @@ Příklady:
 **LTI (Linear Time Invariant)** systémy jsou takové systémy, které jsou lineární a časově nezávislé.
 
 ###Linearita
+
 Lineární systém je aditivní a homogenní
+
 #####Aditivita (Additivity)
+
 ![T (x1[n] + x2[n]) = T (x1[n]) + T (x2[n])](https://latex.codecogs.com/svg.latex?T%28x_%7B1%7D%5Bn%5D%20&plus;%20x_%7B2%7D%5Bn%5D%29%20%3D%20T%28x_%7B1%7D%5Bn%5D%29%20&plus;%20T%28x_%7B2%7D%5Bn%5D%29)
 
 #####Homogenita (Homogenity)
@@ -43,6 +47,7 @@ Lineární systém je aditivní a homogenní
 
 
 ###Kauzalita
+
 Výstup kauzálního systému závisí pouze na současných a minulých hodnotách
 
 - Kauzální systém : ![y(t) = x(t) + x(t-1)](https://latex.codecogs.com/svg.latex?y%28t%29%20%3D%20x%28t%29%20&plus;%20x%28t-1%29)
@@ -51,6 +56,7 @@ Výstup kauzálního systému závisí pouze na současných a minulých hodnot�
 
 
 ###Stabilita
+
 - definujeme BIBO stabilitu (Bounded Input Bounded Output)
 - Pokud je vstup do systému omezený (např. na interval <-1;1>) tak jeho výstup bude také omezený (tzn. jeho rozsah se nebude rozpínat do nekonečna)
 
@@ -58,6 +64,7 @@ Obecně lze říct že systém je stabilní, pokud amplituda jeho výstupu neros
 
 
 ###Invariantnost vůči (časovému) posunu
+
 - Nechť ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D) je výstup systému ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) na ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D)
 - Pak ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) je invariantní vůči posunu, pokud pro libovolné zpoždění ![n_0](https://latex.codecogs.com/svg.latex?n_0)
 
@@ -127,11 +134,13 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 	- skupinové spoždění = ![(N-1)/2](https://latex.codecogs.com/svg.latex?%5Cfrac%7BN-1%7D%7B2%7D), kde ![N](https://latex.codecogs.com/svg.latex?N) je délka filtru 
 
 ###Z-transformace
+
 - Z-transformace diskrétní řady ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) je deﬁnována jako:
 	- ![X(z) = \sum_{n = 0}^{N-1} x[n] \cdot z^{-n}](https://latex.codecogs.com/svg.latex?X%28z%29%20%3D%20%5Csum_%7Bn%20%3D%200%7D%5E%7BN-1%7D%20x%5Bn%5D%20%5Ccdot%20z%5E%7B-n%7D)
 - Z-obraz je komplexní funkce komplexní proměnné. Jeho vlastnosti se nejčastěji popisují v z-rovině
 
 ###Region konvergence
+
 - (Region of Convergence - ROC) - hodnoty z, pro které je součet řady konečný
 - DTFT ze Z-obrazu získáme dosazením ![z = e^{j\omega}](https://latex.codecogs.com/svg.latex?z%20%3D%20e%5E%7Bj%5Comega%7D), tedy DTFT je tvořena body na jednotkové kružnici v Z rovině
 - Region konvergence je mezikruží ve formě α<|z|<β
@@ -152,6 +161,7 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 - ![](http://nrlug.puhep.res.in/GLUE/Packages/engg/DSP/book/img90.gif)
 
 ####Nuly a póly
+
 - Všechny systémy popsané LCCDE lze jednoznačně popsat pomocí Z-transformace jako racionální funkci (viz. přenosová funkce)
 - nuly jsou pak kořeny čitatele a póly kořeny jmenovatele přenosové funkce
 - z pozic nul a pólů v z-rovině můžeme vyčíst chování daného filtru
@@ -176,6 +186,7 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 
 
 ##Lineární diferenční rovnice s konstantními koeficienty
+
 - Linear constant coeﬃcient diﬀerence equation (LCCDE)
 - Speciální případ diferenčních rovnic popisující LTI systémy
 
@@ -189,12 +200,14 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 - Rekurzivní DR vyžadují počáteční podmínky
 
 ##Systémy s lineární fází
+
 - Fázová charakteristika udává změnu fáze harmonické funkce o dané frekvenci při průchodu systémem
 	- Nejsou-li všechny harmonické složky signálu zpožděné stejně,
 dochází k fázovému zkreslení
 - Systémy/ﬁltry, které nedeformují fázové spektrum signálu se označují jako ﬁltry se (zobecněnou) lineární fází
 
 ##Systémy s minimální fází
+
 - Systém ![H_{min}(z)](https://latex.codecogs.com/svg.latex?H_%7Bmin%7D%28z%29) má minimální fázi, pokud má realizovatelný inverzní systém (nuly uvnitř jednotkové kružnice)
 - Každý realizovatelný systém je možné převést na systém s minimální fází
 - Převod ![H(z)](https://latex.codecogs.com/svg.latex?H%28z%29) na systém s minimální fází se provádí pokud:
@@ -209,6 +222,7 @@ dochází k fázovému zkreslení
 	- ![\tau(\omega) = \tau_{min} (\omega) + \tau_{ap} (\omega)](https://latex.codecogs.com/svg.latex?%5Ctau%28%5Comega%29%20%3D%20%5Ctau_%7Bmin%7D%20%28%5Comega%29%20&plus;%20%5Ctau_%7Bap%7D%20%28%5Comega%29)  
 
 ###Realizovatelný systém
+
 - musí být stabilní (ROC musí obsahovat jednotkovou kružnici) a kauzální (ROC musí být kruh rozpínající se vně jednotkové kružnice)
 
 

@@ -24,6 +24,7 @@
  - u->v != v->u
 
 ### Možné reprezentace grafu
+
 - **výčet množiny** vrcholů a hran V={v1,v2,...,vn} H = {{v1,v3},{v1,v2},...}
 - **grafická reprezentace** (graf)
 - **seznamem vrcholů a seznamy jejich následovníků**
@@ -140,6 +141,7 @@
 - graf G je rovinný, pokud neobsahuje podgraf homeomorfní s **K3,3** (úplný bipartitní graf) nebo **K5** (úplný graf)
 
 ## Prohledávání grafu
+
 Hledáme cestu z vrcholu u do vrcholu v.
 
 ### Do hloubky (DFS - LIFO)
@@ -163,6 +165,7 @@ Hledáme cestu z vrcholu u do vrcholu v.
 *Prohledávání do šířky*
 
 ## Minimální kostra
+
 Minimální kostra je kostra s nejmenší možnou váhou.
 
 **Jarníkův - Primův**
@@ -197,6 +200,7 @@ Minimální kostra je kostra s nejmenší možnou váhou.
 *Kruskalův algoritmus*
 
 ## Nejkratší cesta
+
 Hledání nejkratší cesty z vrcholu u do vrcholu v.
 
 **Dijkstrův algoritmus**
