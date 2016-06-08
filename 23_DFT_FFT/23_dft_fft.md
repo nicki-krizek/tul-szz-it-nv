@@ -19,6 +19,7 @@ výpočet DFT a IDFT
 
 - je algoritmus určený pro sekvence délky ![N = 2^{k} , k \in Z](https://latex.codecogs.com/svg.latex?N%20%3D%202%5E%7Bk%7D%20%2C%20k%20%5Cin%20Z)
 - Výpočetních úspor je dosaženo díky periodicitě komplexních exponenciál a možnosti vypočítat N-bodovou DFT pomocí dvou N/2-bodových DFT
+- Vyžaduje ![\frac{N}{2}log_2(N)](https://latex.codecogs.com/svg.latex?%5Cfrac%7BN%7D%7B2%7Dlog_2%28N%29) komplexních součinů a ![N \cdot log_2(N)](https://latex.codecogs.com/svg.latex?N%20%5Ccdot%20log_2%28N%29) komplexních součtů
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/DIT-FFT-butterfly.png/300px-DIT-FFT-butterfly.png)
 ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/pseudokod.png)
