@@ -94,7 +94,7 @@ Metoda pomocí rozkladu na nezávislá pole
 - zvolím si bod, kam pomyslně dosadim věž (ideálně tak, aby vznikly nezávislá pole), v tu chvíli se mi to rozdělí na 2 části, která zpracuji zvlášť
 	- tu část, kde věž "je", musím vynásobit x
 - výsledek je pak součet rozložených dvou částí
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook_rozlozeny.jpg)
+![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/05_vytvorujici_funkce/rook_rozlozeny2.jpg)
 
 
 2. Metoda přes zakázaná pole (Inverzní rook polynom)
