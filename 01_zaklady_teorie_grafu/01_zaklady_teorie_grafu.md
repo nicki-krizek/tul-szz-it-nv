@@ -72,8 +72,8 @@
 **Strom** - souvislý acyklický graf, kde ekvivaletně platí:
 
 - G je strom
-- G je acyklycký a zároveň |V| = |H| - 1
-- G je souvislý a zároveň |V| = |H| - 1
+- G je acyklycký a zároveň |V| = |H| + 1
+- G je souvislý a zároveň |V| = |H| + 1
 - Pro mezi libovolnými vrcholy existuje právě jedna cesta
 
 **Kostra grafu** -  takový podgraf souvislého grafu G na množině všech jeho vrcholů, který je stromem (strom, obsahující všechny vrcholy grafu G)
