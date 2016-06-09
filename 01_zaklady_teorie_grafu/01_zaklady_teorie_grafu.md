@@ -72,7 +72,7 @@
 **Strom** - souvislý acyklický graf, kde ekvivaletně platí:
 
 - G je strom
-- G je acyklycký a zároveň |V| = |H| + 1
+- G je acyklický a zároveň |V| = |H| + 1
 - G je souvislý a zároveň |V| = |H| + 1
 - Pro mezi libovolnými vrcholy existuje právě jedna cesta
 
