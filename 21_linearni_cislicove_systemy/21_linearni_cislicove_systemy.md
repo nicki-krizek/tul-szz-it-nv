@@ -224,9 +224,10 @@ dochází k fázovému zkreslení
 ###Realizovatelný systém
 
 - musí být stabilní (ROC musí obsahovat jednotkovou kružnici) a kauzální (ROC musí být kruh rozpínající se vně jednotkové kružnice)
-- 
+
 
 #####Příklad ROC
+
 Tenhle příklad máme v sešitě
 Mám přenosovou funkci a její inverzi, dle tabulky ROC přepisu zjistím první omezení ROC. To je rovno koeficientu před Zkem, tzn. že je větší jak 0,8
 
