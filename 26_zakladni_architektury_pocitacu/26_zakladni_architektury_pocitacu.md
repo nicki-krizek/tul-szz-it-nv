@@ -212,7 +212,7 @@ Z pohledu instrukčního cyklu jsou architektury založeny většinou na vnitřn
 - velmi vysoký výkon na paralelní výpočty
 - masivní paralelizace (používá se ke kryptoanylýze například pro lámání hashe)
 - specializovaná architektura na vektorové a maticové operace (filtry, konvoluce, transformace)
-- oproti CPU, které má obecně mnohem větší sběrnici (třeba 64bit) májí GPU procesory menší sběrnici, jelikož pracují s malými čísly, ale zase těch procesorů tam je velké množství
+- GPU obvykle disponují paměťovou sbernicí s mnohem vyšší propustností, než CPU. GPU totiž pracuje s větším množstvím dat najednou.
 ![Model GPU](http://www.quantalea.net/static/app/tutorial/content/images/gpuModel.jpg)
 
 ## Architektura mikrořadičů
@@ -270,7 +270,7 @@ Počítač zpracovává program, který má 5 miliónů 1-CPI (jednotaktových i
 
 *Příklad použití výkonostní rovnice*
 
-### Amhdálův zákon
+### Amhdahlův zákon
 Amdahlův zákon je pravidlo používané v informatice k vyjádření maximálního předpokládaného zlepšení systému poté, co je vylepšena pouze některá z jeho částí. Využívá se např. u víceprocesorových systémů k předpovězení teoretického maximálního zrychlení při přidávání dalších procesorů.
 
 - Úloh, které vyžadují čistě paralelní zpracování, je poměrně málo.
