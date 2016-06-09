@@ -224,5 +224,17 @@ dochází k fázovému zkreslení
 ###Realizovatelný systém
 
 - musí být stabilní (ROC musí obsahovat jednotkovou kružnici) a kauzální (ROC musí být kruh rozpínající se vně jednotkové kružnice)
+- 
+
+#####Příklad ROC
+Tenhle příklad máme v sešitě
+Mám přenosovou funkci a její inverzi, dle tabulky ROC přepisu zjistím první omezení ROC. To je rovno koeficientu před Zkem, tzn. že je větší jak 0,8
+
+![H(z) = \frac{1-0.5 z^{-1}}{1-0.8 z^{-1}} \rightarrow |z| >  0.8 \\
+G(z) = \frac{1-0.8 z^{-1}}{1-0.5 z^{-1}} \rightarrow ROC = ?](https://latex.codecogs.com/gif.latex?H%28z%29%20%3D%20%5Cfrac%7B1-0.5%20z%5E%7B-1%7D%7D%7B1-0.8%20z%5E%7B-1%7D%7D%20%5Crightarrow%20%7Cz%7C%20%3E%200.8%20%5C%5C%20G%28z%29%20%3D%20%5Cfrac%7B1-0.8%20z%5E%7B-1%7D%7D%7B1-0.5%20z%5E%7B-1%7D%7D%20%5Crightarrow%20ROC%20%3D%20%3F)
+
+Z inverzní funkce mám alfu 0,5. To jestli tma má být větší nebo menší zjistím tak, že daný interval musí mít průnik s ROC H(z).
+Aby mělo průnik, tak musí být větší jak 0,5.
+Výsledné ROC daného systému je tedy |z| > 0,8, což znamená že daný systém je jak stabilní (obsahuje 1), tak kauzální (směřuje vně kruřnice)
 
 
