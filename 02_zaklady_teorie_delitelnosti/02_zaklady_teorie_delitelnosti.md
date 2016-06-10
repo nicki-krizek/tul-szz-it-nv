@@ -293,7 +293,7 @@ Pokud ![NSD(a, m) \mid b](https://latex.codecogs.com/svg.latex?NSD%28a%2C%20m%29
 
 4. Nalezení zbývajících řešení.
 
-  Další řešení jsou pouze násobky ![x_0](https://latex.codecogs.com/svg.latex?x_0) menší než ![m](https://latex.codecogs.com/svg.latex?m).
+  Další řešení získám přičítáním vyděleného modulu (379) k ![x_0](https://latex.codecogs.com/svg.latex?x_0).
 
   ![x \equiv \mathbf{341, 720, 1099}~(1137)](https://latex.codecogs.com/svg.latex?x%20%5Cequiv%20%5Cmathbf%7B341%2C%20720%2C%201099%7D%7E%281137%29)
 
