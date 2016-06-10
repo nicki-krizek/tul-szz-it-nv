@@ -341,7 +341,7 @@ Umožňuje řešit obecné soustavy kongruencí, kde
 
 Postup:
 
-1. Ověřím řešitelnost (viz výše): Pro všechny dvojice kongruencí musí platit, že NSD modulů nesmí dělit rozdíl pravých stran.
+1. Ověřím řešitelnost (viz výše): Pro všechny dvojice kongruencí musí platit, že NSD modulů *musí* dělit rozdíl pravých stran.
 
 2. Vypočítám ![M = NSN(m_1, m_2, \ldots, m_n)](https://latex.codecogs.com/svg.latex?M%20%3D%20NSN%28m_1%2C%20m_2%2C%20%5Cldots%2C%20m_n%29)
 
