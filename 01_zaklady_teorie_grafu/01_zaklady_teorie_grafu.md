@@ -213,3 +213,15 @@ Hledání nejkratší cesty z vrcholu u do vrcholu v.
 ![Dijkstrův algoritmus](01_dijkstra.gif)
 
 *Dijkstrův algoritmus*
+
+**Floydův-Warshallův algoritmus**
+- hledá nejkratší cestu mezi všemi dvojicemi vrcholů
+- umí pracovat s negativně ohodnocenými hranami, pokud se nevyskytuje záporný cyklus
+- https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
+- https://www.youtube.com/watch?v=KQ9zlKZ5Rzc
+
+**Bellmanův-Fordův algoritmus**
+- narozdíl od Dijkstrova algoritmu umí pracovat se záprně ohodnocenými hranami, je ale pomalejší
+- umí poznat, zda je v grafu tzv. záporný cyklus dozažitelný ze startu (a úloha v tomto případě nemá smysl)
+- https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
+- https://www.youtube.com/watch?v=hxMWBBCpR6A
