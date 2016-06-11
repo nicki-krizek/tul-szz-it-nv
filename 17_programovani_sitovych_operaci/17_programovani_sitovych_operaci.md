@@ -32,7 +32,7 @@ Síťový socket je jeden **koncový bod** dvoubodového komunikačního spojen�
 - **getsockopt()** umožňuje získat aktuální stav dané vlastnosti socketu.
 - **setsockopt()** umožňuje nastavit hodnotu dané vlastnosti socketu.
 
-*Převzato z Berkley Sockets spíše pro orientaci, reálně se může v závisloti na implementaci.*
+*Převzato z Berkley Sockets spíše pro orientaci, reálně se může lišit v závisloti na implementaci a programovacím jazyce.*
 
 ### Komunikace
 Komunikace probíhá tak, jak je znázorněno na následujícím obrázku.
