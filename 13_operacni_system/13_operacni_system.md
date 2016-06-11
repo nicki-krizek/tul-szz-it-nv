@@ -208,7 +208,7 @@ proti přepsání.
 
 **Fragmentace** - Důsledek dynamického přidělení paměti, po určitém čase v dynamickém přidělování se objevují náhodně volné bloky.
 
-###Strategie přidělování
+### Strategie přidělování
 
 1. **Best FIT** - přidělení nejmenšího možného bloku - snaha šetřit paměť
  - Nevýhody: proces vrací malé množství pamětí. Nutné projít všechny volné bloky paměti
