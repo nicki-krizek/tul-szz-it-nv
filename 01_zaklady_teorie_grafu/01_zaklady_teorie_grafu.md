@@ -67,7 +67,7 @@
 
 **Faktor grafu** - podgraf obsahující všechny vrcholy
 
-**Acyklický graf** - graf, ve kterém neexistuje kružnice
+**Acyklický graf (les)** - graf, ve kterém neexistuje kružnice
 
 **Strom** - souvislý acyklický graf, kde ekvivaletně platí:
 
