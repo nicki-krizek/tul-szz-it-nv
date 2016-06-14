@@ -13,8 +13,9 @@ výpočet DFT a IDFT
 - Výpočetní náročnost DFT vypočtené podle deﬁnice je ![O(N^{2})](https://latex.codecogs.com/svg.latex?O%28N%5E%7B2%7D%29) aritmetických operací
 	- FFT je schopna spočítat stejný výsledek v ![O(N \cdot log(N))](https://latex.codecogs.com/svg.latex?O%28N%20%5Ccdot%20log%28N%29%29)operacích
 **Vlastnosti**
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/vlastnosti.png)
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/vlastnosti2.png)
+
+![](vlastnosti.png)
+![](vlastnosti2.png)
 
 **Radix-2 Cooley-Tukey FFT** 
 
@@ -22,8 +23,8 @@ výpočet DFT a IDFT
 - Výpočetních úspor je dosaženo díky periodicitě komplexních exponenciál a možnosti vypočítat N-bodovou DFT pomocí dvou N/2-bodových DFT
 - Vyžaduje ![\frac{N}{2}log_2(N)](https://latex.codecogs.com/svg.latex?%5Cfrac%7BN%7D%7B2%7Dlog_2%28N%29) komplexních součinů a ![N \cdot log_2(N)](https://latex.codecogs.com/svg.latex?N%20%5Ccdot%20log_2%28N%29) komplexních součtů
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/DIT-FFT-butterfly.png/300px-DIT-FFT-butterfly.png)
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/pseudokod.png)
+![](300px-DIT-FFT-butterfly.png)
+![](pseudokod.png)
 
 ##Lineární a kruhová konvoluce
 
@@ -44,7 +45,8 @@ výpočet DFT a IDFT
 	- Distributivita: (Distributive property)
 		- x[n] ∗{h1[n] + h2[n]}= x[n] ∗h1[n] + x[n] ∗h2[n]
 		- Paralelní zapojení systémů h1[n],h2[n] lze nahradit systémem s impulsní odezvou heq = h1[n] + h2[n]
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/lin_konv.png)
+		- 
+![](lin_konv.png)
 
 Vysledek konvoluce = [1 3 6 10 9 7 4]
 
@@ -53,9 +55,9 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 
 - Jsou-li x[n] a h[n] dvě konečné sekvence s N-bodovou DFT X[k] a H[k]
 - pak sekvence s DFT rovnou Y [k] = H[k]X[k] je dána vztahem
-- ![](http://s33.postimg.org/dyxv7dgsf/kruh_konv.png)
+- ![](kruh_konv.png)
 - Jedná se tedy o konvoluci h[n] s periodicky prodlouženým signálem x[n] vyhodnocenou na jedné periodě o délce N \
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/kruh_konv_2.png)
+ ![](kruh_konv_2.png)
 	- vezme se výsledek lineárni konvoluce, seřadí se 2x pod sebe a spodní se posune doprava o délku kruhové konvoluce
 	- překrývající se sečtou a zbytek se opíše, dokud nedostanem (v tomhle případě) 4 čísla
 	- výsledek kruhové konvoluce je tedy [10 10 10 10] 
@@ -64,7 +66,7 @@ Vysledek konvoluce = [1 3 6 10 9 7 4]
 - Z kruhové konvoluce lze udělat lineární doplněním nul ke každému signálu 
 	- potřebná délka = délka prvního + délka druhého - 1
 	- v předchozím příkladu by se signály s délkou 4 doplnili 3 nulami, pak by kruhová konvoluce dala stejný výsledek jako lineární
-	- ![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/23_DFT_FFT/kruh_konv_3.png)
+	- ![](kruh_konv_3.png)
 - Při vhodném doplnění nulami se však používá právě pro rychlý výpočet lineární konvoluce (výstup z FIR ﬁltru) pomocí DFT
 
 ##Rychlý výpočet lineární konvoluce pomocí FFT
@@ -86,7 +88,7 @@ Tento postup je nevhodný pro dlouhé sekvence x[n]
 
 - základní princip je, že při kruhové konvoluci signálu s impulzní odezvou, vznikne část navíc (oproti délce vstupu)
 - výsledkem blokové konvoluce Add je poskládání jednotlivých mezivýsledků ![y_{i}](https://latex.codecogs.com/gif.latex?y_%7Bi%7D) za sebe, s tím že překrývající části se sečtou
-![](http://s33.postimg.org/s1thkqudb/overlap_add.png)
+![](overlap_add.png)
 
 ###Overlap-Save (Bloková konvoluce)
 
@@ -94,4 +96,4 @@ Tento postup je nevhodný pro dlouhé sekvence x[n]
 - v dalších rámcích se přidá na začátek místo nul poslední hodnoty z předchozího rámce
 	- následně se pak v jednotlivých konvolucích přidané segmenty odstraní a mezivýsledky ![y_{i}](https://latex.codecogs.com/gif.latex?y_%7Bi%7D) se poskládají za sebe 
 
-![](http://s33.postimg.org/wp0x8mwjj/ovelap_save.png)
+![](ovelap_save.png)
