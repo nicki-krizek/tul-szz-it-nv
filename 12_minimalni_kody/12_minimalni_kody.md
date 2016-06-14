@@ -17,7 +17,7 @@ Kraftova nerovnost je věta užívaná v teorii kódování. Udává omezení na
 
 Matematicky lze Kraftovu nerovnost formulovat takto: Uvažujme \scriptstyle D-znakový prefixový kód kódující  r různých zpráv pomocí kódových slov délek ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r). Pak musí být splněna nerovnost
 
-![](https://upload.wikimedia.org/math/f/5/a/f5ad6c8b0d3c2bfdbe7d77700592aab4.png)
+![](pic1.png)
 
 Naopak, pokud přirozená čísla ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r) splňují výše uvedenou nerovnost, tak existuje prefixový kód s D znaky a délkami kódových slov ![l_1, l_2, \ldots, l_r ](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots%2C%20l_r).
 
@@ -27,7 +27,7 @@ McMillanova věta je tvrzení z oblasti teorie informace, které dává do vztah
 
 Délky slov ![l_i](https://latex.codecogs.com/svg.latex?l_i) libovolného jednoznačně dekódovatelného D-znakového kódu splňují nerovnost
 
-![](https://upload.wikimedia.org/math/b/4/9/b49a15762132fae47ad9f53c05211b4d.png)
+![](pic2.png)
 
 >Pozn: Číslo D tedy představuje počet znaků, pomocí nichž kódujeme zprávy přicházející ze zdroje, pro binární kód je D = 2, což odpovídá znakům 0 a 1. Po zakódování takovýmto kódem tedy z dané zprávy dostaneme posloupnost nul a jedniček. Pro ternární kódy máme D = 3 (tj. znaky 0, 1, 2) atd. Čísla ![l_1, l_2, \ldots](https://latex.codecogs.com/svg.latex?l_1%2C%20l_2%2C%20%5Cldots) pak označují délky jednotlivých kódových slov. To znamená, máme-li danou i-tou zprávu, tak ![l_i](https://latex.codecogs.com/svg.latex?l_i) udává počet znaků v posloupnosti použité pro zakódování této zprávy, např. pro \scriptstyle i-tou zprávu, jejíž kódové slovo je 00101, je ![l_i](https://latex.codecogs.com/svg.latex?l_i) = 5 .
 
@@ -142,9 +142,9 @@ Kompresní poměr: (nový počet bitů) / (původní počet bitů) = 23 / 88 = 0
 - Výstupem je jedno racionální číslo a tabulka četností
 	- pomocí tabulky zjistíme poměrné rozdělení jednotlivých znaků a následně z daného racionálního čísla sestavíme řetězec
 
-![ukazka aritm. kod](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/aritm_kod.png)
+![ukazka aritm. kod](aritm_kod.png)
 
-![ukazka aritm. kod2](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/aritm_kod2.png)
+![ukazka aritm. kod2](aritm_kod2.png)
 
 #####Komprese
 
@@ -171,7 +171,7 @@ Konkrétní číslo se pak vybírá takové, aby šlo zapsat pomocí co nejmén�
 
 ##Extra
 
-![bezp. kod](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/bezp_kody.png)
+![bezp. kod](bezp_kody.png)
 
 ###Paritní bit
 
@@ -189,7 +189,7 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
 ![B = p_1p_2a_1p_3a_2a_3a_4p_4a_5](https://latex.codecogs.com/svg.latex?B%20%3D%20p_1p_2a_1p_3a_2a_3a_4p_4a_5)
 - paritní bity jsou na pozicích mocniny 2 (tedy 1,2,4,8,16,... 
 
-![hamming](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/hamming.png)
+![hamming](hamming.png)
 
 - první paritní bit kontroluje všechny bity, co mají nastaven least significant bit v bitové reprezentaci pozice (např. 1 -> **1** ; 3 -> 1**1** ; 5 -> 10**1**), kromě sebe samozřejmě, tu hodnotu teprve musí vypočítat
 - druhý paritní bit kontroluje všechny bity, co mají nastaven second least significant bit v bitové reprezentaci pozice (napr 2 -> **1**0 ; 3 -> **1**1 ; 6 -> 1**1**0)
@@ -218,7 +218,7 @@ Zakódovaný řetězec pro 5 informačních bitů (a je informační bit) je ve 
 
 - algoritmus převede vstupní řetězec na polynom, vynásobího polynomem CRC a výsledek projde přes modulo 2, to co zbyde je výstup CRC 
 
-![crc](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/12_minimalni_kody/crc.png)
+![crc](crc.png)
 
 Často používané
 
