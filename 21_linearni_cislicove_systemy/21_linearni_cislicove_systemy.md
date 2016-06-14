@@ -25,6 +25,7 @@ Lineární systém je aditivní a homogenní
 ![T (x1[n] + x2[n]) = T (x1[n]) + T (x2[n])](https://latex.codecogs.com/svg.latex?T%28x_%7B1%7D%5Bn%5D%20&plus;%20x_%7B2%7D%5Bn%5D%29%20%3D%20T%28x_%7B1%7D%5Bn%5D%29%20&plus;%20T%28x_%7B2%7D%5Bn%5D%29)
 
 #####Homogenita (Homogenity)
+
 ![T (cx[n]) = cT (x[n])](https://latex.codecogs.com/svg.latex?T%20%28cx%5Bn%5D%29%20%3D%20cT%20%28x%5Bn%5D%29)
 
 **Pro linearitu tedy platí podmínka**
@@ -65,7 +66,7 @@ Obecně lze říct že systém je stabilní, pokud amplituda jeho výstupu neros
 
 ###Invariantnost vůči (časovému) posunu
 
-- Nechť ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D) je výstup systému ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) na ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D)
+- Nechť ![y[n]](https://latex.codecogs.com/svg.latex?y%5Bn%5D) je výstup systému ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) na ![x[n]](https://latex.codecogs.com/svg.latex?x%5Bn%5D) 
 - Pak ![T(\cdot)](https://latex.codecogs.com/svg.latex?T%28%5Ccdot%29) je invariantní vůči posunu, pokud pro libovolné zpoždění ![n_0](https://latex.codecogs.com/svg.latex?n_0)
 
 ###Popis LTI systému
@@ -113,7 +114,7 @@ Funkci, která popisuje závislost vlastních hodnot na frekvenci ω značíme !
 
 Získáme ji aplikací DTFT na impulzní odezvu systému ![h[n]](https://latex.codecogs.com/svg.latex?h%5Bn%5D)
 
-![](https://github.com/tomaskrizek/tul-szz-it-nv/blob/master/21_linearni_cislicove_systemy/frekv_char.png)
+![](frekv_char.png)
 
 - na cvikách jsme ji vždycky počítali z diferenční rovnice systému (jako zlomek koeficientů x vuci koeficientum y)
 
@@ -168,7 +169,7 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 	- v blízkosti nul budou dané frekvence tlumeny
 	- v blízkosti pólů budou frekvence zesilovány
 - intenzita zesílení/tlumení je dána vzdáleností od [0;0]
-- ![ukazka frekencni char. filtru a roc](http://noel.feld.cvut.cz/vyu/ada/adacv/img139.png)
+- ![ukazka frekencni char. filtru a roc](img139.png)
 - v pravo dole je z-rovina, filtr má nulu v [0;0] a jeden pól skoro u [1;0]
 	- ve frek. charak. se to projeví velkým zesílením jedné frekvence, v tomto případě zesílení konstantních signálů (f= 0 Hz)
 
@@ -176,7 +177,9 @@ Dohromady: ![H(e^{j\omega}) = |H(e^{j\omega})| \cdot e^{j\Phi(\omega)}](https://
 ##Přenosová funkce
 
 - Získáme ji pomocí Z-transformace impulsní odezvy
-![](http://s33.postimg.org/n3i62tyvj/o21_frek_char.png)
+
+![](o21_frek_char.png)
+
 - ![B(z)](https://latex.codecogs.com/svg.latex?B%28z%29) jsou koeficienty vstupu a ![A(z)](https://latex.codecogs.com/svg.latex?A%28z%29) jsou koeficienty zpětné vazby
 - Příklad: 
 	- ![y[n] - 5y[n-3] = 2x[n] - 3x[n-1]](https://latex.codecogs.com/svg.latex?y%5Bn%5D%20-%205y%5Bn-3%5D%20%3D%202x%5Bn%5D%20-%203x%5Bn-1%5D)
