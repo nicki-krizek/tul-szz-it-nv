@@ -357,3 +357,22 @@ Postup:
 
   ![x_i \equiv 0~ (\frac{M}{M_i})~\wedge~x_i \equiv 1~(M_i)](https://latex.codecogs.com/svg.latex?x_i%20%5Cequiv%200%7E%20%28%5Cfrac%7BM%7D%7BM_i%7D%29%7E%5Cwedge%7Ex_i%20%5Cequiv%201%7E%28M_i%29)
 
+### Pozn.: Brute-force reseni v jazyce Haskell
+
+Pro nalezeni reseni soustavy kongruenci pomoci metody brute-force lze velice efektivne vyuzit programovaci jazyk Haskell:
+
+```
+ghci> [x | x <- [1..(5*8*11*9)], x `mod` 5 == 2, x `mod` 8 == 3, x `mod` 11 == 6, x `mod` 9 == 4]
+[787]
+```
+
+Vyse uvedeny kod nalezne vsechny prvky od 1 do M pro zadane kongruence. Tento zapis funguje bez ohledu na pocet reseni:
+
+```
+ghci> [x | x <- [1..(2*5*8)], x `mod` 2 == 1, x `mod` 5 == 4, x `mod` 8 == 3]
+[19,59]
+ghci> [x | x <- [1..(2*5*8)], x `mod` 2 == 1, x `mod` 5 == 4, x `mod` 8 == 2]
+[]
+```
+
+Hodi se pro rychle overeni spravneho reseni uloh. Vice o jazyce Haskell: [http://learnyouahaskell.com/chapters](http://learnyouahaskell.com/chapters)
