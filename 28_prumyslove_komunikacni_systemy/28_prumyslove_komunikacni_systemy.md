@@ -288,25 +288,29 @@ _Propojení zařízení do řetězu (daisy chain) vede ke snížení požadovan�
 
 ### I2C
 
-I2C je zkratka z celého názvu _Inter-Integrated Circuit_. V určitých ohledech se jedná o sběrnici podobnou SPI (existence hodinového signálu, jediný uzel typu master), ovšem některé vlastnosti těchto sběrnic jsou odlišné. Zatímco u sběrnice SPI byl umožněn obousměrný přenos dat díky použití dvojice vodičů MISO a MOSI, je sběrnice I2C vybavena „pouze" jedním datovým vodičem **SDA** (**SCL** (Synchronous Clock)), z čehož vyplývá, že se data přenáší **poloduplexně**. Také to znamená poněkud složitější interní strukturu všech připojených zařízení, protože příslušné piny musí být možné přepínat ze vstupního režimu na režim výstupní. Též zde není použit výběr zařízení typu slave pomocí zvláštních signálů, protože každému uzlu je přiřazena jednoznačná adresa - kromě elektrických charakteristik je totiž přesně stanoven i komunikační protokol, což je další rozdíl oproti výše popsané sběrnici SPI. Obecně je možné říci, že I2C je sice poněkud složitější, ale zato flexibilnější sběrnice, která se velmi často používá i pro komunikaci na delší vzdálenosti (řádově metry, viz například DDC u monitorů), než tomu je u sběrnice SPI.
+I2C je zkratka z celého názvu _Inter-Integrated Circuit_. Jedná se o sběrnici typu multimaster, v důsledku čehož se musí řešit arbitrace přístupu na sběrnici. Sběrnice má též zabudovaný mechanismus pro adresování připojených stanic (resp. připojených uzlů). Každá stanice připojená na sběrnici má přidělenu adresu o délce 7 či 10 bitů (slouží k jejímu výběru při komunikaci a při arbitraci). Sběrnice slouží primárně k připojování obvodů k mikrokontrolérům.
 
-- jediná datová linka (Serial Data Line) (half-duplex)
-- sériové, synchronní
-- halfduplex
-- může být multi-master
-- pevný protokol (startovní, ukončovací podmínka => podmínky generuje master)
-- až 128 různých zařízení
-- individuální adresu o délce 7 (128 zařízení) nebo 10 bitů (1024 zařízení) pro všechna zařízení
+**Fyzická vrstva:**
+Jednotlivé uzly na sběrnici jsou propojeny právě jedním datovým vodičem značeným SDA. I2C má v celku právě dva vodiče: datový vodič (značen SDA) a vodič s hodinovým signálem (značen SCL). Maximální přípustná frekvence hodinového signálu (SCL vodiče) je 100kHz nebo 400kHz (dle implementace).
+
+**Linková (spojová) vrstva:**
+V rámci je obsažena 7 bitová adresa příjemce (adresu má přiřazenu každý uzel na sběrnici) a jeden bit určující typ požadované operace (R/W - read/write). V rámci přenosu dochází k potvrzování přijetí dat (ACK), což se děje paralelně s jejich příjmem. Pokud není přijat ACK, spojení se přerušuje vysláním STOP.
+
+K arbitraci přístupu na sběrnici je využita standardní metoda detekce kolize. Každá stanice může zahájit vysílání, pokud je sběrnice v klidovém stavu. Při vysílání musí docházet ke kontrole, zdali nedochází ke kolizi (jinými slovy, zdali nevysílá více stanic najednou). V případě kolize musí stanice okamžitě ukončit přenos.
+
+**Více na:**
+
+- <http://home.zcu.cz/%7Edudacek/NMS/Seriova_rozhrani.pdf>
 
 - <http://vyvoj.hw.cz/navrh-obvodu/strucny-popis-sbernice-i2c-a-jeji-prakticke-vyuziti-k-pripojeni-externi-eeprom-24lc256>
 
 - <http://www.root.cz/clanky/externi-seriove-sbernice-spi-a-i2c/>
 
 - <https://cs.wikipedia.org/wiki/I%C2%B2C>
-- <http://www.root.cz/clanky/komunikace-po-seriove-sbernici-isup2supc/>
-- <http://home.zcu.cz/~dudacek/NMS/Seriova_rozhrani.pdf>
 
-**Obvody:**
+- <http://www.root.cz/clanky/komunikace-po-seriove-sbernici-isup2supc/>
+
+**Nejčastěji připojované obvody:**
 
 - Analogové ADC, DAC
 - Paměti EEPROM, FLASH
