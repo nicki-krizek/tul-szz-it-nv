@@ -61,7 +61,7 @@ Slidy k tomu v sekci online courses/slides: [http://www.crypto-textbook.com/](ht
   - Affiní šifra (vynásobení konstantou a přičtení)
   - Hillova šifra (násobení matic)
 - Aditivní šifry
-  - Viegnerova šifra (opakuje se heslo, sečtení znaků)
+  - Vigenerova šifra (opakuje se heslo, sečtení znaků)
   - Vermanova šifra (stejně dlouhé heslo jako šifrovaný text)
 - Transpoziční šifry (znaky se nechají, mění se jejich pozice)
 - Blokové šifry
@@ -170,8 +170,8 @@ Dešifrujte NTBWWFYN pomocí Hillovy matice H(3, 2; 7, 5).
 NTBWWFYN => KFHMXXDR
 
 ### Aditivní šifry
-#### Viegnerova šifra
-Jedná se o speciální případ polyalfabetické šifry, což znamená, že pro šifrování není použita celá abeceda. Caesarova šifra je speciálním případ Vigenèrovy šifry s heslem o délce jeden znak. Viegenèrova šifra používá heslo, jehož znaky určují posunutí otevřeného textu a to tak, že otevřený text se rozdělí na bloky znaků dlouhé stejně jako heslo a každý znak se sečte s odpovídajícím znakem hesla. Vigenèrova šifra způsobuje změny pravděpodobnosti rozložení znaků a tím podstatně znemožňuje kryptoanalýzu na základě analýzy četnosti znaků v textu. (obvykle se pro šifrování používá spíše Viegnerův čtverec - předpočítané kombinace)
+#### Vigenerova šifra
+Jedná se o speciální případ polyalfabetické šifry, což znamená, že pro šifrování není použita celá abeceda. Caesarova šifra je speciálním případ Vigenèrovy šifry s heslem o délce jeden znak. Vigenèrova šifra používá heslo, jehož znaky určují posunutí otevřeného textu a to tak, že otevřený text se rozdělí na bloky znaků dlouhé stejně jako heslo a každý znak se sečte s odpovídajícím znakem hesla. Vigenèrova šifra způsobuje změny pravděpodobnosti rozložení znaků a tím podstatně znemožňuje kryptoanalýzu na základě analýzy četnosti znaků v textu. (obvykle se pro šifrování používá spíše Vigenerův čtverec - předpočítané kombinace)
 
 **Ci = Ti + Ki mod m** - šifrování
 
@@ -192,7 +192,7 @@ Ti = Ci - Ki mod m - dešifrování
 STASNEAVESELE => AYTEIVJTHTAJEQ
 
 #### Vermanova šifra
-Obdoba Viegnerovy šifry, klíč je však zcela náhodný a stejně dlouhý jako otevřený text. Bez znalosti klíče nerozluštitelná.
+Obdoba Vigenerovy šifry, klíč je však zcela náhodný a stejně dlouhý jako otevřený text. Bez znalosti klíče nerozluštitelná.
 
 ### Transpoziční šifry
 Principem transpoziční šifry je změna pořadí znaků (jejich permutace) na základě předem dohodnutého systém. Jinými slovy transpoziční šifra mění pořadí znaků, nikoliv jejich vzhled. Výhodou této šifry je její jednoduchost, k zašifrování není potřeba hluboká znalost matematiky a zvládne ho i dítě. Většina transpozičních šifer je založena na určitém geometrickém postupu. Text je zapsán do určitého geometrického obrazce a poté jiným způsobem přepsán do výsledného šifrovaného textu. Existuje mnoho variant, například **čtení odzadu**, **čtení každého N-tého písmene**, **text do spirály ve čtverci** nebo **transpoziční mřížka**.
